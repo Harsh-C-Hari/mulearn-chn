@@ -26,6 +26,15 @@
 | 6.3 | Complete 21-member directory | ✅ complete | `mulearn-chn_phase-06_subphase-03.zip` (+ `_deploy`) |
 | 6.4 | Interaction & motion refinement | ✅ complete | `mulearn-chn_phase-06_subphase-04.zip` (+ `_deploy`) |
 | 6.5 | Integration, visual QA & completion | ✅ complete | `mulearn-chn_phase-06_complete.zip` (+ `mulearn-chn_phase-06_deploy.zip`) |
+| Fix-01 | Sticker anchoring + roster decoration | ✅ complete | `mulearn-chn_phase-06_fix-01.zip` (+ `_deploy`) |
+
+### Fix-01 notes
+Sticker anchoring and roster decoration per client plan (`µLearn CHN sticker anchoring + roster decoration.md`):
+- **Featured Team Stickers:** Anchored inside `<article class="card member-card">` so they translate with card on hover (`translate(-3px, -3px)`), matching Offers cards. De-duplicated Hanin C K's sticker from `#s-asterisk` to `#s-bolt` (coral, outlined), giving 4 distinct shapes across the 4 featured leads (asterisk, star, sparkle, bolt).
+- **Featured Event Stickers:** Anchored inside `<article class="card event-card">` so they translate with card on hover.
+- **Roster Card Fill:** Filled all 21 directory cards (`.roster__item`) moderately with one sticker and one CSS geometric accent (`::before`). Distance rules strictly verified: shape repeat distance >= 6, color repeat distance >= 4, color != photo mat, accent != sticker and mat. Text and photos sit above decorations (`position: relative; z-index: 1; padding-inline-end: var(--s-3);`) with zero text bounding box collisions across all viewports (320, 390, 768, 1024, 1440).
+- **Motion Scope:** Scoped `.team .sticker > svg` in `motion-home.js` to `.team > .sticker > svg, .member-card__stk > svg` so the 21 roster cards enter as one unit with `.roster-panel` without an elongated 21-element sequential stagger cascade.
+- **Tests & Verification:** `scripts/test_phase6.py` expanded to 116/116, `scripts/test_phase5.py` expanded to 282/282. All test suites PASS (including `test_phase4.py` 20/20, `test_motion.py` PASS, `test_motion_home.py` PASS with CLS 0.0024, `verify_project.py` PASS). Deployable and checkpoint archives updated.
 
 Phase 6 working rules (client, 2026-11-20): run all five subphases in order **without stopping for approval** (overrides the brief's "stop" lines); attach the versioned full + deployable ZIP after each; never overwrite a checkpoint; look = mix of Board 1 + Board 2. Photos/roles per `docs/team-audit.md`.
 
