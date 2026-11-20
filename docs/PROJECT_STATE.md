@@ -1,7 +1,7 @@
 # PROJECT_STATE.md
 
-**Last updated:** 2026-11-20 · **Current phase:** Release Preparation (Stage 1: GitHub Readiness) · **Website Status:** Phase 7 Complete  
-**Project status:** Phase 7 (Memories & Gallery) completed and audited. Link underlines fixed with `text-decoration-skip-ink: none` (`f184170`). Stage 1 GitHub readiness audit complete: root README and comprehensive `.gitignore` added, 0 secrets present, 96/96 production assets verified. Ready for user review before Stage 2 (Vercel Readiness).
+**Last updated:** 2026-11-20 · **Current phase:** Release Preparation (Stage 2: Vercel Readiness Complete) · **Website Status:** Phase 7 Complete  
+**Project status:** Phase 7 completed. GitHub repository published as standalone repo (`https://github.com/Harsh-C-Hari/mulearn-chn`). Stage 2 Vercel readiness audit completed: paths audited, deployment handoff document created (`docs/DEPLOYMENT.md`), zero build/runtime dependencies, verified static site parameters documented. Ready for user deployment approval.
 
 ## Phase status
 | Phase | Name | Status |

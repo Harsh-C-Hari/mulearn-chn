@@ -2,6 +2,14 @@
 
 Format: newest first. Each entry: date · phase · what changed · files · verification.
 
+## 2026-11-20 — Release Preparation / Stage 2 (Vercel Readiness Audit)
+- **Vercel Readiness & Deployment Handoff ([docs/DEPLOYMENT.md]):**
+  - Completed production path audit: all 76 asset references in `index.html`, 25 in `styleguide.html`, and 5 in `css/` confirmed local, valid, and relative.
+  - Confirmed zero root-relative paths, zero broken references, and zero external runtime requests.
+  - Formulated verified Vercel static deployment settings: Framework `Other`, Root Directory `./`, Build Command `none`, Output Directory `.` (leave empty), Install Command `none`.
+  - Documented post-deployment checklist, optional hardened security headers (`vercel.json`), and instant rollback procedures.
+- **Files:** `mulearn-chn/docs/DEPLOYMENT.md`, `mulearn-chn/scripts/audit_production_paths.py`, `mulearn-chn/docs/CHANGELOG.md`, `mulearn-chn/docs/PROJECT_STATE.md`.
+
 ## 2026-11-20 — Release Preparation / Stage 1 (GitHub Readiness)
 - **GitHub Readiness Audit & Documentation:**
   - Audited full repository structure at `D:\mulearn\website`: identified deployment root (`mulearn-chn/`), source archive assets (`sources/`), and historical checkpoint archives (`phase/`).
