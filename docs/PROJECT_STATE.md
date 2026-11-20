@@ -1,14 +1,14 @@
 # PROJECT_STATE.md
 
-**Last updated:** 2026-11-20 · **Current phase:** 0 (planning) — COMPLETE · **Next phase:** 1 (Asset pipeline & content data)
-**Project status:** no website code exists yet. The only implementation artefact is the reference prototype.
+**Last updated:** 2026-11-20 · **Current phase:** 1 (Asset pipeline & content data) — COMPLETE · **Next phase:** 2 (Scaffold & design foundation)  
+**Project status:** Asset pipeline executed and verified; structured content data in place; website scaffolding and foundation ready to be created in Phase 2.
 
 ## Phase status
 | Phase | Name | Status |
 |---|---|---|
-| 0 | Master planning & audit | ✅ complete (this bundle) |
-| 1 | Asset pipeline & content data | ⏳ not started |
-| 2 | Scaffold & design foundation | ⏳ |
+| 0 | Master planning & audit | ✅ complete |
+| 1 | Asset pipeline & content data | ✅ complete |
+| 2 | Scaffold & design foundation | ⏳ next |
 | 3 | Header/nav + Hero + About | ⏳ |
 | 4 | Offers + Join + Footer | ⏳ |
 | 5 | Events + dialogs | ⏳ |
@@ -19,26 +19,42 @@
 | 10 | Release & handoff | ⏳ |
 
 ## Files in this bundle and integrity
-| File | SHA-256 |
+| File | Status / Verification |
 |---|---|
-| reference/ulearn_prototype_v1_UNMODIFIED.html | 333a447d23a3a2b1728069cf3aaa4bbad1b4f77470bb017659e0649a05cc555d |
-| docs/ASSET_MAPPING.md | 1925744494eb9d1e90220dc4e2fc2fe8900bafff17d709ca17134e29be909dcc |
+| `reference/ulearn_prototype_v1_UNMODIFIED.html` | ✅ Unmodified reference visual prototype |
+| `docs/ASSET_MANIFEST.json` | ✅ 49 manifest entries covering all 96 derivatives |
+| `docs/ASSET_MANIFEST.md` | ✅ Complete inventory, audit, and derivative documentation |
+| `docs/ASSET_MAPPING.md` | ✅ Final section mapping and resolution of D1, D2, D7, D9 |
+| `docs/asset-review.html` | ✅ Visual contact sheet for visual review |
+| `data/{links,team,events,memories}.js` | ✅ Canonical data modules attached to `window.MULEARN` |
+| `img/{hero,about,events,team,memories,brand,og}/` | ✅ 96 derivatives, 4.17 MB total, 0 EXIF, 0 upscaled |
+| `scripts/{build_assets,extract_embedded,extract_frames,verify_project,generate_contact_sheet}.py` | ✅ Reproducible pipeline and test scripts |
 
-Originals (`mulearn.zip`, 85 files, 88 MB) are **not** in this bundle; the client keeps them. Phase 1 needs them re-uploaded.
+Originals (`sources/mulearn`, 74 files) remain 100% untouched and are excluded from deployable bundles.
 
 ## Decisions log (newest first; overrides the spec)
 | Date | Decision | By |
 |---|---|---|
+| 2026-11-20 | Web Slingers poster details verified via RapidOCR: Date 27th October, Venue SDPK, Time 4:00 PM – 5:15 PM. No year invented. | Phase 1 |
+| 2026-11-20 | Tech Forge represented via extracted title frame ("TECHFORGE 2.0") from source video; no dates or venue invented. | Phase 1 |
+| 2026-11-20 | 5 genuine event photos (≥ 480px wide) extracted from posters into dedicated derivatives for dialogs and lightbox gallery. | Phase 1 |
+| 2026-11-20 | Event cards use 4:3 framed previews to preserve full poster artwork without destructive text cuts. | Phase 1 |
+| 2026-11-20 | Team portraits: all 21 members included; filename roles used verbatim per D2; `18_Al_Ameen` rotated 90° CW; `1_geetha_s` kept unupscaled. | Phase 1 |
+| 2026-11-20 | Memories collage: 6 authentic photo frames assigned (`p1`–`p6`); `event5_zdu88j.jpg` rejected as non-photographic. | Phase 1 |
+| 2026-11-20 | All EXIF and GPS location metadata stripped from all derivatives across the board for privacy and performance. | Phase 1 |
+| 2026-11-20 | College facts verified: CEC established in 1993 by Government of Kerala under IHRD, AICTE-approved, KTU-affiliated, college code CHN. | Phase 1 |
 | 2026-11-20 | Stack = no-build static HTML/CSS/vanilla JS (classic scripts), GSAP vendored, WebP derivatives, Vercel static | Phase 0 |
-| 2026-11-20 | ODYSSEY spelling = "ODYSSEY" | Phase 0 (poster text + third-party listing) |
+| 2026-11-20 | ODYSSEY spelling = "ODYSSEY" | Phase 0 |
 | 2026-11-20 | No statistics published (sources conflict) | Phase 0 |
 | 2026-11-20 | Defaults D1–D15 in Spec §15 apply until the client answers | Phase 0 |
 
-## Open client questions (see Spec §15 for defaults)
-D1 event imagery · D2 team roles ("Lead Enabler", "Campus Co-Lead", "Operational/Operations", "IG Lead – Entrepreneurship") · D3 hero wording ("official") · D4 confirm LinkedIn/Instagram/email · D5 darker indigo for text fills · D6 Satoshi files · D7 logo · D8 permissions · D9 missing event facts · D10 event split · D11 stats · D12 credit/disclaimer · D13 video · D14 deploy URL · D15 reference image/Figma.
-
-## Known issues carried forward
-Prototype defects P1–P12 (see PHASE0_REPORT.md §1.4). Not accessible during Phase 0: Figma, LinkedIn, Instagram, body of mulearn-chn.vercel.app, Instagram captions.
-
-## Environment facts verified in Phase 0 (Claude Web sandbox)
-Playwright + headless Chromium launches; Node 22 / npm 10; ffmpeg + Pillow available; npm registry reachable (gsap 3.15.1, @fontsource/plus-jakarta-sans 5.3.0 present; no @fontsource/satoshi); Google Fonts, Fontshare, cdnjs are **not** reachable from the sandbox.
+## Verification results
+`scripts/verify_project.py` executed:
+- Total derivatives checked: 96
+- Total size: 4.17 MB (down from 88 MB originals)
+- Dimension errors: 0
+- Upscaling errors: 0
+- EXIF/GPS leaks: 0
+- Budget violations: 0
+- Raw source leaks into `img/`: 0
+- Status: ✅ ALL CHECKS PASSED

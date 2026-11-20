@@ -1,0 +1,1803 @@
+[
+  {
+    "id": "hero-primary",
+    "source": {
+      "path": "sources/mulearn/Memories/IMG_7789_qyh10e.jpg",
+      "sha256": "c9a18a6a1f781c052c0a112797c0a4e33e874495f0cca4b631c97be2a3ddcdac",
+      "width": 4032,
+      "height": 3024,
+      "bytes": 2678159
+    },
+    "crop": {
+      "x": 150,
+      "y": 180,
+      "w": 2600,
+      "h": 2730
+    },
+    "derivatives": [
+      {
+        "path": "img/hero/hero-1200.webp",
+        "width": 1200,
+        "height": 1260,
+        "bytes": 151198,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/hero/hero-1200.jpg",
+        "width": 1200,
+        "height": 1260,
+        "bytes": 178363,
+        "format": "JPEG"
+      },
+      {
+        "path": "img/hero/hero-900.webp",
+        "width": 900,
+        "height": 945,
+        "bytes": 99652,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/hero/hero-600.webp",
+        "width": 600,
+        "height": 630,
+        "bytes": 51296,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "hero.photo"
+    ],
+    "alt": "\u00b5Learn community members engaged in a hands-on technical workshop at College of Engineering Chengannur",
+    "objectPosition": "35% 40%",
+    "permission": "confirmed",
+    "notes": "Authentic computer lab workshop photograph with standing mentor and students."
+  },
+  {
+    "id": "about-primary",
+    "source": {
+      "path": "sources/mulearn/Memories/IMG_9798_mvknx7.jpg",
+      "sha256": "c03e8931e11163458c759adf71a6f041266088831f55c7f8729798d0f54b22ee",
+      "width": 2268,
+      "height": 4032,
+      "bytes": 1527416
+    },
+    "crop": {
+      "x": 0,
+      "y": 350,
+      "w": 2268,
+      "h": 2608
+    },
+    "derivatives": [
+      {
+        "path": "img/about/about-820.webp",
+        "width": 820,
+        "height": 943,
+        "bytes": 55560,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/about/about-410.webp",
+        "width": 410,
+        "height": 472,
+        "bytes": 20142,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "about.photo"
+    ],
+    "alt": "Instructor conducting an Intro to Figma session projected on screen for \u00b5Learn students",
+    "objectPosition": "50% 25%",
+    "permission": "confirmed",
+    "notes": "Authentic peer learning and design session in lab."
+  },
+  {
+    "id": "event-odyssey",
+    "source": {
+      "path": "sources/mulearn/Events/Odessey/Screenshot 2026-11-19 213205.png",
+      "sha256": "7a3a4ca03916cb112c7dd5ea8153b380bb7d871b7713f9a0e6fca25b99be1fa6",
+      "width": 688,
+      "height": 805,
+      "bytes": 542431
+    },
+    "derivatives": [
+      {
+        "path": "img/events/poster-odyssey.webp",
+        "width": 688,
+        "height": 805,
+        "bytes": 37556,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/events/card-odyssey-405.webp",
+        "width": 405,
+        "height": 304,
+        "bytes": 8622,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/events/card-odyssey-600.webp",
+        "width": 600,
+        "height": 450,
+        "bytes": 15134,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "events.card",
+      "events.dialog"
+    ],
+    "alt": "ODYSSEY Hackathon promo poster: 32 Hours. One Journey. Endless Possibilities.",
+    "permission": "confirmed",
+    "notes": "Event promotional poster for ODYSSEY."
+  },
+  {
+    "id": "event-buildathon",
+    "source": {
+      "path": "sources/mulearn/Events/Buildathon/Screenshot 2026-11-19 213523.png",
+      "sha256": "5b34ee43c933499426f45bc2fc689183ac2e3dbf1f43582aecd91cf4d82bd1f0",
+      "width": 693,
+      "height": 821,
+      "bytes": 390052
+    },
+    "derivatives": [
+      {
+        "path": "img/events/poster-buildathon.webp",
+        "width": 693,
+        "height": 821,
+        "bytes": 36924,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/events/card-buildathon-405.webp",
+        "width": 405,
+        "height": 304,
+        "bytes": 8916,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/events/card-buildathon-600.webp",
+        "width": 600,
+        "height": 450,
+        "bytes": 14778,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "events.card",
+      "events.dialog"
+    ],
+    "alt": "Buildathon event poster: \u00b5FIFA \u00d7 Gemma 4 at College of Engineering Chengannur",
+    "permission": "confirmed",
+    "notes": "Event promotional poster for Buildathon."
+  },
+  {
+    "id": "event-bwai",
+    "source": {
+      "path": "sources/mulearn/Events/build with ai/Screenshot 2026-11-19 213938.png",
+      "sha256": "7da4a5be4103644f0725a587e8dc6107f2a81aa2936ffed3acc3268b43a8751a",
+      "width": 693,
+      "height": 826,
+      "bytes": 529292
+    },
+    "derivatives": [
+      {
+        "path": "img/events/poster-bwai.webp",
+        "width": 693,
+        "height": 826,
+        "bytes": 75220,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/events/card-bwai-405.webp",
+        "width": 405,
+        "height": 304,
+        "bytes": 16758,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/events/card-bwai-600.webp",
+        "width": 600,
+        "height": 450,
+        "bytes": 29692,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "events.card",
+      "events.dialog"
+    ],
+    "alt": "Build with AI workshop poster: Build a Gemini-Powered YouTube Summarizer",
+    "permission": "confirmed",
+    "notes": "Event promotional poster for Build with AI."
+  },
+  {
+    "id": "event-techforge",
+    "source": {
+      "path": "sources/mulearn/Events/Tech forge/Recording 2026-11-19 212924.mp4",
+      "timestamp": "00:00:02.000",
+      "width": 496,
+      "height": 638
+    },
+    "derivatives": [
+      {
+        "path": "img/events/poster-techforge.webp",
+        "width": 496,
+        "height": 638,
+        "bytes": 12782,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/events/card-techforge-405.webp",
+        "width": 405,
+        "height": 304,
+        "bytes": 3984,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "events.card",
+      "events.dialog"
+    ],
+    "alt": "Tech Forge 2.0 title card",
+    "permission": "confirmed",
+    "notes": "Extracted from official Tech Forge 2.0 video recording. No upscale."
+  },
+  {
+    "id": "event-typerace",
+    "source": {
+      "path": "sources/mulearn/Events/Type Race/Screenshot 2026-11-19 213923.png",
+      "sha256": "936223f7c3733d69bad5b4401b07b781b3c42430ad37af75c51c6698a0c6fc2b",
+      "width": 696,
+      "height": 822,
+      "bytes": 873372
+    },
+    "derivatives": [
+      {
+        "path": "img/events/poster-typerace.webp",
+        "width": 696,
+        "height": 822,
+        "bytes": 108726,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/events/card-typerace-405.webp",
+        "width": 405,
+        "height": 304,
+        "bytes": 11630,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/events/card-typerace-600.webp",
+        "width": 600,
+        "height": 450,
+        "bytes": 27624,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "events.card",
+      "events.dialog"
+    ],
+    "alt": "Type Race competition poster: Where Speed Meets Precision",
+    "permission": "confirmed",
+    "notes": "Event promotional poster for Type Race."
+  },
+  {
+    "id": "event-useless",
+    "source": {
+      "path": "sources/mulearn/Events/Useless Projects/Screenshot 2026-11-19 213404.png",
+      "sha256": "596d397dedff10c8573d79fa3ece68a14f4f1a9e80123e30cb6f9bfe447df56b",
+      "width": 692,
+      "height": 816,
+      "bytes": 265710
+    },
+    "derivatives": [
+      {
+        "path": "img/events/poster-useless.webp",
+        "width": 692,
+        "height": 816,
+        "bytes": 29860,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/events/card-useless-405.webp",
+        "width": 405,
+        "height": 304,
+        "bytes": 10108,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/events/card-useless-600.webp",
+        "width": 600,
+        "height": 450,
+        "bytes": 14738,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "events.card",
+      "events.dialog"
+    ],
+    "alt": "Useless Projects 3.0 poster by TinkerHub CE Chengannur and \u00b5Learn CHN",
+    "permission": "confirmed",
+    "notes": "Event promotional poster for Useless Projects 3.0."
+  },
+  {
+    "id": "event-webslingers",
+    "source": {
+      "path": "sources/mulearn/Events/Web slingers/Screenshot 2026-11-19 213328.png",
+      "sha256": "9a9eb96cf972c22eac9f56857749169bad306896c84bce5dfef42fa05651f1b7",
+      "width": 650,
+      "height": 831,
+      "bytes": 678753
+    },
+    "derivatives": [
+      {
+        "path": "img/events/poster-webslingers.webp",
+        "width": 650,
+        "height": 831,
+        "bytes": 62720,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/events/card-webslingers-405.webp",
+        "width": 405,
+        "height": 304,
+        "bytes": 11464,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/events/card-webslingers-600.webp",
+        "width": 600,
+        "height": 450,
+        "bytes": 21422,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "events.card",
+      "events.dialog"
+    ],
+    "alt": "Web Slingers event details poster: 27th October at SDPK",
+    "permission": "confirmed",
+    "notes": "Event promotional poster for Web Slingers."
+  },
+  {
+    "id": "event-photo-photo-odyssey-wrap",
+    "source": {
+      "path": "sources/mulearn/Events/Odessey/Screenshot 2026-11-19 213254.png",
+      "crop": [
+        30,
+        425,
+        645,
+        777
+      ]
+    },
+    "derivatives": [
+      {
+        "path": "img/events/photo-odyssey-wrap.webp",
+        "width": 615,
+        "height": 352,
+        "bytes": 42194,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "events.dialog.photo",
+      "memories.gallery"
+    ],
+    "alt": "ODYSSEY Community Wrap Crowd during ODYSSEY",
+    "permission": "confirmed",
+    "notes": "High-resolution genuine photo embedded inside ODYSSEY poster."
+  },
+  {
+    "id": "event-photo-photo-odyssey-stage",
+    "source": {
+      "path": "sources/mulearn/Events/Odessey/Screenshot 2026-11-19 212606.png",
+      "crop": [
+        0,
+        0,
+        507,
+        332
+      ]
+    },
+    "derivatives": [
+      {
+        "path": "img/events/photo-odyssey-stage.webp",
+        "width": 507,
+        "height": 332,
+        "bytes": 15502,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "events.dialog.photo",
+      "memories.gallery"
+    ],
+    "alt": "ODYSSEY Stage Speaker Session during ODYSSEY",
+    "permission": "confirmed",
+    "notes": "High-resolution genuine photo embedded inside ODYSSEY poster."
+  },
+  {
+    "id": "event-photo-photo-buildathon-podium",
+    "source": {
+      "path": "sources/mulearn/Events/Buildathon/Screenshot 2026-11-19 213807.png",
+      "crop": [
+        84,
+        380,
+        605,
+        692
+      ]
+    },
+    "derivatives": [
+      {
+        "path": "img/events/photo-buildathon-podium.webp",
+        "width": 521,
+        "height": 312,
+        "bytes": 27242,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "events.dialog.photo",
+      "memories.gallery"
+    ],
+    "alt": "Buildathon First Place Podium \u2014 Frustrated Devs during Buildathon",
+    "permission": "confirmed",
+    "notes": "High-resolution genuine photo embedded inside Buildathon poster."
+  },
+  {
+    "id": "event-photo-photo-bwai-group",
+    "source": {
+      "path": "sources/mulearn/Events/build with ai/Screenshot 2026-11-19 214034.png",
+      "crop": [
+        40,
+        133,
+        658,
+        475
+      ]
+    },
+    "derivatives": [
+      {
+        "path": "img/events/photo-bwai-group.webp",
+        "width": 618,
+        "height": 342,
+        "bytes": 51508,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "events.dialog.photo",
+      "memories.gallery"
+    ],
+    "alt": "Build with AI Participant Group during Build with AI",
+    "permission": "confirmed",
+    "notes": "High-resolution genuine photo embedded inside Build with AI poster."
+  },
+  {
+    "id": "event-photo-photo-useless-glimpses",
+    "source": {
+      "path": "sources/mulearn/Events/Useless Projects/Screenshot 2026-11-19 213837.png",
+      "crop": [
+        75,
+        372,
+        629,
+        702
+      ]
+    },
+    "derivatives": [
+      {
+        "path": "img/events/photo-useless-glimpses.webp",
+        "width": 554,
+        "height": 330,
+        "bytes": 36420,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "events.dialog.photo",
+      "memories.gallery"
+    ],
+    "alt": "Useless Projects 3.0 Celebratory Evening Group during Useless Projects 3.0",
+    "permission": "confirmed",
+    "notes": "High-resolution genuine photo embedded inside Useless Projects 3.0 poster."
+  },
+  {
+    "id": "team-sara-shaji",
+    "name": "Sara Shaji",
+    "role": "Operational Team",
+    "source": {
+      "path": "sources/mulearn/Team/10_Sara_Shaji__Operational_Team.jpg",
+      "sha256": "2daba149529b45bc48d5da935ddcaab4fa2a7830137fe0b3d8149de6fbcece5a",
+      "width": 2268,
+      "height": 4032,
+      "bytes": 519665
+    },
+    "crop": {
+      "x": 495,
+      "y": 1400,
+      "w": 902,
+      "h": 1082
+    },
+    "derivatives": [
+      {
+        "path": "img/team/sara-shaji-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 10210,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/sara-shaji-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 19134,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Sara Shaji, Operational Team",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-afsal-s",
+    "name": "Afsal S",
+    "role": "Designer",
+    "source": {
+      "path": "sources/mulearn/Team/11_Afsal_S__Designer.png",
+      "sha256": "763f294f508f6301e26fcbce00431ed0d8aaf7ac1600986d0b8899be66b08f36",
+      "width": 896,
+      "height": 1152,
+      "bytes": 1148728
+    },
+    "crop": {
+      "x": 111,
+      "y": 77,
+      "w": 679,
+      "h": 815
+    },
+    "derivatives": [
+      {
+        "path": "img/team/afsal-s-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 10862,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/afsal-s-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 21024,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Afsal S, Designer",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-vismaya-gawri-krishnan",
+    "name": "Vismaya Gawri Krishnan",
+    "role": "Designer",
+    "source": {
+      "path": "sources/mulearn/Team/12_Vismaya_Gawri_Krishnan__Designer.jpg",
+      "sha256": "13313032995b91a1060926218e0154866eb53ad330b302784dcb83e8d1bbab40",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 315278
+    },
+    "crop": {
+      "x": 200,
+      "y": 200,
+      "w": 900,
+      "h": 1080
+    },
+    "derivatives": [
+      {
+        "path": "img/team/vismaya-gawri-krishnan-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 29832,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/vismaya-gawri-krishnan-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 67890,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Vismaya Gawri Krishnan, Designer",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-karthika-s",
+    "name": "Karthika S",
+    "role": "Content Team",
+    "source": {
+      "path": "sources/mulearn/Team/13_Karthika_S__Content_Team.jpg",
+      "sha256": "5f1ad054a66d1e12f8ce5a0f29891535ad2673c0514d4666708c2e00052aca7d",
+      "width": 780,
+      "height": 1040,
+      "bytes": 92709
+    },
+    "crop": {
+      "x": 100,
+      "y": 180,
+      "w": 580,
+      "h": 696
+    },
+    "derivatives": [
+      {
+        "path": "img/team/karthika-s-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 17730,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/karthika-s-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 36384,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Karthika S, Content Team",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-sreelakshmi-m",
+    "name": "Sreelakshmi M",
+    "role": "Content Team",
+    "source": {
+      "path": "sources/mulearn/Team/14_Sreelakshmi_M__Content_Team.jpg",
+      "sha256": "898516fe9c06a09aabae12c19726a50c7438178c56ecf6e7f94aa6b664ccd734",
+      "width": 3120,
+      "height": 4160,
+      "bytes": 1846983
+    },
+    "crop": {
+      "x": 797,
+      "y": 644,
+      "w": 1362,
+      "h": 1634
+    },
+    "derivatives": [
+      {
+        "path": "img/team/sreelakshmi-m-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 39148,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/sreelakshmi-m-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 69090,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Sreelakshmi M, Content Team",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-parvathy-vinayan",
+    "name": "Parvathy Vinayan",
+    "role": "Media Team",
+    "source": {
+      "path": "sources/mulearn/Team/15_Parvathy_Vinayan__Media_Team.jpg",
+      "sha256": "aa8c392b5d062abb2466ebbda05712cc84a9acdf00279ebedabb5562de445b8a",
+      "width": 900,
+      "height": 1600,
+      "bytes": 153713
+    },
+    "crop": {
+      "x": 150,
+      "y": 400,
+      "w": 600,
+      "h": 720
+    },
+    "derivatives": [
+      {
+        "path": "img/team/parvathy-vinayan-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 13896,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/parvathy-vinayan-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 27690,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Parvathy Vinayan, Media Team",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-brijith-k-reji",
+    "name": "Brijith K Reji",
+    "role": "Media Team",
+    "source": {
+      "path": "sources/mulearn/Team/16_Brijith_K_Reji__Media_Team.jpg",
+      "sha256": "40a0302fbb57c58e82181b3f92aea5c6eefdfaf8e3a4376e7d45b03434585f29",
+      "width": 768,
+      "height": 1344,
+      "bytes": 611708
+    },
+    "crop": {
+      "x": 100,
+      "y": 250,
+      "w": 580,
+      "h": 696
+    },
+    "derivatives": [
+      {
+        "path": "img/team/brijith-k-reji-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 9776,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/brijith-k-reji-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 21198,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Brijith K Reji, Media Team",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-adhi-narayan",
+    "name": "Adhi Narayan",
+    "role": "IG Lead \u2013 AI",
+    "source": {
+      "path": "sources/mulearn/Team/17_Adhi_Narayan__IG_Lead-AI.jpg",
+      "sha256": "4de73f12fe68dbbc272db3f54a51b8accf10f875834198010a63b6992525cd00",
+      "width": 2056,
+      "height": 2176,
+      "bytes": 3198131
+    },
+    "crop": {
+      "x": 300,
+      "y": 100,
+      "w": 1500,
+      "h": 1800
+    },
+    "derivatives": [
+      {
+        "path": "img/team/adhi-narayan-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 17604,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/adhi-narayan-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 59004,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Adhi Narayan, IG Lead \u2013 AI",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-al-ameen",
+    "name": "Al Ameen",
+    "role": "IG Lead \u2013 UI/UX",
+    "source": {
+      "path": "sources/mulearn/Team/18_Al_Ameen__IG_Lead-UI_UX.jpg",
+      "sha256": "ea59d258a0a3e0befff1839332750c3a9eeaf8236f79159114950e6bab4ea5e2",
+      "width": 3000,
+      "height": 4000,
+      "bytes": 6714503
+    },
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "w": 3000,
+      "h": 3600
+    },
+    "derivatives": [
+      {
+        "path": "img/team/al-ameen-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 6844,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/al-ameen-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 14912,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Al Ameen, IG Lead \u2013 UI/UX",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-amal-s",
+    "name": "Amal S",
+    "role": "IG Lead \u2013 Cyber Security",
+    "source": {
+      "path": "sources/mulearn/Team/19_Amal_S__IG_Lead-Cyber_Security.jpg",
+      "sha256": "e8ab745abe8b1c39729d2f333bbae2a5742a7b67a2924f38f9cddf83ca6d580a",
+      "width": 2805,
+      "height": 3000,
+      "bytes": 1995644
+    },
+    "crop": {
+      "x": 400,
+      "y": 300,
+      "w": 2000,
+      "h": 2400
+    },
+    "derivatives": [
+      {
+        "path": "img/team/amal-s-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 28014,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/amal-s-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 65594,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Amal S, IG Lead \u2013 Cyber Security",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-geetha-s",
+    "name": "Geetha S",
+    "role": "Lead Enabler",
+    "source": {
+      "path": "sources/mulearn/Team/1_geetha_s__Lead_Enabler.jpg",
+      "sha256": "2315b581f72c564aa186cc25a0c09940eeb1cfaee981d86873c8aab099322db5",
+      "width": 400,
+      "height": 514,
+      "bytes": 83660
+    },
+    "crop": {
+      "x": 13,
+      "y": 0,
+      "w": 377,
+      "h": 452
+    },
+    "derivatives": [
+      {
+        "path": "img/team/geetha-s-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 14916,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/geetha-s-native.webp",
+        "width": 377,
+        "height": 452,
+        "bytes": 23868,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Geetha S, Lead Enabler",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-abhiram-j",
+    "name": "Abhiram J",
+    "role": "IG Lead \u2013 Web",
+    "source": {
+      "path": "sources/mulearn/Team/20_Abhiram_J__IG_Lead-Web.jpg",
+      "sha256": "6045037d240175c0ef9adde9defb950106bcbaa79d38624c0fa6339f3dce3183",
+      "width": 1023,
+      "height": 1018,
+      "bytes": 113690
+    },
+    "crop": {
+      "x": 200,
+      "y": 50,
+      "w": 650,
+      "h": 780
+    },
+    "derivatives": [
+      {
+        "path": "img/team/abhiram-j-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 9376,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/abhiram-j-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 18408,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Abhiram J, IG Lead \u2013 Web",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-swathy-j",
+    "name": "Swathy J",
+    "role": "IG Lead \u2013 Entrepreneurship",
+    "source": {
+      "path": "sources/mulearn/Team/21_Swathy_J__IG_Lead-Entrepreneurship.jpg",
+      "sha256": "c2bc9e143d241e18635eb881d8da5ac07b1ce0c08a3de545eeb4db247910c8f2",
+      "width": 960,
+      "height": 1173,
+      "bytes": 92008
+    },
+    "crop": {
+      "x": 100,
+      "y": 50,
+      "w": 780,
+      "h": 936
+    },
+    "derivatives": [
+      {
+        "path": "img/team/swathy-j-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 7502,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/swathy-j-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 15440,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Swathy J, IG Lead \u2013 Entrepreneurship",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-nithin-jayakumar",
+    "name": "Nithin Jayakumar",
+    "role": "Campus Lead",
+    "source": {
+      "path": "sources/mulearn/Team/2_Nithin_Jayakumar__Campus_Lead.jpg",
+      "sha256": "c7d69c64788f6f688e5cf81018baaf9b2797368be84b4744bf8945fc158df7a3",
+      "width": 1000,
+      "height": 1500,
+      "bytes": 111625
+    },
+    "crop": {
+      "x": 150,
+      "y": 200,
+      "w": 700,
+      "h": 840
+    },
+    "derivatives": [
+      {
+        "path": "img/team/nithin-jayakumar-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 8430,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/nithin-jayakumar-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 16068,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.featured",
+      "team.directory"
+    ],
+    "alt": "Portrait of Nithin Jayakumar, Campus Lead",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-divyalakshmi",
+    "name": "Divyalakshmi",
+    "role": "Campus Co-Lead",
+    "source": {
+      "path": "sources/mulearn/Team/3_Divyalakshmi__Campus_Co-Lead.jpg",
+      "sha256": "d2db3d4427372778ea34b2e79096ee2ab1513ae8b80cca1f4b5fbe12b516a510",
+      "width": 1180,
+      "height": 1572,
+      "bytes": 217771
+    },
+    "crop": {
+      "x": 200,
+      "y": 300,
+      "w": 800,
+      "h": 960
+    },
+    "derivatives": [
+      {
+        "path": "img/team/divyalakshmi-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 22886,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/divyalakshmi-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 48582,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Divyalakshmi, Campus Co-Lead",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-govind-j-s",
+    "name": "Govind J S",
+    "role": "Creative Lead",
+    "source": {
+      "path": "sources/mulearn/Team/4_govind_j_s__Creative_Lead.webp",
+      "sha256": "6b9312a4bea63df554bc53195079cde1486c42f1775e0f5c43d074762a607cc5",
+      "width": 1273,
+      "height": 1662,
+      "bytes": 145410
+    },
+    "crop": {
+      "x": 200,
+      "y": 300,
+      "w": 900,
+      "h": 1080
+    },
+    "derivatives": [
+      {
+        "path": "img/team/govind-j-s-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 19386,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/govind-j-s-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 37892,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.featured",
+      "team.directory"
+    ],
+    "alt": "Portrait of Govind J S, Creative Lead",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-hanin-c-k",
+    "name": "Hanin C K",
+    "role": "Operational Lead",
+    "source": {
+      "path": "sources/mulearn/Team/5_Hanin_C_K__Operational_Lead.jpg",
+      "sha256": "029357c012b220a5225350bce2356615ee7f65f0d70f0863313102de86bebddb",
+      "width": 1653,
+      "height": 1989,
+      "bytes": 750308
+    },
+    "crop": {
+      "x": 200,
+      "y": 150,
+      "w": 1250,
+      "h": 1500
+    },
+    "derivatives": [
+      {
+        "path": "img/team/hanin-c-k-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 12966,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/hanin-c-k-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 25004,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.featured",
+      "team.directory"
+    ],
+    "alt": "Portrait of Hanin C K, Operational Lead",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-amanul-farhan",
+    "name": "Amanul Farhan",
+    "role": "Technical Lead",
+    "source": {
+      "path": "sources/mulearn/Team/6_Amanul_Farhan__Technical_Lead.jpg",
+      "sha256": "0e681255c900ca00f786775d4e957360e8a975e9fbca5d20a2132a04972bf3db",
+      "width": 1000,
+      "height": 1500,
+      "bytes": 158546
+    },
+    "crop": {
+      "x": 50,
+      "y": 50,
+      "w": 900,
+      "h": 1080
+    },
+    "derivatives": [
+      {
+        "path": "img/team/amanul-farhan-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 11188,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/amanul-farhan-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 22392,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.featured",
+      "team.directory"
+    ],
+    "alt": "Portrait of Amanul Farhan, Technical Lead",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-pavithra-a",
+    "name": "Pavithra A",
+    "role": "Media Lead",
+    "source": {
+      "path": "sources/mulearn/Team/7_Pavithra_A__Media_Lead.jpg",
+      "sha256": "f2ec3abc4c313dd8aa1d448c64986e99e00d69c41a4948a6ddcddc0457a0edfd",
+      "width": 1756,
+      "height": 3021,
+      "bytes": 1149152
+    },
+    "crop": {
+      "x": 0,
+      "y": 300,
+      "w": 1756,
+      "h": 2107
+    },
+    "derivatives": [
+      {
+        "path": "img/team/pavithra-a-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 17010,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/pavithra-a-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 53198,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Pavithra A, Media Lead",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-albin-thomas",
+    "name": "Albin Thomas",
+    "role": "Content Lead",
+    "source": {
+      "path": "sources/mulearn/Team/8_Albin_Thomas__Content_Lead.jpg",
+      "sha256": "5eccd7214b12e1a28a5b34dda854132b5a86a0b9a99fd3185c736c31d5433e58",
+      "width": 2268,
+      "height": 4032,
+      "bytes": 3560494
+    },
+    "crop": {
+      "x": 200,
+      "y": 800,
+      "w": 1800,
+      "h": 2160
+    },
+    "derivatives": [
+      {
+        "path": "img/team/albin-thomas-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 10924,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/albin-thomas-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 31020,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Albin Thomas, Content Lead",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "team-melwin-shibu-mathew",
+    "name": "Melwin Shibu Mathew",
+    "role": "Operational Team",
+    "source": {
+      "path": "sources/mulearn/Team/9_Melwin_Shibu_Mathew__Operational_Team.jpg",
+      "sha256": "c230b3e5e006fd5cbf15ead68f4693105d5131b5a5ec5dc4594472b9d2698a52",
+      "width": 1892,
+      "height": 2168,
+      "bytes": 1335055
+    },
+    "crop": {
+      "x": 300,
+      "y": 300,
+      "w": 1300,
+      "h": 1560
+    },
+    "derivatives": [
+      {
+        "path": "img/team/melwin-shibu-mathew-300.webp",
+        "width": 300,
+        "height": 360,
+        "bytes": 9142,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/team/melwin-shibu-mathew-600.webp",
+        "width": 600,
+        "height": 720,
+        "bytes": 20188,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "team.directory"
+    ],
+    "alt": "Portrait of Melwin Shibu Mathew, Operational Team",
+    "permission": "confirmed",
+    "notes": "Face-centred 3:3.6 portrait crop. EXIF corrected. No upscaling."
+  },
+  {
+    "id": "memories-p1",
+    "slot": "p1",
+    "source": {
+      "path": "sources/mulearn/Memories/IMG_7834_xrr7b7.jpg",
+      "sha256": "1638e0b83e596a6b7f12fe3f5b91fc7b8008f8d7bc5ccdb23814189a6458551a",
+      "width": 4032,
+      "height": 3024,
+      "bytes": 3881408
+    },
+    "crop": {
+      "x": 0,
+      "y": 350,
+      "w": 4032,
+      "h": 2240
+    },
+    "derivatives": [
+      {
+        "path": "img/memories/collage-p1-460.webp",
+        "width": 460,
+        "height": 256,
+        "bytes": 24384,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/memories/collage-p1-920.webp",
+        "width": 920,
+        "height": 511,
+        "bytes": 86262,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "memories.collage.p1"
+    ],
+    "alt": "Wide view of students engaged in coding session in the CEC computer lab",
+    "permission": "confirmed",
+    "notes": "Full lab room session"
+  },
+  {
+    "id": "memories-p2",
+    "slot": "p2",
+    "source": {
+      "path": "sources/mulearn/Memories/IMG_9803_ixchge.jpg",
+      "sha256": "770c6fe7b8a68a5eb014c2e07b0c27d5847642dac772c1f7feebfea2fe06130f",
+      "width": 5712,
+      "height": 3213,
+      "bytes": 4060260
+    },
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "w": 5712,
+      "h": 2856
+    },
+    "derivatives": [
+      {
+        "path": "img/memories/collage-p2-460.webp",
+        "width": 460,
+        "height": 230,
+        "bytes": 22770,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/memories/collage-p2-920.webp",
+        "width": 920,
+        "height": 460,
+        "bytes": 74022,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "memories.collage.p2"
+    ],
+    "alt": "Mentor guiding students in lab workstations during \u00b5Learn technical workshop",
+    "permission": "confirmed",
+    "notes": "Lab session with mentor"
+  },
+  {
+    "id": "memories-p3",
+    "slot": "p3",
+    "source": {
+      "path": "sources/mulearn/Memories/IMG_5086_tm6kwh.jpg",
+      "sha256": "1a1ffe8a2cf1a7185fcd41a15f9600d340b4d2f39244305663897cac7eeaf1f9",
+      "width": 6000,
+      "height": 4000,
+      "bytes": 4149891
+    },
+    "crop": {
+      "x": 1000,
+      "y": 1750,
+      "w": 4000,
+      "h": 2100
+    },
+    "derivatives": [
+      {
+        "path": "img/memories/collage-p3-460.webp",
+        "width": 460,
+        "height": 242,
+        "bytes": 18784,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/memories/collage-p3-920.webp",
+        "width": 920,
+        "height": 483,
+        "bytes": 62112,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "memories.collage.p3"
+    ],
+    "alt": "Close-up of enthusiastic \u00b5Learn community members gathered on campus",
+    "permission": "confirmed",
+    "notes": "Community crowd gathering"
+  },
+  {
+    "id": "memories-p4",
+    "slot": "p4",
+    "source": {
+      "path": "sources/mulearn/Memories/IMG_7789_qyh10e.jpg",
+      "sha256": "c9a18a6a1f781c052c0a112797c0a4e33e874495f0cca4b631c97be2a3ddcdac",
+      "width": 4032,
+      "height": 3024,
+      "bytes": 2678159
+    },
+    "crop": {
+      "x": 1200,
+      "y": 500,
+      "w": 2800,
+      "h": 1555
+    },
+    "derivatives": [
+      {
+        "path": "img/memories/collage-p4-460.webp",
+        "width": 460,
+        "height": 255,
+        "bytes": 17958,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/memories/collage-p4-920.webp",
+        "width": 920,
+        "height": 511,
+        "bytes": 59392,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "memories.collage.p4"
+    ],
+    "alt": "Students collaborating at computer desks during hands-on lab workshop",
+    "permission": "confirmed",
+    "notes": "Students collaborating in lab"
+  },
+  {
+    "id": "memories-p5",
+    "slot": "p5",
+    "source": {
+      "path": "sources/mulearn/Memories/IMG_5086_tm6kwh.jpg",
+      "sha256": "1a1ffe8a2cf1a7185fcd41a15f9600d340b4d2f39244305663897cac7eeaf1f9",
+      "width": 6000,
+      "height": 4000,
+      "bytes": 4149891
+    },
+    "crop": {
+      "x": 0,
+      "y": 400,
+      "w": 6000,
+      "h": 3400
+    },
+    "derivatives": [
+      {
+        "path": "img/memories/collage-p5-460.webp",
+        "width": 460,
+        "height": 261,
+        "bytes": 23282,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/memories/collage-p5-920.webp",
+        "width": 920,
+        "height": 521,
+        "bytes": 74494,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/memories/collage-p5-1200.webp",
+        "width": 1200,
+        "height": 680,
+        "bytes": 112118,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "memories.collage.p5"
+    ],
+    "alt": "\u00b5Learn CHN community group photo in front of College of Engineering Chengannur main building",
+    "permission": "confirmed",
+    "notes": "Main community group photo"
+  },
+  {
+    "id": "memories-p6",
+    "slot": "p6",
+    "source": {
+      "path": "sources/mulearn/Memories/IMG_7844_lclzmf.jpg",
+      "sha256": "22111ecb8cba33df111ed13ad1575b709889bc90c9155fee2da6ddf981a445fa",
+      "width": 4032,
+      "height": 3024,
+      "bytes": 3199899
+    },
+    "crop": {
+      "x": 400,
+      "y": 0,
+      "w": 3300,
+      "h": 3000
+    },
+    "derivatives": [
+      {
+        "path": "img/memories/collage-p6-460.webp",
+        "width": 460,
+        "height": 418,
+        "bytes": 31436,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/memories/collage-p6-920.webp",
+        "width": 920,
+        "height": 836,
+        "bytes": 104008,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "memories.collage.p6"
+    ],
+    "alt": "Instructors presenting technical demonstration on projector screen",
+    "permission": "confirmed",
+    "notes": "Projector demonstration and mentoring"
+  },
+  {
+    "id": "lightbox-img-5086",
+    "source": {
+      "path": "sources/mulearn/Memories/IMG_5086_tm6kwh.jpg",
+      "sha256": "1a1ffe8a2cf1a7185fcd41a15f9600d340b4d2f39244305663897cac7eeaf1f9",
+      "width": 6000,
+      "height": 4000,
+      "bytes": 4149891
+    },
+    "derivatives": [
+      {
+        "path": "img/memories/lightbox-img-5086.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 215998,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "memories.lightbox"
+    ],
+    "alt": "\u00b5Learn CHN Community Group Photo at CEC",
+    "permission": "confirmed",
+    "notes": "Full lightbox gallery version: \u00b5Learn CHN Community Group Photo at CEC"
+  },
+  {
+    "id": "lightbox-img-7789",
+    "source": {
+      "path": "sources/mulearn/Memories/IMG_7789_qyh10e.jpg",
+      "sha256": "c9a18a6a1f781c052c0a112797c0a4e33e874495f0cca4b631c97be2a3ddcdac",
+      "width": 4032,
+      "height": 3024,
+      "bytes": 2678159
+    },
+    "derivatives": [
+      {
+        "path": "img/memories/lightbox-img-7789.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 204558,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "memories.lightbox"
+    ],
+    "alt": "Computer Lab Technical Session & Speaker",
+    "permission": "confirmed",
+    "notes": "Full lightbox gallery version: Computer Lab Technical Session & Speaker"
+  },
+  {
+    "id": "lightbox-img-7834",
+    "source": {
+      "path": "sources/mulearn/Memories/IMG_7834_xrr7b7.jpg",
+      "sha256": "1638e0b83e596a6b7f12fe3f5b91fc7b8008f8d7bc5ccdb23814189a6458551a",
+      "width": 4032,
+      "height": 3024,
+      "bytes": 3881408
+    },
+    "derivatives": [
+      {
+        "path": "img/memories/lightbox-img-7834.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 222014,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "memories.lightbox"
+    ],
+    "alt": "CEC Computer Lab Hackers at Work",
+    "permission": "confirmed",
+    "notes": "Full lightbox gallery version: CEC Computer Lab Hackers at Work"
+  },
+  {
+    "id": "lightbox-img-7844",
+    "source": {
+      "path": "sources/mulearn/Memories/IMG_7844_lclzmf.jpg",
+      "sha256": "22111ecb8cba33df111ed13ad1575b709889bc90c9155fee2da6ddf981a445fa",
+      "width": 4032,
+      "height": 3024,
+      "bytes": 3199899
+    },
+    "derivatives": [
+      {
+        "path": "img/memories/lightbox-img-7844.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 224614,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "memories.lightbox"
+    ],
+    "alt": "Lab Workshop with Live Projection",
+    "permission": "confirmed",
+    "notes": "Full lightbox gallery version: Lab Workshop with Live Projection"
+  },
+  {
+    "id": "lightbox-img-9798",
+    "source": {
+      "path": "sources/mulearn/Memories/IMG_9798_mvknx7.jpg",
+      "sha256": "c03e8931e11163458c759adf71a6f041266088831f55c7f8729798d0f54b22ee",
+      "width": 2268,
+      "height": 4032,
+      "bytes": 1527416
+    },
+    "derivatives": [
+      {
+        "path": "img/memories/lightbox-img-9798.webp",
+        "width": 900,
+        "height": 1600,
+        "bytes": 100506,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "memories.lightbox"
+    ],
+    "alt": "Intro to Figma Design Session",
+    "permission": "confirmed",
+    "notes": "Full lightbox gallery version: Intro to Figma Design Session"
+  },
+  {
+    "id": "lightbox-img-9803",
+    "source": {
+      "path": "sources/mulearn/Memories/IMG_9803_ixchge.jpg",
+      "sha256": "770c6fe7b8a68a5eb014c2e07b0c27d5847642dac772c1f7feebfea2fe06130f",
+      "width": 5712,
+      "height": 3213,
+      "bytes": 4060260
+    },
+    "derivatives": [
+      {
+        "path": "img/memories/lightbox-img-9803.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 201576,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "memories.lightbox"
+    ],
+    "alt": "Mentored Coding Lab Session",
+    "permission": "confirmed",
+    "notes": "Full lightbox gallery version: Mentored Coding Lab Session"
+  },
+  {
+    "id": "brand-logo",
+    "source": {
+      "path": "sources/mulearn/mulearn_logo.png",
+      "sha256": "373de8b510e737e0162484648e9dc788d03ca32f7071d8a43dd5daaf093d0a65",
+      "width": 262,
+      "height": 112,
+      "bytes": 7206
+    },
+    "derivatives": [
+      {
+        "path": "img/brand/logo.webp",
+        "width": 262,
+        "height": 112,
+        "bytes": 3052,
+        "format": "WEBP"
+      },
+      {
+        "path": "img/brand/logo.png",
+        "width": 262,
+        "height": 112,
+        "bytes": 6699,
+        "format": "PNG"
+      }
+    ],
+    "usage": [
+      "brand.logo"
+    ],
+    "alt": "\u00b5Learn CHN wordmark logo",
+    "permission": "confirmed",
+    "notes": "Native wordmark 262x112 px. Unupscaled."
+  },
+  {
+    "id": "og-image",
+    "source": {
+      "path": "sources/mulearn/Memories/IMG_5086_tm6kwh.jpg",
+      "width": 6000,
+      "height": 4000
+    },
+    "derivatives": [
+      {
+        "path": "img/og/og-image.jpg",
+        "width": 1200,
+        "height": 630,
+        "bytes": 89678,
+        "format": "JPEG"
+      },
+      {
+        "path": "img/og/og-image.webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 61566,
+        "format": "WEBP"
+      }
+    ],
+    "usage": [
+      "seo.opengraph"
+    ],
+    "alt": "\u00b5Learn CHN \u2014 Learn. Build. Belong. The student tech community of College of Engineering Chengannur.",
+    "permission": "confirmed",
+    "notes": "1200x630 social preview card."
+  }
+]
