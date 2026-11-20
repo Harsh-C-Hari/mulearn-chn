@@ -73,7 +73,8 @@
 .roster-panel{padding:var(--s-2);background:var(--c-lavender);border:var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow-7)}
 .roster{display:grid;gap:var(--s-2);grid-template-columns:minmax(0,1fr)}
 .roster__item{
-  --mat:var(--c-accent); display:flex; align-items:center; gap:var(--s-2); min-width:0; padding:var(--s-1);
+  --mat:var(--c-accent); position:relative; overflow:hidden; isolation:isolate;
+  display:flex; align-items:center; gap:var(--s-2); min-width:0; padding:var(--s-1);
   background:var(--c-surface); border:var(--border); border-radius:var(--r-md); box-shadow:var(--shadow-3);
   transition:transform var(--t-fast) var(--ease-out),box-shadow var(--t-fast) var(--ease-out);
 }
@@ -81,15 +82,66 @@
 .roster__item:nth-child(4n+3){--mat:var(--c-coral)}
 .roster__item:nth-child(4n){--mat:var(--c-primary)}
 .roster__item:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-5)}
-.roster__photo{margin:0;flex:0 0 72px;width:72px;padding:var(--s-0);background:var(--mat);border:var(--border);border-radius:6px}
+
+/* Pure-CSS geometric accents cycling i mod 6 (flat, no gradients, never over text, never matching mat or sticker) */
+.roster__item::before{
+  content:""; position:absolute; z-index:0; pointer-events:none;
+}
+/* 1 (items 1, 7, 13, 19): circle at bottom-right (lavender) */
+.roster__item:nth-child(6n+1)::before{
+  inset-inline-end:-14px; inset-block-end:-14px; width:36px; height:36px;
+  background:var(--c-lavender); border-radius:50%; border:var(--border);
+}
+/* 2 (items 2, 8, 14, 20): ring at top-right (coral) */
+.roster__item:nth-child(6n+2)::before{
+  inset-inline-end:20px; inset-block-start:-12px; width:28px; height:28px;
+  border:3px solid var(--c-coral); border-radius:50%;
+}
+/* 3 (items 3, 9, 15, 21): rotated square at top-right (lavender) */
+.roster__item:nth-child(6n+3)::before{
+  inset-inline-end:-10px; inset-block-start:-10px; width:26px; height:26px;
+  background:var(--c-lavender); border:var(--border); transform:rotate(25deg);
+}
+/* 4 (items 4, 10, 16): pill at bottom-right (coral) */
+.roster__item:nth-child(6n+4)::before{
+  inset-inline-end:-10px; inset-block-end:8px; width:34px; height:14px;
+  background:var(--c-coral); border:var(--border); border-radius:var(--r-pill);
+}
+/* 5 (items 5, 11, 17): corner triangle at bottom-right (mint) */
+.roster__item:nth-child(6n+5)::before{
+  inset-inline-end:0; inset-block-end:0; width:28px; height:28px;
+  background:var(--c-mint); clip-path:polygon(100% 0,100% 100%,0 100%);
+}
+/* 6 (items 6, 12, 18): half-circle at right edge (yellow) */
+.roster__item:nth-child(6n)::before{
+  inset-inline-end:-14px; inset-block-start:calc(50% - 14px); width:28px; height:28px;
+  background:var(--c-accent); border:var(--border); border-radius:50%;
+}
+
+.roster__photo{position:relative;z-index:1;margin:0;flex:0 0 72px;width:72px;padding:var(--s-0);background:var(--mat);border:var(--border);border-radius:6px}
 .roster__photo img{display:block;width:100%;aspect-ratio:5/6;object-fit:cover;border:1px solid var(--c-ink);border-radius:3px;background:var(--c-bg)}
 .roster__photo--mono{display:grid;place-items:center;aspect-ratio:5/6;font:var(--fw-xbold) 1.25rem/1 var(--font-display)}
-.roster__text{display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-width:0;flex:1}
+.roster__text{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-width:0;flex:1;padding-inline-end:var(--s-3)}
 .roster__num{font:var(--fw-xbold) .75rem/1 var(--font-display);letter-spacing:.06em;padding:2px 6px;background:var(--c-bg);border:var(--border);border-radius:var(--r-sm)}
 .roster__name{font:var(--fw-xbold) 1.0625rem/1.15 var(--font-display);letter-spacing:-.02em;overflow-wrap:anywhere}
 .roster__role{font-size:var(--fs-meta);line-height:1.3;color:var(--text-muted);overflow-wrap:anywhere}
 .roster__flag{margin-block-start:2px;padding:1px var(--s-1);background:var(--c-accent);border:var(--border);border-radius:var(--r-sm);font-size:var(--fs-micro);font-weight:var(--fw-bold);line-height:1.4}
 .roster__item--featured{border-width:3px}
+
+/* Roster stickers: positioned on right edge, clipped to card, text always on top */
+.roster__stk{--size:36px;position:absolute;z-index:0;pointer-events:none}
+.roster__stk--tr{--r:-6px;--y:-6px;--rot:12deg}
+.roster__stk--br{--r:-6px;--b:-6px;--y:auto;--rot:-10deg}
+.roster__stk--mid{--r:-8px;--y:calc(50% - 18px);--b:auto;--rot:8deg}
+
+@media (min-width:1024px) and (max-width:1279.98px){
+  .roster__stk{--size:30px}
+  .roster__stk--mid{--y:calc(50% - 15px)}
+}
+@media (min-width:1440px){
+  .roster__stk{--size:40px}
+  .roster__stk--mid{--y:calc(50% - 20px)}
+}
 @media (min-width:700px){.roster{grid-template-columns:repeat(2,minmax(0,1fr))}.roster-panel{padding:var(--s-3)}.roster{gap:var(--s-3) var(--s-3)}}
 @media (min-width:1024px){.roster{grid-template-columns:repeat(3,minmax(0,1fr))}.roster__photo{flex-basis:84px;width:84px}}
 

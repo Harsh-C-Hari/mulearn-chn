@@ -45,9 +45,38 @@ function featuredItem(m) {
     `      </li>`
   ].filter(Boolean).join("\n");
 }
+/* Phase 6.3 / Section 3b roster decoration: 21 items with one sticker and one geometric accent.
+ * Distance rules: shape no repeats within 6, color no repeats within 4, color != photo mat.
+ * Mats rotate 4n+1: yellow, 4n+2: mint, 4n+3: coral, 4n: indigo. */
+const ROSTER_DECOR = [
+  { shape: "asterisk", color: "coral", pos: "tr", outlined: true },
+  { shape: "star", color: "indigo", pos: "br", outlined: false },
+  { shape: "sparkle", color: "mint", pos: "mid", outlined: true },
+  { shape: "bolt", color: "yellow", pos: "tr", outlined: true },
+  { shape: "circle-diamond", color: "lavender", pos: "br", outlined: true },
+  { shape: "triangle", color: "coral", pos: "mid", outlined: true },
+  { shape: "quarter", color: "indigo", pos: "tr", outlined: false },
+  { shape: "asterisk", color: "mint", pos: "br", outlined: true },
+  { shape: "star", color: "ink", pos: "mid", outlined: false },
+  { shape: "sparkle", color: "yellow", pos: "tr", outlined: true },
+  { shape: "bolt", color: "lavender", pos: "br", outlined: true },
+  { shape: "circle-diamond", color: "coral", pos: "mid", outlined: true },
+  { shape: "triangle", color: "mint", pos: "tr", outlined: true },
+  { shape: "quarter", color: "indigo", pos: "br", outlined: false },
+  { shape: "asterisk", color: "yellow", pos: "mid", outlined: true },
+  { shape: "star", color: "lavender", pos: "tr", outlined: true },
+  { shape: "sparkle", color: "coral", pos: "br", outlined: true },
+  { shape: "bolt", color: "ink", pos: "mid", outlined: false },
+  { shape: "circle-diamond", color: "mint", pos: "tr", outlined: true },
+  { shape: "triangle", color: "yellow", pos: "br", outlined: true },
+  { shape: "quarter", color: "indigo", pos: "mid", outlined: false }
+];
+
 /* Phase 6.3 roster entry: all 21 in roster order, small portrait (decorative: the name is adjacent), numeral, name, role (held titles: none),
- * "Featured above" flag for the four cards so the count stays 21. */
-function directoryItem(m) {
+ * "Featured above" flag for the four cards so the count stays 21, and moderate sticker decor. */
+function directoryItem(m, i) {
+  const dec = ROSTER_DECOR[i];
+  const outlineCls = dec.outlined ? " sticker--outlined" : "";
   const ph = m.photo, mono = !m.photoShown;
   return [
     `      <li class="roster__item${m.featured ? " roster__item--featured" : ""}" data-member="${m.id}">`,
@@ -60,6 +89,7 @@ function directoryItem(m) {
     m.roleLabel ? `          <span class="roster__role">${esc(m.roleLabel)}</span>` : "",
     m.featured ? `          <span class="roster__flag">Featured above</span>` : "",
     `        </div>`,
+    `        <span class="sticker sticker--${dec.color}${outlineCls} roster__stk roster__stk--${dec.pos}" aria-hidden="true"><svg><use href="#s-${dec.shape}"/></svg></span>`,
     `      </li>`
   ].filter(Boolean).join("\n");
 }
