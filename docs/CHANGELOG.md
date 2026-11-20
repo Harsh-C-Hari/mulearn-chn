@@ -2,6 +2,33 @@
 
 Format: newest first. Each entry: date · phase · what changed · files · verification.
 
+## 2026-11-20 — Phase 6 / Subphase 6.5 (Integration, visual QA & Phase 6 completion) — PHASE 6 COMPLETE
+- Reviewed the Team section in full-page context at 1440 and 390 (`docs/screenshots/team-6-5-{1440,390}.png`): lavender "The people" label, "Meet the team" headline with yellow underline, four colour-blocked portrait cards (yellow/indigo/mint/yellow) with white label bars, Board 2 grid + stickers, lavender roster panel with 21 numbered entries and four "Featured above" flags. Matches the Board 1 + Board 2 mix; **no visual changes were needed**.
+- Verified every role label and image-to-name pairing against `data/team.js` (21 unique names/roles in order, held titles for Geetha S / Divyalakshmi / Swathy J not shown, Hanin = Operational Lead). Portrait pairings remain filename-based (see `docs/team-audit.md`) and are listed as open client confirmations.
+- Final gates: test_phase6 104/104; test_phase5 278/278; test_phase4 20/20; motion tests PASS (CLS 0.001); axe 0 violations at 320/390/768/1024/1440; no overflow, console errors or external requests; verify_project PASS; deployable ZIP has no sources/docs/scripts/reference; both final ZIPs extracted fresh and re-tested.
+- Phase 6 marked complete; Phase 7 — Memories & Gallery is next (not started).
+
+## 2026-11-20 — Phase 6 / Subphase 6.4 (Interaction & motion refinement)
+- Decision (recorded): **no filters, search or category navigation** (21 people fit on one scan; filtering would only hide people and add state) and **no member dialogs/profile pages** (no biographies or links exist in the content register). The roster stays a plain, fully visible list.
+- Added: Team reveal in `js/motion-home.js` (inside the existing `mm.add('(prefers-reduced-motion: no-preference)')`): section head + stickers timeline (once), each featured card rises as it nears the viewport, the directory panel enters as one block (the 21 entries are not animated individually). Transform + opacity only, `clearProps` on completion, nothing hidden in CSS. 6.4 checks in `scripts/test_phase6.py`, `docs/audit-results-phase6-4.json`, `docs/screenshots/team-6-4-{1440,390}.png`.
+- Unchanged by design: hover/focus feedback (card lift + photo straightening, roster lift) already in `css/sections/team.css`; no control depends on hover; no focusable controls in the Team section (nothing dead to tab to).
+- Verified: test_phase6 104/104 (normal, reduced-motion, GSAP blocked and JS-disabled all show 21 + 4 fully visible with no leftover inline styles; no layout shift); test_phase5 278/278; test_phase4 20/20; motion PASS (CLS 0.001); axe 0 ×5; no overflow/console errors/external requests; verify_project PASS.
+
+## 2026-11-20 — Phase 6 / Subphase 6.3 (Complete 21-member directory)
+- Added: complete directory (`directoryItem()` in `scripts/build_team.js`, "Directory" block in `css/sections/team.css`), section decorations (grid, triangle, star, asterisk, squiggle), directory note, 6.3 checks in `scripts/test_phase6.py`, `docs/audit-results-phase6-3.json`.
+- Design: one ordered list of all 21 in roster order inside a Board 2 lavender panel; white Board 1-style entries with a small framed portrait on a rotating colour mat (yellow/mint/coral/indigo), numeral, name and role; the four featured are marked with the text flag "Featured above" so the count stays 21. 1 column <700, 2 columns 700–1023, 3 columns ≥1024. No group headings (they would imply a hierarchy). Held titles show the name only. Directory thumbnails use empty alt (the name is adjacent).
+- Verified: test_phase6 91/91; test_phase5 278/278; test_phase4 20/20; motion PASS (CLS 0.001); axe 0 ×5; no overflow/console errors/external requests; verify_project PASS.
+
+## 2026-11-20 — Phase 6 / Subphase 6.2 (Featured team cards)
+- Added: four featured team cards (`featuredItem()` in `scripts/build_team.js`, "Featured cards" block in `css/sections/team.css`), 6.2 checks in `scripts/test_phase6.py`, `docs/audit-results-phase6-2.json`.
+- Design: Board 1 portrait cards on yellow / indigo / mint backdrops with a white label bar (name + role), Board 2 hard shadows, ±1.5° tilt that straightens on hover/focus, flat corner stickers, desktop vertical stagger. 1 column (horizontal card) <600px, 2×2 at 600–1023, 4 across ≥1024. Portraits are the 300/600 derivatives via `srcset`, whole 5:6 frame, never upscaled. `photoShown:false` renders a neutral monogram instead of a portrait.
+- Verified: test_phase6 61/61; test_phase5 278/278; test_phase4 20/20; motion PASS (CLS 0.001); axe 0 ×5; no overflow/console errors/external requests; verify_project PASS.
+
+## 2026-11-20 — Phase 6 / Subphase 6.1 (Roster audit & section structure)
+- Added: `docs/team-audit.md`, `scripts/build_team.js`, `scripts/test_phase6.py`, `css/sections/team.css`, real `#team` section (head + featured list + 21-entry roster, generated from data, no-JS safe), `docs/audit-results-phase6-1.json`, `docs/phase6-results.json`.
+- Changed: `data/team.js` rewritten to a reconciled schema (display `roleLabel`, `roleStatus`, `photo`, `photoShown`, `featuredOrder`, `tone`); fixed two non-existent image paths; held titles for Geetha S, Divyalakshmi, Swathy J; `#team` stub removed; `scripts/test_phase4.py` order/stat assertions updated for Team; `css/sections/events.css` thumbnail layout-shift fix.
+- Verified: test_phase6 31/31; test_phase5 278/278; test_phase4 20/20; motion PASS (CLS 0.001); axe 0 ×5; no overflow/console errors/external requests; verify_project PASS.
+
 ## 2026-11-20 — Phase 5 / Subphase 5.5 (Integration, visual QA & Phase 5 completion) — PHASE 5 COMPLETE
 - Reviewed the Events section in the full page (desktop/tablet/mobile screenshots) against Board 1 + Board 2: hierarchy, spacing, poster legibility, featured vs compact subordination and decoration all accepted; no code changes were required. Phase 5 content/asset/dialog code is unchanged from 5.4.
 - Added: `docs/phase5-report.md`, `docs/audit-results-phase5-5.json`, `docs/audit-results-phase5-5-dialogs.json`, `docs/screenshots/events-5-5-{1440,390}.png`.

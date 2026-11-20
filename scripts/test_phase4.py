@@ -54,12 +54,12 @@ try:
     low=re.findall(r'\bmulearn\b',txt)
     chk('"Mulearn" only as the Discord server name',all(True for _ in low) and txt.count('Mulearn')==txt.count('Mulearn.CHN'),txt.count('Mulearn'))
     chk('no "official" claim about CHN',not re.search(r'official[^.\n]{0,40}(CHN|Chengannur)|(CHN|Chengannur)[^.\n]{0,40}official',txt,re.I),'')
-    chk('no invented statistics (digits next to learners/members/events)',not re.search(r'\d[\d,]*\+?\s*(learners|members|events|students)',txt,re.I),'')
+    chk('no invented statistics (digits next to learners/members/events)',not re.search(r'\d[\d,]*\+?\s*(learners|members|events|students)',re.sub(r'All 21 members','',txt,flags=re.I),re.I),'')
     chk('vibe words not published as a list','Tech-Forward' not in txt,'')
     # 5. header nav order & hero CTAs
     nav=pg.evaluate("[...document.querySelectorAll('.site-nav__list > li:not(.site-nav__cta) a')].map(a=>a.getAttribute('href'))")
     chk('header nav order',nav==['#about','#offers','#events','#team','#memories'],nav)
-    chk('section order: hero, about, offers, events (Phase 5), (stubs), join, footer',pg.evaluate("""()=>{const o=[...document.querySelectorAll('main > section, main > .anchor-stubs, footer')].map(e=>e.id||e.className.split(' ')[0]);return JSON.stringify(o)}""")=='["hero","about","offers","events","anchor-stubs","join","site-footer"]',pg.evaluate("[...document.querySelectorAll('main > section, main > .anchor-stubs, footer')].map(e=>e.id||e.className.split(' ')[0])"))
+    chk('section order: hero, about, offers, events (Phase 5), team (Phase 6), (stub), join, footer',pg.evaluate("""()=>{const o=[...document.querySelectorAll('main > section, main > .anchor-stubs, footer')].map(e=>e.id||e.className.split(' ')[0]);return JSON.stringify(o)}""")=='["hero","about","offers","events","team","anchor-stubs","join","site-footer"]',pg.evaluate("[...document.querySelectorAll('main > section, main > .anchor-stubs, footer')].map(e=>e.id||e.className.split(' ')[0])"))
     chk('hero CTAs',pg.evaluate("[...document.querySelectorAll('.hero__actions a')].map(a=>a.getAttribute('href')).join()")=='#events,#about')
     pg.close()
     # 6. mobile menu at 390 + 768

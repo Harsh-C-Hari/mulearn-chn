@@ -74,6 +74,25 @@
           gsap.from(c, { y: 56, opacity: 0, duration: .8, ease: EASE, scrollTrigger: { trigger: c, start: "top 88%", once: true }, clearProps: "opacity,visibility,transform" });
         });
       }
+      // ---------------- Team reveal (Phase 6.4; once, transform + opacity only, nothing hidden in CSS) ----------------
+      // Head + stickers as one timeline; each featured card rises as it nears the viewport; the directory panel enters
+      // as ONE block (the 21 entries are deliberately not animated one by one).
+      var team = document.getElementById("team");
+      if (team) {
+        var tt = gsap.timeline({ defaults: { ease: EASE }, paused: true, onComplete: function () {
+          gsap.set(q(".team__head > *, .team .sticker > svg", team), { clearProps: "opacity,visibility,transform" });
+        }});
+        tt.from(q(".team__head > *", team), { y: 32, opacity: 0, duration: .65, stagger: .1 }, 0)
+          .from(q(".team .sticker > svg", team), { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .55, ease: "back.out(2)", stagger: .05 }, .35);
+        ScrollTrigger.create({ trigger: team, start: "top 70%", once: true, onEnter: function () { tt.play(); } });
+        q(".team__featured .member-card", team).forEach(function (c) {
+          gsap.from(c, { y: 48, opacity: 0, duration: .75, ease: EASE, scrollTrigger: { trigger: c, start: "top 90%", once: true }, clearProps: "opacity,visibility,transform" });
+        });
+        var panel = team.querySelector(".roster-panel");
+        if (panel) {
+          gsap.from(panel, { y: 40, opacity: 0, duration: .7, ease: EASE, scrollTrigger: { trigger: panel, start: "top 92%", once: true }, clearProps: "opacity,visibility,transform" });
+        }
+      }
       // ---------------- Join reveal (once) ----------------
       var join = document.getElementById("join");
       if (join) {

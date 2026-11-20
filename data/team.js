@@ -1,283 +1,72 @@
 /**
- * µLearn CHN — Team Member Data
- * Verified against asset archive filenames per Spec §7.7 and ASSET_MAPPING.md §2.
- * Roles and names are derived verbatim from client-supplied filenames in sources/mulearn/Team/.
+ * µLearn CHN — Team data (Phase 6.1, reconciled). Single source of truth for the Team section.
+ * Rendered into index.html (no-JS safe) by scripts/build_team.js; never edit the generated markup by hand.
  *
- * Precedence / Verification Rules:
- * - CANONICAL ROSTER: 21 members strictly starting with #1 Geetha S and ending with #21 Swathy J.
- *   (References to any alternative names such as 'Abhiram V' or 'Aswin Sreekumar' are invalid).
- * - FEATURED SELECTION: Exactly four members per Spec §7.7 and approved prototype:
- *   1. Campus Lead (#2 Nithin Jayakumar)
- *   2. Technical Lead (#6 Amanul Farhan)
- *   3. Creative Lead (#4 Govind J S)
- *   4. Operational Lead (#5 Hanin C K)
- * - VERIFICATION LEVELS:
- *   [TECHNICALLY_VERIFIED]: Derivative image exists, dimensions/budget verified, EXIF stripped.
- *   [SOURCE_DOCUMENT_VERIFIED]: Name and role match client filename on disk verbatim.
- *   [CLIENT_CONFIRMATION_REQUIRED]: Face-to-name linkage, Lead Enabler status, and non-standard IG groups.
+ * SOURCES: names and recorded roles = client-supplied filenames in sources/mulearn/Team/ (Spec §7.7, 21 members).
+ * Pairing of face to name rests ONLY on those client filenames. It was not (and must not be) checked by comparing faces.
+ *
+ * FIELDS
+ *   role         recorded role, verbatim from the filename (internal record; never rewritten)
+ *   roleStatus   "recorded" = shown publicly | "unconfirmed" = the title is in doubt, so it is NOT shown (name only)
+ *   roleLabel    the text shown publicly (null when roleStatus is "unconfirmed"); "IG" is expanded to "Interest Group"
+ *   roleNote     why a title is held back / what is open (internal)
+ *   photo        derivative files that exist in img/team/ (never upscaled; w/h = real pixel size of src600)
+ *   photoShown   false = neutral monogram instead of the portrait (kill-switch if a pairing is ever disputed)
+ *   featured     featuredOrder 1..4 for the four cards, in page order
+ *   tone         card backdrop colour for the featured cards (yellow / indigo / mint rotation, Board 1)
+ *
+ * No hierarchy is implied: the directory is one list in roster order; `kind` is only the role's own wording.
  */
 (function () {
   window.MULEARN = window.MULEARN || {};
-
+  function P(slug, w, h, pos) {
+    return { src300: "img/team/" + slug + "-300.webp", src600: "img/team/" + slug + (w === 377 ? "-native" : "-600") + ".webp", w300: 300, h300: 360, w: w, h: h, pos: pos || "50% 25%" };
+  }
+  function M(n, id, name, role, slug, opts) {
+    opts = opts || {};
+    var unconfirmed = !!opts.unconfirmed;
+    var ig = /^IG Lead – /.test(role);
+    return {
+      id: "team-" + (n < 10 ? "0" : "") + n + "-" + id,
+      order: n,
+      name: name,
+      role: role,
+      roleStatus: unconfirmed ? "unconfirmed" : "recorded",
+      roleLabel: unconfirmed ? null : (ig ? role.replace("IG Lead", "Interest Group Lead") : role),
+      roleNote: opts.note || "",
+      kind: ig ? "interest-group-lead" : /Lead$/.test(role) ? "lead" : /Team$|Designer$/.test(role) ? "team" : "other",
+      photo: P(slug, opts.w || 600, opts.h || 720, opts.pos),
+      photoShown: true,
+      featured: !!opts.fo,
+      featuredOrder: opts.fo || 0,
+      tone: opts.tone || ""
+    };
+  }
   window.MULEARN.team = [
-    // --- 1. Leadership ---
-    {
-      id: "team-01-geetha",
-      name: "Geetha S",
-      role: "Lead Enabler",
-      roleFamily: "Leadership",
-      image300: "img/team/geetha-s-300.webp",
-      image600: "img/team/geetha-s-native.webp", // Native source is 377px; capped to prevent upscaling
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: true,
-      notes: "Lead Enabler per filename; organizational title unconfirmed (not in standard µLearn chapter model; do not assume Faculty Mentor)."
-    },
-    {
-      id: "team-02-nithin",
-      name: "Nithin Jayakumar",
-      role: "Campus Lead",
-      roleFamily: "Leadership",
-      image300: "img/team/nithin-jayakumar-300.webp",
-      image600: "img/team/nithin-jayakumar-600.webp",
-      featured: true,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Campus Lead per filename; featured in approved prototype and Spec §7.7."
-    },
-    {
-      id: "team-03-divyalakshmi",
-      name: "Divyalakshmi",
-      role: "Campus Co-Lead",
-      roleFamily: "Leadership",
-      image300: "img/team/divyalakshmi-300.webp",
-      image600: "img/team/divyalakshmi-600.webp",
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: true,
-      notes: "Campus Co-Lead per filename; spelling 'Co-Lead' vs 'Co Lead' to be confirmed by client."
-    },
-
-    // --- 2. Core Functional Leads ---
-    {
-      id: "team-04-govind",
-      name: "Govind J S",
-      role: "Creative Lead",
-      roleFamily: "Core Leads",
-      image300: "img/team/govind-j-s-300.webp",
-      image600: "img/team/govind-j-s-600.webp",
-      featured: true,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Creative Lead per filename; featured in approved prototype and Spec §7.7."
-    },
-    {
-      id: "team-05-hanin",
-      name: "Hanin C K",
-      role: "Operational Lead",
-      roleFamily: "Core Leads",
-      image300: "img/team/hanin-c-k-300.webp",
-      image600: "img/team/hanin-c-k-600.webp",
-      featured: true,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: true,
-      notes: "Operational Lead per filename (prototype used 'Operations Lead'); client to confirm exact title preference."
-    },
-    {
-      id: "team-06-amanul",
-      name: "Amanul Farhan",
-      role: "Technical Lead",
-      roleFamily: "Core Leads",
-      image300: "img/team/amanul-farhan-300.webp",
-      image600: "img/team/amanul-farhan-600.webp",
-      featured: true,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Technical Lead per filename; featured in approved prototype and Spec §7.7."
-    },
-    {
-      id: "team-07-pavithra",
-      name: "Pavithra A",
-      role: "Media Lead",
-      roleFamily: "Core Leads",
-      image300: "img/team/pavithra-a-300.webp",
-      image600: "img/team/pavithra-a-600.webp",
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Media Lead per filename."
-    },
-    {
-      id: "team-08-albin",
-      name: "Albin Thomas",
-      role: "Content Lead",
-      roleFamily: "Core Leads",
-      image300: "img/team/albin-thomas-300.webp",
-      image600: "img/team/albin-thomas-600.webp",
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Content Lead per filename."
-    },
-
-    // --- 3. Operational & Creative Teams ---
-    {
-      id: "team-09-melwin",
-      name: "Melwin Shibu Mathew",
-      role: "Operational Team",
-      roleFamily: "Operations & Creative",
-      image300: "img/team/melwin-shibu-mathew-300.webp",
-      image600: "img/team/melwin-shibu-mathew-600.webp",
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Operational Team per filename."
-    },
-    {
-      id: "team-10-sara",
-      name: "Sara Shaji",
-      role: "Operational Team",
-      roleFamily: "Operations & Creative",
-      image300: "img/team/sara-shaji-300.webp",
-      image600: "img/team/sara-shaji-600.webp",
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Operational Team per filename."
-    },
-    {
-      id: "team-11-afsal",
-      name: "Afsal S",
-      role: "Designer",
-      roleFamily: "Operations & Creative",
-      image300: "img/team/afsal-s-300.webp",
-      image600: "img/team/afsal-s-600.webp",
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Designer per filename (cut-out portrait style in source)."
-    },
-    {
-      id: "team-12-vismaya",
-      name: "Vismaya Gawri Krishnan",
-      role: "Designer",
-      roleFamily: "Operations & Creative",
-      image300: "img/team/vismaya-gawri-krishnan-300.webp",
-      image600: "img/team/vismaya-gawri-krishnan-600.webp",
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Designer per filename."
-    },
-    {
-      id: "team-13-karthika",
-      name: "Karthika S",
-      role: "Content Team",
-      roleFamily: "Operations & Creative",
-      image300: "img/team/karthika-s-300.webp",
-      image600: "img/team/karthika-s-native.webp",
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Content Team per filename."
-    },
-    {
-      id: "team-14-sreelakshmi",
-      name: "Sreelakshmi M",
-      role: "Content Team",
-      roleFamily: "Operations & Creative",
-      image300: "img/team/sreelakshmi-m-300.webp",
-      image600: "img/team/sreelakshmi-m-600.webp",
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Content Team per filename."
-    },
-    {
-      id: "team-15-parvathy",
-      name: "Parvathy Vinayan",
-      role: "Media Team",
-      roleFamily: "Operations & Creative",
-      image300: "img/team/parvathy-vinayan-300.webp",
-      image600: "img/team/parvathy-vinayan-600.webp",
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Media Team per filename (distinct from Pavithra A)."
-    },
-    {
-      id: "team-16-brijith",
-      name: "Brijith K Reji",
-      role: "Media Team",
-      roleFamily: "Operations & Creative",
-      image300: "img/team/brijith-k-reji-300.webp",
-      image600: "img/team/brijith-k-reji-600.webp",
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Media Team per filename."
-    },
-
-    // --- 4. Interest Group (IG) Leads ---
-    {
-      id: "team-17-adhi",
-      name: "Adhi Narayan",
-      role: "IG Lead – AI",
-      roleFamily: "Interest Group Leads",
-      image300: "img/team/adhi-narayan-300.webp",
-      image600: "img/team/adhi-narayan-600.webp",
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Interest Group Lead for Artificial Intelligence."
-    },
-    {
-      id: "team-18-al-ameen",
-      name: "Al Ameen",
-      role: "IG Lead – UI/UX",
-      roleFamily: "Interest Group Leads",
-      image300: "img/team/al-ameen-300.webp",
-      image600: "img/team/al-ameen-600.webp",
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Interest Group Lead for UI/UX Design; EXIF rotation 6 orientation corrected."
-    },
-    {
-      id: "team-19-amal",
-      name: "Amal S",
-      role: "IG Lead – Cyber Security",
-      roleFamily: "Interest Group Leads",
-      image300: "img/team/amal-s-300.webp",
-      image600: "img/team/amal-s-600.webp",
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Interest Group Lead for Cyber Security."
-    },
-    {
-      id: "team-20-abhiram",
-      name: "Abhiram J",
-      role: "IG Lead – Web",
-      roleFamily: "Interest Group Leads",
-      image300: "img/team/abhiram-j-300.webp",
-      image600: "img/team/abhiram-j-native.webp",
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: false,
-      notes: "Interest Group Lead for Web Development."
-    },
-    {
-      id: "team-21-swathy",
-      name: "Swathy J",
-      role: "IG Lead – Entrepreneurship",
-      roleFamily: "Interest Group Leads",
-      image300: "img/team/swathy-j-300.webp",
-      image600: "img/team/swathy-j-600.webp",
-      featured: false,
-      verificationLevel: "SOURCE_DOCUMENT_VERIFIED",
-      clientConfirmationRequired: true,
-      notes: "Interest Group Lead for Entrepreneurship (Note: Entrepreneurship is a CHN campus-specific group; not in the 23 official central org groups per mulearn.org)."
-    }
+    M(1, "geetha", "Geetha S", "Lead Enabler", "geetha-s", { w: 377, h: 452, unconfirmed: true,
+      note: "Open: what \"Lead Enabler\" means is unknown (not in the µLearn chapter model). Not shown as Faculty; title held back until the client confirms." }),
+    M(2, "nithin", "Nithin Jayakumar", "Campus Lead", "nithin-jayakumar", { fo: 1, tone: "yellow" }),
+    M(3, "divyalakshmi", "Divyalakshmi", "Campus Co-Lead", "divyalakshmi", { unconfirmed: true,
+      note: "Open: client to confirm the title and its spelling (Co-Lead vs Co Lead). Held back until confirmed." }),
+    M(4, "govind", "Govind J S", "Creative Lead", "govind-j-s", { fo: 3, tone: "mint" }),
+    M(5, "hanin", "Hanin C K", "Operational Lead", "hanin-c-k", { fo: 4, tone: "yellow",
+      note: "Wording only: the prototype said \"Operations Lead\"; the client filename and this brief say \"Operational Lead\", which is shown. Client may confirm the preferred wording." }),
+    M(6, "amanul", "Amanul Farhan", "Technical Lead", "amanul-farhan", { fo: 2, tone: "indigo" }),
+    M(7, "pavithra", "Pavithra A", "Media Lead", "pavithra-a"),
+    M(8, "albin", "Albin Thomas", "Content Lead", "albin-thomas"),
+    M(9, "melwin", "Melwin Shibu Mathew", "Operational Team", "melwin-shibu-mathew"),
+    M(10, "sara", "Sara Shaji", "Operational Team", "sara-shaji"),
+    M(11, "afsal", "Afsal S", "Designer", "afsal-s"),
+    M(12, "vismaya", "Vismaya Gawri Krishnan", "Designer", "vismaya-gawri-krishnan", { pos: "50% 12%" }),
+    M(13, "karthika", "Karthika S", "Content Team", "karthika-s"),
+    M(14, "sreelakshmi", "Sreelakshmi M", "Content Team", "sreelakshmi-m"),
+    M(15, "parvathy", "Parvathy Vinayan", "Media Team", "parvathy-vinayan"),
+    M(16, "brijith", "Brijith K Reji", "Media Team", "brijith-k-reji"),
+    M(17, "adhi", "Adhi Narayan", "IG Lead – AI", "adhi-narayan"),
+    M(18, "al-ameen", "Al Ameen", "IG Lead – UI/UX", "al-ameen"),
+    M(19, "amal", "Amal S", "IG Lead – Cyber Security", "amal-s"),
+    M(20, "abhiram", "Abhiram J", "IG Lead – Web", "abhiram-j"),
+    M(21, "swathy", "Swathy J", "IG Lead – Entrepreneurship", "swathy-j", { unconfirmed: true,
+      note: "Open: \"Entrepreneurship\" is not among the official µLearn Interest Groups listed on mulearn.org (checked 2026-11-20); may be a CHN-specific group. Title held back until confirmed. (Swathy J also appears as a Build with AI speaker; identity not merged from faces.)" })
   ];
 })();

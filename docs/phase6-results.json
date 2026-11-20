@@ -1,0 +1,1018 @@
+{
+ "21 members, canonical names and recorded roles in order": {
+  "pass": true,
+  "info": ""
+ },
+ "21 unique names / ids / orders": {
+  "pass": true,
+  "info": ""
+ },
+ "no members from older summaries (Abhiram V, Aswin Sreekumar)": {
+  "pass": true,
+  "info": ""
+ },
+ "four featured in spec order with spec roles": {
+  "pass": true,
+  "info": ""
+ },
+ "featured tones set (yellow/indigo/mint rotation)": {
+  "pass": true,
+  "info": ""
+ },
+ "displayed role labels as designed (held titles = null, IG expanded)": {
+  "pass": true,
+  "info": []
+ },
+ "held titles: status unconfirmed + note recorded": {
+  "pass": true,
+  "info": ""
+ },
+ "Hanin: Operational Lead shown, wording note recorded": {
+  "pass": true,
+  "info": ""
+ },
+ "all 42 portrait files exist and recorded sizes are real (no upscaling)": {
+  "pass": true,
+  "info": [
+   [],
+   []
+  ]
+ },
+ "no source assets referenced": {
+  "pass": true,
+  "info": ""
+ },
+ "no invented fields (bio/social/links/email)": {
+  "pass": true,
+  "info": ""
+ },
+ "index.html team markup is generated from data": {
+  "pass": true,
+  "info": ""
+ },
+ "320: no horizontal overflow": {
+  "pass": true,
+  "info": 320
+ },
+ "320: no console errors / external requests": {
+  "pass": true,
+  "info": [
+   [],
+   []
+  ]
+ },
+ "320: directory lists all 21 unique members with exact names and roles": {
+  "pass": true,
+  "info": [
+   [
+    "Geetha S",
+    null
+   ],
+   [
+    "Nithin Jayakumar",
+    "Campus Lead"
+   ],
+   [
+    "Divyalakshmi",
+    null
+   ]
+  ]
+ },
+ "320: exactly the four featured are flagged \"Featured above\"": {
+  "pass": true,
+  "info": ""
+ },
+ "320: featured cards and directory refer to the same 4 people (no 25-person count)": {
+  "pass": true,
+  "info": ""
+ },
+ "320: directory portraits loaded, decorative alt, not upscaled": {
+  "pass": true,
+  "info": []
+ },
+ "320: directory names not clipped, entries inside viewport": {
+  "pass": true,
+  "info": ""
+ },
+ "320: directory columns 1": {
+  "pass": true,
+  "info": 1
+ },
+ "320: four featured cards, names and roles exact, in order": {
+  "pass": true,
+  "info": [
+   [
+    "Nithin Jayakumar",
+    "Campus Lead"
+   ],
+   [
+    "Amanul Farhan",
+    "Technical Lead"
+   ],
+   [
+    "Govind J S",
+    "Creative Lead"
+   ],
+   [
+    "Hanin C K",
+    "Operational Lead"
+   ]
+  ]
+ },
+ "320: featured portraits loaded with alt \"Portrait of <name>\"": {
+  "pass": true,
+  "info": [
+   {
+    "name": "Nithin Jayakumar",
+    "role": "Campus Lead",
+    "loaded": true,
+    "alt": "Portrait of Nithin Jayakumar",
+    "cur": "nithin-jayakumar-300.webp",
+    "nat": 150,
+    "css": 101,
+    "nameClip": false,
+    "inView": true,
+    "h": 166,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   },
+   {
+    "name": "Amanul Farhan",
+    "role": "Technical Lead",
+    "loaded": true,
+    "alt": "Portrait of Amanul Farhan",
+    "cur": "amanul-farhan-300.webp",
+    "nat": 150,
+    "css": 101,
+    "nameClip": false,
+    "inView": true,
+    "h": 166,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   },
+   {
+    "name": "Govind J S",
+    "role": "Creative Lead",
+    "loaded": true,
+    "alt": "Portrait of Govind J S",
+    "cur": "govind-j-s-300.webp",
+    "nat": 150,
+    "css": 101,
+    "nameClip": false,
+    "inView": true,
+    "h": 166,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   },
+   {
+    "name": "Hanin C K",
+    "role": "Operational Lead",
+    "loaded": true,
+    "alt": "Portrait of Hanin C K",
+    "cur": "hanin-c-k-300.webp",
+    "nat": 150,
+    "css": 101,
+    "nameClip": false,
+    "inView": true,
+    "h": 166,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   }
+  ]
+ },
+ "320: no portrait upscaled (CSS width <= file width)": {
+  "pass": true,
+  "info": [
+   [
+    "nithin-jayakumar-300.webp",
+    150,
+    101
+   ],
+   [
+    "amanul-farhan-300.webp",
+    150,
+    101
+   ],
+   [
+    "govind-j-s-300.webp",
+    150,
+    101
+   ],
+   [
+    "hanin-c-k-300.webp",
+    150,
+    101
+   ]
+  ]
+ },
+ "320: names not clipped, cards inside viewport": {
+  "pass": true,
+  "info": ""
+ },
+ "320: names are h3 inside articles; cards carry no dead controls": {
+  "pass": true,
+  "info": ""
+ },
+ "320: layout columns 1": {
+  "pass": true,
+  "info": 1
+ },
+ "390: no horizontal overflow": {
+  "pass": true,
+  "info": 390
+ },
+ "390: no console errors / external requests": {
+  "pass": true,
+  "info": [
+   [],
+   []
+  ]
+ },
+ "390: directory lists all 21 unique members with exact names and roles": {
+  "pass": true,
+  "info": [
+   [
+    "Geetha S",
+    null
+   ],
+   [
+    "Nithin Jayakumar",
+    "Campus Lead"
+   ],
+   [
+    "Divyalakshmi",
+    null
+   ]
+  ]
+ },
+ "390: exactly the four featured are flagged \"Featured above\"": {
+  "pass": true,
+  "info": ""
+ },
+ "390: featured cards and directory refer to the same 4 people (no 25-person count)": {
+  "pass": true,
+  "info": ""
+ },
+ "390: directory portraits loaded, decorative alt, not upscaled": {
+  "pass": true,
+  "info": []
+ },
+ "390: directory names not clipped, entries inside viewport": {
+  "pass": true,
+  "info": ""
+ },
+ "390: directory columns 1": {
+  "pass": true,
+  "info": 1
+ },
+ "390: four featured cards, names and roles exact, in order": {
+  "pass": true,
+  "info": [
+   [
+    "Nithin Jayakumar",
+    "Campus Lead"
+   ],
+   [
+    "Amanul Farhan",
+    "Technical Lead"
+   ],
+   [
+    "Govind J S",
+    "Creative Lead"
+   ],
+   [
+    "Hanin C K",
+    "Operational Lead"
+   ]
+  ]
+ },
+ "390: featured portraits loaded with alt \"Portrait of <name>\"": {
+  "pass": true,
+  "info": [
+   {
+    "name": "Nithin Jayakumar",
+    "role": "Campus Lead",
+    "loaded": true,
+    "alt": "Portrait of Nithin Jayakumar",
+    "cur": "nithin-jayakumar-300.webp",
+    "nat": 150,
+    "css": 130,
+    "nameClip": false,
+    "inView": true,
+    "h": 199,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   },
+   {
+    "name": "Amanul Farhan",
+    "role": "Technical Lead",
+    "loaded": true,
+    "alt": "Portrait of Amanul Farhan",
+    "cur": "amanul-farhan-300.webp",
+    "nat": 150,
+    "css": 130,
+    "nameClip": false,
+    "inView": true,
+    "h": 199,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   },
+   {
+    "name": "Govind J S",
+    "role": "Creative Lead",
+    "loaded": true,
+    "alt": "Portrait of Govind J S",
+    "cur": "govind-j-s-300.webp",
+    "nat": 150,
+    "css": 130,
+    "nameClip": false,
+    "inView": true,
+    "h": 199,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   },
+   {
+    "name": "Hanin C K",
+    "role": "Operational Lead",
+    "loaded": true,
+    "alt": "Portrait of Hanin C K",
+    "cur": "hanin-c-k-300.webp",
+    "nat": 150,
+    "css": 130,
+    "nameClip": false,
+    "inView": true,
+    "h": 199,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   }
+  ]
+ },
+ "390: no portrait upscaled (CSS width <= file width)": {
+  "pass": true,
+  "info": [
+   [
+    "nithin-jayakumar-300.webp",
+    150,
+    130
+   ],
+   [
+    "amanul-farhan-300.webp",
+    150,
+    130
+   ],
+   [
+    "govind-j-s-300.webp",
+    150,
+    130
+   ],
+   [
+    "hanin-c-k-300.webp",
+    150,
+    130
+   ]
+  ]
+ },
+ "390: names not clipped, cards inside viewport": {
+  "pass": true,
+  "info": ""
+ },
+ "390: names are h3 inside articles; cards carry no dead controls": {
+  "pass": true,
+  "info": ""
+ },
+ "390: layout columns 1": {
+  "pass": true,
+  "info": 1
+ },
+ "768: no horizontal overflow": {
+  "pass": true,
+  "info": 768
+ },
+ "768: no console errors / external requests": {
+  "pass": true,
+  "info": [
+   [],
+   []
+  ]
+ },
+ "768: directory lists all 21 unique members with exact names and roles": {
+  "pass": true,
+  "info": [
+   [
+    "Geetha S",
+    null
+   ],
+   [
+    "Nithin Jayakumar",
+    "Campus Lead"
+   ],
+   [
+    "Divyalakshmi",
+    null
+   ]
+  ]
+ },
+ "768: exactly the four featured are flagged \"Featured above\"": {
+  "pass": true,
+  "info": ""
+ },
+ "768: featured cards and directory refer to the same 4 people (no 25-person count)": {
+  "pass": true,
+  "info": ""
+ },
+ "768: directory portraits loaded, decorative alt, not upscaled": {
+  "pass": true,
+  "info": []
+ },
+ "768: directory names not clipped, entries inside viewport": {
+  "pass": true,
+  "info": ""
+ },
+ "768: directory columns 2": {
+  "pass": true,
+  "info": 2
+ },
+ "768: four featured cards, names and roles exact, in order": {
+  "pass": true,
+  "info": [
+   [
+    "Nithin Jayakumar",
+    "Campus Lead"
+   ],
+   [
+    "Amanul Farhan",
+    "Technical Lead"
+   ],
+   [
+    "Govind J S",
+    "Creative Lead"
+   ],
+   [
+    "Hanin C K",
+    "Operational Lead"
+   ]
+  ]
+ },
+ "768: featured portraits loaded with alt \"Portrait of <name>\"": {
+  "pass": true,
+  "info": [
+   {
+    "name": "Nithin Jayakumar",
+    "role": "Campus Lead",
+    "loaded": true,
+    "alt": "Portrait of Nithin Jayakumar",
+    "cur": "nithin-jayakumar-600.webp",
+    "nat": 330,
+    "css": 288,
+    "nameClip": false,
+    "inView": true,
+    "h": 494,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   },
+   {
+    "name": "Amanul Farhan",
+    "role": "Technical Lead",
+    "loaded": true,
+    "alt": "Portrait of Amanul Farhan",
+    "cur": "amanul-farhan-600.webp",
+    "nat": 330,
+    "css": 288,
+    "nameClip": false,
+    "inView": true,
+    "h": 494,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   },
+   {
+    "name": "Govind J S",
+    "role": "Creative Lead",
+    "loaded": true,
+    "alt": "Portrait of Govind J S",
+    "cur": "govind-j-s-600.webp",
+    "nat": 330,
+    "css": 288,
+    "nameClip": false,
+    "inView": true,
+    "h": 494,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   },
+   {
+    "name": "Hanin C K",
+    "role": "Operational Lead",
+    "loaded": true,
+    "alt": "Portrait of Hanin C K",
+    "cur": "hanin-c-k-600.webp",
+    "nat": 330,
+    "css": 288,
+    "nameClip": false,
+    "inView": true,
+    "h": 494,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   }
+  ]
+ },
+ "768: no portrait upscaled (CSS width <= file width)": {
+  "pass": true,
+  "info": [
+   [
+    "nithin-jayakumar-600.webp",
+    330,
+    288
+   ],
+   [
+    "amanul-farhan-600.webp",
+    330,
+    288
+   ],
+   [
+    "govind-j-s-600.webp",
+    330,
+    288
+   ],
+   [
+    "hanin-c-k-600.webp",
+    330,
+    288
+   ]
+  ]
+ },
+ "768: names not clipped, cards inside viewport": {
+  "pass": true,
+  "info": ""
+ },
+ "768: names are h3 inside articles; cards carry no dead controls": {
+  "pass": true,
+  "info": ""
+ },
+ "768: layout columns 2": {
+  "pass": true,
+  "info": 2
+ },
+ "1024: no horizontal overflow": {
+  "pass": true,
+  "info": 1024
+ },
+ "1024: no console errors / external requests": {
+  "pass": true,
+  "info": [
+   [],
+   []
+  ]
+ },
+ "1024: directory lists all 21 unique members with exact names and roles": {
+  "pass": true,
+  "info": [
+   [
+    "Geetha S",
+    null
+   ],
+   [
+    "Nithin Jayakumar",
+    "Campus Lead"
+   ],
+   [
+    "Divyalakshmi",
+    null
+   ]
+  ]
+ },
+ "1024: exactly the four featured are flagged \"Featured above\"": {
+  "pass": true,
+  "info": ""
+ },
+ "1024: featured cards and directory refer to the same 4 people (no 25-person count)": {
+  "pass": true,
+  "info": ""
+ },
+ "1024: directory portraits loaded, decorative alt, not upscaled": {
+  "pass": true,
+  "info": []
+ },
+ "1024: directory names not clipped, entries inside viewport": {
+  "pass": true,
+  "info": ""
+ },
+ "1024: directory columns 3": {
+  "pass": true,
+  "info": 3
+ },
+ "1024: four featured cards, names and roles exact, in order": {
+  "pass": true,
+  "info": [
+   [
+    "Nithin Jayakumar",
+    "Campus Lead"
+   ],
+   [
+    "Amanul Farhan",
+    "Technical Lead"
+   ],
+   [
+    "Govind J S",
+    "Creative Lead"
+   ],
+   [
+    "Hanin C K",
+    "Operational Lead"
+   ]
+  ]
+ },
+ "1024: featured portraits loaded with alt \"Portrait of <name>\"": {
+  "pass": true,
+  "info": [
+   {
+    "name": "Nithin Jayakumar",
+    "role": "Campus Lead",
+    "loaded": true,
+    "alt": "Portrait of Nithin Jayakumar",
+    "cur": "nithin-jayakumar-300.webp",
+    "nat": 260,
+    "css": 157,
+    "nameClip": false,
+    "inView": true,
+    "h": 374,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   },
+   {
+    "name": "Amanul Farhan",
+    "role": "Technical Lead",
+    "loaded": true,
+    "alt": "Portrait of Amanul Farhan",
+    "cur": "amanul-farhan-300.webp",
+    "nat": 260,
+    "css": 157,
+    "nameClip": false,
+    "inView": true,
+    "h": 374,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   },
+   {
+    "name": "Govind J S",
+    "role": "Creative Lead",
+    "loaded": true,
+    "alt": "Portrait of Govind J S",
+    "cur": "govind-j-s-300.webp",
+    "nat": 260,
+    "css": 157,
+    "nameClip": false,
+    "inView": true,
+    "h": 345,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   },
+   {
+    "name": "Hanin C K",
+    "role": "Operational Lead",
+    "loaded": true,
+    "alt": "Portrait of Hanin C K",
+    "cur": "hanin-c-k-300.webp",
+    "nat": 260,
+    "css": 157,
+    "nameClip": false,
+    "inView": true,
+    "h": 345,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   }
+  ]
+ },
+ "1024: no portrait upscaled (CSS width <= file width)": {
+  "pass": true,
+  "info": [
+   [
+    "nithin-jayakumar-300.webp",
+    260,
+    157
+   ],
+   [
+    "amanul-farhan-300.webp",
+    260,
+    157
+   ],
+   [
+    "govind-j-s-300.webp",
+    260,
+    157
+   ],
+   [
+    "hanin-c-k-300.webp",
+    260,
+    157
+   ]
+  ]
+ },
+ "1024: names not clipped, cards inside viewport": {
+  "pass": true,
+  "info": ""
+ },
+ "1024: names are h3 inside articles; cards carry no dead controls": {
+  "pass": true,
+  "info": ""
+ },
+ "1024: layout columns 4": {
+  "pass": true,
+  "info": 4
+ },
+ "#team is a <section> labelled by its h2": {
+  "pass": true,
+  "info": ""
+ },
+ "no empty #team stub span remains": {
+  "pass": true,
+  "info": ""
+ },
+ "section order Offers > Events > Team > Memories stub > Join": {
+  "pass": true,
+  "info": ""
+ },
+ "nav Team link targets the real section": {
+  "pass": true,
+  "info": ""
+ },
+ "21 roster entries, 4 featured, names unique (no 25-member impression)": {
+  "pass": true,
+  "info": ""
+ },
+ "roster text = names in roster order": {
+  "pass": true,
+  "info": ""
+ },
+ "held titles are NOT in the page, other roles are": {
+  "pass": true,
+  "info": ""
+ },
+ "no invented stats/bios in section": {
+  "pass": true,
+  "info": ""
+ },
+ "1440: no horizontal overflow": {
+  "pass": true,
+  "info": 1440
+ },
+ "1440: no console errors / external requests": {
+  "pass": true,
+  "info": [
+   [],
+   []
+  ]
+ },
+ "1440: directory lists all 21 unique members with exact names and roles": {
+  "pass": true,
+  "info": [
+   [
+    "Geetha S",
+    null
+   ],
+   [
+    "Nithin Jayakumar",
+    "Campus Lead"
+   ],
+   [
+    "Divyalakshmi",
+    null
+   ]
+  ]
+ },
+ "1440: exactly the four featured are flagged \"Featured above\"": {
+  "pass": true,
+  "info": ""
+ },
+ "1440: featured cards and directory refer to the same 4 people (no 25-person count)": {
+  "pass": true,
+  "info": ""
+ },
+ "1440: directory portraits loaded, decorative alt, not upscaled": {
+  "pass": true,
+  "info": []
+ },
+ "1440: directory names not clipped, entries inside viewport": {
+  "pass": true,
+  "info": ""
+ },
+ "1440: directory columns 3": {
+  "pass": true,
+  "info": 3
+ },
+ "1440: four featured cards, names and roles exact, in order": {
+  "pass": true,
+  "info": [
+   [
+    "Nithin Jayakumar",
+    "Campus Lead"
+   ],
+   [
+    "Amanul Farhan",
+    "Technical Lead"
+   ],
+   [
+    "Govind J S",
+    "Creative Lead"
+   ],
+   [
+    "Hanin C K",
+    "Operational Lead"
+   ]
+  ]
+ },
+ "1440: featured portraits loaded with alt \"Portrait of <name>\"": {
+  "pass": true,
+  "info": [
+   {
+    "name": "Nithin Jayakumar",
+    "role": "Campus Lead",
+    "loaded": true,
+    "alt": "Portrait of Nithin Jayakumar",
+    "cur": "nithin-jayakumar-300.webp",
+    "nat": 260,
+    "css": 221,
+    "nameClip": false,
+    "inView": true,
+    "h": 418,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   },
+   {
+    "name": "Amanul Farhan",
+    "role": "Technical Lead",
+    "loaded": true,
+    "alt": "Portrait of Amanul Farhan",
+    "cur": "amanul-farhan-300.webp",
+    "nat": 260,
+    "css": 221,
+    "nameClip": false,
+    "inView": true,
+    "h": 418,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   },
+   {
+    "name": "Govind J S",
+    "role": "Creative Lead",
+    "loaded": true,
+    "alt": "Portrait of Govind J S",
+    "cur": "govind-j-s-300.webp",
+    "nat": 260,
+    "css": 221,
+    "nameClip": false,
+    "inView": true,
+    "h": 418,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   },
+   {
+    "name": "Hanin C K",
+    "role": "Operational Lead",
+    "loaded": true,
+    "alt": "Portrait of Hanin C K",
+    "cur": "hanin-c-k-300.webp",
+    "nat": 260,
+    "css": 221,
+    "nameClip": false,
+    "inView": true,
+    "h": 418,
+    "tag": "ARTICLE",
+    "inter": 0,
+    "hd": "H3"
+   }
+  ]
+ },
+ "1440: no portrait upscaled (CSS width <= file width)": {
+  "pass": true,
+  "info": [
+   [
+    "nithin-jayakumar-300.webp",
+    260,
+    221
+   ],
+   [
+    "amanul-farhan-300.webp",
+    260,
+    221
+   ],
+   [
+    "govind-j-s-300.webp",
+    260,
+    221
+   ],
+   [
+    "hanin-c-k-300.webp",
+    260,
+    221
+   ]
+  ]
+ },
+ "1440: names not clipped, cards inside viewport": {
+  "pass": true,
+  "info": ""
+ },
+ "1440: names are h3 inside articles; cards carry no dead controls": {
+  "pass": true,
+  "info": ""
+ },
+ "1440: layout columns 4": {
+  "pass": true,
+  "info": 4
+ },
+ "header Team link scrolls to the section, landing below the sticky header": {
+  "pass": true,
+  "info": 92.171875
+ },
+ "6.4 normal: after settling, everything visible (opacity 1), 21 + 4 present": {
+  "pass": true,
+  "info": {
+   "n": 29,
+   "hidden": 0,
+   "roster": 21,
+   "feat": 4,
+   "motion": true
+  }
+ },
+ "6.4 normal: js-motion class set": {
+  "pass": true,
+  "info": true
+ },
+ "6.4 normal: no leftover inline transform/opacity after the entrance": {
+  "pass": true,
+  "info": 0
+ },
+ "6.4 reduced-motion: after settling, everything visible (opacity 1), 21 + 4 present": {
+  "pass": true,
+  "info": {
+   "n": 29,
+   "hidden": 0,
+   "roster": 21,
+   "feat": 4,
+   "motion": false
+  }
+ },
+ "6.4 reduced-motion: js-motion class absent": {
+  "pass": true,
+  "info": false
+ },
+ "6.4 reduced-motion: no leftover inline transform/opacity after the entrance": {
+  "pass": true,
+  "info": 0
+ },
+ "6.4 GSAP blocked: after settling, everything visible (opacity 1), 21 + 4 present": {
+  "pass": true,
+  "info": {
+   "n": 29,
+   "hidden": 0,
+   "roster": 21,
+   "feat": 4,
+   "motion": false
+  }
+ },
+ "6.4 GSAP blocked: js-motion class absent": {
+  "pass": true,
+  "info": false
+ },
+ "6.4 GSAP blocked: no leftover inline transform/opacity after the entrance": {
+  "pass": true,
+  "info": 0
+ },
+ "6.4 JS disabled: all 21 roster entries + 4 featured cards present and visible": {
+  "pass": true,
+  "info": [
+   21,
+   4,
+   true
+  ]
+ },
+ "6.4 keyboard: no focusable controls inside featured cards or roster (nothing dead to tab to)": {
+  "pass": true,
+  "info": ""
+ },
+ "6.4 keyboard: tabbing from the Team nav link never lands on a hidden/inert element": {
+  "pass": true,
+  "info": ""
+ },
+ "6.4 team entrance causes no layout shift beyond CLS 0.01 (page-wide)": {
+  "pass": true,
+  "info": 2.513221153846154e-05
+ }
+}

@@ -1,0 +1,103 @@
+/* ==========================================================================
+   team.css — Team & member directory (Phase 6.1 structure; 6.2 featured cards, 6.3 directory, 6.4 interaction)
+   Rules: flat colour only, 2px navy lines, hard shadows, "µ" never uppercased, decorations never over text.
+   ========================================================================== */
+.team{position:relative;isolation:isolate;background:var(--c-bg);padding-block:var(--s-8) var(--section-y)}
+.team__head{gap:var(--s-2);max-width:48rem;margin-block-end:var(--s-8)}
+.team__head .section-label{text-transform:none;letter-spacing:.02em;font-size:var(--fs-meta)}
+.team__title{font-size:clamp(3rem,1.5rem + 6vw,6.25rem);line-height:.9;letter-spacing:-.04em}
+.team__title .hl{box-shadow:inset 0 -.2em 0 var(--c-accent)}
+.team__lead{max-width:38rem;color:var(--c-ink)}
+.team__group + .team__group{margin-block-start:var(--s-10)}
+.team__group-label{display:inline-block;margin:0 0 var(--s-3);padding-block-end:var(--s-0);border-block-end:3px solid var(--c-ink);
+  font-size:var(--fs-meta);font-weight:var(--fw-xbold);letter-spacing:var(--ls-label);text-transform:uppercase;line-height:1.3}
+.team__featured,.roster{list-style:none;margin:0;padding:0}
+
+/* ==========================================================================
+   Featured cards (6.2) — Board 1 portrait cards on yellow / indigo / mint backdrops with a white label bar,
+   Board 2 hard shadows, tilt and stagger. Portraits stay whole (5/6 frame = the 300x360 derivative's ratio).
+   ========================================================================== */
+.team__featured{display:grid;gap:var(--s-5) var(--s-4);grid-template-columns:minmax(0,1fr);padding-block-start:var(--s-2)}
+.member{display:flex;min-width:0;position:relative}
+.member-card{
+  --card-pad:0; --card-shadow:var(--shadow-7); --focus-ring:var(--c-ink); --focus-gap:var(--card-bg);
+  width:100%; gap:0; overflow:visible; flex-direction:row;
+}
+.member-card--yellow{--card-bg:var(--c-accent)}
+.member-card--indigo{--card-bg:var(--c-primary);--focus-ring:var(--c-ink)}
+.member-card--mint{--card-bg:var(--c-mint)}
+.member-card:hover,.member-card:focus-within{transform:translate(-3px,-3px);box-shadow:var(--shadow-9)}
+.member-card__photo{
+  --rot:-1.5deg; margin:var(--s-2); flex:0 0 40%; max-width:40%; align-self:center; padding:var(--s-0);
+  background:var(--c-surface); border:var(--border); border-radius:6px; box-shadow:var(--shadow-5);
+  transform:rotate(var(--rot)); transition:transform var(--t-med) var(--ease-out);
+}
+.member:nth-child(even) .member-card__photo{--rot:1.5deg}
+.member-card:hover .member-card__photo,.member-card:focus-within .member-card__photo{transform:rotate(0)}
+.member-card__photo img{display:block;width:100%;aspect-ratio:5/6;object-fit:cover;border:1px solid var(--c-ink);border-radius:3px;background:var(--c-bg)}
+.member-card__photo--mono{display:grid;place-items:center;aspect-ratio:5/6;font:var(--fw-xbold) 2.5rem/1 var(--font-display);letter-spacing:-.03em}
+.member-card__body{
+  display:flex; flex-direction:column; justify-content:center; gap:var(--s-1); flex:1; min-width:0;
+  padding:var(--s-2); background:var(--c-surface); border-inline-start:var(--border); border-radius:0 calc(var(--r-lg) - 2px) calc(var(--r-lg) - 2px) 0;
+}
+.member-card__name{font:var(--fw-xbold) clamp(1.375rem,1.15rem + 1vw,1.75rem)/1.05 var(--font-display);letter-spacing:-.03em;text-wrap:balance;overflow-wrap:anywhere}
+.member-card__role{
+  align-self:flex-start; margin:0; padding:2px var(--s-1); background:var(--c-bg); border:var(--border); border-radius:var(--r-sm);
+  font-size:var(--fs-meta); font-weight:var(--fw-semibold); line-height:1.3;
+}
+.member--featured .member-card__stk{--size:48px;--r:-8px;--y:-20px;--rot:12deg;z-index:3}
+/* 600-1023: two-up vertical cards */
+@media (min-width:600px){
+  .team__featured{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s-6) var(--s-5)}
+  .member-card{flex-direction:column}
+  .member-card__photo{flex:none;max-width:none;align-self:stretch;margin:var(--s-2) var(--s-2) 0;padding:var(--s-1)}
+  .member-card__body{border-inline-start:0;border-block-start:var(--border);border-radius:0 0 calc(var(--r-lg) - 2px) calc(var(--r-lg) - 2px);margin-block-start:var(--s-2);padding:var(--s-2) var(--s-2) var(--s-3);justify-content:flex-start}
+}
+/* >=1024: four-up with Board 2 vertical stagger */
+@media (min-width:1024px){
+  .team__featured{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s-5);align-items:start}
+  .member--featured:nth-child(2){margin-block-start:var(--s-5)}
+  .member--featured:nth-child(3){margin-block-start:var(--s-1)}
+  .member--featured:nth-child(4){margin-block-start:var(--s-6)}
+}
+@media (max-width:599.98px){
+  .member-card{--card-shadow:var(--shadow-6)}
+  .member--featured .member-card__stk{--size:40px}
+}
+
+/* ==========================================================================
+   Directory (6.3) — one list of all 21 in roster order (no invented hierarchy). Board 2 lavender panel with white
+   Board 1-style entries: small framed portrait (rotating colour mat), numeral, name, role. Featured four carry a text flag.
+   ========================================================================== */
+.team__dir-note{margin:calc(var(--s-1) * -1) 0 var(--s-3);max-width:38rem;color:var(--text-muted);font-size:var(--fs-meta)}
+.roster-panel{padding:var(--s-2);background:var(--c-lavender);border:var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow-7)}
+.roster{display:grid;gap:var(--s-2);grid-template-columns:minmax(0,1fr)}
+.roster__item{
+  --mat:var(--c-accent); display:flex; align-items:center; gap:var(--s-2); min-width:0; padding:var(--s-1);
+  background:var(--c-surface); border:var(--border); border-radius:var(--r-md); box-shadow:var(--shadow-3);
+  transition:transform var(--t-fast) var(--ease-out),box-shadow var(--t-fast) var(--ease-out);
+}
+.roster__item:nth-child(4n+2){--mat:var(--c-mint)}
+.roster__item:nth-child(4n+3){--mat:var(--c-coral)}
+.roster__item:nth-child(4n){--mat:var(--c-primary)}
+.roster__item:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-5)}
+.roster__photo{margin:0;flex:0 0 72px;width:72px;padding:var(--s-0);background:var(--mat);border:var(--border);border-radius:6px}
+.roster__photo img{display:block;width:100%;aspect-ratio:5/6;object-fit:cover;border:1px solid var(--c-ink);border-radius:3px;background:var(--c-bg)}
+.roster__photo--mono{display:grid;place-items:center;aspect-ratio:5/6;font:var(--fw-xbold) 1.25rem/1 var(--font-display)}
+.roster__text{display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-width:0;flex:1}
+.roster__num{font:var(--fw-xbold) .75rem/1 var(--font-display);letter-spacing:.06em;padding:2px 6px;background:var(--c-bg);border:var(--border);border-radius:var(--r-sm)}
+.roster__name{font:var(--fw-xbold) 1.0625rem/1.15 var(--font-display);letter-spacing:-.02em;overflow-wrap:anywhere}
+.roster__role{font-size:var(--fs-meta);line-height:1.3;color:var(--text-muted);overflow-wrap:anywhere}
+.roster__flag{margin-block-start:2px;padding:1px var(--s-1);background:var(--c-accent);border:var(--border);border-radius:var(--r-sm);font-size:var(--fs-micro);font-weight:var(--fw-bold);line-height:1.4}
+.roster__item--featured{border-width:3px}
+@media (min-width:700px){.roster{grid-template-columns:repeat(2,minmax(0,1fr))}.roster-panel{padding:var(--s-3)}.roster{gap:var(--s-3) var(--s-3)}}
+@media (min-width:1024px){.roster{grid-template-columns:repeat(3,minmax(0,1fr))}.roster__photo{flex-basis:84px;width:84px}}
+
+/* ---------- Section decorations (never over text) ---------- */
+.team__bg-grid{--w:200px;--h:150px;--r:2%;--y:90px;--op:.35;display:none}
+@media (min-width:640px){.team__bg-grid{display:block}}
+.team__s-tri{--size:52px;--x:calc(var(--gutter) - 12px);--y:30px;--rot:-10deg}
+.team__s-star{--size:64px;--r:8%;--y:60px;--rot:12deg}
+.team__s-asterisk{--size:84px;--r:22%;--y:130px;--rot:8deg}
+.team__s-squig{--size:130px;--r:3%;--b:10px;--rot:-6deg;display:none}
+@media (min-width:1024px){.team__s-squig{display:block}}

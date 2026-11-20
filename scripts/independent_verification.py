@@ -49,8 +49,10 @@ def check_content_data():
     with open(team_path, "r", encoding="utf-8") as f:
         team_txt = f.read()
     
-    # Count team entries
+    # Count team entries (supports both object notation and constructor call M(n, ...))
     team_ids = re.findall(r'id:\s*"(team-\d+-[^"]+)"', team_txt)
+    if not team_ids:
+        team_ids = re.findall(r'M\(\s*(\d+),', team_txt)
     print(f"Team members in team.js: {len(team_ids)}")
     
     # Key roles
