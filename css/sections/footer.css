@@ -7,7 +7,7 @@
 .footer__edge .edge{display:block}
 .site-footer{position:relative;isolation:isolate;overflow:clip;background:var(--c-ink);color:var(--c-bg);padding-block:var(--s-8) var(--s-4)}
 .site-footer a{color:inherit}
-.site-footer a:hover{text-decoration-color:var(--c-accent)}
+.site-footer a:hover{text-decoration-color:var(--c-accent);text-decoration-skip-ink:none}
 
 /* closing tagline */
 .footer__big{font:var(--fw-xbold) clamp(3rem,1.6rem + 6.2vw,8.5rem)/.88 var(--font-display);letter-spacing:-.045em;margin-block-end:var(--s-8);max-width:14ch}
@@ -26,7 +26,7 @@
 .site-footer .brand__mark{--fill:var(--c-bg)}
 .site-footer .brand__chn{color:var(--c-ink);box-shadow:2px 2px 0 var(--c-primary)}
 .footer__about{max-width:26rem;font-size:1.0625rem}
-.footer__org{display:inline-block;padding-block:10px;line-height:1.3;min-height:44px;font-weight:var(--fw-bold);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.25em;text-decoration-color:var(--c-accent)}
+.footer__org{display:inline-block;padding-block:10px;line-height:1.3;min-height:44px;font-weight:var(--fw-bold);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.25em;text-decoration-skip-ink:none;text-decoration-color:var(--c-accent)}
 .footer__org .icon{display:inline-block;width:1em;height:1em;vertical-align:-.14em;margin-inline-start:.3em}
 
 /* labels */
@@ -52,7 +52,7 @@
 /* bottom bar */
 .footer__bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s-1) var(--s-4);margin-block-start:var(--s-8);padding-block-start:var(--s-3);border-block-start:2px dashed var(--c-bg)}
 .footer__legal{margin:0;font-size:var(--fs-meta);font-weight:var(--fw-semibold)}
-.footer__top{display:inline-flex;align-items:center;gap:.4em;min-height:44px;font-weight:var(--fw-bold);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.25em;text-decoration-color:var(--c-accent)}
+.footer__top{display:inline-flex;align-items:center;gap:.4em;min-height:44px;font-weight:var(--fw-bold);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.25em;text-decoration-skip-ink:none;text-decoration-color:var(--c-accent)}
 .footer__top .icon{width:1em;height:1em}
 
 /* decorations (aria-hidden, never over text) */

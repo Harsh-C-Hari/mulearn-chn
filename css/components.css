@@ -43,9 +43,9 @@
 /* ---------- Text links ---------- */
 .link{
   display:inline-flex; align-items:center; gap:.35em; font-weight:var(--fw-bold); min-height:44px;  /* 4.2: touch target (WCAG 2.5.8) */
-  color:var(--link); text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:.25em;
+  color:var(--link); text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:.25em; text-decoration-skip-ink:none;
 }
-.link:hover{text-decoration-thickness:4px;text-decoration-color:var(--c-primary-strong)}
+.link:hover{text-decoration-thickness:4px;text-decoration-color:var(--c-primary-strong);text-decoration-skip-ink:none}
 .link .icon{width:1em;height:1em;transition:transform var(--t-fast) var(--ease-out)}
 .link:hover .icon{transform:translate(2px,-2px)}
 
