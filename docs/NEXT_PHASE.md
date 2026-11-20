@@ -11,6 +11,8 @@ Scaffold the website architecture, vendor runtime dependencies, configure typogr
 
 Do not write full section copy or implement page-level layouts during Phase 2. Focus on the foundational design system as code.
 
+Ensure that all design tokens, component markup, and script scaffolding strictly consume the canonical data files (`data/links.js`, `data/team.js`, `data/events.js`, `data/memories.js`) adhering to the 3-tier verification framework established in Phase 1.
+
 ---
 
 ## 2. Phase 2 Scope & Tasks
@@ -46,10 +48,17 @@ Do not write full section copy or implement page-level layouts during Phase 2. F
    - SVG Decorative Stickers: inline SVG definitions for Asterisk, Star, Triangle, Squiggle, and Dotted Grids.
    - SVG Icon Sprite: inline Lucide-style SVG icons (`arrow-right`, `arrow-up-right`, `x`, `menu`, `chevron-left/right`, `mail`, `external-link`).
 
-5. **Styleguide & Component Test Page (`styleguide.html`):**
+5. **Data Integration Preparation:**
+   Ensure components are designed to accept data from `window.MULEARN`:
+   - Links: Primary CTAs consume `window.MULEARN.links.register` and `.discord`; socials consume `.linkedin`, `.instagram`, `.email`.
+   - Events: Event cards and dialogs consume `window.MULEARN.events` (supporting 3 featured cards + 4 compact cards; displaying unstated years gracefully without placeholder text).
+   - Team: Team grid consumes `window.MULEARN.team` (displaying 4 featured members on page; modal/expanded directory displaying all 21 members).
+   - Memories: Collage consumes `window.MULEARN.memories.collageFrames`; lightbox consumes `window.MULEARN.memories.lightboxGallery`.
+
+6. **Styleguide & Component Test Page (`styleguide.html`):**
    Build `styleguide.html` showcasing all tokens, font hierarchy, contrast checks, every component in all interactive states (default, hover, active, focus, disabled), and responsive views.
 
-6. **Accessibility & Quality Checks:**
+7. **Accessibility & Quality Checks:**
    - Verify WCAG 2.2 AA contrast across all token pairs.
    - Ensure touch targets meet minimum 44×44px for primary controls.
    - Test `styleguide.html` with axe-core / Playwright; zero critical/serious issues.
@@ -76,3 +85,4 @@ Do not write full section copy or implement page-level layouts during Phase 2. F
 - Do NOT introduce gradients, blurred drop shadows, or glassmorphism.
 - Do NOT add runtime external CDN links. All assets and vendor scripts must be self-hosted.
 - Keep reduced-motion media query active.
+- Do NOT invent or alter content facts, dates, names, or URLs.

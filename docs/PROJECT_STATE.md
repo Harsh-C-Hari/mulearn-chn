@@ -1,13 +1,13 @@
 # PROJECT_STATE.md
 
-**Last updated:** 2026-11-20 · **Current phase:** 1 (Asset pipeline & content data) — COMPLETE · **Next phase:** 2 (Scaffold & design foundation)  
-**Project status:** Asset pipeline executed and verified; structured content data in place; website scaffolding and foundation ready to be created in Phase 2.
+**Last updated:** 2026-11-20 · **Current phase:** 1 (Asset pipeline & content data) — VERIFIED & CONSISTENT · **Next phase:** 2 (Scaffold & design foundation)  
+**Project status:** Asset pipeline verified; content data reconciled with Project Master Spec §7, §8, §9; 3-tier verification framework established; ready for Phase 2 scaffolding.
 
 ## Phase status
 | Phase | Name | Status |
 |---|---|---|
 | 0 | Master planning & audit | ✅ complete |
-| 1 | Asset pipeline & content data | ✅ complete |
+| 1 | Asset pipeline & content data | ✅ complete & reconciled |
 | 2 | Scaffold & design foundation | ⏳ next |
 | 3 | Header/nav + Hero + About | ⏳ |
 | 4 | Offers + Join + Footer | ⏳ |
@@ -21,20 +21,30 @@
 ## Files in this bundle and integrity
 | File | Status / Verification |
 |---|---|
-| `reference/ulearn_prototype_v1_UNMODIFIED.html` | ✅ Unmodified reference visual prototype |
+| `reference/ulearn_prototype_v1_UNMODIFIED.html` | ✅ Unmodified reference visual prototype (SHA-256 verified) |
 | `docs/ASSET_MANIFEST.json` | ✅ 49 manifest entries covering all 96 derivatives |
 | `docs/ASSET_MANIFEST.md` | ✅ Complete inventory, audit, and derivative documentation |
-| `docs/ASSET_MAPPING.md` | ✅ Final section mapping and resolution of D1, D2, D7, D9 |
-| `docs/asset-review.html` | ✅ Visual contact sheet for visual review |
-| `data/{links,team,events,memories}.js` | ✅ Canonical data modules attached to `window.MULEARN` |
+| `docs/ASSET_MAPPING.md` | ✅ Final section mapping, 3-tier verification framework, and resolution of D1, D2, D7, D9 |
+| `docs/asset-review.html` | ✅ Visual contact sheet for visual review (49 img elements, 0 broken) |
+| `data/links.js` | ✅ Canonical destinations per Spec §8; unconfirmed prototype alternatives documented |
+| `data/team.js` | ✅ Canonical 21-member roster (#1 Geetha S to #21 Swathy J); featured 4 per Spec §7.7 |
+| `data/events.js` | ✅ Exactly the 7 specified initiatives per Spec §7.4; unstated years kept null |
+| `data/memories.js` | ✅ 6-frame polaroid collage + 11-item lightbox gallery |
 | `img/{hero,about,events,team,memories,brand,og}/` | ✅ 96 derivatives, 4.17 MB total, 0 EXIF, 0 upscaled |
-| `scripts/{build_assets,extract_embedded,extract_frames,verify_project,generate_contact_sheet}.py` | ✅ Reproducible pipeline and test scripts |
+| `scripts/{build_assets,extract_embedded,extract_frames,verify_project,independent_verification}.py` | ✅ Reproducible pipeline and test scripts |
 
 Originals (`sources/mulearn`, 74 files) remain 100% untouched and are excluded from deployable bundles.
+
+## Content Verification Framework
+All project content is tracked under three explicit tiers:
+1. **Technically Verified:** Derivative file existence, decodability, pixel dimensions, zero upscaling, stripped EXIF/GPS metadata, byte size budgets ($\le 180\text{ KB}$ hero, $\le 70\text{ KB}$ team, $\le 60\text{ KB}$ event cards), and live HTTP route validity.
+2. **Source Document Verified:** 21 team member names and roles matched verbatim to `sources/mulearn/Team/` filenames; 7 event initiatives, podiums, speakers, and sponsors extracted from poster artwork in `sources/mulearn/Events/`; external URLs matching `PROJECT_MASTER_SPEC.md` §8.
+3. **Information Requiring Client Confirmation:** Unstated event years (Buildathon, Useless Projects, Web Slingers), "Lead Enabler" organizational role definition, "Entrepreneurship" IG official recognition, and prototype alternative URLs.
 
 ## Decisions log (newest first; overrides the spec)
 | Date | Decision | By |
 |---|---|---|
+| 2026-11-20 | Content Consistency Audit: Resolved reporting anomalies; confirmed canonical 21-member roster (#1 Geetha S to #21 Swathy J) and 7 specified initiatives; preserved client Spec §8 URLs; documented prototype alternatives in `data/links.js`. | Phase 1 Audit |
 | 2026-11-20 | Web Slingers poster details verified via RapidOCR: Date 27th October, Venue SDPK, Time 4:00 PM – 5:15 PM. No year invented. | Phase 1 |
 | 2026-11-20 | Tech Forge represented via extracted title frame ("TECHFORGE 2.0") from source video; no dates or venue invented. | Phase 1 |
 | 2026-11-20 | 5 genuine event photos (≥ 480px wide) extracted from posters into dedicated derivatives for dialogs and lightbox gallery. | Phase 1 |
