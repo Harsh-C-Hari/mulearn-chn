@@ -777,10 +777,13 @@
 /* Viewing stage */
 .lightbox-dialog__view {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
   align-items: center;
   justify-content: center;
   padding: var(--s-3);
+  gap: var(--s-3);
   background: var(--c-ink);
   color: var(--c-surface);
   min-height: 280px;
@@ -788,21 +791,18 @@
 
 @media (min-width: 768px) {
   .lightbox-dialog__view {
-    padding: var(--s-5) var(--s-8);
+    padding: var(--s-4) var(--s-4);
     min-height: 440px;
   }
 }
 
 .lightbox-dialog__figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 0;
-  gap: var(--s-3);
+  display: contents;
 }
 
 .lightbox-dialog__stage {
+  grid-row: 1;
+  grid-column: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -822,12 +822,14 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
-/* Navigation buttons (Desktop) */
+/* Universal floating navigation controls */
 .lightbox-dialog__nav {
-  display: none;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  display: inline-flex;
+  grid-row: 1;
+  grid-column: 1;
+  align-self: center;
+  position: sticky;
+  top: 72px;
   width: 48px;
   height: 48px;
   background: var(--c-surface);
@@ -836,42 +838,41 @@
   border-radius: var(--r-sm);
   box-shadow: var(--shadow-5);
   cursor: pointer;
-  z-index: 5;
+  z-index: 20;
+  isolation: isolate;
   align-items: center;
   justify-content: center;
   transition: transform var(--t-fast) var(--ease-out), box-shadow var(--t-fast) var(--ease-out), background-color var(--t-fast);
 }
 
-@media (min-width: 768px) {
-  .lightbox-dialog__nav {
-    display: inline-flex;
-  }
-  .lightbox-dialog__nav--prev {
-    left: var(--s-2);
-  }
-  .lightbox-dialog__nav--next {
-    right: var(--s-2);
-  }
+.lightbox-dialog__nav--prev {
+  justify-self: start;
+  margin-inline-start: var(--s-2);
+}
+
+.lightbox-dialog__nav--next {
+  justify-self: end;
+  margin-inline-end: var(--s-2);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .lightbox-dialog__nav:hover {
     background: var(--c-accent);
     box-shadow: var(--shadow-7);
-    transform: translateY(-50%) translate(-2px, -2px);
+    transform: translate(-2px, -2px);
   }
 }
 
 .lightbox-dialog__nav:focus-visible {
   background: var(--c-accent);
   box-shadow: var(--shadow-7);
-  transform: translateY(-50%) translate(-2px, -2px);
+  transform: translate(-2px, -2px);
   outline: 3px solid var(--c-primary);
   outline-offset: 3px;
 }
 
 .lightbox-dialog__nav:active {
-  transform: translateY(-50%) translate(1px, 1px);
+  transform: translate(1px, 1px);
   box-shadow: var(--shadow-3);
 }
 
@@ -882,6 +883,9 @@
 
 /* Caption container */
 .lightbox-dialog__caption-wrap {
+  grid-row: 2;
+  grid-column: 1;
+  justify-self: center;
   display: flex;
   flex-direction: column;
   gap: var(--s-1);
@@ -918,9 +922,9 @@
   color: var(--text-muted);
 }
 
-/* Mobile Nav Bar */
+/* Mobile Nav Bar - Hidden to avoid duplicate controls */
 .lightbox-dialog__mobile-nav {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
   padding: var(--s-2) var(--s-3);
