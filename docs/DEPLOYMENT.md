@@ -1,6 +1,6 @@
 # µLearn CHN — Vercel Deployment Guide & Handoff
 
-**Project:** µLearn CHN Official Community Website  
+**Project:** µLearn CHN community website  
 **Repository:** [https://github.com/Harsh-C-Hari/mulearn-chn](https://github.com/Harsh-C-Hari/mulearn-chn)  
 **Production Branch:** `main`  
 **Hosting Target:** Vercel (Static Web Architecture)  
@@ -34,42 +34,11 @@ Because the GitHub repository `Harsh-C-Hari/mulearn-chn` is a standalone reposit
 
 ---
 
-## 3. Optional `vercel.json` Security & Cache Configuration
+## 3. Vercel Configuration Policy
 
-A `vercel.json` is **not required** for deployment because Vercel automatically serves static HTML, CSS, JS, and image assets with standard MIME types and automatic HTTPS.
-
-However, if you wish to enforce hardened security headers and immutable asset caching, the following minimal, verified `vercel.json` may be added:
-
-```json
-{
-  "cleanUrls": true,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
-      ]
-    },
-    {
-      "source": "/(fonts|img|vendor)/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    },
-    {
-      "source": "/(.*).(html)?$",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
-      ]
-    }
-  ]
-}
-```
-
-> **Security Note:** Content Security Policy (CSP) is intentionally omitted from the initial headers to prevent accidental disruption of inline SVG symbols, theme scripts, and motion timelines.
+* **No `vercel.json` for Initial Deployment**: The website is a zero-build static project that uses Vercel's default static hosting behavior. Zero custom configuration files or custom headers are added for the initial release.
+* **Default Platform Caching**: Default platform caching is relied upon. Long-term immutable caching (such as 1-year cache headers) is intentionally avoided because asset filenames are not content-hashed; un-hashed static assets must allow immediate revalidation on subsequent deploys.
+* **Zero Runtime Overhead**: No build scripts, serverless functions, or environment variables are configured.
 
 ---
 
@@ -94,9 +63,8 @@ Follow these exact steps in your Vercel Dashboard when ready to deploy:
    - Click **Deploy**.
    - Deployment typically takes under 15 seconds for this static site.
 5. **Custom Domain Setup (Optional)**:
-   - Navigate to **Project Settings** → **Domains**.
-   - Add your custom domain (e.g., `mulearn.ceconline.edu` or `mulearn-chn.org`).
-   - Configure the DNS `CNAME` or `A` records per Vercel's prompt. SSL certificates are provisioned automatically.
+   - A custom domain should only be configured if an actual domain is officially supplied and approved.
+   - If approved, navigate to **Project Settings** → **Domains**, add the domain, and configure the DNS `CNAME` or `A` records as directed by Vercel. SSL certificates are provisioned automatically.
 
 ---
 
