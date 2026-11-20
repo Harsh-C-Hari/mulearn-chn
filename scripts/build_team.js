@@ -8,8 +8,18 @@ const T = window.MULEARN.team.slice().sort((a, b) => a.order - b.order);
 const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const pad = n => String(n).padStart(2, "0");
 
-/* Phase 6.2 featured card: tone-coloured card, framed portrait (photoShown guard -> neutral monogram), white label bar with name + role. */
-const STK = { yellow: ["sticker--indigo", "s-asterisk"], indigo: ["sticker--yellow sticker--outlined", "s-star"], mint: ["sticker--yellow sticker--outlined", "s-sparkle"] };
+/* Phase 6.2 / sticker anchoring: per-member map so all 4 featured cards have distinct shapes.
+ * 1: Nithin (yellow) -> indigo asterisk (#s-asterisk)
+ * 2: Amanul (indigo) -> yellow star (#s-star)
+ * 3: Govind (mint) -> yellow sparkle (#s-sparkle)
+ * 4: Hanin (yellow) -> coral bolt (#s-bolt, de-duplicated from Nithin's asterisk)
+ * The sticker is placed inside <article> so it rides along on hover translate. */
+const FEATURED_STK = {
+  1: ["sticker--indigo", "s-asterisk"],
+  2: ["sticker--yellow sticker--outlined", "s-star"],
+  3: ["sticker--yellow sticker--outlined", "s-sparkle"],
+  4: ["sticker--coral sticker--outlined", "s-bolt"]
+};
 const initials = n => n.split(/\s+/).map(w => w[0]).slice(0, 2).join("").toUpperCase();
 function photoFigure(m, cls, sizes) {
   const ph = m.photo;
@@ -21,7 +31,7 @@ function photoFigure(m, cls, sizes) {
   ].join("\n");
 }
 function featuredItem(m) {
-  const id = "member-" + m.id, stk = STK[m.tone];
+  const id = "member-" + m.id, stk = FEATURED_STK[m.featuredOrder] || ["sticker--indigo", "s-asterisk"];
   return [
     `      <li class="member member--featured member--${m.tone}" data-member="${m.id}">`,
     `        <article class="card member-card member-card--${m.tone}" aria-labelledby="${id}-name">`,
@@ -30,8 +40,8 @@ function featuredItem(m) {
     `            <h3 id="${id}-name" class="member-card__name">${esc(m.name)}</h3>`,
     m.roleLabel ? `            <p class="member-card__role">${esc(m.roleLabel)}</p>` : "",
     `          </div>`,
+    `          <span class="sticker ${stk[0]} member-card__stk" aria-hidden="true"><svg><use href="#${stk[1]}"/></svg></span>`,
     `        </article>`,
-    `        <span class="sticker ${stk[0]} member-card__stk" aria-hidden="true"><svg><use href="#${stk[1]}"/></svg></span>`,
     `      </li>`
   ].filter(Boolean).join("\n");
 }
