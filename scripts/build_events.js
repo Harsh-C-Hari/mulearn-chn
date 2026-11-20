@@ -9,19 +9,55 @@ const E = window.MULEARN.events.slice().sort((a, b) => a.order - b.order);
 const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const pad = n => String(n).padStart(2, "0");
 
-function card(e) {
-  const id = "event-" + e.slug;
+/* Phase 5.3 compact entry: coloured thumbnail field (poster shown whole), number, title, printed descriptor, date only if verified, button. */
+function compactCard(e) {
+  const id = "event-" + e.slug, t = e.thumb;
   const lines = [
-    `      <li class="event event--${e.group} event--${e.slug}" data-event="${e.slug}">`,
-    `        <article class="card event__card" aria-labelledby="${id}-title">`,
-    `          <span class="card__num event__num" aria-hidden="true">${pad(e.order)}</span>`,
-    `          <h3 id="${id}-title" class="card__title event__title">${esc(e.title)}</h3>`,
-    `          <p class="event__descriptor">${esc(e.descriptor)}</p>`
+    `      <li class="event event--compact event--${e.slug}" data-event="${e.slug}">`,
+    `        <article class="card event-mini event-mini--${e.tone}" aria-labelledby="${id}-title">`,
+    `          <figure class="event-mini__thumb">`,
+    `            <img src="${esc(t.src)}" srcset="${esc(t.srcset)}" sizes="(min-width:1024px) 220px, (min-width:700px) 300px, 130px" width="${t.width}" height="${t.height}" alt="${esc(e.image.alt)}" loading="lazy" decoding="async">`,
+    `          </figure>`,
+    `          <div class="event-mini__body">`,
+    `            <span class="event-mini__num" aria-hidden="true">${pad(e.order)}</span>`,
+    `            <h3 id="${id}-title" class="event-mini__title">${esc(e.title)}</h3>`,
+    `            <p class="event-mini__desc">${esc(e.descriptor)}</p>`
   ];
-  if (e.dateLabel) lines.push(`          <p class="event__date">${esc(e.dateLabel)}</p>`);
-  lines.push(`        </article>`, `      </li>`);
+  if (e.dateLabel) lines.push(`            <p class="event-mini__date"><span class="tag tag--ink">${esc(e.dateLabel)}</span></p>`);
+  lines.push(
+    `            <button type="button" class="btn btn--sm btn--neutral event-mini__btn" data-event-open="${e.slug}" aria-haspopup="dialog">View details<span class="sr-only"> for ${esc(e.title)}</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>`,
+    `          </div>`,
+    `        </article>`,
+    `      </li>`);
   return lines.join("\n");
 }
+
+/* Phase 5.2 featured card: poster in a framed, tilted mat; coloured card body; "View details" button (dialog arrives in 5.4). */
+const STK = { coral: ["sticker--yellow sticker--outlined", "s-star"], indigo: ["sticker--yellow sticker--outlined", "s-sparkle"], yellow: ["sticker--indigo", "s-asterisk"] };
+function featuredCard(e) {
+  const id = "event-" + e.slug, im = e.image.poster;
+  const lines = [
+    `      <li class="event event--featured event--${e.slug}" data-event="${e.slug}">`,
+    `        <article class="card event-card event-card--${e.tone}" aria-labelledby="${id}-title">`,
+    `          <span class="event-card__num" aria-hidden="true">${pad(e.order)}</span>`,
+    `          <figure class="event-card__poster">`,
+    `            <img src="${esc(im.src)}" width="${im.width}" height="${im.height}" alt="${esc(e.image.alt)}" loading="lazy" decoding="async">`,
+    `          </figure>`,
+    `          <div class="event-card__body">`,
+    `            <h3 id="${id}-title" class="event-card__title">${esc(e.title)}</h3>`,
+    `            <p class="event-card__blurb">${esc(e.blurb)}</p>`
+  ];
+  const tags = [e.dateLabel].concat(e.meta || []).filter(Boolean);
+  if (tags.length) lines.push(`            <ul class="tag-list event-card__tags" role="list">`, ...tags.map((t, i) => `              <li><span class="tag${i === 0 ? " tag--ink" : ""}">${esc(t)}</span></li>`), `            </ul>`);
+  lines.push(
+    `            <button type="button" class="btn btn--sm event-card__btn" data-event-open="${e.slug}" aria-haspopup="dialog">View details<span class="sr-only"> for ${esc(e.title)}</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>`,
+    `          </div>`,
+    `        </article>`,
+    `        <span class="sticker ${STK[e.tone][0]} event-card__stk" aria-hidden="true"><svg><use href="#${STK[e.tone][1]}"/></svg></span>`,
+    `      </li>`);
+  return lines.join("\n");
+}
+const card = e => (e.group === "featured" ? featuredCard(e) : compactCard(e));
 const block = g => E.filter(e => e.group === g).map(card).join("\n");
 
 const file = path.join(root, "index.html");

@@ -2,6 +2,20 @@
 
 Format: newest first. Each entry: date · phase · what changed · files · verification.
 
+## 2026-11-20 — Phase 5 / Subphase 5.4 (Accessible event-detail dialogs)
+- Added: `js/events.js`, `css/sections/event-dialog.css`, dialog shell in `index.html`, `dialogNote` (Tech Forge) in `data/events.js`, dialog tests in `scripts/test_phase5.py`, `docs/audit-results-phase5-4.json`, `docs/audit-results-phase5-4-dialogs.json`, `docs/screenshots/dialog-*.png`.
+- Verified: all seven triggers individually ×5 widths; Esc/Close/backdrop + focus return; reduced-motion, GSAP-blocked, JS-disabled; test_phase5 278/278; axe 0 (page ×5, dialogs ×35); test_phase4 20/20; motion PASS; verify_project PASS.
+
+## 2026-11-20 — Phase 5 / Subphase 5.3 (Compact event entries)
+- Added: compact entry markup/CSS (`compactCard()`, events.css compact block), 8 thumbnail derivatives `img/events/thumb-*`, `tone`/`thumb` fields in `data/events.js`, compact checks in `scripts/test_phase5.py`, `docs/audit-results-phase5-3.json`, `docs/screenshots/events-5-3a-*.png`.
+- Changed: Tech Forge descriptor → "TECHFORGE 2.0"; squiggle sticker hidden <1024px; upscale test uses the real file width from `currentSrc`.
+- Verified: test_phase5 93/93; test_phase4 20/20; motion PASS; axe 0 ×5; no overflow; 0 console errors; 0 external requests; verify_project PASS.
+
+## 2026-11-20 — Phase 5 / Subphase 5.2 (Featured event cards)
+- Added: real featured cards (`css/sections/events.css` featured block; `featuredCard()` in `scripts/build_events.js`), `blurb`/`tone`/`meta` fields in `data/events.js`, Events reveal in `js/motion-home.js`, per-width featured checks in `scripts/test_phase5.py`, `docs/audit-results-phase5-2.json`, `docs/screenshots/events-5-2a-*.png`.
+- Changed: Instagram "›" chip removed from `img/events/poster-{odyssey,buildathon}.webp` and `card-{odyssey,buildathon}-{405,600,810}.webp` (inpainted, same filenames); `scripts/shot_events.py` forces eager images.
+- Verified: test_phase5 65/65; test_phase4 20/20; motion PASS; axe 0 ×5; no overflow; 0 console errors; 0 external requests; verify_project PASS.
+
 ## 2026-11-20 — Phase 5 / Subphase 5.1 (Event data audit & section structure)
 - Added: `css/sections/events.css`, real `#events` section in `index.html` (label, h2, lead, note, Featured/More groups, generated placeholder cards), `scripts/build_events.js`, `scripts/test_phase5.py`, `scripts/shot_events.py`, `docs/events-audit.md`, `docs/phase5-results.json`, `docs/audit-results-phase5-1.json`, `docs/screenshots/events-5-1-*.png`.
 - Changed: `data/events.js` reconciled to the master-prompt accuracy rules (unsupported venues/labels removed, schema = group/order/facts/lists/parts); `#events` anchor stub removed; `scripts/test_phase4.py` order assertion includes `events`.

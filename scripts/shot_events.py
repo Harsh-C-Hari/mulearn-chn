@@ -9,7 +9,7 @@ try:
     b=p.chromium.launch()
     for w in (320,390,768,1024,1440):
       pg=b.new_page(viewport={'width':w,'height':900}); pg.goto('http://localhost:8773/index.html'); pg.wait_for_timeout(800)
-      pg.evaluate("document.getElementById('events').scrollIntoView()"); pg.wait_for_timeout(2200)
+      pg.evaluate("document.querySelectorAll('#events img').forEach(i=>i.loading='eager');document.getElementById('events').scrollIntoView()"); pg.wait_for_timeout(2500)
       pg.locator('#events').screenshot(path=os.path.join(root,'docs/screenshots',f'events-{tag}-{w}.png')); pg.close()
     b.close()
 finally: srv.terminate()

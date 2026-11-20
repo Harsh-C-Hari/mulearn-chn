@@ -71,6 +71,486 @@
   "pass": true,
   "info": []
  },
+ "320px: 3 featured cards in order": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 230.95953369140625,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 230.95953369140625,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 230.95953369140625,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "320px: featured posters load, have alt, are not upscaled": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 230.95953369140625,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 230.95953369140625,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 230.95953369140625,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "320px: detail buttons named, wired to slug, >=44px tall": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 230.95953369140625,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 230.95953369140625,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 230.95953369140625,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "320px: featured cards inside viewport": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 230.95953369140625,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 230.95953369140625,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 230.95953369140625,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "320px: 4 compact entries in order": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 86.875,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 56,
+    "inView": true,
+    "date": null,
+    "ar": 0.7865327486207384,
+    "nar": 0.7784431137724551
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 86.875,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 56,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8530223995090519,
+    "nar": 0.8496732026143791
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 86.875,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 56,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8530223995090519,
+    "nar": 0.8496732026143791
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 86.875,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 56,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7911212293682414,
+    "nar": 0.7831325301204819
+   }
+  ]
+ },
+ "320px: compact thumbnails load, have alt, not upscaled, aspect preserved": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 86.875,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 56,
+    "inView": true,
+    "date": null,
+    "ar": 0.7865327486207384,
+    "nar": 0.7784431137724551
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 86.875,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 56,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8530223995090519,
+    "nar": 0.8496732026143791
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 86.875,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 56,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8530223995090519,
+    "nar": 0.8496732026143791
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 86.875,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 56,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7911212293682414,
+    "nar": 0.7831325301204819
+   }
+  ]
+ },
+ "320px: compact buttons named, wired, >=44px": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 86.875,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 56,
+    "inView": true,
+    "date": null,
+    "ar": 0.7865327486207384,
+    "nar": 0.7784431137724551
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 86.875,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 56,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8530223995090519,
+    "nar": 0.8496732026143791
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 86.875,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 56,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8530223995090519,
+    "nar": 0.8496732026143791
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 86.875,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 56,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7911212293682414,
+    "nar": 0.7831325301204819
+   }
+  ]
+ },
+ "320px: compact entries inside viewport": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 86.875,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 56,
+    "inView": true,
+    "date": null,
+    "ar": 0.7865327486207384,
+    "nar": 0.7784431137724551
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 86.875,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 56,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8530223995090519,
+    "nar": 0.8496732026143791
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 86.875,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 56,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8530223995090519,
+    "nar": 0.8496732026143791
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 86.875,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 56,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7911212293682414,
+    "nar": 0.7831325301204819
+   }
+  ]
+ },
+ "320px: all seven events visible (7 detail buttons)": {
+  "pass": true,
+  "info": ""
+ },
  "320px: no console errors": {
   "pass": true,
   "info": []
@@ -86,6 +566,486 @@
  "390px: no clipped event titles": {
   "pass": true,
   "info": []
+ },
+ "390px: 3 featured cards in order": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 301.942138671875,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 301.942138671875,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 301.942138671875,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "390px: featured posters load, have alt, are not upscaled": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 301.942138671875,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 301.942138671875,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 301.942138671875,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "390px: detail buttons named, wired to slug, >=44px tall": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 301.942138671875,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 301.942138671875,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 301.942138671875,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "390px: featured cards inside viewport": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 301.942138671875,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 301.942138671875,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 301.942138671875,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "390px: 4 compact entries in order": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 113.03125,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7845986984815618,
+    "nar": 0.7784431137724551
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 113.03125,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8515597410241318,
+    "nar": 0.8496732026143791
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 113.03125,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8515597410241318,
+    "nar": 0.8496732026143791
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 113.03125,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7892210342570368,
+    "nar": 0.7831325301204819
+   }
+  ]
+ },
+ "390px: compact thumbnails load, have alt, not upscaled, aspect preserved": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 113.03125,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7845986984815618,
+    "nar": 0.7784431137724551
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 113.03125,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8515597410241318,
+    "nar": 0.8496732026143791
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 113.03125,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8515597410241318,
+    "nar": 0.8496732026143791
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 113.03125,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7892210342570368,
+    "nar": 0.7831325301204819
+   }
+  ]
+ },
+ "390px: compact buttons named, wired, >=44px": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 113.03125,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7845986984815618,
+    "nar": 0.7784431137724551
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 113.03125,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8515597410241318,
+    "nar": 0.8496732026143791
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 113.03125,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8515597410241318,
+    "nar": 0.8496732026143791
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 113.03125,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7892210342570368,
+    "nar": 0.7831325301204819
+   }
+  ]
+ },
+ "390px: compact entries inside viewport": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 113.03125,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7845986984815618,
+    "nar": 0.7784431137724551
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 113.03125,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8515597410241318,
+    "nar": 0.8496732026143791
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 113.03125,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8515597410241318,
+    "nar": 0.8496732026143791
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 113.03125,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7892210342570368,
+    "nar": 0.7831325301204819
+   }
+  ]
+ },
+ "390px: all seven events visible (7 detail buttons)": {
+  "pass": true,
+  "info": ""
  },
  "390px: no console errors": {
   "pass": true,
@@ -103,6 +1063,486 @@
   "pass": true,
   "info": []
  },
+ "768px: 3 featured cards in order": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 244.9595947265625,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 271.28375244140625,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 271.2837219238281,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "768px: featured posters load, have alt, are not upscaled": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 244.9595947265625,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 271.28375244140625,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 271.2837219238281,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "768px: detail buttons named, wired to slug, >=44px tall": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 244.9595947265625,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 271.28375244140625,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 271.2837219238281,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "768px: featured cards inside viewport": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 244.9595947265625,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 271.28375244140625,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 271.2837219238281,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "768px: 4 compact entries in order": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 390,
+    "shown": 303.09375,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7791613110539846,
+    "nar": 0.7772020725388601
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 390,
+    "shown": 303.09375,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8476664918720503,
+    "nar": 0.847457627118644
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 390,
+    "shown": 303.09375,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8495226416746956,
+    "nar": 0.8498583569405099
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 390,
+    "shown": 303.09375,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7837892440098589,
+    "nar": 0.783289817232376
+   }
+  ]
+ },
+ "768px: compact thumbnails load, have alt, not upscaled, aspect preserved": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 390,
+    "shown": 303.09375,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7791613110539846,
+    "nar": 0.7772020725388601
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 390,
+    "shown": 303.09375,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8476664918720503,
+    "nar": 0.847457627118644
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 390,
+    "shown": 303.09375,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8495226416746956,
+    "nar": 0.8498583569405099
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 390,
+    "shown": 303.09375,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7837892440098589,
+    "nar": 0.783289817232376
+   }
+  ]
+ },
+ "768px: compact buttons named, wired, >=44px": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 390,
+    "shown": 303.09375,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7791613110539846,
+    "nar": 0.7772020725388601
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 390,
+    "shown": 303.09375,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8476664918720503,
+    "nar": 0.847457627118644
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 390,
+    "shown": 303.09375,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8495226416746956,
+    "nar": 0.8498583569405099
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 390,
+    "shown": 303.09375,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7837892440098589,
+    "nar": 0.783289817232376
+   }
+  ]
+ },
+ "768px: compact entries inside viewport": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 390,
+    "shown": 303.09375,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7791613110539846,
+    "nar": 0.7772020725388601
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 390,
+    "shown": 303.09375,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8476664918720503,
+    "nar": 0.847457627118644
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 390,
+    "shown": 303.09375,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8495226416746956,
+    "nar": 0.8498583569405099
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 390,
+    "shown": 303.09375,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7837892440098589,
+    "nar": 0.783289817232376
+   }
+  ]
+ },
+ "768px: all seven events visible (7 detail buttons)": {
+  "pass": true,
+  "info": ""
+ },
  "768px: no console errors": {
   "pass": true,
   "info": []
@@ -118,6 +1558,486 @@
  "1024px: no clipped event titles": {
   "pass": true,
   "info": []
+ },
+ "1024px: 3 featured cards in order": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 220.97105407714844,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 220.987060546875,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 220.9710693359375,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "1024px: featured posters load, have alt, are not upscaled": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 220.97105407714844,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 220.987060546875,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 220.9710693359375,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "1024px: detail buttons named, wired to slug, >=44px tall": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 220.97105407714844,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 220.987060546875,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 220.9710693359375,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "1024px: featured cards inside viewport": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 220.97105407714844,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 220.987060546875,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 220.9710693359375,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "1024px: 4 compact entries in order": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 178.71875,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7822994323233705,
+    "nar": 0.7801418439716312
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 178.734375,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8497882772453755,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 178.71875,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.849777117384844,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 178.734375,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7868886290156153,
+    "nar": 0.7857142857142857
+   }
+  ]
+ },
+ "1024px: compact thumbnails load, have alt, not upscaled, aspect preserved": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 178.71875,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7822994323233705,
+    "nar": 0.7801418439716312
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 178.734375,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8497882772453755,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 178.71875,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.849777117384844,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 178.734375,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7868886290156153,
+    "nar": 0.7857142857142857
+   }
+  ]
+ },
+ "1024px: compact buttons named, wired, >=44px": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 178.71875,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7822994323233705,
+    "nar": 0.7801418439716312
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 178.734375,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8497882772453755,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 178.71875,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.849777117384844,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 178.734375,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7868886290156153,
+    "nar": 0.7857142857142857
+   }
+  ]
+ },
+ "1024px: compact entries inside viewport": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 178.71875,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7822994323233705,
+    "nar": 0.7801418439716312
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 178.734375,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8497882772453755,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 178.71875,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.849777117384844,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 178.734375,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7868886290156153,
+    "nar": 0.7857142857142857
+   }
+  ]
+ },
+ "1024px: all seven events visible (7 detail buttons)": {
+  "pass": true,
+  "info": ""
  },
  "1024px: no console errors": {
   "pass": true,
@@ -163,6 +2083,579 @@
   "pass": true,
   "info": []
  },
+ "1440px: 3 featured cards in order": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 305.1962890625,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 305.1962890625,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 305.21270751953125,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "1440px: featured posters load, have alt, are not upscaled": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 305.1962890625,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 305.1962890625,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 305.21270751953125,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "1440px: detail buttons named, wired to slug, >=44px tall": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 305.1962890625,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 305.1962890625,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 305.21270751953125,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "1440px: featured cards inside viewport": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "odyssey",
+    "h3": "ODYSSEY",
+    "loaded": true,
+    "alt": true,
+    "nat": 688,
+    "shown": 305.1962890625,
+    "btnName": "View details for ODYSSEY",
+    "open": "odyssey",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "buildathon",
+    "h3": "Buildathon",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 305.1962890625,
+    "btnName": "View details for Buildathon",
+    "open": "buildathon",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   },
+   {
+    "slug": "bwai",
+    "h3": "Build with AI",
+    "loaded": true,
+    "alt": true,
+    "nat": 693,
+    "shown": 305.21270751953125,
+    "btnName": "View details for Build with AI",
+    "open": "bwai",
+    "popup": "dialog",
+    "bw": 167.484375,
+    "bh": 44,
+    "inView": true,
+    "posterHidden": "block"
+   }
+  ]
+ },
+ "featured cards use only verified facts (dates/tags match data)": {
+  "pass": true,
+  "info": ""
+ },
+ "no year invented on Buildathon card": {
+  "pass": true,
+  "info": ""
+ },
+ "no Alappuzha / CEC conflict text on Build with AI card": {
+  "pass": true,
+  "info": ""
+ },
+ "keyboard: each featured button focusable, focus ring visible": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px: 4 compact entries in order": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7814851161269218,
+    "nar": 0.7801418439716312
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8491706161137441,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8491706161137441,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7861569681347008,
+    "nar": 0.7857142857142857
+   }
+  ]
+ },
+ "1440px: compact thumbnails load, have alt, not upscaled, aspect preserved": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7814851161269218,
+    "nar": 0.7801418439716312
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8491706161137441,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8491706161137441,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7861569681347008,
+    "nar": 0.7857142857142857
+   }
+  ]
+ },
+ "1440px: compact buttons named, wired, >=44px": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7814851161269218,
+    "nar": 0.7801418439716312
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8491706161137441,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8491706161137441,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7861569681347008,
+    "nar": 0.7857142857142857
+   }
+  ]
+ },
+ "1440px: compact entries inside viewport": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7814851161269218,
+    "nar": 0.7801418439716312
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8491706161137441,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8491706161137441,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7861569681347008,
+    "nar": 0.7857142857142857
+   }
+  ]
+ },
+ "1440px: all seven events visible (7 detail buttons)": {
+  "pass": true,
+  "info": ""
+ },
+ "compact dates only where verified (Tech Forge has none)": {
+  "pass": true,
+  "info": [
+   {
+    "slug": "techforge",
+    "h3": "Tech Forge",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Tech Forge",
+    "open": "techforge",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": null,
+    "ar": 0.7814851161269218,
+    "nar": 0.7801418439716312
+   },
+   {
+    "slug": "typerace",
+    "h3": "Type Race",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Type Race",
+    "open": "typerace",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "26 March 2026",
+    "ar": 0.8491706161137441,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "useless",
+    "h3": "Useless Projects 3.0",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Useless Projects 3.0",
+    "open": "useless",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "11–12 September",
+    "ar": 0.8491706161137441,
+    "nar": 0.8494208494208494
+   },
+   {
+    "slug": "webslingers",
+    "h3": "Web Slingers",
+    "loaded": true,
+    "alt": true,
+    "nat": 260,
+    "shown": 223.96875,
+    "btnName": "View details for Web Slingers",
+    "open": "webslingers",
+    "popup": "dialog",
+    "bh": 44,
+    "inView": true,
+    "date": "27 October",
+    "ar": 0.7861569681347008,
+    "nar": 0.7857142857142857
+   }
+  ]
+ },
+ "Tech Forge entry shows only the title-card text": {
+  "pass": true,
+  "info": "04\nTech Forge\n\nTECHFORGE 2.0\n\nView details\nfor Tech Forge"
+ },
+ "compact visually subordinate (title smaller than featured)": {
+  "pass": true,
+  "info": ""
+ },
  "1440px: no console errors": {
   "pass": true,
   "info": []
@@ -170,5 +2663,1760 @@
  "1440px: no external requests": {
   "pass": true,
   "info": []
+ },
+ "320px odyssey: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "ODYSSEY"
+  }
+ },
+ "320px odyssey: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "ODYSSEY",
+   "desc": "32 hours. One journey. Endless possibilities.",
+   "text": " Past event · details Close event details ODYSSEY 32 hours. One journey. Endless possibilities. DetailsDate20–21 September 2026Duration32 hoursVenueCollege of Engineering, ChengannurPrize pool₹15,000Registration fee₹150RegistrationMakeMyPassPodiumWinnerSPARXFirst runner-upCypherSecond runner-upJijñāsusPartnersTechnology partnerGoogle for DevelopersFood partnerMalabar FreshMentors thankedJerry Sanju JoanesAbhijith J NairJoe Abraham KBranding on the posterIEDCµLearn CHNGoogle for DevelopersFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Podium",
+    "Partners",
+    "Mentors thanked",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "320px odyssey: no placeholder/conflict text": {
+  "pass": true,
+  "info": ""
+ },
+ "320px odyssey: page scroll locked while open": {
+  "pass": true,
+  "info": ""
+ },
+ "320px odyssey: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "320px odyssey: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "odyssey"
+  }
+ },
+ "320px buildathon: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Buildathon"
+  }
+ },
+ "320px buildathon: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Buildathon",
+   "desc": "A µFIFA × Gemma 4 buildathon at the College of Engineering, Chengannur.",
+   "text": " Past event · details Close event details Buildathon A µFIFA × Gemma 4 buildathon at the College of Engineering, Chengannur. As printed on the posterµFIFA × Gemma 4DetailsDate17–18 JulyTime5 PM – 9 AMVenueCollege of Engineering, ChengannurPrize pool₹7K*PodiumFirst placeFrustrated DevsSecond placeTek KnightsThird placeHoloPartnersTitle sponsorBITAMandi MahalThe Chocolate DropV Fit Fitness HubJuice It UpSpinnersThe Cowboy (“Penalty Pursuit”)Branding on the posterµLearn CHNGoogle for DevelopersFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Podium",
+    "Partners",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "320px buildathon: no placeholder/conflict text": {
+  "pass": true,
+  "info": ""
+ },
+ "320px buildathon: page scroll locked while open": {
+  "pass": true,
+  "info": ""
+ },
+ "320px buildathon: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "320px buildathon: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "buildathon"
+  }
+ },
+ "320px bwai: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Build with AI"
+  }
+ },
+ "320px bwai: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Build with AI",
+   "desc": "Two activities under one name: a session on building a Gemini-powered YouTube summarizer, and a 16-hour AI hackathon.",
+   "text": " Past event · details Close event details Build with AI Two activities under one name: a session on building a Gemini-powered YouTube summarizer, and a 16-hour AI hackathon. Session: Build a Gemini-Powered YouTube SummarizerDate31 March 2026Time4–5:30 PMVenueMCA CC2SpeakersVishnu Harikumar and Swathy J16-hour AI hackathonDate6–7 April 2026Time5 PM – 9 AMVenueMaker’s Space & SDPKDuration16 hoursProject awardsWinnersPhoenixCreativeAmingosInnovativeBizzarePartnersAssociate partnerPRODDECBranding on the posterµLearnGoogle for DevelopersMakeMyPassNotionPRODDECFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Session: Build a Gemini-Powered YouTube Summarizer",
+    "16-hour AI hackathon",
+    "Project awards",
+    "Partners",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "320px bwai: no placeholder/conflict text": {
+  "pass": true,
+  "info": ""
+ },
+ "320px bwai: page scroll locked while open": {
+  "pass": true,
+  "info": ""
+ },
+ "320px bwai: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "320px bwai: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "bwai"
+  }
+ },
+ "320px techforge: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Tech Forge"
+  }
+ },
+ "320px techforge: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Tech Forge",
+   "desc": "TECHFORGE 2.0",
+   "text": " Past event · details Close event details Tech Forge TECHFORGE 2.0 Only the title card is available for this event. No date, venue or other details have been confirmed. ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": []
+  }
+ },
+ "320px techforge: no placeholder/conflict text": {
+  "pass": true,
+  "info": ""
+ },
+ "320px techforge: page scroll locked while open": {
+  "pass": true,
+  "info": ""
+ },
+ "320px techforge: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "320px techforge: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "techforge"
+  }
+ },
+ "320px typerace: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Type Race"
+  }
+ },
+ "320px typerace: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Type Race",
+   "desc": "Where speed meets precision",
+   "text": " Past event · details Close event details Type Race Where speed meets precision DetailsDate26 March 2026Time12:15–1 PMVenueCC2Prize pool₹1,500Registration fee₹20Free entryµLearners with 7K+ Karma points and IEEE CS members (5 seats)WinnersChristo Chery GeorgeNevin MathewNiranjan V ChandranBranding on the posterIEEE SB CECIEEE Computer SocietyµLearn CHN ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Winners",
+    "Branding on the poster"
+   ]
+  }
+ },
+ "320px typerace: no placeholder/conflict text": {
+  "pass": true,
+  "info": ""
+ },
+ "320px typerace: page scroll locked while open": {
+  "pass": true,
+  "info": ""
+ },
+ "320px typerace: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "320px typerace: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "typerace"
+  }
+ },
+ "320px useless: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Useless Projects 3.0"
+  }
+ },
+ "320px useless: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Useless Projects 3.0",
+   "desc": "Third edition · creative, deliberately non-useful projects",
+   "text": " Past event · details Close event details Useless Projects 3.0 Third edition · creative, deliberately non-useful projects DetailsEditionThird editionDate11–12 SeptemberThemeCreative, deliberately non-useful projectsBranding on the posterTinkerHub CE ChengannurµLearn CHNFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "320px useless: no placeholder/conflict text": {
+  "pass": true,
+  "info": ""
+ },
+ "320px useless: page scroll locked while open": {
+  "pass": true,
+  "info": ""
+ },
+ "320px useless: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "320px useless: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "useless"
+  }
+ },
+ "320px webslingers: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Web Slingers"
+  }
+ },
+ "320px webslingers: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Web Slingers",
+   "desc": "Podium: Marvel Jesus, Titans, Cosmopolitans",
+   "text": " Past event · details Close event details Web Slingers Podium: Marvel Jesus, Titans, Cosmopolitans DetailsDate27 OctoberTime4:00–5:15 PMVenueSDPK Room 204PodiumFirst placeMarvel JesusSecond placeTitansThird placeCosmopolitansBranding on the posterµLearn CHN ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Podium",
+    "Branding on the poster"
+   ]
+  }
+ },
+ "320px webslingers: no placeholder/conflict text": {
+  "pass": true,
+  "info": ""
+ },
+ "320px webslingers: page scroll locked while open": {
+  "pass": true,
+  "info": ""
+ },
+ "320px webslingers: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "320px webslingers: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "webslingers"
+  }
+ },
+ "320px dialogs: no console errors": {
+  "pass": true,
+  "info": []
+ },
+ "390px odyssey: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "ODYSSEY"
+  }
+ },
+ "390px odyssey: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "ODYSSEY",
+   "desc": "32 hours. One journey. Endless possibilities.",
+   "text": " Past event · details Close event details ODYSSEY 32 hours. One journey. Endless possibilities. DetailsDate20–21 September 2026Duration32 hoursVenueCollege of Engineering, ChengannurPrize pool₹15,000Registration fee₹150RegistrationMakeMyPassPodiumWinnerSPARXFirst runner-upCypherSecond runner-upJijñāsusPartnersTechnology partnerGoogle for DevelopersFood partnerMalabar FreshMentors thankedJerry Sanju JoanesAbhijith J NairJoe Abraham KBranding on the posterIEDCµLearn CHNGoogle for DevelopersFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Podium",
+    "Partners",
+    "Mentors thanked",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "390px odyssey: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "390px odyssey: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "odyssey"
+  }
+ },
+ "390px buildathon: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Buildathon"
+  }
+ },
+ "390px buildathon: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Buildathon",
+   "desc": "A µFIFA × Gemma 4 buildathon at the College of Engineering, Chengannur.",
+   "text": " Past event · details Close event details Buildathon A µFIFA × Gemma 4 buildathon at the College of Engineering, Chengannur. As printed on the posterµFIFA × Gemma 4DetailsDate17–18 JulyTime5 PM – 9 AMVenueCollege of Engineering, ChengannurPrize pool₹7K*PodiumFirst placeFrustrated DevsSecond placeTek KnightsThird placeHoloPartnersTitle sponsorBITAMandi MahalThe Chocolate DropV Fit Fitness HubJuice It UpSpinnersThe Cowboy (“Penalty Pursuit”)Branding on the posterµLearn CHNGoogle for DevelopersFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Podium",
+    "Partners",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "390px buildathon: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "390px buildathon: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "buildathon"
+  }
+ },
+ "390px bwai: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Build with AI"
+  }
+ },
+ "390px bwai: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Build with AI",
+   "desc": "Two activities under one name: a session on building a Gemini-powered YouTube summarizer, and a 16-hour AI hackathon.",
+   "text": " Past event · details Close event details Build with AI Two activities under one name: a session on building a Gemini-powered YouTube summarizer, and a 16-hour AI hackathon. Session: Build a Gemini-Powered YouTube SummarizerDate31 March 2026Time4–5:30 PMVenueMCA CC2SpeakersVishnu Harikumar and Swathy J16-hour AI hackathonDate6–7 April 2026Time5 PM – 9 AMVenueMaker’s Space & SDPKDuration16 hoursProject awardsWinnersPhoenixCreativeAmingosInnovativeBizzarePartnersAssociate partnerPRODDECBranding on the posterµLearnGoogle for DevelopersMakeMyPassNotionPRODDECFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Session: Build a Gemini-Powered YouTube Summarizer",
+    "16-hour AI hackathon",
+    "Project awards",
+    "Partners",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "390px bwai: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "390px bwai: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "bwai"
+  }
+ },
+ "390px techforge: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Tech Forge"
+  }
+ },
+ "390px techforge: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Tech Forge",
+   "desc": "TECHFORGE 2.0",
+   "text": " Past event · details Close event details Tech Forge TECHFORGE 2.0 Only the title card is available for this event. No date, venue or other details have been confirmed. ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": []
+  }
+ },
+ "390px techforge: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "390px techforge: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "techforge"
+  }
+ },
+ "390px typerace: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Type Race"
+  }
+ },
+ "390px typerace: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Type Race",
+   "desc": "Where speed meets precision",
+   "text": " Past event · details Close event details Type Race Where speed meets precision DetailsDate26 March 2026Time12:15–1 PMVenueCC2Prize pool₹1,500Registration fee₹20Free entryµLearners with 7K+ Karma points and IEEE CS members (5 seats)WinnersChristo Chery GeorgeNevin MathewNiranjan V ChandranBranding on the posterIEEE SB CECIEEE Computer SocietyµLearn CHN ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Winners",
+    "Branding on the poster"
+   ]
+  }
+ },
+ "390px typerace: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "390px typerace: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "typerace"
+  }
+ },
+ "390px useless: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Useless Projects 3.0"
+  }
+ },
+ "390px useless: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Useless Projects 3.0",
+   "desc": "Third edition · creative, deliberately non-useful projects",
+   "text": " Past event · details Close event details Useless Projects 3.0 Third edition · creative, deliberately non-useful projects DetailsEditionThird editionDate11–12 SeptemberThemeCreative, deliberately non-useful projectsBranding on the posterTinkerHub CE ChengannurµLearn CHNFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "390px useless: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "390px useless: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "useless"
+  }
+ },
+ "390px webslingers: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Web Slingers"
+  }
+ },
+ "390px webslingers: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Web Slingers",
+   "desc": "Podium: Marvel Jesus, Titans, Cosmopolitans",
+   "text": " Past event · details Close event details Web Slingers Podium: Marvel Jesus, Titans, Cosmopolitans DetailsDate27 OctoberTime4:00–5:15 PMVenueSDPK Room 204PodiumFirst placeMarvel JesusSecond placeTitansThird placeCosmopolitansBranding on the posterµLearn CHN ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Podium",
+    "Branding on the poster"
+   ]
+  }
+ },
+ "390px webslingers: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "390px webslingers: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "webslingers"
+  }
+ },
+ "390px close button closes + restores focus": {
+  "pass": true,
+  "info": ""
+ },
+ "390px backdrop click closes + restores focus": {
+  "pass": true,
+  "info": ""
+ },
+ "390px click inside dialog does not close it": {
+  "pass": true,
+  "info": ""
+ },
+ "390px dialogs: no console errors": {
+  "pass": true,
+  "info": []
+ },
+ "768px odyssey: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "ODYSSEY"
+  }
+ },
+ "768px odyssey: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "ODYSSEY",
+   "desc": "32 hours. One journey. Endless possibilities.",
+   "text": " Past event · details Close event details ODYSSEY 32 hours. One journey. Endless possibilities. DetailsDate20–21 September 2026Duration32 hoursVenueCollege of Engineering, ChengannurPrize pool₹15,000Registration fee₹150RegistrationMakeMyPassPodiumWinnerSPARXFirst runner-upCypherSecond runner-upJijñāsusPartnersTechnology partnerGoogle for DevelopersFood partnerMalabar FreshMentors thankedJerry Sanju JoanesAbhijith J NairJoe Abraham KBranding on the posterIEDCµLearn CHNGoogle for DevelopersFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Podium",
+    "Partners",
+    "Mentors thanked",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "768px odyssey: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "768px odyssey: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "odyssey"
+  }
+ },
+ "768px buildathon: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Buildathon"
+  }
+ },
+ "768px buildathon: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Buildathon",
+   "desc": "A µFIFA × Gemma 4 buildathon at the College of Engineering, Chengannur.",
+   "text": " Past event · details Close event details Buildathon A µFIFA × Gemma 4 buildathon at the College of Engineering, Chengannur. As printed on the posterµFIFA × Gemma 4DetailsDate17–18 JulyTime5 PM – 9 AMVenueCollege of Engineering, ChengannurPrize pool₹7K*PodiumFirst placeFrustrated DevsSecond placeTek KnightsThird placeHoloPartnersTitle sponsorBITAMandi MahalThe Chocolate DropV Fit Fitness HubJuice It UpSpinnersThe Cowboy (“Penalty Pursuit”)Branding on the posterµLearn CHNGoogle for DevelopersFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Podium",
+    "Partners",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "768px buildathon: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "768px buildathon: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "buildathon"
+  }
+ },
+ "768px bwai: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Build with AI"
+  }
+ },
+ "768px bwai: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Build with AI",
+   "desc": "Two activities under one name: a session on building a Gemini-powered YouTube summarizer, and a 16-hour AI hackathon.",
+   "text": " Past event · details Close event details Build with AI Two activities under one name: a session on building a Gemini-powered YouTube summarizer, and a 16-hour AI hackathon. Session: Build a Gemini-Powered YouTube SummarizerDate31 March 2026Time4–5:30 PMVenueMCA CC2SpeakersVishnu Harikumar and Swathy J16-hour AI hackathonDate6–7 April 2026Time5 PM – 9 AMVenueMaker’s Space & SDPKDuration16 hoursProject awardsWinnersPhoenixCreativeAmingosInnovativeBizzarePartnersAssociate partnerPRODDECBranding on the posterµLearnGoogle for DevelopersMakeMyPassNotionPRODDECFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Session: Build a Gemini-Powered YouTube Summarizer",
+    "16-hour AI hackathon",
+    "Project awards",
+    "Partners",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "768px bwai: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "768px bwai: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "bwai"
+  }
+ },
+ "768px techforge: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Tech Forge"
+  }
+ },
+ "768px techforge: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Tech Forge",
+   "desc": "TECHFORGE 2.0",
+   "text": " Past event · details Close event details Tech Forge TECHFORGE 2.0 Only the title card is available for this event. No date, venue or other details have been confirmed. ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": []
+  }
+ },
+ "768px techforge: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "768px techforge: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "techforge"
+  }
+ },
+ "768px typerace: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Type Race"
+  }
+ },
+ "768px typerace: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Type Race",
+   "desc": "Where speed meets precision",
+   "text": " Past event · details Close event details Type Race Where speed meets precision DetailsDate26 March 2026Time12:15–1 PMVenueCC2Prize pool₹1,500Registration fee₹20Free entryµLearners with 7K+ Karma points and IEEE CS members (5 seats)WinnersChristo Chery GeorgeNevin MathewNiranjan V ChandranBranding on the posterIEEE SB CECIEEE Computer SocietyµLearn CHN ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Winners",
+    "Branding on the poster"
+   ]
+  }
+ },
+ "768px typerace: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "768px typerace: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "typerace"
+  }
+ },
+ "768px useless: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Useless Projects 3.0"
+  }
+ },
+ "768px useless: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Useless Projects 3.0",
+   "desc": "Third edition · creative, deliberately non-useful projects",
+   "text": " Past event · details Close event details Useless Projects 3.0 Third edition · creative, deliberately non-useful projects DetailsEditionThird editionDate11–12 SeptemberThemeCreative, deliberately non-useful projectsBranding on the posterTinkerHub CE ChengannurµLearn CHNFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "768px useless: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "768px useless: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "useless"
+  }
+ },
+ "768px webslingers: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Web Slingers"
+  }
+ },
+ "768px webslingers: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Web Slingers",
+   "desc": "Podium: Marvel Jesus, Titans, Cosmopolitans",
+   "text": " Past event · details Close event details Web Slingers Podium: Marvel Jesus, Titans, Cosmopolitans DetailsDate27 OctoberTime4:00–5:15 PMVenueSDPK Room 204PodiumFirst placeMarvel JesusSecond placeTitansThird placeCosmopolitansBranding on the posterµLearn CHN ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Podium",
+    "Branding on the poster"
+   ]
+  }
+ },
+ "768px webslingers: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "768px webslingers: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "webslingers"
+  }
+ },
+ "768px dialogs: no console errors": {
+  "pass": true,
+  "info": []
+ },
+ "1024px odyssey: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "ODYSSEY"
+  }
+ },
+ "1024px odyssey: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "ODYSSEY",
+   "desc": "32 hours. One journey. Endless possibilities.",
+   "text": " Past event · details Close event details ODYSSEY 32 hours. One journey. Endless possibilities. DetailsDate20–21 September 2026Duration32 hoursVenueCollege of Engineering, ChengannurPrize pool₹15,000Registration fee₹150RegistrationMakeMyPassPodiumWinnerSPARXFirst runner-upCypherSecond runner-upJijñāsusPartnersTechnology partnerGoogle for DevelopersFood partnerMalabar FreshMentors thankedJerry Sanju JoanesAbhijith J NairJoe Abraham KBranding on the posterIEDCµLearn CHNGoogle for DevelopersFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Podium",
+    "Partners",
+    "Mentors thanked",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "1024px odyssey: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "1024px odyssey: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "odyssey"
+  }
+ },
+ "1024px buildathon: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Buildathon"
+  }
+ },
+ "1024px buildathon: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Buildathon",
+   "desc": "A µFIFA × Gemma 4 buildathon at the College of Engineering, Chengannur.",
+   "text": " Past event · details Close event details Buildathon A µFIFA × Gemma 4 buildathon at the College of Engineering, Chengannur. As printed on the posterµFIFA × Gemma 4DetailsDate17–18 JulyTime5 PM – 9 AMVenueCollege of Engineering, ChengannurPrize pool₹7K*PodiumFirst placeFrustrated DevsSecond placeTek KnightsThird placeHoloPartnersTitle sponsorBITAMandi MahalThe Chocolate DropV Fit Fitness HubJuice It UpSpinnersThe Cowboy (“Penalty Pursuit”)Branding on the posterµLearn CHNGoogle for DevelopersFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Podium",
+    "Partners",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "1024px buildathon: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "1024px buildathon: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "buildathon"
+  }
+ },
+ "1024px bwai: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Build with AI"
+  }
+ },
+ "1024px bwai: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Build with AI",
+   "desc": "Two activities under one name: a session on building a Gemini-powered YouTube summarizer, and a 16-hour AI hackathon.",
+   "text": " Past event · details Close event details Build with AI Two activities under one name: a session on building a Gemini-powered YouTube summarizer, and a 16-hour AI hackathon. Session: Build a Gemini-Powered YouTube SummarizerDate31 March 2026Time4–5:30 PMVenueMCA CC2SpeakersVishnu Harikumar and Swathy J16-hour AI hackathonDate6–7 April 2026Time5 PM – 9 AMVenueMaker’s Space & SDPKDuration16 hoursProject awardsWinnersPhoenixCreativeAmingosInnovativeBizzarePartnersAssociate partnerPRODDECBranding on the posterµLearnGoogle for DevelopersMakeMyPassNotionPRODDECFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Session: Build a Gemini-Powered YouTube Summarizer",
+    "16-hour AI hackathon",
+    "Project awards",
+    "Partners",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "1024px bwai: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "1024px bwai: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "bwai"
+  }
+ },
+ "1024px techforge: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Tech Forge"
+  }
+ },
+ "1024px techforge: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Tech Forge",
+   "desc": "TECHFORGE 2.0",
+   "text": " Past event · details Close event details Tech Forge TECHFORGE 2.0 Only the title card is available for this event. No date, venue or other details have been confirmed. ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "btn btn--sm event-dialog__close",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": []
+  }
+ },
+ "1024px techforge: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "1024px techforge: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "techforge"
+  }
+ },
+ "1024px typerace: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Type Race"
+  }
+ },
+ "1024px typerace: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Type Race",
+   "desc": "Where speed meets precision",
+   "text": " Past event · details Close event details Type Race Where speed meets precision DetailsDate26 March 2026Time12:15–1 PMVenueCC2Prize pool₹1,500Registration fee₹20Free entryµLearners with 7K+ Karma points and IEEE CS members (5 seats)WinnersChristo Chery GeorgeNevin MathewNiranjan V ChandranBranding on the posterIEEE SB CECIEEE Computer SocietyµLearn CHN ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Winners",
+    "Branding on the poster"
+   ]
+  }
+ },
+ "1024px typerace: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "1024px typerace: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "typerace"
+  }
+ },
+ "1024px useless: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Useless Projects 3.0"
+  }
+ },
+ "1024px useless: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Useless Projects 3.0",
+   "desc": "Third edition · creative, deliberately non-useful projects",
+   "text": " Past event · details Close event details Useless Projects 3.0 Third edition · creative, deliberately non-useful projects DetailsEditionThird editionDate11–12 SeptemberThemeCreative, deliberately non-useful projectsBranding on the posterTinkerHub CE ChengannurµLearn CHNFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "1024px useless: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "1024px useless: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "useless"
+  }
+ },
+ "1024px webslingers: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Web Slingers"
+  }
+ },
+ "1024px webslingers: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Web Slingers",
+   "desc": "Podium: Marvel Jesus, Titans, Cosmopolitans",
+   "text": " Past event · details Close event details Web Slingers Podium: Marvel Jesus, Titans, Cosmopolitans DetailsDate27 OctoberTime4:00–5:15 PMVenueSDPK Room 204PodiumFirst placeMarvel JesusSecond placeTitansThird placeCosmopolitansBranding on the posterµLearn CHN ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "btn btn--sm event-dialog__close",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Podium",
+    "Branding on the poster"
+   ]
+  }
+ },
+ "1024px webslingers: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "1024px webslingers: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "webslingers"
+  }
+ },
+ "1024px dialogs: no console errors": {
+  "pass": true,
+  "info": []
+ },
+ "1440px odyssey: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "ODYSSEY"
+  }
+ },
+ "1440px odyssey: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "ODYSSEY",
+   "desc": "32 hours. One journey. Endless possibilities.",
+   "text": " Past event · details Close event details ODYSSEY 32 hours. One journey. Endless possibilities. DetailsDate20–21 September 2026Duration32 hoursVenueCollege of Engineering, ChengannurPrize pool₹15,000Registration fee₹150RegistrationMakeMyPassPodiumWinnerSPARXFirst runner-upCypherSecond runner-upJijñāsusPartnersTechnology partnerGoogle for DevelopersFood partnerMalabar FreshMentors thankedJerry Sanju JoanesAbhijith J NairJoe Abraham KBranding on the posterIEDCµLearn CHNGoogle for DevelopersFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Podium",
+    "Partners",
+    "Mentors thanked",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "1440px odyssey: no placeholder/conflict text": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px odyssey: page scroll locked while open": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px odyssey: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px odyssey: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "odyssey"
+  }
+ },
+ "1440px buildathon: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Buildathon"
+  }
+ },
+ "1440px buildathon: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Buildathon",
+   "desc": "A µFIFA × Gemma 4 buildathon at the College of Engineering, Chengannur.",
+   "text": " Past event · details Close event details Buildathon A µFIFA × Gemma 4 buildathon at the College of Engineering, Chengannur. As printed on the posterµFIFA × Gemma 4DetailsDate17–18 JulyTime5 PM – 9 AMVenueCollege of Engineering, ChengannurPrize pool₹7K*PodiumFirst placeFrustrated DevsSecond placeTek KnightsThird placeHoloPartnersTitle sponsorBITAMandi MahalThe Chocolate DropV Fit Fitness HubJuice It UpSpinnersThe Cowboy (“Penalty Pursuit”)Branding on the posterµLearn CHNGoogle for DevelopersFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Podium",
+    "Partners",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "1440px buildathon: no placeholder/conflict text": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px buildathon: page scroll locked while open": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px buildathon: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px buildathon: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "buildathon"
+  }
+ },
+ "1440px bwai: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Build with AI"
+  }
+ },
+ "1440px bwai: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Build with AI",
+   "desc": "Two activities under one name: a session on building a Gemini-powered YouTube summarizer, and a 16-hour AI hackathon.",
+   "text": " Past event · details Close event details Build with AI Two activities under one name: a session on building a Gemini-powered YouTube summarizer, and a 16-hour AI hackathon. Session: Build a Gemini-Powered YouTube SummarizerDate31 March 2026Time4–5:30 PMVenueMCA CC2SpeakersVishnu Harikumar and Swathy J16-hour AI hackathonDate6–7 April 2026Time5 PM – 9 AMVenueMaker’s Space & SDPKDuration16 hoursProject awardsWinnersPhoenixCreativeAmingosInnovativeBizzarePartnersAssociate partnerPRODDECBranding on the posterµLearnGoogle for DevelopersMakeMyPassNotionPRODDECFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Session: Build a Gemini-Powered YouTube Summarizer",
+    "16-hour AI hackathon",
+    "Project awards",
+    "Partners",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "1440px bwai: no placeholder/conflict text": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px bwai: page scroll locked while open": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px bwai: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px bwai: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "bwai"
+  }
+ },
+ "1440px techforge: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Tech Forge"
+  }
+ },
+ "1440px techforge: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Tech Forge",
+   "desc": "TECHFORGE 2.0",
+   "text": " Past event · details Close event details Tech Forge TECHFORGE 2.0 Only the title card is available for this event. No date, venue or other details have been confirmed. ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "btn btn--sm event-dialog__close",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": []
+  }
+ },
+ "1440px techforge: no placeholder/conflict text": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px techforge: page scroll locked while open": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px techforge: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px techforge: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "techforge"
+  }
+ },
+ "1440px typerace: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Type Race"
+  }
+ },
+ "1440px typerace: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Type Race",
+   "desc": "Where speed meets precision",
+   "text": " Past event · details Close event details Type Race Where speed meets precision DetailsDate26 March 2026Time12:15–1 PMVenueCC2Prize pool₹1,500Registration fee₹20Free entryµLearners with 7K+ Karma points and IEEE CS members (5 seats)WinnersChristo Chery GeorgeNevin MathewNiranjan V ChandranBranding on the posterIEEE SB CECIEEE Computer SocietyµLearn CHN ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Winners",
+    "Branding on the poster"
+   ]
+  }
+ },
+ "1440px typerace: no placeholder/conflict text": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px typerace: page scroll locked while open": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px typerace: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px typerace: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "typerace"
+  }
+ },
+ "1440px useless: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Useless Projects 3.0"
+  }
+ },
+ "1440px useless: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Useless Projects 3.0",
+   "desc": "Third edition · creative, deliberately non-useful projects",
+   "text": " Past event · details Close event details Useless Projects 3.0 Third edition · creative, deliberately non-useful projects DetailsEditionThird editionDate11–12 SeptemberThemeCreative, deliberately non-useful projectsBranding on the posterTinkerHub CE ChengannurµLearn CHNFrom the event ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "event-dialog__panel",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Branding on the poster",
+    "From the event"
+   ]
+  }
+ },
+ "1440px useless: no placeholder/conflict text": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px useless: page scroll locked while open": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px useless: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px useless: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "useless"
+  }
+ },
+ "1440px webslingers: opens by keyboard with correct content": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "modal": true,
+   "title": "Web Slingers"
+  }
+ },
+ "1440px webslingers: focus moves into dialog, fits viewport, poster+photos load with alt, no overflow": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "title": "Web Slingers",
+   "desc": "Podium: Marvel Jesus, Titans, Cosmopolitans",
+   "text": " Past event · details Close event details Web Slingers Podium: Marvel Jesus, Titans, Cosmopolitans DetailsDate27 OctoberTime4:00–5:15 PMVenueSDPK Room 204PodiumFirst placeMarvel JesusSecond placeTitansThird placeCosmopolitansBranding on the posterµLearn CHN ",
+   "lab": "event-dialog-title",
+   "dby": "event-dialog-desc",
+   "modal": true,
+   "inView": true,
+   "posterOk": true,
+   "photosOk": true,
+   "inside": true,
+   "active": "btn btn--sm event-dialog__close",
+   "ov": 0,
+   "emptyHeads": 0,
+   "sections": [
+    "Details",
+    "Podium",
+    "Branding on the poster"
+   ]
+  }
+ },
+ "1440px webslingers: no placeholder/conflict text": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px webslingers: page scroll locked while open": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px webslingers: Tab/Shift+Tab keep focus inside": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px webslingers: Esc closes and focus returns to its trigger": {
+  "pass": true,
+  "info": {
+   "open": false,
+   "same": "webslingers"
+  }
+ },
+ "1440px close button closes + restores focus": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px backdrop click closes + restores focus": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px click inside dialog does not close it": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px dialogs: no console errors": {
+  "pass": true,
+  "info": []
+ },
+ "reduced-motion: dialog opens immediately and fully visible": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "op": "1",
+   "anim": 0
+  }
+ },
+ "reduced-motion: Esc closes promptly": {
+  "pass": true,
+  "info": ""
+ },
+ "reduced-motion: GSAP not requested": {
+  "pass": true,
+  "info": [
+   "http://localhost:8772/index.html",
+   "http://localhost:8772/css/tokens.css",
+   "http://localhost:8772/css/base.css",
+   "http://localhost:8772/css/layout.css",
+   "http://localhost:8772/css/components.css",
+   "http://localhost:8772/css/decor.css",
+   "http://localhost:8772/css/utilities.css",
+   "http://localhost:8772/css/sections/header.css",
+   "http://localhost:8772/css/sections/hero.css",
+   "http://localhost:8772/css/sections/about.css",
+   "http://localhost:8772/css/sections/offers.css",
+   "http://localhost:8772/css/sections/events.css",
+   "http://localhost:8772/css/sections/event-dialog.css",
+   "http://localhost:8772/css/sections/join.css",
+   "http://localhost:8772/css/sections/footer.css",
+   "http://localhost:8772/img/hero/hero-600.webp",
+   "http://localhost:8772/data/links.js",
+   "http://localhost:8772/data/events.js",
+   "http://localhost:8772/js/main.js",
+   "http://localhost:8772/js/nav.js",
+   "http://localhost:8772/js/events.js",
+   "http://localhost:8772/js/motion-guard.js",
+   "http://localhost:8772/js/motion-home.js",
+   "http://localhost:8772/fonts/PlusJakartaSans-400.woff2",
+   "http://localhost:8772/fonts/PlusJakartaSans-800.woff2",
+   "http://localhost:8772/fonts/PlusJakartaSans-700.woff2",
+   "http://localhost:8772/fonts/PlusJakartaSans-600.woff2",
+   "http://localhost:8772/img/about/about-820.webp",
+   "http://localhost:8772/img/events/poster-odyssey.webp",
+   "http://localhost:8772/img/events/photo-odyssey-stage.webp",
+   "http://localhost:8772/img/events/photo-odyssey-wrap.webp",
+   "http://localhost:8772/img/events/poster-buildathon.webp",
+   "http://localhost:8772/img/events/poster-bwai.webp",
+   "http://localhost:8772/img/events/thumb-techforge-260.webp",
+   "http://localhost:8772/img/events/thumb-typerace-260.webp",
+   "http://localhost:8772/img/events/thumb-useless-260.webp",
+   "http://localhost:8772/img/events/thumb-webslingers-260.webp"
+  ]
+ },
+ "GSAP blocked: dialog opens immediately and fully visible": {
+  "pass": true,
+  "info": {
+   "open": true,
+   "op": "1",
+   "anim": 3
+  }
+ },
+ "GSAP blocked: Esc closes promptly": {
+  "pass": true,
+  "info": ""
+ },
+ "JS disabled: all 7 event titles + facts visible, dead buttons hidden": {
+  "pass": true,
+  "info": {
+   "btns": 0,
+   "titles": 7,
+   "dates": 6
+  }
  }
 }

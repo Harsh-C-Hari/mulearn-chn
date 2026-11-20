@@ -60,6 +60,20 @@
           gsap.from(c, { y: 56, opacity: 0, duration: .8, ease: EASE, scrollTrigger: { trigger: c, start: "top 88%", once: true }, clearProps: "opacity,visibility,transform" });
         });
       }
+      // ---------------- Events reveal (once; transform + opacity only, nothing is hidden in CSS) ----------------
+      var events = document.getElementById("events");
+      if (events) {
+        var et = gsap.timeline({ defaults: { ease: EASE }, paused: true, onComplete: function () {
+          gsap.set(q(".events__head > *, .events .sticker > svg", events), { clearProps: "opacity,visibility,transform" });
+        }});
+        et.from(q(".events__head > *", events), { y: 32, opacity: 0, duration: .65, stagger: .1 }, 0)
+          .from(q(".events .sticker > svg", events), { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .55, ease: "back.out(2)", stagger: .05 }, .35);
+        ScrollTrigger.create({ trigger: events, start: "top 70%", once: true, onEnter: function () { et.play(); } });
+        // each event card rises as it nears the viewport (staggered naturally by its position)
+        q(".event--featured .event-card", events).forEach(function (c) {
+          gsap.from(c, { y: 56, opacity: 0, duration: .8, ease: EASE, scrollTrigger: { trigger: c, start: "top 88%", once: true }, clearProps: "opacity,visibility,transform" });
+        });
+      }
       // ---------------- Join reveal (once) ----------------
       var join = document.getElementById("join");
       if (join) {

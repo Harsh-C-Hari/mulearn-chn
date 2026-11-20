@@ -1,0 +1,66 @@
+/* ==========================================================================
+   event-dialog.css — one reusable event-detail <dialog> (Phase 5.4)
+   Flat colour, 2px navy lines, hard shadow. The panel scrolls inside the viewport; the poster is shown whole.
+   Buttons are hidden when JS or <dialog> is unavailable (a dead control is worse than none; card info stays visible).
+   ========================================================================== */
+.no-js [data-event-open],.no-dialog [data-event-open]{display:none}
+.event-dialog{
+  --tone:var(--c-lavender); --focus-ring:var(--c-primary-strong); --focus-gap:var(--c-bg);
+  position:fixed; inset:0; margin:auto; padding:0; width:min(calc(100% - 24px),64rem); max-width:none; max-height:calc(100dvh - 24px);
+  background:var(--c-bg); color:var(--c-ink); border:var(--border); border-radius:var(--r-lg); box-shadow:var(--shadow-9); overflow:hidden;
+}
+.event-dialog:not([open]){display:none}
+.event-dialog[data-tone="coral"]{--tone:var(--c-coral)}
+.event-dialog[data-tone="yellow"]{--tone:var(--c-accent)}
+.event-dialog[data-tone="indigo"]{--tone:var(--c-primary)}
+.event-dialog[data-tone="mint"]{--tone:var(--c-mint)}
+.event-dialog[data-tone="lavender"]{--tone:var(--c-lavender)}
+.event-dialog::backdrop{background:rgba(15,23,42,.74)}
+@media (prefers-reduced-motion:no-preference){
+  .event-dialog[open]::backdrop{animation:evd-fade .25s var(--ease-out)}
+  .event-dialog.is-closing::backdrop{animation:evd-fade .2s var(--ease-out) reverse forwards}
+  @keyframes evd-fade{from{opacity:0}to{opacity:1}}
+}
+.event-dialog__panel{max-height:calc(100dvh - 24px - 4px);overflow:auto;overscroll-behavior:contain}
+.event-dialog__bar{
+  position:sticky; inset-block-start:0; z-index:5; display:flex; align-items:center; justify-content:space-between; gap:var(--s-2);
+  padding:var(--s-1) var(--s-2) var(--s-1) var(--s-3); background:var(--c-bg); border-block-end:var(--border);
+}
+.event-dialog__kicker{font-size:var(--fs-micro);font-weight:var(--fw-xbold);letter-spacing:var(--ls-label);text-transform:uppercase}
+.event-dialog__close{--btn-bg:var(--c-accent);--btn-fg:var(--c-ink);min-height:44px;padding:var(--s-1) var(--s-3)}
+.event-dialog__layout{display:grid;grid-template-columns:minmax(0,1fr)}
+.event-dialog__poster{
+  margin:0; padding:var(--s-3); background:var(--tone); display:flex; justify-content:center; align-items:flex-start;
+  border-block-end:var(--border);
+}
+.event-dialog__poster img{display:block;width:100%;max-width:340px;height:auto;border:var(--border);border-radius:4px;background:var(--c-surface);box-shadow:var(--shadow-6);transform:rotate(-1.5deg)}
+.event-dialog__content{padding:var(--s-3);display:flex;flex-direction:column;gap:var(--s-3);min-width:0}
+.event-dialog__title{font:var(--fw-xbold) clamp(2.25rem,1.5rem + 3.2vw,4rem)/.95 var(--font-display);letter-spacing:var(--ls-display);overflow-wrap:anywhere;text-wrap:balance}
+.event-dialog__desc{font-size:var(--fs-lead);line-height:1.45;color:var(--c-ink);max-width:40ch}
+.event-dialog__sections{display:flex;flex-direction:column;gap:var(--s-3)}
+.event-dialog__printed{display:flex;flex-direction:column;gap:4px;padding:var(--s-2);background:var(--c-surface);border:var(--border);border-radius:var(--r-md);box-shadow:var(--shadow-3);font-weight:var(--fw-bold)}
+.event-dialog__printed-label{font-size:var(--fs-micro);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-muted);font-weight:var(--fw-xbold)}
+.event-dialog__block{display:flex;flex-direction:column;gap:var(--s-1);padding-block-start:var(--s-2);border-block-start:2px dashed var(--c-ink)}
+.event-dialog__h{font-size:var(--fs-meta);font-weight:var(--fw-xbold);letter-spacing:var(--ls-label);text-transform:uppercase;line-height:1.3}
+.event-dialog__facts{display:grid;gap:var(--s-1) var(--s-3);grid-template-columns:minmax(0,1fr);margin:0}
+.event-dialog__fact{display:flex;flex-direction:column;gap:2px;min-width:0}
+.event-dialog__fact dt{font-size:var(--fs-micro);font-weight:var(--fw-xbold);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-muted)}
+.event-dialog__fact dd{margin:0;font-size:1.0625rem;font-weight:var(--fw-bold);overflow-wrap:anywhere}
+.event-dialog__list{list-style:none;margin:0;padding:0;display:grid;gap:var(--s-1)}
+.event-dialog__list li{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px var(--s-2);padding:var(--s-1) var(--s-2);background:var(--c-surface);border:var(--border);border-radius:var(--r-sm)}
+.event-dialog__role{font-size:var(--fs-micro);font-weight:var(--fw-xbold);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-muted);min-width:0}
+@media (min-width:640px){.event-dialog__role{min-width:13em}}
+.event-dialog__photos{display:grid;gap:var(--s-2);grid-template-columns:minmax(0,1fr)}
+.event-dialog__photo{margin:0;padding:6px;background:var(--c-surface);border:var(--border);border-radius:4px;box-shadow:var(--shadow-3)}
+.event-dialog__photo img{display:block;width:100%;height:auto;border:1px solid var(--c-ink)}
+.event-dialog__note{padding:var(--s-2);background:var(--c-surface);border:2px dashed var(--c-ink);border-radius:var(--r-md);font-weight:var(--fw-semibold)}
+@media (min-width:640px){
+  .event-dialog__facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .event-dialog__photos{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:860px){
+  .event-dialog__layout{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+  .event-dialog__poster{border-block-end:0;border-inline-end:var(--border);padding:var(--s-4) var(--s-3)}
+  .event-dialog__poster img{position:sticky;inset-block-start:calc(var(--s-6) + var(--s-3))}
+  .event-dialog__content{padding:var(--s-4)}
+}

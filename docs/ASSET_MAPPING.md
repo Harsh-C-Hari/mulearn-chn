@@ -118,3 +118,6 @@ Structured strictly around the **seven initiatives** defined in `PROJECT_MASTER_
 | `Events/Odessey/Screenshot 2026-11-19 212307.png` | Low-resolution duplicate (400×500) of higher-res date poster. | Higher-res version used. |
 | `Events/Odessey/Screenshot 2026-11-19 212314.png` | Low-resolution duplicate (407×507) of prize pool poster. | Higher-res version used. |
 | 15 Excluded Sponsor/Teaser Slides | Pure sponsor logos, partner slides, registration teasers. | Excluded per Spec §9.2 Rule 7; not delivered in `Events1.zip`/`Events2.zip`. |
+
+## Phase 5.3 addition — compact event thumbnails
+Eight new derivatives made from the existing event posters / Tech Forge title frame (resized only, never upscaled): `img/events/thumb-{techforge,typerace,useless,webslingers}-{260,390}.webp`. Used by the compact event entries (poster shown whole on a coloured field). No originals touched.

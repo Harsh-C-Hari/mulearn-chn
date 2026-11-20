@@ -21,6 +21,9 @@
     {
       id: "event-odyssey", slug: "odyssey", title: "ODYSSEY", group: "featured", order: 1,
       descriptor: "A 32-hour event",
+      blurb: "32 hours. One journey. Endless possibilities.",
+      tone: "coral",
+      meta: ["College of Engineering, Chengannur"],
       printed: "32 hours. One journey. Endless possibilities.",
       dateLabel: "20–21 September 2026",
       facts: [
@@ -61,6 +64,9 @@
     {
       id: "event-buildathon", slug: "buildathon", title: "Buildathon", group: "featured", order: 2,
       descriptor: "µFIFA × Gemma 4",
+      blurb: "A µFIFA × Gemma 4 buildathon at the College of Engineering, Chengannur.",
+      tone: "indigo",
+      meta: ["5 PM – 9 AM"],
       printed: "µFIFA × Gemma 4",
       dateLabel: "17–18 July",
       facts: [
@@ -97,6 +103,9 @@
     {
       id: "event-bwai", slug: "bwai", title: "Build with AI", group: "featured", order: 3,
       descriptor: "A session and a 16-hour AI hackathon",
+      blurb: "Two activities under one name: a session on building a Gemini-powered YouTube summarizer, and a 16-hour AI hackathon.",
+      tone: "yellow",
+      meta: ["Session + hackathon"],
       dateLabel: "31 March and 6–7 April 2026",
       parts: [
         { title: "Session: Build a Gemini-Powered YouTube Summarizer",
@@ -139,8 +148,11 @@
     /* ======================= COMPACT (4) ======================= */
     {
       id: "event-techforge", slug: "techforge", title: "Tech Forge", group: "compact", order: 4,
-      descriptor: "Title card: TECHFORGE 2.0",
+      descriptor: "TECHFORGE 2.0",
+      tone: "lavender",
+      thumb: { src: "img/events/thumb-techforge-390.webp", srcset: "img/events/thumb-techforge-260.webp 260w, img/events/thumb-techforge-390.webp 390w", width: 390, height: 502 },
       printed: "TECHFORGE 2.0",
+      dialogNote: "Only the title card is available for this event. No date, venue or other details have been confirmed.",
       dateLabel: "",
       facts: [],
       image: {
@@ -155,6 +167,8 @@
     {
       id: "event-typerace", slug: "typerace", title: "Type Race", group: "compact", order: 5,
       descriptor: "Where speed meets precision",
+      tone: "mint",
+      thumb: { src: "img/events/thumb-typerace-390.webp", srcset: "img/events/thumb-typerace-260.webp 260w, img/events/thumb-typerace-390.webp 390w", width: 390, height: 461 },
       printed: "Where speed meets precision",
       dateLabel: "26 March 2026",
       facts: [
@@ -182,6 +196,8 @@
     {
       id: "event-useless", slug: "useless", title: "Useless Projects 3.0", group: "compact", order: 6,
       descriptor: "Third edition · creative, deliberately non-useful projects",
+      tone: "coral",
+      thumb: { src: "img/events/thumb-useless-390.webp", srcset: "img/events/thumb-useless-260.webp 260w, img/events/thumb-useless-390.webp 390w", width: 390, height: 460 },
       dateLabel: "11–12 September",
       facts: [
         { label: "Edition", value: "Third edition" },
@@ -206,6 +222,8 @@
     {
       id: "event-webslingers", slug: "webslingers", title: "Web Slingers", group: "compact", order: 7,
       descriptor: "Podium: Marvel Jesus, Titans, Cosmopolitans",
+      tone: "yellow",
+      thumb: { src: "img/events/thumb-webslingers-390.webp", srcset: "img/events/thumb-webslingers-260.webp 260w, img/events/thumb-webslingers-390.webp 390w", width: 390, height: 499 },
       dateLabel: "27 October",
       facts: [
         { label: "Date", value: "27 October" },

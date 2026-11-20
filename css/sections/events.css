@@ -20,18 +20,109 @@
 .events__featured,.events__compact{list-style:none;margin:0;padding:0;display:grid;gap:var(--s-5) var(--s-4);grid-template-columns:minmax(0,1fr)}
 @media (min-width:700px){.events__compact{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (min-width:1024px){
-  .events__featured{grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s-6)}
+  .events__featured{grid-template-columns:repeat(3,minmax(0,1fr))}
   .events__compact{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s-4)}
 }
 .event{display:flex;min-width:0;position:relative}
 
-/* ---------- Placeholder card anatomy (replaced by the real card system in 5.2 / 5.3) ---------- */
-.event__card{flex:1;--card-pad:var(--s-3);gap:var(--s-1)}
-.event__num{font-size:clamp(2.5rem,2rem + 1.5vw,3.5rem);line-height:.8;margin-block-end:var(--s-1)}
-.event__title{font-size:clamp(1.75rem,1.4rem + 1.2vw,2.5rem);line-height:.98;letter-spacing:-.03em}
-.event--compact .event__title{font-size:clamp(1.375rem,1.2rem + .6vw,1.75rem)}
-.event__descriptor{font-size:1rem}
-.event__date{margin-block-start:auto;padding-block-start:var(--s-1);font-size:var(--fs-meta);font-weight:var(--fw-bold)}
+
+/* ==========================================================================
+   Featured cards (5.2) — Board 2 colour-blocked cards + Board 1 framed imagery.
+   Poster sits whole (never cropped past ~2%) on a white mat with a hard shadow; one flat sticker per card.
+   ========================================================================== */
+.events__featured{gap:var(--s-8) var(--s-5);padding-block-start:var(--s-2)}
+.event--featured{position:relative}
+.event--featured .event-card__stk{--size:56px;--r:-10px;--y:-22px;--rot:12deg;z-index:3}
+.event-card{
+  --card-pad:var(--s-3); --card-shadow:var(--shadow-7); --focus-ring:var(--c-primary-strong); --focus-gap:var(--card-bg);
+  gap:var(--s-3); width:100%;
+}
+.event-card--coral{--card-bg:var(--c-coral);--focus-ring:var(--c-ink)}
+.event-card--yellow{--card-bg:var(--c-accent);--focus-ring:var(--c-ink)}
+.event-card--indigo{--card-bg:var(--c-primary-strong);--card-fg:var(--text-on-strong);--focus-ring:var(--c-accent)}
+.event-card:hover,.event-card:focus-within{transform:translate(-3px,-3px);box-shadow:var(--shadow-9)}
+
+.event-card__num{
+  position:absolute; z-index:3; inset-block-start:-20px; inset-inline-start:-14px;
+  display:grid; place-items:center; width:56px; height:56px;
+  background:var(--c-surface); color:var(--c-ink); border:var(--border); border-radius:50%; box-shadow:var(--shadow-3);
+  font:var(--fw-xbold) 1.25rem/1 var(--font-display); letter-spacing:-.02em;
+}
+.event-card__poster{
+  margin:0; padding:var(--s-1); background:var(--c-surface); border:var(--border); border-radius:6px; box-shadow:var(--shadow-5);
+  transform:rotate(var(--rot,-1.5deg)); transition:transform var(--t-med) var(--ease-out);
+}
+.event--buildathon{--rot:1.5deg}
+.event-card:hover .event-card__poster,.event-card:focus-within .event-card__poster{transform:rotate(0)}
+.event-card__poster img{display:block;width:100%;aspect-ratio:5/6;object-fit:cover;object-position:50% 30%;border:1px solid var(--c-ink);border-radius:3px;background:var(--c-bg)}
+.event-card__body{display:flex;flex-direction:column;gap:var(--s-2);flex:1;min-width:0}
+.event-card__title{font:var(--fw-xbold) clamp(2.125rem,1.6rem + 2vw,3rem)/.95 var(--font-display);letter-spacing:var(--ls-display);text-wrap:balance;overflow-wrap:anywhere}
+.event-card__blurb{font-size:1rem;line-height:1.5;max-width:34ch}
+.event-card__tags{margin-block-start:var(--s-0)}
+.event-card__tags .tag{white-space:normal;text-align:start}
+.event-card__btn{align-self:flex-start;margin-block-start:auto;--btn-bg:var(--c-surface);--btn-fg:var(--c-ink)}
+.event-card--indigo .event-card__btn{--btn-bg:var(--c-accent)}
+
+/* Tablet: first card spans the row as an editorial split; the other two share a row */
+@media (min-width:700px) and (max-width:1023.98px){
+  .events__featured{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .event--odyssey{grid-column:1/-1}
+  .event--odyssey .event-card{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-5);align-items:center}
+  .event--odyssey .event-card__poster{max-width:320px;justify-self:center;width:100%}
+  .event--odyssey .event-card__body{gap:var(--s-3)}
+  .event--odyssey .event-card__btn{margin-block-start:var(--s-1)}
+}
+/* Desktop: three-up with stagger and tilt (Board 2) */
+@media (min-width:1024px){
+  .events__featured{gap:var(--s-6);align-items:start}
+  .event--buildathon{margin-block-start:var(--s-8)}
+  .event--bwai{margin-block-start:var(--s-3)}
+  .event--featured{height:100%}
+  .event--buildathon,.event--bwai{height:auto}
+}
+@media (max-width:699.98px){
+  .event-card{--card-pad:var(--s-2);--card-shadow:var(--shadow-6)}
+  .event--featured .event-card__stk{--size:44px}
+}
+
+
+/* ==========================================================================
+   Compact entries (5.3) — subordinate to the featured cards: white outlined card, coloured thumbnail field,
+   smaller type and a 5px shadow. <700px = horizontal row; ≥700px = vertical tile.
+   ========================================================================== */
+.events__compact{gap:var(--s-4) var(--s-4)}
+.event-mini{
+  --card-pad:0; --card-shadow:var(--shadow-5); --focus-ring:var(--c-primary-strong); --focus-gap:var(--c-surface);
+  gap:0; overflow:visible; width:100%; flex-direction:row;
+}
+.event-mini:hover,.event-mini:focus-within{transform:translate(-2px,-2px);box-shadow:var(--shadow-7)}
+.event-mini__thumb{
+  --tone:var(--c-lavender); margin:0; flex:0 0 38%; max-width:38%; display:flex; align-items:center; justify-content:center;
+  padding:var(--s-1); background:var(--tone); border-inline-end:var(--border); border-radius:calc(var(--r-lg) - 2px) 0 0 calc(var(--r-lg) - 2px);
+}
+.event-mini--lavender .event-mini__thumb{--tone:var(--c-lavender)}
+.event-mini--mint .event-mini__thumb{--tone:var(--c-mint)}
+.event-mini--coral .event-mini__thumb{--tone:var(--c-coral)}
+.event-mini--yellow .event-mini__thumb{--tone:var(--c-accent)}
+.event-mini__thumb img{display:block;width:100%;height:auto;max-height:100%;object-fit:contain;border:var(--border);border-radius:3px;background:var(--c-bg);box-shadow:3px 3px 0 var(--c-ink)}
+.event-mini__body{display:flex;flex-direction:column;align-items:flex-start;gap:var(--s-1);flex:1;min-width:0;padding:var(--s-2)}
+.event-mini__num{font:var(--fw-xbold) .8125rem/1 var(--font-display);letter-spacing:.06em;padding:3px 8px;background:var(--c-bg);border:var(--border);border-radius:var(--r-sm)}
+.event-mini__title{font:var(--fw-xbold) clamp(1.25rem,1.1rem + .6vw,1.5rem)/1.05 var(--font-display);letter-spacing:-.025em;overflow-wrap:anywhere;text-wrap:balance}
+.event-mini__desc{font-size:var(--fs-meta);line-height:1.45;color:var(--text-muted)}
+.event-mini__date{margin:0}
+.event-mini__btn{margin-block-start:auto;--btn-bg:var(--c-surface)}
+.event-mini__body > .event-mini__desc + .event-mini__btn,.event-mini__body > .event-mini__date + .event-mini__btn{margin-block-start:var(--s-1)}
+@media (min-width:700px){
+  .event-mini{flex-direction:column;height:100%}
+  .event-mini__thumb{flex:none;max-width:none;width:100%;aspect-ratio:4/3;border-inline-end:0;border-block-end:var(--border);border-radius:calc(var(--r-lg) - 2px) calc(var(--r-lg) - 2px) 0 0;padding:var(--s-2)}
+  .event-mini__thumb img{width:auto;height:100%;max-width:100%}
+  .event-mini__body{padding:var(--s-2) var(--s-2) var(--s-3)}
+  .event-mini__btn{margin-block-start:auto;align-self:flex-start}
+}
+@media (min-width:1024px){
+  .events__compact{gap:var(--s-4)}
+  .events__compact > .event:nth-child(even){margin-block-start:var(--s-4)}
+}
 
 /* ---------- Section decorations (never over text) ---------- */
 .events__bg-grid{--w:200px;--h:150px;--r:2%;--y:120px;--op:.35}
@@ -39,5 +130,7 @@
 .events__s-tri{--size:56px;--x:calc(var(--gutter) - 12px);--y:34px;--rot:-10deg}
 .events__s-asterisk{--size:88px;--r:22%;--y:150px;--rot:8deg}
 .events__s-squig{--size:150px;--r:3%;--b:8px;--rot:-6deg}
+.events__s-squig{display:none}
+@media (min-width:1024px){.events__s-squig{display:block}}
 .events__bg-grid{display:none}
 @media (min-width:640px){.events__bg-grid{display:block}}

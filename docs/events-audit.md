@@ -25,3 +25,4 @@ Source of truth: `docs/PROJECT_MASTER_SPEC.md` §7.4 (poster-stated facts) + the
 - Unknown values are omitted, never `null` in the UI. `dateLabel` empty for Tech Forge.
 - `facts[]` {label,value}; `lists[]` {label, items[{role?,name}]}; `parts[]` for Build with AI; `open[]` internal only.
 - No-JS fallback: `scripts/build_events.js` writes the cards into `index.html` between markers; 5.4 adds the dialog layer in JS on top.
+- Instagram "›" chip removed from the ODYSSEY and Buildathon poster/card derivatives in 5.2 (inpainted, same filenames).
