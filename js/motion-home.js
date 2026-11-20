@@ -83,7 +83,7 @@
           gsap.set(q(".team__head > *, .team .sticker > svg", team), { clearProps: "opacity,visibility,transform" });
         }});
         tt.from(q(".team__head > *", team), { y: 32, opacity: 0, duration: .65, stagger: .1 }, 0)
-          .from(q(".team .sticker > svg", team), { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .55, ease: "back.out(2)", stagger: .05 }, .35);
+          .from(q(".team > .sticker > svg, .member-card__stk > svg", team), { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .55, ease: "back.out(2)", stagger: .05 }, .35);
         ScrollTrigger.create({ trigger: team, start: "top 70%", once: true, onEnter: function () { tt.play(); } });
         q(".team__featured .member-card", team).forEach(function (c) {
           gsap.from(c, { y: 48, opacity: 0, duration: .75, ease: EASE, scrollTrigger: { trigger: c, start: "top 90%", once: true }, clearProps: "opacity,visibility,transform" });
