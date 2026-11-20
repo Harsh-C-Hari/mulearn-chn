@@ -1,7 +1,7 @@
 # PROJECT_STATE.md
 
-**Last updated:** 2026-11-20 · **Current phase:** 7 (Memories & Gallery) — **Phase 7 complete** · **Next:** Phase 8 — Motion Layer Integration & Sitewide Refinement  
-**Project status:** Phase 7 (Memories & Gallery) completed with 6-frame editorial polaroid collage, 11-item community gallery drawer, and accessible modal lightbox (`<dialog id="memories-lightbox">`). Audited at 320/390/768/1024/1440 (zero horizontal overflow, 0 console errors, 0 external requests).
+**Last updated:** 2026-11-20 · **Current phase:** Release Preparation (Stage 1: GitHub Readiness) · **Website Status:** Phase 7 Complete  
+**Project status:** Phase 7 (Memories & Gallery) completed and audited. Link underlines fixed with `text-decoration-skip-ink: none` (`f184170`). Stage 1 GitHub readiness audit complete: root README and comprehensive `.gitignore` added, 0 secrets present, 96/96 production assets verified. Ready for user review before Stage 2 (Vercel Readiness).
 
 ## Phase status
 | Phase | Name | Status |

@@ -2,6 +2,23 @@
 
 Format: newest first. Each entry: date · phase · what changed · files · verification.
 
+## 2026-11-20 — Release Preparation / Stage 1 (GitHub Readiness)
+- **GitHub Readiness Audit & Documentation:**
+  - Audited full repository structure at `D:\mulearn\website`: identified deployment root (`mulearn-chn/`), source archive assets (`sources/`), and historical checkpoint archives (`phase/`).
+  - Created root [README.md](file:///d:/mulearn/website/README.md) covering project purpose, tech stack, directory structure, local preview, and Vercel static deployment settings.
+  - Updated [mulearn-chn/README.md](file:///d:/mulearn/website/mulearn-chn/README.md) with Phase 7 completion status.
+  - Enhanced root [.gitignore](file:///d:/mulearn/website/.gitignore) with standard OS, IDE, environment, Python cache, and `.vercel` exclusions while ensuring all website production assets and documentation remain tracked.
+  - Scanned all 388 tracked repository files for secrets, tokens, credentials, and API keys (0 secrets found).
+  - Verified project asset integrity (`verify_project.py` 96/96 derivatives PASS, data synchronizers PASS).
+- **Files:** `README.md`, `.gitignore`, `mulearn-chn/README.md`, `mulearn-chn/docs/CHANGELOG.md`, `mulearn-chn/docs/PROJECT_STATE.md`.
+
+## 2026-11-20 — Hotfix: Continuous Link Underlines (text-decoration-skip-ink: none)
+- **Link Underline Gap Fix ([commit f184170]):**
+  - Diagnosed browser default `text-decoration-skip-ink: auto` creating gaps under descender characters (`g`, `y`, `j`, `p`, `q`, `@`, `.`).
+  - Added `text-decoration-skip-ink: none;` across `css/base.css` (`a`), `css/components.css` (`.link`, `.link:hover`), and `css/sections/footer.css` (`.site-footer a:hover`, `.footer__org`, `.footer__top`).
+  - Verified all 7 target links visually across standard (1280px), 200% zoom, and mobile (375px) viewports with zero gaps and zero stray ticks.
+- **Files:** `css/base.css`, `css/components.css`, `css/sections/footer.css`.
+
 ## 2026-11-20 — Phase 7 / Subphase 7.5 (Motion, Visual QA & Phase 7 Completion) — PHASE 7 COMPLETE
 - **Motion Layer Integration ([js/motion-home.js]):**
   - Added restrained ScrollTrigger entrance timeline for `#memories`: section head and sparkles enter at 70% viewport, followed by each of the 6 collage polaroids rising gently at 88% viewport.
