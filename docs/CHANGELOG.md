@@ -2,6 +2,37 @@
 
 Format: newest first. Each entry: date · phase · what changed · files · verification.
 
+## 2026-11-20 — Phase 3 / Subphase 3.6 (Integration, visual QA & completion) — PHASE 3 COMPLETE
+- Added: `scripts/screenshot_full.py`, `docs/screenshots/full-*.png`, `docs/audit-focus-index.json`, Phase 3 sections in `docs/responsive-report.md` and `docs/accessibility-report.md`, Phase 3 section in `docs/design-system.md`.
+- Changed: `scripts/audit_focus.py` honours `FOCUS_OUT`; removed superseded `page-*.png` screenshots.
+- Verified: see accessibility report. Phase 3 complete; Phase 4 not started.
+
+## 2026-11-20 — Phase 3 / Subphase 3.5 (Motion & interactions)
+- Added: `js/motion-home.js`, `scripts/test_motion_home.py`, `docs/motion-home-results.json`; header scroll shadow + menu transition in `header.css` / `nav.js`; `motion-home.js` script tag in `index.html`.
+- Changed: `scripts/audit_a11y.py` waits 2.6s after load.
+- Verified: `test_motion_home.py` 17/17 (normal entrance runs and ends clean; About reveals on scroll at 1280 and 390; reduced motion = GSAP never requested, content visible; GSAP blocked and JS disabled = content visible; CLS 0.001; 0 external requests; no page errors); `test_motion.py index.html` PASS; header test unchanged; axe 0 violations ×5 after the entrance completes.
+- Known: the only console line in the GSAP-blocked scenario is the browser logging the request the test blocks on purpose.
+
+## 2026-11-20 — Phase 3 / Subphase 3.4 (About section)
+- Added: `css/sections/about.css`, About markup + anchor stubs in `index.html`, `docs/screenshots/about-{320,390,768,1024,1440}.png`.
+- Fixed during review: fact tag overflowed the card at 320/390 (tags may wrap), unverified phrase "run by students for students" removed, faint ink dots replace near-invisible yellow dots.
+- Verified: no page overflow ×5 (only clipped decorations extend past the viewport), axe 0 violations ×5, 0 console errors, 0 external requests, 13 tab stops all with visible focus ring.
+
+## 2026-11-20 — Phase 3 / Subphase 3.3 (Hero visual refinement & responsive)
+- Changed: `css/sections/hero.css` rewritten (per-breakpoint composition, tuned headline scale, photo crop); hero sticker markup in `index.html` now uses `.hero__s-*` classes (adds ink blob, sparkle, indigo quarter; removes inline style placement).
+- Added: `docs/screenshots/hero-{320,390,768,1024,1440}.png`, `docs/screenshots/hero-vs-reference-1440.png`.
+- Verified: no overflow ×5; axe 0 violations ×5; 0 console errors; 0 external requests; visual review of every width against the approved reference.
+
+## 2026-11-20 — Phase 3 / Subphase 3.2 (Hero structure, content & assets)
+- Added: `css/sections/hero.css`, hero markup in `index.html` (replaces the 3.1 stub), `docs/screenshots/hero-struct-{320,390,768,1024,1440}.png`.
+- Removed: temporary `.stub` rule from `header.css`.
+- Verified: no overflow ×5 widths, 0 console errors, 0 external requests; hero image loads from `img/hero/` derivatives only (no source file referenced).
+
+## 2026-11-20 — Phase 3 / Subphase 3.1 (Header & navigation)
+- Added: `index.html`, `css/sections/header.css`, `js/nav.js`, `js/main.js`, `scripts/test_header.py`, `docs/screenshots/header-{320,390,768,1024,1180,1440}.png` (+ `-menu-open`, `-nojs`), `docs/audit-index.json`.
+- Changed: `scripts/audit_a11y.py` / `run_audit.sh` accept `AUDIT_OUT` so a page audit no longer overwrites Phase 2 results.
+- Verified (headless Chromium): menu open/Esc/focus-return/link-close/outside-close at 320/390/768/1024; sticky top = 0; no overflow at 320/390/768/1024/1180/1440 (open and closed); desktop nav on one row at 1180 and 1440; no-JS page keeps links + CTA; axe 0 violations ×5; 0 console errors; 0 external requests; `verify_project.py` PASS.
+
 ## 2026-11-20 — Phase 2 / Subphase 2.6 (final responsive & accessibility audit) — PHASE 2 COMPLETE
 - Added: `docs/responsive-report.md`, `docs/accessibility-report.md`, `docs/screenshots/styleguide-{320,390,768,1024,1440}.png`, `docs/audit-results.json`, `docs/audit-focus.json`, `scripts/audit_a11y.py`, `scripts/audit_focus.py`, `scripts/run_audit.sh`, `scripts/pack_deploy.py`.
 - Fixed (a11y): failing-contrast demo chips; yellow footer button inheriting cream text (1.38:1); invisible navy shadow on buttons in ink sections; focus ring 1:1 on indigo card and 2.79:1 on coral card (now surface-aware `--focus-ring`/`--focus-gap`).

@@ -1,7 +1,7 @@
 # PROJECT_STATE.md
 
-**Last updated:** 2026-11-20 · **Current phase:** 2 (Design foundation) — **COMPLETE** (Subphase 2.6 done) · **Next:** Phase 3 (Header/nav + Hero + About) — awaiting client go-ahead  
-**Project status:** Design system built and audited (axe-core 0 violations at 5 widths, WCAG 2.2 focus checks pass, 0 console errors, 0 external requests); `styleguide.html` is the reference for every Phase 3+ section.
+**Last updated:** 2026-11-20 · **Current phase:** 3 (Header, Hero & About) — **COMPLETE** (Subphase 3.6 done) · **Next:** Phase 4 (Offers + Join + Footer) — awaiting client go-ahead  
+**Project status:** Phase 3 complete: header/navigation, hero and About assembled in `index.html`, with motion. Audited at 320/390/768/1024/1440 (axe 0 violations, no overflow, 0 console errors, 0 external requests, motion tests 17/17). Offers, Events, Team, Memories, Join and Footer are Phases 4–7.
 
 ## Phase status
 | Phase | Name | Status |
@@ -9,7 +9,7 @@
 | 0 | Master planning & audit | ✅ complete |
 | 1 | Asset pipeline & content data | ✅ complete & reconciled |
 | 2 | Design foundation (subphased) | ✅ complete — final ZIP `mulearn-chn_phase-02_complete.zip` |
-| 3 | Header/nav + Hero + About | ⏳ |
+| 3 | Header/nav + Hero + About | ✅ complete |
 | 4 | Offers + Join + Footer | ⏳ |
 | 5 | Events + dialogs | ⏳ |
 | 6 | Team + directory | ⏳ |
@@ -17,6 +17,37 @@
 | 8 | Motion layer | ⏳ |
 | 9 | QA / a11y / perf / SEO | ⏳ |
 | 10 | Release & handoff | ⏳ |
+
+## Phase 3 progress (subphase checkpoints)
+| Subphase | Name | Status | ZIP |
+|---|---|---|---|
+| 3.1 | Header & navigation | ✅ complete | `mulearn-chn_phase-03_subphase-01.zip` (+ `mulearn-chn_phase-03_subphase-01_deploy.zip`) |
+| 3.2 | Hero structure, content & assets | ✅ complete | `mulearn-chn_phase-03_subphase-02.zip` (+ `mulearn-chn_phase-03_subphase-02_deploy.zip`) |
+| 3.3 | Hero visual refinement & responsive | ✅ complete | `mulearn-chn_phase-03_subphase-03.zip` (+ `mulearn-chn_phase-03_subphase-03_deploy.zip`) |
+| 3.4 | About section | ✅ complete | `mulearn-chn_phase-03_subphase-04.zip` (+ `mulearn-chn_phase-03_subphase-04_deploy.zip`) |
+| 3.5 | Motion & interactions | ✅ complete | `mulearn-chn_phase-03_subphase-05.zip` (+ `mulearn-chn_phase-03_subphase-05_deploy.zip`) |
+| 3.6 | Integration, visual QA & completion | ✅ complete | `mulearn-chn_phase-03_complete.zip` (+ `mulearn-chn_phase-03_deploy.zip`) |
+
+
+Phase 3 working rules (client, 2026-11-20): run all six subphases in order **without stopping for approval**; deliver a versioned full ZIP + deployable ZIP after each; never overwrite a checkpoint. Client wants the look to be a **mix of Board 1 and Board 2** (see `docs/design-audit.md` §4).
+
+### 3.1 notes
+`index.html` created (skip link, sticky header, `<main>` with a temporary build stub replaced in 3.2). Header = asterisk + µLearn lockup with a small CHN tag, five links (About · Offers · Events · Team · Memories) and a yellow **Join us** pill (→ `data/links.js` `register`, bound by `js/main.js`, hard-coded href is the no-JS fallback). One `<nav aria-label="Main">` serves both layouts: horizontal row ≥1180px (Join is the last `<li>`, so DOM order = visual order), disclosure panel below (button `aria-expanded`/`aria-controls`, Esc closes + returns focus, link/outside click and focus-leave close, no trap). 640–1179px shows Join in the bar beside the Menu button; <640px Join sits inside the panel. Nav targets #offers/#events/#team/#memories do not exist until Phases 4–7 — the links work as anchors but scroll nowhere until then (anchor stubs are added after About in 3.4).
+
+### 3.2 notes
+Hero section added to `index.html` (`#hero`, `aria-labelledby=hero-title`): h1 "Learn. Build. Belong." (three block spans), lead "The µLearn community of College of Engineering, Chengannur." (D3 safe wording, no "official"), one generic supporting sentence (no stats/claims), CTAs **Explore events** (→ #events) and **Know more** (→ #about) as in the approved reference, plus a text link **Join the CHN Discord** bound to `data-link="discord"` (`data/links.js`). Photo = `img/hero/hero-{600,900,1200}.webp` (derivative of `IMG_7789_qyh10e.jpg`, alt from manifest, `fetchpriority=high`, 1200×1260 attrs, mono per C5-A). First-pass stickers + scallop edge in place; composition tuned in 3.3. `css/sections/hero.css` added.
+
+### 3.3 notes
+Hero composition refined against the approved Board 1 hero (+ Board 2 vocabulary). Headline: three stacked lines at `clamp(3.75rem,1.2rem+14vw,8rem)` (<900) / `clamp(5.5rem,10.2vw,10.5rem)` (≥900) / `clamp(9rem,11vw,11.5rem)` (≥1280), line-height .88. Photo: `.photo-frame--mono--tilt-r` with `--shadow-9`, ratio 10/9, `object-position:30% 100%` (trims ceiling, keeps mentor + students). Decorations are positioned per breakpoint via `.hero__s-*` classes so none overlap text: mobile = triangle + asterisk top-right of the headline, sparkle on the photo corner, indigo quarter bottom-left, grid + slab top-right; tablet adds squiggle; ≥900 adds the Board 2 ink blob (bottom-right) and gutter shapes; squiggle only ≥1280 (collided with copy at 900–1279). Lavender field ends in the Board 2 scallop edge into cream. Comparison image: `docs/screenshots/hero-vs-reference-1440.png`.
+
+### 3.4 notes
+About section added (`#about`, `css/sections/about.css`): white outlined card (label, h2 "About µLearn CHN" with lavender highlight, two paragraphs, yellow "µLearn — the network" / mint "µLearn CHN — our campus" explainer cards, two fact tags, **Our journey** → #memories + text link to mulearn.org via `data-link="mulearnOrg"`), and a tilted mono photo on a yellow mat with star, loop and faint dots. Photo `img/about/about-{410,820}.webp` (derivative of `IMG_9798_mvknx7.jpg`, alt from manifest, lazy). Copy is derived only from Spec §7.1/§7.2 (peer learning in small groups; offerings list; CHN = campus community; CEC est. 1993) — no numbers, no programmes attributed to CHN, no "official". Anchor stubs `#offers #events #team #memories #join` added after About (empty aria-hidden spans) so nav and CTA anchors resolve until Phases 4–7 replace them.
+
+### 3.5 notes
+Motion added with the Phase 2 foundation. `js/motion-home.js` (inside `MULEARN.motion.onReady` + `mm.add('(prefers-reduced-motion: no-preference)')`): hero entrance once on load (headline lines rise, intro, CTAs, photo, then sticker pop); About reveal once via ScrollTrigger (`top 75%`, `once`): card, explainer cards, tags/CTAs, photo, stickers. Only transform + opacity; `clearProps` after each timeline so no inline styles remain. CSS-only: header gets a flat 4px hard shadow after 8px scroll (`.is-stuck`, class toggled in `nav.js`), menu panel fades/slides in (≤1179px). No continuous loops, no scroll hijack. Nothing hidden in CSS: start states are applied by JS after GSAP registers (brief first-paint then entrance on load is expected). Reduced motion: GSAP is never requested and global transition rule neutralises CSS motion. `scripts/test_motion_home.py` covers normal / reduced / GSAP blocked / JS disabled / 390px / CLS (results in `docs/motion-home-results.json`).
+
+### 3.6 notes
+Integration QA of header + hero + About together (see `docs/phase3-report.md`, `docs/responsive-report.md`, `docs/accessibility-report.md`). Final-state screenshots `docs/screenshots/full-{320,390,768,1024,1440}.png`. Link check: every `data-link` href equals its `data/links.js` URL; all in-page anchors resolve (stubs after About); 19 local refs exist; no `sources/` references; every `_blank` link has `rel=noopener noreferrer` + sr-only "opens in a new tab". Focus audit: 13 tab stops (1440) / 8 (390), min ring contrast 4.53:1, none obscured, skip link OK.
 
 ## Phase 2 progress (subphase checkpoints)
 | Subphase | Name | Status | ZIP |
@@ -59,6 +90,7 @@ All project content is tracked under three explicit tiers:
 ## Decisions log (newest first; overrides the spec)
 | Date | Decision | By |
 |---|---|---|
+| 2026-11-20 | 3.1: One `<nav>` for desktop row + mobile disclosure (no duplicated link lists); nav row from 1180px (Phase 2.6); Join CTA is the last nav `<li>` on desktop for correct tab order; link label "Offers" used for the spec's "What µLearn offers" to fit one row; CTA hrefs come from `data/links.js` via `data-link` (HTML href is the no-JS fallback). | Phase 3.1 |
 | 2026-11-20 | 2.6: Focus ring + gap are surface-aware custom properties (`--focus-ring`, `--focus-gap`); yellow on indigo/ink, navy on coral, gap = card colour. `.btn` owns its text colour so ancestor `a{}` rules can't override it. Sub-AA colour pairs appear in the styleguide only as labelled "fails" chips on a neutral surface. Header nav shows from 1180px. `verify_project.py` now resolves paths relative to itself (H1 closed); root duplicate docs removed (H3 closed); stale `pack_bundles.py` replaced by `pack_deploy.py`. | Phase 2.6 |
 | 2026-11-20 | 2.5: Team portraits are full-background photos (not cut-outs), so Board 1's coloured backdrop is realised as a coloured **mat** around an inset photo, with a dot pattern on two of four. Portrait captions use roles only (face↔name linkage still needs client confirmation). Styleguide uses only existing sample copy/data (event titles, formats, roles); no new facts. Board 2 wave edge realised as hard scallop mask (`.edge`). Ink/indigo cards force inherited link colour (accessibility fix). | Phase 2.5 |
 | 2026-11-20 | 2.4: Sprite is single source (`img/ui/sprite.svg`) inlined per page by `sync_sprite.py` (C9-B). `motion-guard.js` lazily loads GSAP only when reduced-motion is off (saves ~118 KB for those visitors); `js-motion` class set only after both libraries register. Board 2 "wave" edge built as hard-edged scallop/zigzag masks (flat, no curves-with-gradient). GSAP licence note written by hand (npm tarball ships no LICENSE file). | Phase 2.4 |

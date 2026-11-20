@@ -1,0 +1,82 @@
+/* ==========================================================================
+   header.css — site header + navigation (Phase 3.1)
+   One <nav> element serves both layouts: a horizontal row from 1180px, a disclosure panel below.
+   No-JS: the panel is simply shown as a wrapped row under the brand (nothing depends on JS to be reachable).
+   ========================================================================== */
+.site-header{position:sticky;inset-block-start:0;z-index:var(--z-header);background:var(--c-bg);border-block-end:var(--border)}
+.site-header__row{display:flex;align-items:center;justify-content:space-between;gap:var(--s-2);min-height:var(--header-h)}
+@media (min-width:1024px){.site-header__row{gap:var(--s-3)}}
+
+/* ---------- Brand lockup: asterisk + µLearn + CHN tag ---------- */
+.brand{display:inline-flex;align-items:center;gap:var(--s-1);min-height:44px;color:var(--c-ink);text-decoration:none;flex:none}
+.brand:hover{text-decoration:none}
+.brand__mark{width:34px;height:34px;--fill:var(--c-ink);transition:transform var(--t-med) var(--ease-out)}
+.brand:hover .brand__mark{transform:rotate(45deg)}
+.brand__word{font:var(--fw-xbold) 1.625rem/1 var(--font-display);letter-spacing:var(--ls-heading)}
+.brand__chn{
+  align-self:center;padding:2px 7px;background:var(--c-accent);border:var(--border);border-radius:var(--r-sm);
+  font:var(--fw-xbold) .6875rem/1.3 var(--font-body);letter-spacing:var(--ls-label);box-shadow:2px 2px 0 var(--c-ink);
+}
+@media (max-width:359px){.brand__word{font-size:1.4rem}.brand__mark{width:28px;height:28px}}
+
+/* ---------- Right-hand actions ---------- */
+.site-header__actions{display:flex;align-items:center;gap:var(--s-2);flex:none}
+.site-header__cta{display:none;white-space:nowrap}
+@media (min-width:640px){.site-header__cta{display:inline-flex}}
+
+/* ---------- Menu toggle (disclosure button) ---------- */
+.menu-toggle{display:none}
+.js .menu-toggle{display:inline-flex}
+@media (min-width:1180px){.js .menu-toggle{display:none}}
+.menu-toggle{min-width:44px;padding-inline:var(--s-2)}
+.menu-toggle .icon{width:1.35em;height:1.35em}
+.menu-toggle__close{display:none}
+.menu-toggle[aria-expanded="true"] .menu-toggle__open{display:none}
+.menu-toggle[aria-expanded="true"] .menu-toggle__close{display:inline-block}
+.menu-toggle[aria-expanded="true"]{--btn-bg:var(--c-accent)}
+.menu-toggle:hover .icon{transform:none}   /* the arrow nudge in .btn is wrong for a menu icon */
+
+/* ---------- Navigation ---------- */
+.site-nav{flex-basis:100%;order:3;padding-block-end:var(--s-2)}
+.site-nav__list{display:flex;flex-wrap:wrap;gap:var(--s-0) var(--s-1);list-style:none;padding:0;margin:0}
+.site-nav__cta{display:none}
+
+/* JS present, below 1180px: the nav becomes a disclosure panel under the bar */
+@media (max-width:1179px){
+  .js .site-nav{
+    position:absolute;inset-inline:0;inset-block-start:100%;order:0;flex-basis:auto;
+    background:var(--c-bg);border-block-end:var(--border);box-shadow:0 6px 0 var(--c-ink);
+    max-height:calc(100dvh - var(--header-h));overflow-y:auto;overscroll-behavior:contain;padding:var(--s-2) var(--gutter) var(--s-3);
+  }
+  .js .site-nav:not(.is-open){display:none}
+  .js .site-nav__list{flex-direction:column;flex-wrap:nowrap;gap:0}
+  .js .site-nav .nav-link{
+    width:100%;min-height:56px;padding:0 var(--s-1);font:var(--fw-xbold) 1.375rem/1.1 var(--font-display);letter-spacing:var(--ls-heading);
+    border-block-end:2px dashed var(--c-ink);border-radius:0;
+  }
+  .js .site-nav .nav-link:hover{box-shadow:inset .5em 0 0 var(--c-lavender)}
+  .js .site-nav .nav-link[aria-current="true"]{box-shadow:inset .5em 0 0 var(--c-accent)}
+  .js .site-nav__cta{display:block;padding-block-start:var(--s-3)}
+}
+@media (min-width:640px) and (max-width:1179px){.site-nav__cta,.js .site-nav__cta{display:none}}
+
+/* Desktop: single row. Brand | links … Join (CTA is the last <li>, pushed right with auto margin).
+   DOM order = visual order, so the tab order matches what people see (WCAG 2.4.3). */
+@media (min-width:1180px){
+  .site-header__actions{display:none}
+  .site-nav{flex:1 1 auto;order:0;padding:0;margin-inline-start:var(--s-4)}
+  .site-nav__list{flex-wrap:nowrap;gap:var(--s-1);align-items:center}
+  .site-nav .nav-link{padding-inline:var(--s-2);white-space:nowrap}
+  .site-nav__cta,.js .site-nav__cta{display:block!important;margin-inline-start:auto}
+}
+/* no-JS under 640px: the bar CTA is hidden, so the CTA inside the nav list stays visible */
+@media (max-width:639px){.no-js .site-nav__cta{display:block}}
+
+
+/* ---------- Motion (3.5): scroll shadow + menu panel entrance. Reduced-motion rule in base.css neutralises both. ---------- */
+.site-header{transition:box-shadow var(--t-med) var(--ease-out)}
+.site-header.is-stuck{box-shadow:0 4px 0 var(--c-ink)}
+@media (prefers-reduced-motion:no-preference) and (max-width:1179px){
+  .js .site-nav.is-open{animation:menu-in var(--t-med) var(--ease-out)}
+  @keyframes menu-in{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+}

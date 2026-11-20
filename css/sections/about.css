@@ -1,0 +1,45 @@
+/* ==========================================================================
+   about.css — About section (Phase 3.4)
+   Cream page, white outlined text card (Board 1) with colour-blocked explainer cards (Board 2),
+   tilted mono photo on a yellow mat with star + loop. Flat colour, 2px navy lines, hard shadows.
+   ========================================================================== */
+.about{background:var(--c-bg);padding-block:var(--s-8) var(--section-y)}
+.about__grid{display:grid;gap:var(--s-8);grid-template-columns:minmax(0,1fr);align-items:start}
+@media (min-width:900px){.about__grid{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:var(--s-6);align-items:center}}
+
+.about__card{--card-pad:var(--s-3);gap:var(--s-3);box-shadow:var(--shadow-9)}
+@media (min-width:640px){.about__card{--card-pad:var(--s-5)}}
+.about__title{font-size:clamp(2.5rem,1.3rem + 4.4vw,4.5rem);line-height:.95;letter-spacing:-.035em}
+.about__copy{display:flex;flex-direction:column;gap:var(--s-2);max-width:40rem;font-size:var(--fs-lead);line-height:1.5}
+.about__copy p{margin:0}
+.about__copy strong{font-weight:var(--fw-xbold)}
+
+/* µLearn vs µLearn CHN explainer */
+.about__pair{display:grid;gap:var(--s-2);grid-template-columns:minmax(0,1fr)}
+@media (min-width:640px){.about__pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s-3)}}
+.about__pair .card{--card-pad:var(--s-2);--card-shadow:var(--shadow-5);gap:var(--s-1)}
+.about__pair .card__title{font-size:1.25rem}
+.about__pair .card__text{font-size:.9375rem;line-height:1.5}
+.about__tag{align-self:flex-start}
+
+.about__facts{display:flex;flex-wrap:wrap;gap:var(--s-1)}
+.about__actions{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-2) var(--s-4)}
+
+/* Photo side */
+.about__media{position:relative;isolation:isolate;justify-self:center;width:min(100%,24rem);padding-block:var(--s-4)}
+@media (min-width:900px){.about__media{width:100%;max-width:26rem;justify-self:end}}
+.about__figure{--shadow:var(--shadow-7);box-shadow:var(--shadow-7);position:relative;z-index:var(--z-content)}
+.about__figure img{--ratio:4/4.6;--pos:50% 40%}
+.about__media .sticker{z-index:2}
+.about__s-star{--size:76px;--r:-14px;--y:-4px;--rot:12deg}
+.about__s-loop{--size:150px;--x:-48px;--b:-6px;--rot:-6deg;z-index:0!important}
+.about__s-dots{--size:96px;--r:-34px;--b:16px;z-index:0!important}
+@media (max-width:639px){
+  .about__s-star{--size:56px;--r:-6px}
+  .about__s-loop{--size:104px;--x:-20px}
+  .about__s-dots{--size:70px;--r:-14px}
+}
+
+/* Fact tags may wrap on narrow cards (base .tag is nowrap) */
+.about__facts .tag{white-space:normal;max-width:100%}
+@media (max-width:639px){.about__copy{font-size:1.0625rem}.about__actions .link{flex:1 1 12rem}}

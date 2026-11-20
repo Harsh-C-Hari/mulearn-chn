@@ -40,3 +40,6 @@ Checks: `scripts/screenshot.py` (5 widths, overflow, console, network), `scripts
 
 ## Focus tokens (added in 2.6)
 `:focus-visible` draws a 3px outline (offset 3px) plus a 5px gap. Both follow the surface: `--focus-ring` (default strong indigo) and `--focus-gap` (default cream). `.on-ink` / `[data-surface="ink"]` switch to yellow ring + navy gap; `.card--indigo`, `.card--ink` use a yellow ring and `.card--coral` a navy ring; every `.card` sets its gap to its own fill. Rule: the ring must reach 3:1 against the adjacent surface. New coloured surfaces must set these two properties.
+
+## Phase 3 additions (index.html)
+`css/sections/header.css` (`.site-header`, `.brand`, `.site-nav`, `.menu-toggle`), `hero.css` (`.hero`, `.hero__*`, per-breakpoint `.hero__s-*` sticker placement), `about.css` (`.about`, `.about__*`). JS: `js/main.js` (binds `[data-link]` to `data/links.js`), `js/nav.js` (menu, active section, scroll shadow), `js/motion-home.js` (hero entrance, About reveal; needs `MULEARN.motion`). Page load order: seven shared stylesheets + header/hero/about; scripts `links.js, main.js, nav.js, motion-guard.js, motion-home.js` (all `defer`). Nav targets for later phases are empty `<span id>` stubs after About.

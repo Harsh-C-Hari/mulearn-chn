@@ -1,0 +1,99 @@
+{
+ "scenarios": [
+  {
+   "scenario": "normal",
+   "motionClass": true,
+   "midHero_minOpacity": 0,
+   "heroAllVisible": true,
+   "aboutRevealedOnScroll": true,
+   "leftoverInlineStyles": 0,
+   "overflow": false,
+   "gsapRequested": [
+    "gsap.min.js",
+    "ScrollTrigger.min.js"
+   ],
+   "external": [],
+   "console": [],
+   "stuckClassAtTop": false,
+   "stuckClassScrolled": true,
+   "focusAfterMotion": "brand"
+  },
+  {
+   "scenario": "reduced",
+   "motionClass": false,
+   "heroAllVisible": true,
+   "aboutVisibleWithoutScroll": true,
+   "overflow": false,
+   "gsapRequested": [],
+   "external": [],
+   "console": [],
+   "stuckClassAtTop": false,
+   "stuckClassScrolled": true,
+   "focusAfterMotion": "brand"
+  },
+  {
+   "scenario": "gsap-blocked",
+   "motionClass": false,
+   "heroAllVisible": true,
+   "aboutVisibleWithoutScroll": true,
+   "overflow": false,
+   "gsapRequested": [
+    "gsap.min.js"
+   ],
+   "external": [],
+   "console": [
+    "Failed to load resource: net::ERR_FAILED"
+   ],
+   "stuckClassAtTop": false,
+   "stuckClassScrolled": true,
+   "focusAfterMotion": "brand"
+  },
+  {
+   "scenario": "js-disabled",
+   "heroAllVisible": true,
+   "aboutVisibleWithoutScroll": true,
+   "overflow": false,
+   "gsapRequested": [],
+   "external": [],
+   "console": []
+  },
+  {
+   "scenario": "normal-390",
+   "motionClass": true,
+   "midHero_minOpacity": 0,
+   "heroAllVisible": true,
+   "aboutRevealedOnScroll": true,
+   "leftoverInlineStyles": 0,
+   "overflow": false,
+   "gsapRequested": [
+    "gsap.min.js",
+    "ScrollTrigger.min.js"
+   ],
+   "external": [],
+   "console": [],
+   "stuckClassAtTop": false,
+   "stuckClassScrolled": true,
+   "focusAfterMotion": "brand"
+  }
+ ],
+ "cls": 0.001,
+ "checks": {
+  "normal: entrance runs (opacity <1 mid-animation)": true,
+  "normal: hero fully visible after entrance": true,
+  "normal: About revealed on scroll": true,
+  "normal: no leftover inline opacity/visibility": true,
+  "normal: js-motion class set": true,
+  "normal: header shadow class toggles": true,
+  "reduced: GSAP not requested": true,
+  "reduced: no js-motion class": true,
+  "reduced: content visible": true,
+  "gsap-blocked: content visible": true,
+  "gsap-blocked: no js-motion class": true,
+  "js-disabled: content visible": true,
+  "mobile 390: no overflow + reveals": true,
+  "no console errors (gsap-blocked ignores the deliberately blocked request itself)": true,
+  "no external requests (all scenarios)": true,
+  "no overflow (all scenarios)": true,
+  "CLS < 0.01 with motion": true
+ }
+}

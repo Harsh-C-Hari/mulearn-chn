@@ -39,5 +39,5 @@ async def main():
         await pg.keyboard.press('Enter');await pg.wait_for_timeout(200)
         out['skip']={'first':first,'hash':await pg.evaluate('location.hash'),'targetExists':await pg.evaluate("!!document.querySelector(location.hash||'#none')")}
         await b.close()
-    json.dump(out,open('docs/audit-focus.json','w'),indent=1);print(json.dumps(out,indent=1))
+    json.dump(out,open(os.environ.get('FOCUS_OUT','docs/audit-focus.json'),'w'),indent=1);print(json.dumps(out,indent=1))
 asyncio.run(main())

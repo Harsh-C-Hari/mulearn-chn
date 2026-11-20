@@ -19,7 +19,7 @@ async def main():
             pg.on('console',lambda m,e=errs:e.append(m.text) if m.type in('error','warning') else None)
             pg.on('pageerror',lambda e,x=errs:x.append(str(e)))
             pg.on('request',lambda r,q=reqs:q.append(r.url))
-            await pg.goto(URL);await pg.wait_for_timeout(700)
+            await pg.goto(URL);await pg.wait_for_timeout(2600)  # let entrance animations finish (3.5)
             await pg.evaluate('document.fonts.ready')
             m=await pg.evaluate('({sw:document.documentElement.scrollWidth,iw:innerWidth})')
             await pg.add_script_tag(path=AXE)
@@ -66,6 +66,6 @@ async def main():
         pg=await ctx.new_page();await pg.goto(URL);await pg.wait_for_timeout(500)
         out['noJS']={'bodyTextLen':len(await pg.evaluate("document.body.innerText")),'hiddenSections':await pg.evaluate("[...document.querySelectorAll('section')].filter(s=>getComputedStyle(s).opacity==='0'||getComputedStyle(s).visibility==='hidden').length")}
         await ctx.close();await b.close()
-    json.dump(out,open('docs/audit-results.json','w'),indent=1)
+    json.dump(out,open(os.environ.get('AUDIT_OUT','docs/audit-results.json'),'w'),indent=1)
     print(json.dumps(out,indent=1)[:9000])
 asyncio.run(main())

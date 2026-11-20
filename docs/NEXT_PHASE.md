@@ -1,22 +1,15 @@
-# NEXT_PHASE.md — Phase 3 (Header / navigation + Hero + About)
+# NEXT_PHASE.md
 
-> **Checkpoint:** Phase 2 is complete (`mulearn-chn_phase-02_complete.zip`). Do **not** start Phase 3 until the client says so.
-> Read first: `docs/PROJECT_MASTER_SPEC.md`, `docs/PROJECT_STATE.md`, `docs/design-audit.md`, `docs/design-system.md`, `docs/accessibility-report.md`, `docs/ASSET_MAPPING.md`.
+> **Checkpoint:** Phase 3 Subphase 3.6 complete (`mulearn-chn_phase-03_complete.zip`). **Phase 3 is COMPLETE. Next planned phase: Phase 4 — What µLearn offers + Join + Footer.** Do not start Phase 4 until the client says so.
 
-## What Phase 2 delivered (reuse, don't rebuild)
-- `css/tokens.css`, `base.css`, `layout.css`, `components.css`, `decor.css`, `utilities.css`, `css/sections/styleguide.css`
-- `img/ui/sprite.svg` (icons + stickers; inline per page with `python3 scripts/sync_sprite.py <page>.html`)
-- `js/motion-guard.js` (lazy-loads vendored GSAP 3.15.1 + ScrollTrigger only when motion is allowed; sets `html.js-motion`)
-- `styleguide.html` — the visual reference; copy its markup patterns for sections
-
-## Phase 3 scope (from the master plan)
-`index.html` assembly: skip link, header/nav (mobile menu), Hero ("Learn. Build. Belong." with the hero photo frame + stickers), About. Use `data/links.js` for every CTA. No animations beyond what `motion-guard.js` enables (Phase 8 owns the motion layer).
-
-## Rules to keep
-- Flat colour only; 2px navy lines; hard shadows; pill radius for buttons only; mono photos only on hero/About (C5-A).
-- Text only on navy, cream, white, yellow, mint, lavender, coral or strong indigo (white). Never text on `#6366F1`.
-- Every new page: run `scripts/run_audit.sh <page>.html` (axe + keyboard + overflow + network) and `scripts/audit_focus.py`; keep 0 violations.
-- Never change verified team/event data. Deliver a versioned full ZIP after every subphase (`scripts/pack_checkpoint.py`) and a deployable ZIP (`scripts/pack_deploy.py`).
+## Phase 4 — Offers + Join + Footer
+Replace the anchor stubs after About with `<section id="offers">` (6 official labels, staggered sticker cards, links from `data/links.js` `offers.*`), `<section id="join">` (split card, register + Discord CTAs, 3 verified steps, socials, email) and `<footer>`. Events, Team, Memories remain Phases 5–7: keep their stubs until then.
 
 ## Open items for the client
-Satoshi font files (optional; drop into `fonts/` per the note in `tokens.css`); Phase 1 tier-3 content confirmations listed in `PROJECT_STATE.md`.
+Satoshi font files; Phase 1 tier-3 confirmations; confirm Offers link label; hero/About photo choices (hero crop changed to 30% 100%, 10:9).
+
+## Read first
+`docs/PROJECT_MASTER_SPEC.md`, `docs/PROJECT_STATE.md`, `docs/design-system.md`, `docs/design-audit.md`, `docs/ASSET_MAPPING.md`, `docs/accessibility-report.md`, `docs/phase3-report.md`.
+
+## Rules to keep
+Flat colour only; 2px navy lines; hard shadows; pill radius for buttons only; mono photos only on hero/About; text only on navy, cream, white, yellow, mint, lavender, coral or strong indigo (white). Run `scripts/run_audit.sh index.html` after every change. Never change verified team/event data. Full ZIP via `scripts/pack_checkpoint.py`, deployable via `scripts/pack_deploy.py`.

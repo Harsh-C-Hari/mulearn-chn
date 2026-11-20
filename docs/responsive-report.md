@@ -31,3 +31,14 @@ Contact sheets of the 320 px and 768 px full pages and close-ups of the 768/1024
 ## Not tested (honest scope)
 - Real devices and Safari/Firefox: only Chromium was available.
 - Pages other than the styleguide: none exist until Phase 3.
+
+## Phase 3 — index.html (header, hero, About)
+Tested in headless Chromium at 320 / 390 / 768 / 1024 / 1440 (header also 1180). Results: `docs/screenshots/header-test.json`, `docs/audit-index.json`, `docs/screenshots/full-*.png`.
+| Check | Result |
+|---|---|
+| Horizontal overflow (page) | none at any width; menu open or closed |
+| Header | one row ≥1180px (nav on a single line at 1180 and 1440); disclosure panel below; 66px (<1024) / 78px (≥1024) tall; sticky top = 0 |
+| Hero | stacked <900, split ≥900; no decoration on text at any width after fixes (mobile triangle, 1024 squiggle) |
+| About | single column <900, card + tilted photo ≥900; fact tags wrap at 320/390 |
+| Clipped decorations | slab/blob/grid extend past the viewport but are clipped by `.section--clip` (no scroll) |
+Not covered: real devices, landscape phones, Safari/Firefox, zoom ≥200%.

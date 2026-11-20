@@ -51,3 +51,17 @@
 - Automated tools find roughly a third of accessibility issues. No screen-reader pass (NVDA/VoiceOver) was possible here; do one in Phase 9.
 - Only Chromium was tested. Windows High Contrast / forced-colors mode was not tested.
 - Only `styleguide.html` exists; every Phase 3+ page must be re-audited with `scripts/run_audit.sh <page>.html`.
+
+## Phase 3 — index.html (header, hero, About)
+Run: `scripts/run_audit.sh index.html` (axe-core, tags wcag2a/aa, 21a/aa, 22aa, best-practice), `AUDIT_URL=… scripts/audit_focus.py`, `scripts/test_motion_home.py`, `scripts/test_header.py`.
+| Check | Result |
+|---|---|
+| axe-core | 0 violations at 320/390/768/1024/1440 (audit waits for entrance animation to finish) |
+| Structure | 1× h1, h2 for About, h3 in cards, no heading skips; landmarks header / nav "Main" / main; skip link first and targets #main |
+| Menu | button with `aria-expanded`, `aria-controls`, changing label; Esc closes and returns focus; link click, outside click and focus-leave close; no trap |
+| Focus | 13 tab stops at 1440, 8 at 390; min ring contrast 4.53:1; none obscured; all visible |
+| Images | hero + About have descriptive alt; decorations `aria-hidden` |
+| External links | `rel="noopener noreferrer"` + "(opens in a new tab)" |
+| Motion | reduced motion: GSAP never requested, content visible; GSAP blocked / JS off: content visible; CLS 0.001 |
+| Console / network | 0 errors; 0 external requests |
+Not performed: screen-reader testing, forced-colours mode, Safari/Firefox, real devices. WCAG 2.2 AA is targeted; automated tests cannot prove full conformance.

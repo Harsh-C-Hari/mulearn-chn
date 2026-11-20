@@ -1,0 +1,124 @@
+{
+ "320": {
+  "overflow": false,
+  "headerH": 66,
+  "toggleVisible": true,
+  "navVisible": false,
+  "expandedAfterOpen": "true",
+  "panelVisible": true,
+  "overflowOpen": false,
+  "expandedAfterEsc": "false",
+  "focusReturned": true,
+  "closedAfterLink": "false",
+  "closedAfterOutside": "false",
+  "stickyTop": 0,
+  "hrefs": [
+   "https://app.mulearn.org/register",
+   "https://app.mulearn.org/register",
+   "https://discord.gg/DfnDfBhGha",
+   "https://mulearn.org/"
+  ],
+  "console": []
+ },
+ "390": {
+  "overflow": false,
+  "headerH": 66,
+  "toggleVisible": true,
+  "navVisible": false,
+  "expandedAfterOpen": "true",
+  "panelVisible": true,
+  "overflowOpen": false,
+  "expandedAfterEsc": "false",
+  "focusReturned": true,
+  "closedAfterLink": "false",
+  "closedAfterOutside": "false",
+  "stickyTop": 0,
+  "hrefs": [
+   "https://app.mulearn.org/register",
+   "https://app.mulearn.org/register",
+   "https://discord.gg/DfnDfBhGha",
+   "https://mulearn.org/"
+  ],
+  "console": []
+ },
+ "768": {
+  "overflow": false,
+  "headerH": 66,
+  "toggleVisible": true,
+  "navVisible": false,
+  "expandedAfterOpen": "true",
+  "panelVisible": true,
+  "overflowOpen": false,
+  "expandedAfterEsc": "false",
+  "focusReturned": true,
+  "closedAfterLink": "false",
+  "closedAfterOutside": "false",
+  "stickyTop": 0,
+  "hrefs": [
+   "https://app.mulearn.org/register",
+   "https://app.mulearn.org/register",
+   "https://discord.gg/DfnDfBhGha",
+   "https://mulearn.org/"
+  ],
+  "console": []
+ },
+ "1024": {
+  "overflow": false,
+  "headerH": 78,
+  "toggleVisible": true,
+  "navVisible": false,
+  "expandedAfterOpen": "true",
+  "panelVisible": true,
+  "overflowOpen": false,
+  "expandedAfterEsc": "false",
+  "focusReturned": true,
+  "closedAfterLink": "false",
+  "closedAfterOutside": "false",
+  "stickyTop": 0,
+  "hrefs": [
+   "https://app.mulearn.org/register",
+   "https://app.mulearn.org/register",
+   "https://discord.gg/DfnDfBhGha",
+   "https://mulearn.org/"
+  ],
+  "console": []
+ },
+ "1180": {
+  "overflow": false,
+  "headerH": 78,
+  "toggleVisible": false,
+  "navVisible": true,
+  "navSingleRow": true,
+  "ctaVisible": true,
+  "stickyTop": 0,
+  "hrefs": [
+   "https://app.mulearn.org/register",
+   "https://app.mulearn.org/register",
+   "https://discord.gg/DfnDfBhGha",
+   "https://mulearn.org/"
+  ],
+  "console": []
+ },
+ "1440": {
+  "overflow": false,
+  "headerH": 78,
+  "toggleVisible": false,
+  "navVisible": true,
+  "navSingleRow": true,
+  "ctaVisible": true,
+  "stickyTop": 0,
+  "hrefs": [
+   "https://app.mulearn.org/register",
+   "https://app.mulearn.org/register",
+   "https://discord.gg/DfnDfBhGha",
+   "https://mulearn.org/"
+  ],
+  "console": []
+ },
+ "noJS": {
+  "toggleVisible": false,
+  "navVisible": true,
+  "ctaVisible": true,
+  "overflow": false
+ }
+}

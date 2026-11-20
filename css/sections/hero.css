@@ -1,0 +1,68 @@
+/* ==========================================================================
+   hero.css — Hero section (Phase 3.2 structure · 3.3 composition)
+   Board 1 authority (stacked headline, tilted mono photo, asterisk/squiggle/triangle) + Board 2 vocabulary
+   (lavender field, scallop edge, ink blob/wedge, indigo slab). Flat colour, 2px navy lines, hard shadows only.
+   Decorations never carry content and never sit on text: each breakpoint places them in free space.
+   ========================================================================== */
+.hero{padding-block:var(--s-6) 0;background:var(--c-lavender);overflow:clip}
+.hero__grid{display:grid;gap:var(--s-6);grid-template-columns:minmax(0,1fr);align-items:center;padding-block-end:var(--s-10)}
+.hero__copy{display:flex;flex-direction:column;align-items:flex-start;gap:var(--s-3)}
+
+/* Headline: three stacked lines, sized so "Belong." never touches the photo column */
+.hero__title{font-size:clamp(3.75rem,1.2rem + 14vw,8rem);line-height:.88;letter-spacing:-.04em}
+.hero__title span{display:block}
+.hero__intro{display:flex;flex-direction:column;gap:var(--s-1);max-width:34rem}
+.hero__lead{font-size:var(--fs-lead);line-height:1.3;font-weight:var(--fw-xbold);letter-spacing:-.01em}
+.hero__support{color:var(--text-muted);font-size:1.0625rem}
+.hero__actions{display:flex;flex-wrap:wrap;gap:var(--s-2) var(--s-3)}
+.hero__discord{font-size:var(--fs-meta)}
+
+/* Photo: square-ish crop that trims the ceiling, tilt + hard shadow from .photo-frame */
+.hero__figure{width:min(100%,30rem);justify-self:end;margin-inline-end:var(--s-1);--shadow:var(--shadow-9);box-shadow:var(--shadow-9)}
+.hero__figure img{--ratio:10/9;--pos:30% 100%}
+
+/* ---------- Decoration placement: base = mobile (≤639) ---------- */
+.hero__grid-bg{--x:auto;--r:-20px;--y:96px;--w:132px;--h:112px;--op:.22}
+.hero__s-slab{--size:150px;--r:-46px;--y:-30px;--rot:12deg}
+.hero__s-blob,.hero__s-squig{display:none}
+.hero__s-tri{--size:46px;--r:7%;--y:26px;--rot:-12deg}
+.hero__s-ast{--size:44px;--r:12%;--y:122px;--rot:-8deg}
+.hero__s-spark{--size:44px;--r:6%;--b:132px;--rot:8deg;z-index:2}
+.hero__s-quarter{--size:84px;--x:-26px;--b:-30px}
+
+/* ---------- Tablet (640–899): stacked, photo right-aligned with free space beside the headline ---------- */
+@media (min-width:640px){
+  .hero{padding-block-start:var(--s-8)}
+  .hero__grid-bg{--r:6%;--y:60px;--w:192px;--h:160px;--op:.26}
+  .hero__s-slab{--size:210px;--r:-56px;--y:-40px}
+  .hero__s-tri{--size:62px;--r:30%;--y:50px}
+  .hero__s-ast{--size:72px;--r:14%;--y:230px}
+  .hero__s-squig{display:block;--size:150px;--r:8%;--y:370px;--rot:-6deg}
+  .hero__s-spark{--size:58px;--b:112px;--r:5%}
+  .hero__s-quarter{--size:120px}
+  .hero__figure{width:min(100%,27rem)}
+}
+
+/* ---------- Desktop (≥900): headline left, tilted photo right, shapes in the gutter between ---------- */
+@media (min-width:900px){
+  .hero{padding-block-start:var(--s-8)}
+  .hero__grid{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:var(--s-5);padding-block-end:var(--s-12)}
+  .hero__title{font-size:clamp(5.5rem,10.2vw,10.5rem)}
+  .hero__figure{width:100%;justify-self:center;margin-inline-end:0}
+  .hero__grid-bg{--x:30%;--r:auto;--y:24px;--w:192px;--h:176px;--op:.28}
+  .hero__s-slab{--size:250px;--r:-50px;--y:-40px}
+  .hero__s-blob{display:block;--size:300px;--r:-70px;--b:-20px;--rot:-8deg}
+  .hero__s-tri{--size:68px;--x:48%;--r:auto;--y:6%;--rot:-12deg}
+  .hero__s-ast{--size:86px;--x:45%;--r:auto;--y:34%;--rot:-8deg}
+  .hero__s-squig{display:none}
+  .hero__s-spark{--size:70px;--x:48%;--r:auto;--b:112px;--rot:8deg}
+  .hero__s-quarter{--size:150px;--x:-40px;--b:-60px}
+}
+@media (min-width:1280px){
+  .hero__s-squig{display:block;--size:170px;--x:43%;--r:auto;--y:58%}
+  .hero__title{font-size:clamp(9rem,11vw,11.5rem)}
+  .hero__s-blob{--size:380px;--r:-90px}
+  .hero__s-slab{--size:300px}
+}
+.hero__edge{position:relative;z-index:var(--z-content);margin-block-start:-1px;background:var(--c-bg);overflow:clip}
+.hero__edge .edge{display:block}
