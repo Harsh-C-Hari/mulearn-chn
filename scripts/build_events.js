@@ -52,8 +52,8 @@ function featuredCard(e) {
   lines.push(
     `            <button type="button" class="btn btn--sm event-card__btn" data-event-open="${e.slug}" aria-haspopup="dialog">View details<span class="sr-only"> for ${esc(e.title)}</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>`,
     `          </div>`,
+    `          <span class="sticker ${STK[e.tone][0]} event-card__stk" aria-hidden="true"><svg><use href="#${STK[e.tone][1]}"/></svg></span>`,
     `        </article>`,
-    `        <span class="sticker ${STK[e.tone][0]} event-card__stk" aria-hidden="true"><svg><use href="#${STK[e.tone][1]}"/></svg></span>`,
     `      </li>`);
   return lines.join("\n");
 }
