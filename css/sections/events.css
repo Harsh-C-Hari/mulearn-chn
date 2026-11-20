@@ -1,0 +1,43 @@
+/* ==========================================================================
+   events.css — Events & initiatives (Phase 5.1 structure; 5.2 featured cards, 5.3 compact entries, 5.4 dialogs)
+   Cream field (Board 1) with Board 2 vocabulary: lavender label, marker highlight, grid, flat stickers.
+   Rules: flat colour only, 2px navy lines, hard shadows, "µ" never uppercased, decorations never over text.
+   ========================================================================== */
+.events{position:relative;isolation:isolate;background:var(--c-bg);padding-block:var(--s-8) var(--section-y)}
+
+/* ---------- Heading ---------- */
+.events__head{gap:var(--s-2);max-width:48rem;margin-block-end:var(--s-8)}
+.events__head .section-label{text-transform:none;letter-spacing:.02em;font-size:var(--fs-meta)}
+.events__title{font-size:clamp(3rem,1.5rem + 6vw,6.25rem);line-height:.9;letter-spacing:-.04em}
+.events__title .hl{box-shadow:inset 0 -.2em 0 var(--c-mint)}
+.events__lead{max-width:38rem;color:var(--c-ink)}
+.events__note{max-width:38rem;font-size:var(--fs-meta);color:var(--text-muted);padding-inline-start:var(--s-2);border-inline-start:4px solid var(--c-accent)}
+
+/* ---------- Groups ---------- */
+.events__group + .events__group{margin-block-start:var(--s-10)}
+.events__group-label{display:inline-block;margin-block-end:var(--s-3);padding-block-end:var(--s-0);border-block-end:3px solid var(--c-ink);
+  font-size:var(--fs-meta);font-weight:var(--fw-xbold);letter-spacing:var(--ls-label);text-transform:uppercase}
+.events__featured,.events__compact{list-style:none;margin:0;padding:0;display:grid;gap:var(--s-5) var(--s-4);grid-template-columns:minmax(0,1fr)}
+@media (min-width:700px){.events__compact{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1024px){
+  .events__featured{grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s-6)}
+  .events__compact{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s-4)}
+}
+.event{display:flex;min-width:0;position:relative}
+
+/* ---------- Placeholder card anatomy (replaced by the real card system in 5.2 / 5.3) ---------- */
+.event__card{flex:1;--card-pad:var(--s-3);gap:var(--s-1)}
+.event__num{font-size:clamp(2.5rem,2rem + 1.5vw,3.5rem);line-height:.8;margin-block-end:var(--s-1)}
+.event__title{font-size:clamp(1.75rem,1.4rem + 1.2vw,2.5rem);line-height:.98;letter-spacing:-.03em}
+.event--compact .event__title{font-size:clamp(1.375rem,1.2rem + .6vw,1.75rem)}
+.event__descriptor{font-size:1rem}
+.event__date{margin-block-start:auto;padding-block-start:var(--s-1);font-size:var(--fs-meta);font-weight:var(--fw-bold)}
+
+/* ---------- Section decorations (never over text) ---------- */
+.events__bg-grid{--w:200px;--h:150px;--r:2%;--y:120px;--op:.35}
+.events__s-star{--size:72px;--r:6%;--y:70px;--rot:12deg}
+.events__s-tri{--size:56px;--x:calc(var(--gutter) - 12px);--y:34px;--rot:-10deg}
+.events__s-asterisk{--size:88px;--r:22%;--y:150px;--rot:8deg}
+.events__s-squig{--size:150px;--r:3%;--b:8px;--rot:-6deg}
+.events__bg-grid{display:none}
+@media (min-width:640px){.events__bg-grid{display:block}}

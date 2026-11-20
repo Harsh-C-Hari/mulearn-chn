@@ -1,6 +1,6 @@
 # PROJECT_STATE.md
 
-**Last updated:** 2026-11-20 · **Current phase:** 4 (Offers, Join & Footer) — Subphase 4.5 **complete** — **PHASE 4 COMPLETE** · **Next:** Phase 5 — Events + dialogs (not started)  
+**Last updated:** 2026-11-20 · **Current phase:** 5 (Events & Initiatives) — Subphase 5.1 **complete** · **Next:** Subphase 5.2 — Featured event cards  
 **Project status:** Phase 3 complete: header/navigation, hero and About assembled in `index.html`, with motion. Audited at 320/390/768/1024/1440 (axe 0 violations, no overflow, 0 console errors, 0 external requests, motion tests 17/17). Offers, Events, Team, Memories, Join and Footer are Phases 4–7.
 
 ## Phase status
@@ -11,12 +11,26 @@
 | 2 | Design foundation (subphased) | ✅ complete — final ZIP `mulearn-chn_phase-02_complete.zip` |
 | 3 | Header/nav + Hero + About | ✅ complete |
 | 4 | Offers + Join + Footer | ✅ complete |
-| 5 | Events + dialogs | ⏳ |
+| 5 | Events + dialogs | 🔄 in progress (5.1 done) |
 | 6 | Team + directory | ⏳ |
 | 7 | Memories + lightbox | ⏳ |
 | 8 | Motion layer | ⏳ |
 | 9 | QA / a11y / perf / SEO | ⏳ |
 | 10 | Release & handoff | ⏳ |
+
+## Phase 5 progress (subphase checkpoints)
+| Subphase | Name | Status | ZIP |
+|---|---|---|---|
+| 5.1 | Event data audit & section structure | ✅ complete | `mulearn-chn_phase-05_subphase-01.zip` (+ `mulearn-chn_phase-05_subphase-01_deploy.zip`) |
+| 5.2 | Featured event cards | ⏳ | |
+| 5.3 | Compact event entries | ⏳ | |
+| 5.4 | Accessible event-detail dialogs | ⏳ | |
+| 5.5 | Integration, visual QA & completion | ⏳ | |
+
+Phase 5 working rules (client, 2026-11-20): run all five subphases in order **without stopping for approval** (overrides the master prompt's "stop" lines); deliver the versioned full + deployable ZIP after each; never overwrite a checkpoint; look = mix of Board 1 + Board 2.
+
+### 5.1 notes
+`data/events.js` rewritten to the reconciled schema (see `docs/events-audit.md`): 3 featured + 4 compact, unknown fields omitted, invented labels/venues removed (Tech Forge venue, Useless venue, "Overnight Hackathon", "Team" prefixes, third-party organiser), disputed Build with AI location omitted, Buildathon `₹7K*` kept. Real `#events` section (`css/sections/events.css`): lavender label "Looking back", h2 "Events & initiatives", lead, honesty note (posters' printed details; no guessed years), "Featured events" / "More events" groups, placeholder numbered cards. Cards are generated into `index.html` by `scripts/build_events.js` (markers `events:featured|compact`), so they exist without JS. `#events` stub removed; `#team #memories` stubs remain; order Offers → Events → stubs → Join. `data/events.js` is loaded (defer) ready for 5.4. New: `scripts/test_phase5.py` (41/41), `scripts/shot_events.py`, `docs/phase5-results.json`, `docs/audit-results-phase5-1.json` (axe 0 ×5). `scripts/test_phase4.py` section-order assertion updated to include `events`. Known: placeholder card styling only; Instagram arrow artefact in ODYSSEY/Buildathon derivatives to fix in 5.2.
 
 ## Phase 4 progress (subphase checkpoints)
 | Subphase | Name | Status | ZIP |
@@ -116,6 +130,7 @@ All project content is tracked under three explicit tiers:
 ## Decisions log (newest first; overrides the spec)
 | Date | Decision | By |
 |---|---|---|
+| 2026-11-20 | 5.1: Event cards are generated from `data/events.js` into `index.html` (no-JS safe) by `scripts/build_events.js`; unknown fields omitted; Build with AI shows no venue beyond each activity's own printed venue (Alappuzha/CEC conflict unresolved); Web Slingers uses register values (27 October, 4:00–5:15 PM, SDPK Room 204); master-prompt grouping (3 featured / 4 compact) unchanged. | Phase 5.1 |
 | 2026-11-20 | 3.1: One `<nav>` for desktop row + mobile disclosure (no duplicated link lists); nav row from 1180px (Phase 2.6); Join CTA is the last nav `<li>` on desktop for correct tab order; link label "Offers" used for the spec's "What µLearn offers" to fit one row; CTA hrefs come from `data/links.js` via `data-link` (HTML href is the no-JS fallback). | Phase 3.1 |
 | 2026-11-20 | 2.6: Focus ring + gap are surface-aware custom properties (`--focus-ring`, `--focus-gap`); yellow on indigo/ink, navy on coral, gap = card colour. `.btn` owns its text colour so ancestor `a{}` rules can't override it. Sub-AA colour pairs appear in the styleguide only as labelled "fails" chips on a neutral surface. Header nav shows from 1180px. `verify_project.py` now resolves paths relative to itself (H1 closed); root duplicate docs removed (H3 closed); stale `pack_bundles.py` replaced by `pack_deploy.py`. | Phase 2.6 |
 | 2026-11-20 | 2.5: Team portraits are full-background photos (not cut-outs), so Board 1's coloured backdrop is realised as a coloured **mat** around an inset photo, with a dot pattern on two of four. Portrait captions use roles only (face↔name linkage still needs client confirmation). Styleguide uses only existing sample copy/data (event titles, formats, roles); no new facts. Board 2 wave edge realised as hard scallop mask (`.edge`). Ink/indigo cards force inherited link colour (accessibility fix). | Phase 2.5 |

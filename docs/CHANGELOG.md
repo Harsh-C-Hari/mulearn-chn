@@ -2,6 +2,11 @@
 
 Format: newest first. Each entry: date · phase · what changed · files · verification.
 
+## 2026-11-20 — Phase 5 / Subphase 5.1 (Event data audit & section structure)
+- Added: `css/sections/events.css`, real `#events` section in `index.html` (label, h2, lead, note, Featured/More groups, generated placeholder cards), `scripts/build_events.js`, `scripts/test_phase5.py`, `scripts/shot_events.py`, `docs/events-audit.md`, `docs/phase5-results.json`, `docs/audit-results-phase5-1.json`, `docs/screenshots/events-5-1-*.png`.
+- Changed: `data/events.js` reconciled to the master-prompt accuracy rules (unsupported venues/labels removed, schema = group/order/facts/lists/parts); `#events` anchor stub removed; `scripts/test_phase4.py` order assertion includes `events`.
+- Verified: `test_phase5` 41/41, axe 0 ×5, no overflow, 0 console errors, 0 external requests, `test_phase4` 20/20, motion pass (CLS 0.001), `verify_project.py` pass.
+
 ## 2026-11-20 — Phase 4 / Subphase 4.5 (Integration, visual QA & completion) — PHASE 4 COMPLETE
 - Added: `scripts/test_phase4.py`, `docs/phase4-results.json`, `docs/audit-results-phase4.json`, `docs/audit-focus-phase4.json`, Phase 4 sections in `docs/responsive-report.md`, `docs/accessibility-report.md`, `docs/phase4-report.md`; refreshed `docs/screenshots/full-*.png`.
 - Verified: axe 0 ×5, no overflow, 0 console errors, 0 external requests, integration 20/20, motion 17/17, `verify_project.py` pass. Phase 5 not started.

@@ -41,7 +41,6 @@
  },
  "fonts": [
   "Plus Jakarta Sans 400",
-  "Plus Jakarta Sans 500",
   "Plus Jakarta Sans 600",
   "Plus Jakarta Sans 700",
   "Plus Jakarta Sans 800"
@@ -54,20 +53,20 @@
  },
  "semantics": {
   "lang": "en",
-  "title": "Design system \u00b7 \u00b5Learn CHN",
+  "title": "\u00b5Learn CHN \u00b7 College of Engineering, Chengannur",
   "h1": 1,
-  "headings": 38,
+  "headings": 23,
   "headingSkips": 0,
   "main": 1,
-  "header": 11,
-  "nav": 3,
+  "header": 3,
+  "nav": 2,
   "footer": 1,
   "skipLink": true,
   "imgNoAlt": 0,
   "viewport": true
  },
  "keyboard": {
-  "tabStops": 58,
+  "tabStops": 41,
   "withoutVisibleOutline": []
  },
  "reducedMotion": {
@@ -77,7 +76,7 @@
   "maxTransitionMs": 0.01
  },
  "noJS": {
-  "bodyTextLen": 7595,
+  "bodyTextLen": 5004,
   "hiddenSections": 0
  }
 }

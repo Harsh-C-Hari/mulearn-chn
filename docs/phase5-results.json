@@ -1,0 +1,174 @@
+{
+ "seven canonical events": {
+  "pass": true,
+  "info": ""
+ },
+ "grouping 3 featured + 4 compact": {
+  "pass": true,
+  "info": ""
+ },
+ "no null/empty values in displayable fields": {
+  "pass": true,
+  "info": ""
+ },
+ "no \"upcoming\"/\"register now\" language": {
+  "pass": true,
+  "info": ""
+ },
+ "years only where printed (Buildathon/Useless/WebSlingers have none)": {
+  "pass": true,
+  "info": ""
+ },
+ "Tech Forge carries no invented details": {
+  "pass": true,
+  "info": ""
+ },
+ "ODYSSEY facts match poster": {
+  "pass": true,
+  "info": ""
+ },
+ "Buildathon prize keeps asterisk, no year": {
+  "pass": true,
+  "info": ""
+ },
+ "Build with AI: two separate parts, disputed location omitted": {
+  "pass": true,
+  "info": ""
+ },
+ "Type Race eligibility exact": {
+  "pass": true,
+  "info": ""
+ },
+ "Web Slingers venue/time per register": {
+  "pass": true,
+  "info": ""
+ },
+ "Useless Projects: no winners, no venue": {
+  "pass": true,
+  "info": ""
+ },
+ "all event image references exist": {
+  "pass": true,
+  "info": []
+ },
+ "every informative image has alt text": {
+  "pass": true,
+  "info": ""
+ },
+ "no source assets referenced": {
+  "pass": true,
+  "info": ""
+ },
+ "index.html event markup is generated from data": {
+  "pass": true,
+  "info": ""
+ },
+ "320px: no horizontal overflow": {
+  "pass": true,
+  "info": 0
+ },
+ "320px: no clipped event titles": {
+  "pass": true,
+  "info": []
+ },
+ "320px: no console errors": {
+  "pass": true,
+  "info": []
+ },
+ "320px: no external requests": {
+  "pass": true,
+  "info": []
+ },
+ "390px: no horizontal overflow": {
+  "pass": true,
+  "info": 0
+ },
+ "390px: no clipped event titles": {
+  "pass": true,
+  "info": []
+ },
+ "390px: no console errors": {
+  "pass": true,
+  "info": []
+ },
+ "390px: no external requests": {
+  "pass": true,
+  "info": []
+ },
+ "768px: no horizontal overflow": {
+  "pass": true,
+  "info": 0
+ },
+ "768px: no clipped event titles": {
+  "pass": true,
+  "info": []
+ },
+ "768px: no console errors": {
+  "pass": true,
+  "info": []
+ },
+ "768px: no external requests": {
+  "pass": true,
+  "info": []
+ },
+ "1024px: no horizontal overflow": {
+  "pass": true,
+  "info": 0
+ },
+ "1024px: no clipped event titles": {
+  "pass": true,
+  "info": []
+ },
+ "1024px: no console errors": {
+  "pass": true,
+  "info": []
+ },
+ "1024px: no external requests": {
+  "pass": true,
+  "info": []
+ },
+ "section order hero→about→offers→events→team→memories→join": {
+  "pass": true,
+  "info": [
+   "hero",
+   "about",
+   "offers",
+   "events",
+   "team",
+   "memories",
+   "join"
+  ]
+ },
+ "#events is the real section (not a stub)": {
+  "pass": true,
+  "info": ""
+ },
+ "single h2 with proper labelling": {
+  "pass": true,
+  "info": ""
+ },
+ "seven h3 event titles, 3 featured + 4 compact": {
+  "pass": true,
+  "info": ""
+ },
+ "nav + hero CTA resolve to #events below the sticky header": {
+  "pass": true,
+  "info": ""
+ },
+ "1440px: no horizontal overflow": {
+  "pass": true,
+  "info": 0
+ },
+ "1440px: no clipped event titles": {
+  "pass": true,
+  "info": []
+ },
+ "1440px: no console errors": {
+  "pass": true,
+  "info": []
+ },
+ "1440px: no external requests": {
+  "pass": true,
+  "info": []
+ }
+}
