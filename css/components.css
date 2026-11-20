@@ -42,7 +42,7 @@
 
 /* ---------- Text links ---------- */
 .link{
-  display:inline-flex; align-items:center; gap:.35em; font-weight:var(--fw-bold);
+  display:inline-flex; align-items:center; gap:.35em; font-weight:var(--fw-bold); min-height:44px;  /* 4.2: touch target (WCAG 2.5.8) */
   color:var(--link); text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:.25em;
 }
 .link:hover{text-decoration-thickness:4px;text-decoration-color:var(--c-primary-strong)}

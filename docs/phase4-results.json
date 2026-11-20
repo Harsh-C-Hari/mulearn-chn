@@ -1,0 +1,107 @@
+{
+ "all data-link hrefs equal canonical URLs": {
+  "pass": true,
+  "info": []
+ },
+ "every required destination appears on the page": {
+  "pass": true,
+  "info": []
+ },
+ "external links: _blank + noopener noreferrer + sr-only note": {
+  "pass": true,
+  "info": []
+ },
+ "mailto link has no target=_blank": {
+  "pass": true,
+  "info": ""
+ },
+ "all in-page anchors resolve": {
+  "pass": true,
+  "info": []
+ },
+ "anchor clicks land at/below the sticky header": {
+  "pass": true,
+  "info": []
+ },
+ "sticky header pinned at bottom of page": {
+  "pass": true,
+  "info": 0
+ },
+ "no Greek mu U+03BC / capital Mu U+039C in visible text": {
+  "pass": true,
+  "info": []
+ },
+ "no text containing µ is uppercased": {
+  "pass": true,
+  "info": []
+ },
+ "\"Mulearn\" only as the Discord server name": {
+  "pass": true,
+  "info": 1
+ },
+ "no \"official\" claim about CHN": {
+  "pass": true,
+  "info": ""
+ },
+ "no invented statistics (digits next to learners/members/events)": {
+  "pass": true,
+  "info": ""
+ },
+ "vibe words not published as a list": {
+  "pass": true,
+  "info": ""
+ },
+ "header nav order": {
+  "pass": true,
+  "info": [
+   "#about",
+   "#offers",
+   "#events",
+   "#team",
+   "#memories"
+  ]
+ },
+ "section order: hero, about, offers, (stubs), join, footer": {
+  "pass": true,
+  "info": [
+   "hero",
+   "about",
+   "offers",
+   "anchor-stubs",
+   "join",
+   "site-footer"
+  ]
+ },
+ "hero CTAs": {
+  "pass": true,
+  "info": ""
+ },
+ "mobile menu 390: opens, link navigates, menu closes, target below header": {
+  "pass": true,
+  "info": [
+   "true",
+   true,
+   "false",
+   138,
+   66
+  ]
+ },
+ "mobile menu 390: Esc closes and returns focus to toggle": {
+  "pass": true,
+  "info": ""
+ },
+ "mobile menu 768: opens, link navigates, menu closes, target below header": {
+  "pass": true,
+  "info": [
+   "true",
+   true,
+   "false",
+   123,
+   66
+  ]
+ },
+ "mobile menu 768: Esc closes and returns focus to toggle": {
+  "pass": true,
+  "info": ""
+ }
+}

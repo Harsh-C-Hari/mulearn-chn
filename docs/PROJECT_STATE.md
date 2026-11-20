@@ -1,6 +1,6 @@
 # PROJECT_STATE.md
 
-**Last updated:** 2026-11-20 · **Current phase:** 3 (Header, Hero & About) — **COMPLETE** (Subphase 3.6 done) · **Next:** Phase 4 (Offers + Join + Footer) — awaiting client go-ahead  
+**Last updated:** 2026-11-20 · **Current phase:** 4 (Offers, Join & Footer) — Subphase 4.5 **complete** — **PHASE 4 COMPLETE** · **Next:** Phase 5 — Events + dialogs (not started)  
 **Project status:** Phase 3 complete: header/navigation, hero and About assembled in `index.html`, with motion. Audited at 320/390/768/1024/1440 (axe 0 violations, no overflow, 0 console errors, 0 external requests, motion tests 17/17). Offers, Events, Team, Memories, Join and Footer are Phases 4–7.
 
 ## Phase status
@@ -10,13 +10,39 @@
 | 1 | Asset pipeline & content data | ✅ complete & reconciled |
 | 2 | Design foundation (subphased) | ✅ complete — final ZIP `mulearn-chn_phase-02_complete.zip` |
 | 3 | Header/nav + Hero + About | ✅ complete |
-| 4 | Offers + Join + Footer | ⏳ |
+| 4 | Offers + Join + Footer | ✅ complete |
 | 5 | Events + dialogs | ⏳ |
 | 6 | Team + directory | ⏳ |
 | 7 | Memories + lightbox | ⏳ |
 | 8 | Motion layer | ⏳ |
 | 9 | QA / a11y / perf / SEO | ⏳ |
 | 10 | Release & handoff | ⏳ |
+
+## Phase 4 progress (subphase checkpoints)
+| Subphase | Name | Status | ZIP |
+|---|---|---|---|
+| 4.1 | What µLearn offers: content & structure | ✅ complete | `mulearn-chn_phase-04_subphase-01.zip` (+ `mulearn-chn_phase-04_subphase-01_deploy.zip`) |
+| 4.2 | What µLearn offers: visual & responsive refinement | ✅ complete | `mulearn-chn_phase-04_subphase-02.zip` (+ `mulearn-chn_phase-04_subphase-02_deploy.zip`) |
+| 4.3 | Join section | ✅ complete | `mulearn-chn_phase-04_subphase-03.zip` (+ `mulearn-chn_phase-04_subphase-03_deploy.zip`) |
+| 4.4 | Footer | ✅ complete | `mulearn-chn_phase-04_subphase-04.zip` (+ `mulearn-chn_phase-04_subphase-04_deploy.zip`) |
+| 4.5 | Integration, visual QA & completion | ✅ complete | `mulearn-chn_phase-04_complete.zip` (+ `mulearn-chn_phase-04_deploy.zip`) |
+
+Phase 4 working rules (client, 2026-11-20): run all five subphases in order **without stopping for approval**; deliver a versioned full ZIP + deployable ZIP after each; never overwrite a checkpoint; look = mix of Board 1 + Board 2.
+
+### 4.1 notes
+Offers section added (`#offers`, `css/sections/offers.css`): lavender field with scallop edges top/bottom, Board 2 ink label *"Across the µLearn network"*, h2 "What µLearn offers", lead that says the six items belong to the wider µLearn ecosystem and CHN is the campus doorway (no claim that CHN runs them). Six `<li><article class="card">` cards in a `<ul role=list>`: 01 Community · 02 Mentors · 03 Interest Groups (Level 4 unlock + Coders/Creatives/Makers/Managers tags) · 04 Roadmaps · 05 Challenges (Karma points) · 06 Opportunities. Copy rephrased from Spec §7.1 only; no numbers, no CHN programmes. Each card has one explicit text link bound via `data-link="offers.*"` (`js/main.js` now resolves dotted paths into `data/links.js`; the HTML href is the no-JS fallback). Roadmaps and Challenges share one URL in the spec; both cards link to it and a visible note says so (no URL invented, `links.js` unchanged). "µ" must never be uppercased (renders Greek capital Mu): the label is `text-transform:none`. Initial styling = 7/5 alternating 12-col grid (≥1024), 2-col (≥700), 1-col below; fills indigo/yellow/white/mint/coral/cream. Anchor stub `#offers` removed (real section); `#events #team #memories #join` stubs remain. Visual composition (stagger, stickers, tilt, reveal) arrives in 4.2.
+
+### 4.2 notes
+Offers refined to the mixed Board 1 + Board 2 look. Cards: 12-col wide/narrow alternation (7/5, 5/7, 7/5) with desktop vertical stagger and ±0.6–1.2° tilt on the `<li>` wrappers (hover lift is on the inner card, so tilt and lift never fight); numerals 3.5–6rem with a rule above the hook line; one decorative corner sticker per card (asterisk, circle-diamond, bolt, squiggle, star, sparkle) poking out of the top-right corner; hover/focus-within lifts the card to the 9px hard shadow. Section: Board 2 ink blob + yellow sparkle (≥900), faint grid, squiggle (≥1024), mint triangle + indigo quarter (≥640); all decorations are in the clipped, *positioned* `.offers` host (`position:relative` is required — `overflow:clip` alone does not clip absolutely-positioned stickers whose containing block is outside; this caused a false 50px overflow before it was fixed). The 4.1 plain note became a Board 2 `.ink-bar` ("Good to know" badge + shared-destination note + mulearn.org link, cream link colour on navy). Motion: `motion-home.js` Offers reveal (head + stickers once at 70% viewport, each card at 88%, note), transform/opacity only, `clearProps` afterwards, reduced-motion untouched. Global fix found while auditing: `.link` now has `min-height:44px` (hero Discord link and About link were 22/27px tall).
+
+### 4.3 notes
+Join section added (`#join`, `css/sections/join.css`) **after** the `#events #team #memories` anchor stubs (final master order preserved: Phases 5–7 will insert their sections between Offers and Join; the `#join` stub was removed, the other three remain). Composition = Board 1 "Be a part of µLearn!" banner: one outlined white card with a 9px hard shadow; left = mint label "Join µLearn CHN", h2 with yellow marker on "µLearn!", lead, and an `<ol role=list>` of the three verified steps (Spec §7.6) with colour-blocked numerals 01/02/03 AND text titles (understandable without colour); right = Board 2 navy panel clipped on a diagonal (≥1024; stacks below with a top rule on smaller screens) holding "Start here", the prominent yellow **Create µLearn account** CTA (60px), a white **Join the CHN Discord** CTA, contact email (`mailto:`), LinkedIn and Instagram, with yellow sparkle and a cream loop arrow. Copy states plainly that creating an account does not add you to the Discord (separate step) and that Interest Group tasks unlock at Level 4; no approval/onboarding/membership rules were invented. All links bound via `data-link` (register, discord, offers.interestGroups, linkedin, instagram, email); external ones are `_blank` + `rel="noopener noreferrer"` + sr-only "(opens in a new tab)". Columns: 1.15fr/1fr at 1024, 1.4fr/1fr from 1360 (a 1.5fr/1fr split at 1024 wrapped the CTAs and email). Join reveal added to `motion-home.js`.
+
+### 4.4 notes
+Footer added (`<footer class="site-footer on-ink">` after `</main>`, `css/sections/footer.css`). Composition: cream→navy flipped zigzag edge (Board 2), closing tagline "Learn. Build. Belong." in cream/yellow/mint at up to 8.5rem (echoes the hero), three columns — brand (asterisk lockup, "The µLearn community of College of Engineering, Chengannur. A student community connected to the wider µLearn network.", **Part of the µLearn network: mulearn.org**), **On this page** nav (About · Offers · Events · Team · Memories · Join — all six kept; Events/Team/Memories resolve to the existing anchor stubs), **Connect with us** tiles (Discord, LinkedIn, Instagram, `mailto:` email) with indigo hard shadows turning yellow on hover; bottom bar with © line and Back to top. Credit wording: "© 2026 µLearn CHN, College of Engineering, Chengannur." — deliberately makes no ownership/trademark claim about µLearn and no "official" claim; flagged for client confirmation. Brand "vibe words" are not published (Spec §6). All links from `data/links.js` via `data-link`; external ones `_blank` + `noopener noreferrer` + sr-only "(opens in a new tab)"; the email tile has an sr-only "Email us at" prefix. Social/email URLs are client-supplied and **not independently verified for live reachability** (LinkedIn/Instagram login walls). Footer reveal added to `motion-home.js`. Decorations are in the `deco-host` (positioned clip host).
+
+### 4.5 notes
+Integration QA of header + hero + About + Offers + Join + footer together (see `docs/phase4-report.md`, `docs/responsive-report.md`, `docs/accessibility-report.md`). New: `scripts/test_phase4.py` (20/20), `docs/phase4-results.json`, `docs/audit-results-phase4.json`, `docs/audit-focus-phase4.json`, refreshed `docs/screenshots/full-*.png`. Final page order in `main`: hero → About → Offers → anchor stubs (#events #team #memories) → Join, then footer. **Phase 4 is complete.** Open client items: © line wording; unverified-live client URLs; Satoshi font files; Phase 1 tier-3 confirmations.
 
 ## Phase 3 progress (subphase checkpoints)
 | Subphase | Name | Status | ZIP |

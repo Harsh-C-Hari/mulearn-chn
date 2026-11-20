@@ -65,3 +65,13 @@ Run: `scripts/run_audit.sh index.html` (axe-core, tags wcag2a/aa, 21a/aa, 22aa, 
 | Motion | reduced motion: GSAP never requested, content visible; GSAP blocked / JS off: content visible; CLS 0.001 |
 | Console / network | 0 errors; 0 external requests |
 Not performed: screen-reader testing, forced-colours mode, Safari/Firefox, real devices. WCAG 2.2 AA is targeted; automated tests cannot prove full conformance.
+
+## Phase 4 (Offers, Join, Footer) — accessibility results
+Target: WCAG 2.2 AA. Tools: axe-core (wcag2a/2aa/21a/21aa/22aa + best-practice) at five widths, `scripts/audit_focus.py`, `scripts/test_phase4.py`, `scripts/test_motion_home.py`.
+- axe: 0 violations at 320/390/768/1024/1440 (includes colour contrast).
+- Structure: one h1; headings in order (no skips); landmarks header/nav ×2/main/footer; footer nav and lists have accessible names; steps are an `<ol>` with text titles (not colour-only).
+- Keyboard: 41 tab stops, all with a visible outline; focus ring contrast min 3.27:1; nothing obscured by the sticky header; skip link works; mobile menu Esc closes and returns focus.
+- External links: all `_blank` + `rel="noopener noreferrer"` + sr-only "(opens in a new tab)"; email is `mailto:` with an sr-only "Email us at" prefix.
+- Motion: reveals are once-only, transform/opacity only, skipped under `prefers-reduced-motion` (GSAP not requested); content visible with JS disabled.
+- Content hygiene: µ is U+00B5 everywhere; no text containing µ is uppercased; no statistics, no "official" claim about CHN.
+- **Not performed:** screen-reader testing, real-device touch testing, forced-colors mode, Safari/Firefox.

@@ -43,6 +43,47 @@
           .from(q(".about .sticker > svg", about), { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .55, ease: "back.out(2)", stagger: .08 }, .7);
         ScrollTrigger.create({ trigger: about, start: "top 75%", once: true, onEnter: function () { at.play(); } });
       }
+
+      // ---------------- Offers reveal (once, when it scrolls into view) ----------------
+      var offers = document.getElementById("offers");
+      if (offers) {
+        var cards = q(".offer__card", offers);
+        var ot = gsap.timeline({ defaults: { ease: EASE }, paused: true, onComplete: function () {
+          gsap.set(q(".offers__head > *, .offer__card, .offers__note, .offers .sticker > svg", offers), { clearProps: "opacity,visibility,transform" });
+        }});
+        ot.from(q(".offers__head > *", offers), { y: 32, opacity: 0, duration: .65, stagger: .1 }, 0)
+          .from(q(".offers .sticker > svg", offers), { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .55, ease: "back.out(2)", stagger: .05 }, .35)
+          .from(q(".offers__note", offers), { y: 24, opacity: 0, duration: .5 }, .9);
+        ScrollTrigger.create({ trigger: offers, start: "top 70%", once: true, onEnter: function () { ot.play(); } });
+        // each card reveals as it nears the viewport (so lower cards are not animated off-screen)
+        cards.forEach(function (c) {
+          gsap.from(c, { y: 56, opacity: 0, duration: .8, ease: EASE, scrollTrigger: { trigger: c, start: "top 88%", once: true }, clearProps: "opacity,visibility,transform" });
+        });
+      }
+      // ---------------- Join reveal (once) ----------------
+      var join = document.getElementById("join");
+      if (join) {
+        var jt = gsap.timeline({ defaults: { ease: EASE }, paused: true, onComplete: function () {
+          gsap.set(q(".join__banner, .join__step, .join__ctas > *, .join .sticker > svg", join), { clearProps: "opacity,visibility,transform" });
+        }});
+        jt.from(q(".join__banner", join), { y: 56, opacity: 0, duration: .8 }, 0)
+          .from(q(".join__step", join), { y: 24, opacity: 0, duration: .5, stagger: .12 }, .35)
+          .from(q(".join__ctas > *", join), { y: 20, opacity: 0, duration: .45, stagger: .1 }, .6)
+          .from(q(".join .sticker > svg", join), { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .55, ease: "back.out(2)", stagger: .08 }, .7);
+        ScrollTrigger.create({ trigger: join, start: "top 70%", once: true, onEnter: function () { jt.play(); } });
+      }
+      // ---------------- Footer reveal (once) ----------------
+      var foot = document.querySelector(".site-footer");
+      if (foot) {
+        var ft = gsap.timeline({ defaults: { ease: EASE }, paused: true, onComplete: function () {
+          gsap.set(q(".footer__big span, .footer__grid > *, .footer__bar, .site-footer .sticker > svg", foot), { clearProps: "opacity,visibility,transform" });
+        }});
+        ft.from(q(".footer__big span", foot), { yPercent: 60, opacity: 0, duration: .7, stagger: .1 }, 0)
+          .from(q(".footer__grid > *", foot), { y: 24, opacity: 0, duration: .5, stagger: .1 }, .3)
+          .from(q(".footer__bar", foot), { y: 12, opacity: 0, duration: .4 }, .6)
+          .from(q(".site-footer .sticker > svg", foot), { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .5, ease: "back.out(2)", stagger: .06 }, .5);
+        ScrollTrigger.create({ trigger: foot, start: "top 85%", once: true, onEnter: function () { ft.play(); } });
+      }
     });
   });
 })();

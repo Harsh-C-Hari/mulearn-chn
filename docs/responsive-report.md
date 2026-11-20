@@ -42,3 +42,12 @@ Tested in headless Chromium at 320 / 390 / 768 / 1024 / 1440 (header also 1180).
 | About | single column <900, card + tilted photo ≥900; fact tags wrap at 320/390 |
 | Clipped decorations | slab/blob/grid extend past the viewport but are clipped by `.section--clip` (no scroll) |
 Not covered: real devices, landscape phones, Safari/Firefox, zoom ≥200%.
+
+## Phase 4 (Offers, Join, Footer) — responsive results
+Tested in Chromium at 320 / 390 / 768 / 1024 / 1440 with `scripts/run_audit.sh index.html` (results: `docs/audit-results-phase4.json`) and screenshots (`docs/screenshots/{offers,join,footer,full}-*.png`).
+- Horizontal overflow: none at any width. Console errors: 0. Non-local requests: 0. Interactive targets under 24px: 0.
+- Offers: 1 column <700, 2 columns with light stagger 700–1023, 12-column staggered/tilted layout ≥1024. Stickers hidden or resized on small screens; none overlap text.
+- Join: stacked (white story, then navy panel) <1024; diagonal-clipped split ≥1024 (1.15fr/1fr, 1.4fr/1fr from 1360). CTAs stay on one line from 1024.
+- Footer: single column on phones (nav in 2 columns, tiles full width), 2 columns on tablet, 3 columns ≥1024.
+- Defects found and fixed during QA: unpositioned clip host (false overflow), Join column ratio at 1024, footer decorations touching the dashed rule, 22–27px link targets.
+- Not covered: real devices, Safari, Firefox.

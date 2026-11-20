@@ -2,6 +2,29 @@
 
 Format: newest first. Each entry: date · phase · what changed · files · verification.
 
+## 2026-11-20 — Phase 4 / Subphase 4.5 (Integration, visual QA & completion) — PHASE 4 COMPLETE
+- Added: `scripts/test_phase4.py`, `docs/phase4-results.json`, `docs/audit-results-phase4.json`, `docs/audit-focus-phase4.json`, Phase 4 sections in `docs/responsive-report.md`, `docs/accessibility-report.md`, `docs/phase4-report.md`; refreshed `docs/screenshots/full-*.png`.
+- Verified: axe 0 ×5, no overflow, 0 console errors, 0 external requests, integration 20/20, motion 17/17, `verify_project.py` pass. Phase 5 not started.
+
+## 2026-11-20 — Phase 4 / Subphase 4.4 (Footer)
+- Added: `css/sections/footer.css`, `<footer>` in `index.html`, footer reveal in `js/motion-home.js`, `docs/screenshots/footer-{320,390,768,1024,1440}.png`.
+- Verified: axe 0 violations ×5, no overflow, 0 console errors, 0 external requests, 0 targets <24px, 41 keyboard stops all with visible focus, 24 `data-link` anchors match `data/links.js`, all anchors resolve, `_blank` links compliant, motion tests pass (CLS 0.001), `verify_project.py` pass.
+
+## 2026-11-20 — Phase 4 / Subphase 4.3 (Join section)
+- Added: `css/sections/join.css`, `#join` section in `index.html` (after the Events/Team/Memories stubs), Join reveal in `js/motion-home.js`, `docs/screenshots/join-{320,390,768,1024,1440}.png`.
+- Changed: `#join` anchor stub removed (real section now).
+- Verified: axe 0 violations ×5, no overflow, 0 console errors, 0 external requests, 0 targets <24px, 28 keyboard stops all with visible focus, every `data-link` href equals `data/links.js`, all `_blank` links have noopener/noreferrer + sr-only note, all anchors resolve, motion tests pass (CLS 0.001).
+
+## 2026-11-20 — Phase 4 / Subphase 4.2 (Offers: visual & responsive refinement)
+- Rewrote `css/sections/offers.css` (stagger, tilt, stickers, ink bar, responsive); added corner stickers + decor layer + `.ink-bar` note to `#offers` in `index.html`; Offers reveal in `js/motion-home.js`.
+- Changed: `css/components.css` `.link{min-height:44px}` (touch target fix, also lifts hero/About links).
+- Verified: axe 0 violations at 320/390/768/1024/1440, 0 targets under 24px, no overflow, 0 console errors, 0 external requests, motion tests 17/17 (CLS 0.001), screenshots refreshed (offers/hero/about ×5).
+
+## 2026-11-20 — Phase 4 / Subphase 4.1 (What µLearn offers: content & structure)
+- Added: `css/sections/offers.css`, `#offers` section in `index.html`, `scripts/shot_section.py`, `scripts/checkpoint.sh`, `docs/screenshots/offers-{320,390,768,1024,1440}.png`.
+- Changed: `js/main.js` (dotted `data-link` paths); `#offers` anchor stub removed.
+- Verified: axe 0 violations ×5 widths, no overflow, 0 console errors, 0 external requests, every `data-link` href equals its `data/links.js` URL, all anchors resolve, `verify_project.py` pass.
+
 ## 2026-11-20 — Phase 3 / Subphase 3.6 (Integration, visual QA & completion) — PHASE 3 COMPLETE
 - Added: `scripts/screenshot_full.py`, `docs/screenshots/full-*.png`, `docs/audit-focus-index.json`, Phase 3 sections in `docs/responsive-report.md` and `docs/accessibility-report.md`, Phase 3 section in `docs/design-system.md`.
 - Changed: `scripts/audit_focus.py` honours `FOCUS_OUT`; removed superseded `page-*.png` screenshots.

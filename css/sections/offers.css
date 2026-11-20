@@ -1,0 +1,89 @@
+/* ==========================================================================
+   offers.css — What µLearn offers (Phase 4.1 structure → 4.2 visual refinement)
+   Board 2 vocabulary (lavender field, ink blob, ink info bar, scallop edges) + Board 1 cards
+   (white/colour-blocked, 2px navy outline, hard shadows, playful stickers). Flat colour only.
+   Rules: "µ" is never uppercased; decorations never sit over text; nothing hidden in CSS (motion is JS-applied).
+   ========================================================================== */
+.offers{position:relative;isolation:isolate;background:var(--c-lavender);padding-block:var(--s-6) var(--section-y)}
+.offers__edge-top{background:var(--c-bg);overflow:clip;margin-block-end:-1px}
+.offers__edge-bottom{background:var(--c-bg);overflow:clip;margin-block-start:-1px}
+.offers__edge-top .edge,.offers__edge-bottom .edge{display:block}
+
+/* ---------- Heading ---------- */
+.offers__head{gap:var(--s-2);max-width:46rem;margin-block-end:var(--s-8)}
+.offers__title{font-size:clamp(3rem,1.5rem + 6vw,6.25rem);line-height:.9;letter-spacing:-.04em}
+.offers__title .hl{box-shadow:inset 0 -.2em 0 var(--c-accent)}
+.offers__lead{color:var(--c-ink);max-width:38rem}
+.offers__head .section-label{text-transform:none;letter-spacing:.02em;font-size:var(--fs-meta)}  /* µ would uppercase to Μ */
+
+/* ---------- Grid ---------- */
+.offers__grid{list-style:none;margin:0;padding:0;display:grid;gap:var(--s-6) var(--s-4);grid-template-columns:minmax(0,1fr)}
+@media (min-width:700px){.offers__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s-6) var(--s-5)}}
+@media (min-width:1024px){.offers__grid{grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--s-8) var(--s-6);align-items:start}}
+.offer{display:flex;min-width:0;position:relative}
+.offer__card{flex:1;--card-pad:var(--s-3);gap:var(--s-1);--card-shadow:var(--shadow-7)}
+@media (min-width:640px){.offer__card{--card-pad:var(--s-4)}}
+.offer__card:hover,.offer__card:focus-within{transform:translate(-3px,-3px);box-shadow:var(--shadow-9)}
+
+/* ---------- Card anatomy ---------- */
+.offer__num{margin-block-end:var(--s-1);font-size:clamp(3.5rem,2.4rem + 4vw,6rem);line-height:.8}
+.offer__hook{font-size:var(--fs-meta);font-weight:var(--fw-bold);letter-spacing:.06em;text-transform:uppercase;padding-block-start:var(--s-1);border-block-start:2px solid currentColor;width:fit-content;max-width:100%}
+.offer__title{font-size:clamp(2rem,1.4rem + 2vw,3rem);line-height:.95;letter-spacing:-.03em}
+.offer__text{max-width:34rem;font-size:1.0625rem}
+.offer__groups{margin-block-start:var(--s-1)}
+.offer__foot{padding-block-start:var(--s-2)}
+.offer__link{min-height:44px;font-size:1.0625rem}
+.offer__s{z-index:2}
+
+/* ---------- Fills ---------- */
+.offer--community .offer__card{--card-bg:var(--c-primary-strong);--card-fg:var(--text-on-strong);--focus-ring:var(--c-accent)}
+.offer--mentors .offer__card{--card-bg:var(--c-accent)}
+.offer--interest-groups .offer__card{--card-bg:var(--c-surface)}
+.offer--roadmaps .offer__card{--card-bg:var(--c-mint)}
+.offer--challenges .offer__card{--card-bg:var(--c-coral);--focus-ring:var(--c-ink)}
+.offer--opportunities .offer__card{--card-bg:var(--c-bg)}
+.offer--community .offer__link{color:inherit}
+.offer--interest-groups .tag:nth-child(1){background:var(--c-accent)}
+.offer--interest-groups .tag:nth-child(2){background:var(--c-coral)}
+.offer--interest-groups .tag:nth-child(3){background:var(--c-mint)}
+.offer--interest-groups .tag:nth-child(4){background:var(--c-lavender)}
+/* the lavender mat behind cards keeps the cream card readable against the lavender field */
+
+/* ---------- 12-col composition: wide + narrow, staggered, gently tilted (≥1024) ---------- */
+@media (min-width:1024px){
+  .offer--community{grid-column:1/span 7}
+  .offer--mentors{grid-column:8/span 5;margin-block-start:var(--s-10)}
+  .offer--interest-groups{grid-column:1/span 5;margin-block-start:calc(var(--s-4) * -1)}
+  .offer--roadmaps{grid-column:6/span 7;margin-block-start:var(--s-6)}
+  .offer--challenges{grid-column:1/span 7}
+  .offer--opportunities{grid-column:8/span 5;margin-block-start:var(--s-8)}
+  .offer--community .offer__title{font-size:clamp(3rem,2rem + 2vw,4.25rem)}
+  .offer--community{transform:rotate(-.8deg)}.offer--mentors{transform:rotate(1.2deg)}
+  .offer--interest-groups{transform:rotate(.8deg)}.offer--roadmaps{transform:rotate(-1deg)}
+  .offer--challenges{transform:rotate(-.6deg)}.offer--opportunities{transform:rotate(1deg)}
+}
+/* tablet: light stagger on the second column */
+@media (min-width:700px) and (max-width:1023px){
+  .offer:nth-child(even){margin-block-start:var(--s-6)}
+  .offer--community,.offer--challenges{--card-shadow:var(--shadow-7)}
+}
+
+/* ---------- Section decorations (never over text) ---------- */
+.offers__bg-grid{--w:200px;--h:150px;--r:3%;--y:140px;--op:.3}
+.offers__s-blob{--size:210px;--r:-50px;--y:60px;z-index:0}
+.offers__s-spark{--size:64px;--r:70px;--y:116px;z-index:1}
+.offers__s-squig{--size:150px;--r:34%;--y:34px;--rot:-8deg}
+.offers__s-tri{--size:56px;--x:calc(var(--gutter) - 14px);--b:20px;--rot:-12deg}
+.offers__s-quarter{--size:110px;--x:-24px;--b:-24px;opacity:1}
+.offers__bg-grid,.offers__s-tri,.offers__s-quarter{display:none}
+@media (min-width:640px){.offers__s-tri,.offers__s-quarter{display:block}}
+@media (min-width:640px){.offers__bg-grid{display:block}}
+@media (max-width:1023px){.offers__s-squig{display:none}}
+@media (max-width:899px){.offers__bg-grid{display:none}.offers__s-blob{--size:150px;--r:-60px;--y:20px}.offers__s-spark{--r:20px;--y:50px}}
+
+/* ---------- Ink info bar ---------- */
+.offers__note{margin-block-start:var(--s-10);align-items:center;box-shadow:6px 6px 0 var(--c-primary-strong)}
+.offers__note p{margin:0;font-weight:var(--fw-semibold);flex:1 1 16rem}
+.offers__note .link{color:var(--c-bg);text-decoration-color:var(--c-accent)}
+.offers__note .link:hover{text-decoration-color:var(--c-accent)}
+@media (max-width:639px){.offers__note{padding:var(--s-3) var(--s-3);margin-block-start:var(--s-8)}}

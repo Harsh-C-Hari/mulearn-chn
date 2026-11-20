@@ -16,6 +16,9 @@
 <link rel="stylesheet" href="css/sections/header.css">
 <link rel="stylesheet" href="css/sections/hero.css">
 <link rel="stylesheet" href="css/sections/about.css">
+<link rel="stylesheet" href="css/sections/offers.css">
+<link rel="stylesheet" href="css/sections/join.css">
+<link rel="stylesheet" href="css/sections/footer.css">
 <script>document.documentElement.className=document.documentElement.className.replace("no-js","js")</script>
 </head>
 <body id="top">
@@ -171,10 +174,212 @@
     </div>
   </section>
 
+  <!-- ====================== WHAT µLEARN OFFERS ====================== -->
+  <div class="offers__edge-top" aria-hidden="true"><span class="edge edge--lavender edge--flip edge--lg"></span></div>
+  <section id="offers" class="offers section--clip" aria-labelledby="offers-title">
+    <span class="bg-grid offers__bg-grid" aria-hidden="true"></span>
+    <span class="sticker sticker--blob sticker--ink offers__s-blob sticker--hide-sm" aria-hidden="true"><svg><use href="#s-blob-ink"/></svg></span>
+    <span class="sticker sticker--yellow sticker--outlined offers__s-spark sticker--hide-sm" aria-hidden="true"><svg><use href="#s-sparkle"/></svg></span>
+    <span class="sticker sticker--mint sticker--outlined offers__s-tri" aria-hidden="true"><svg><use href="#s-triangle"/></svg></span>
+    <span class="sticker sticker--strong offers__s-quarter" aria-hidden="true"><svg><use href="#s-quarter"/></svg></span>
+    <span class="sticker sticker--yellow offers__s-squig sticker--hide-sm" aria-hidden="true"><svg><use href="#s-squiggle"/></svg></span>
+    <div class="container container--content layer">
+      <header class="section-head offers__head">
+        <span class="section-label section-label--ink">Across the µLearn network</span>
+        <h2 id="offers-title" class="offers__title">What <span class="hl">µLearn</span> offers</h2>
+        <p class="lead offers__lead">Six things learners can tap into across the µLearn network. They belong to the wider µLearn ecosystem, and µLearn CHN is our campus doorway into them.</p>
+      </header>
+
+      <ul class="offers__grid" role="list">
+        <li class="offer offer--community">
+          <article class="card offer__card" aria-labelledby="offer-community">
+            <span class="sticker sticker--yellow sticker--outlined offer__s" aria-hidden="true" style="--size:72px;--r:-16px;--y:-22px;--rot:14deg;"><svg><use href="#s-asterisk-6"/></svg></span>
+            <span class="card__num offer__num" aria-hidden="true">01</span>
+            <p class="offer__hook">Learn with peers</p>
+            <h3 id="offer-community" class="card__title offer__title">Community</h3>
+            <p class="card__text offer__text">Find a community of learners to ask questions, share what you are building and learn alongside, in the small peer groups µLearn is built on.</p>
+            <p class="card__foot offer__foot"><a class="link offer__link" href="https://app.mulearn.org/" target="_blank" rel="noopener noreferrer" data-link="offers.community">Open the µLearn community <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(opens in a new tab)</span></a></p>
+          </article>
+        </li>
+        <li class="offer offer--mentors">
+          <article class="card offer__card" aria-labelledby="offer-mentors">
+            <span class="sticker sticker--indigo sticker--outlined offer__s" aria-hidden="true" style="--size:64px;--r:-14px;--y:-20px;--rot:-10deg;"><svg><use href="#s-circle-diamond"/></svg></span>
+            <span class="card__num offer__num" aria-hidden="true">02</span>
+            <p class="offer__hook">Guidance from people ahead of you</p>
+            <h3 id="offer-mentors" class="card__title offer__title">Mentors</h3>
+            <p class="card__text offer__text">Look up mentors on the µLearn platform when you want advice on what to learn next or feedback on what you have made.</p>
+            <p class="card__foot offer__foot"><a class="link offer__link" href="https://app.mulearn.org/dashboard/search/mentors" target="_blank" rel="noopener noreferrer" data-link="offers.mentors">Find a mentor <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(opens in a new tab)</span></a></p>
+          </article>
+        </li>
+        <li class="offer offer--interest-groups">
+          <article class="card offer__card" aria-labelledby="offer-interest-groups">
+            <span class="sticker sticker--yellow offer__s" aria-hidden="true" style="--size:60px;--r:-12px;--y:-22px;--rot:10deg;"><svg><use href="#s-bolt"/></svg></span>
+            <span class="card__num offer__num" aria-hidden="true">03</span>
+            <p class="offer__hook">Go deeper in what you love</p>
+            <h3 id="offer-interest-groups" class="card__title offer__title">Interest Groups</h3>
+            <p class="card__text offer__text">Reach Level 4 to unlock Interest Group tasks, then choose a group. Groups sit under four families.</p>
+          <ul class="tag-list offer__groups" aria-label="Interest Group families"><li class="tag">Coders</li><li class="tag">Creatives</li><li class="tag">Makers</li><li class="tag">Managers</li></ul>
+            <p class="card__foot offer__foot"><a class="link offer__link" href="https://mulearn.org/interest-groups" target="_blank" rel="noopener noreferrer" data-link="offers.interestGroups">Explore Interest Groups <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(opens in a new tab)</span></a></p>
+          </article>
+        </li>
+        <li class="offer offer--roadmaps">
+          <article class="card offer__card" aria-labelledby="offer-roadmaps">
+            <span class="sticker sticker--indigo offer__s" aria-hidden="true" style="--size:96px;--r:-16px;--y:-14px;--rot:-6deg;--ar:2.667"><svg><use href="#s-squiggle"/></svg></span>
+            <span class="card__num offer__num" aria-hidden="true">04</span>
+            <p class="offer__hook">Know what to learn next</p>
+            <h3 id="offer-roadmaps" class="card__title offer__title">Roadmaps</h3>
+            <p class="card__text offer__text">Follow guided learning roadmaps on the µLearn platform instead of working out your own path from scratch.</p>
+            <p class="card__foot offer__foot"><a class="link offer__link" href="https://app.mulearn.org/dashboard/mujourney" target="_blank" rel="noopener noreferrer" data-link="offers.roadmaps">Open Roadmaps <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(opens in a new tab)</span></a></p>
+          </article>
+        </li>
+        <li class="offer offer--challenges">
+          <article class="card offer__card" aria-labelledby="offer-challenges">
+            <span class="sticker sticker--yellow sticker--outlined offer__s" aria-hidden="true" style="--size:68px;--r:-14px;--y:-22px;--rot:-12deg;"><svg><use href="#s-star"/></svg></span>
+            <span class="card__num offer__num" aria-hidden="true">05</span>
+            <p class="offer__hook">Learn by doing, earn Karma</p>
+            <h3 id="offer-challenges" class="card__title offer__title">Challenges</h3>
+            <p class="card__text offer__text">Take on challenges and collect Karma points, the points µLearn uses to make learning feel like a game.</p>
+            <p class="card__foot offer__foot"><a class="link offer__link" href="https://app.mulearn.org/dashboard/mujourney" target="_blank" rel="noopener noreferrer" data-link="offers.challenges">Open Challenges <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(opens in a new tab)</span></a></p>
+          </article>
+        </li>
+        <li class="offer offer--opportunities">
+          <article class="card offer__card" aria-labelledby="offer-opportunities">
+            <span class="sticker sticker--mint sticker--outlined offer__s" aria-hidden="true" style="--size:66px;--r:-14px;--y:-22px;--rot:8deg;"><svg><use href="#s-sparkle"/></svg></span>
+            <span class="card__num offer__num" aria-hidden="true">06</span>
+            <p class="offer__hook">See where learning can lead</p>
+            <h3 id="offer-opportunities" class="card__title offer__title">Opportunities</h3>
+            <p class="card__text offer__text">Browse the career opportunities µLearn lists, and see how what you learn connects to real work.</p>
+            <p class="card__foot offer__foot"><a class="link offer__link" href="https://mulearn.org/careers" target="_blank" rel="noopener noreferrer" data-link="offers.opportunities">See opportunities <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(opens in a new tab)</span></a></p>
+          </article>
+        </li>
+      </ul>
+
+      <div class="ink-bar on-ink offers__note">
+        <span class="ink-bar__badge">Good to know</span>
+        <p>Roadmaps and Challenges both open the same page on the µLearn platform.</p>
+        <p><a class="link offer__link" href="https://mulearn.org/" target="_blank" rel="noopener noreferrer" data-link="mulearnOrg">See everything on mulearn.org <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(opens in a new tab)</span></a></p>
+      </div>
+    </div>
+  </section>
+  <div class="offers__edge-bottom" aria-hidden="true"><span class="edge edge--lavender edge--lg"></span></div>
+
   <!-- Anchor stubs for sections that arrive in Phases 4–7 (nav targets). Replace each with its real <section id>. -->
-  <div class="anchor-stubs" aria-hidden="true"><span id="offers"></span><span id="events"></span><span id="team"></span><span id="memories"></span><span id="join"></span></div>
+  <div class="anchor-stubs" aria-hidden="true"><span id="events"></span><span id="team"></span><span id="memories"></span></div>
+
+  <!-- ====================== JOIN ====================== -->
+  <section id="join" class="join section--clip" aria-labelledby="join-title">
+    <span class="sticker sticker--indigo join__s-quarter" aria-hidden="true"><svg><use href="#s-quarter"/></svg></span>
+    <span class="sticker sticker--mint sticker--outlined join__s-tri sticker--hide-sm" aria-hidden="true"><svg><use href="#s-triangle"/></svg></span>
+    <div class="container container--content layer">
+      <div class="join__banner">
+        <div class="join__main">
+          <span class="section-label section-label--mint">Join µLearn CHN</span>
+          <h2 id="join-title" class="join__title">Be a part of <span class="hl">µLearn!</span></h2>
+          <p class="join__lead">Getting started takes three steps. The first two are separate: a µLearn account gives you access to the wider network, and the CHN Discord is where our campus community meets. Do both.</p>
+          <ol class="join__steps" role="list">
+            <li class="join__step">
+              <span class="join__num join__num--yellow" aria-hidden="true">01</span>
+              <div class="join__step-body">
+                <h3 class="join__step-title">Create your µLearn account</h3>
+                <p class="join__step-text">Sign up on the µLearn platform with email and password or Google sign-in. The account is your way into the wider µLearn network.</p>
+                <p class="join__step-link"><a class="link" href="https://app.mulearn.org/register" target="_blank" rel="noopener noreferrer" data-link="register">Go to registration <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(opens in a new tab)</span></a></p>
+              </div>
+            </li>
+            <li class="join__step">
+              <span class="join__num join__num--mint" aria-hidden="true">02</span>
+              <div class="join__step-body">
+                <h3 class="join__step-title">Join the CHN Discord</h3>
+                <p class="join__step-text">Join the Mulearn.CHN server to meet our campus community. This is a separate step: creating an account does not add you to the Discord.</p>
+                <p class="join__step-link"><a class="link" href="https://discord.gg/DfnDfBhGha" target="_blank" rel="noopener noreferrer" data-link="discord">Open the CHN Discord invite <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(opens in a new tab)</span></a></p>
+              </div>
+            </li>
+            <li class="join__step">
+              <span class="join__num join__num--lavender" aria-hidden="true">03</span>
+              <div class="join__step-body">
+                <h3 class="join__step-title">Explore Interest Groups</h3>
+                <p class="join__step-text">Interest Group tasks unlock when you reach Level 4. Then you can choose a group under Coders, Creatives, Makers or Managers.</p>
+                <p class="join__step-link"><a class="link" href="https://mulearn.org/interest-groups" target="_blank" rel="noopener noreferrer" data-link="offers.interestGroups">Browse Interest Groups <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(opens in a new tab)</span></a></p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <aside class="join__panel on-ink" aria-labelledby="join-panel-title">
+          <span class="sticker sticker--yellow sticker--outlined join__s-spark" aria-hidden="true"><svg><use href="#s-sparkle"/></svg></span>
+          <span class="sticker sticker--cream-line join__s-loop" aria-hidden="true" style="--ar:1.833;--line-w:5"><svg><use href="#s-loop"/></svg></span>
+          <div class="join__panel-inner">
+            <p id="join-panel-title" class="join__panel-title">Start here</p>
+            <p class="join__panel-text">Join the network and our campus community. Both links open in a new tab.</p>
+            <div class="join__ctas">
+              <a class="btn btn--accent join__cta" href="https://app.mulearn.org/register" target="_blank" rel="noopener noreferrer" data-link="register">Create µLearn account <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg><span class="sr-only">(opens in a new tab)</span></a>
+              <a class="btn btn--neutral join__cta" href="https://discord.gg/DfnDfBhGha" target="_blank" rel="noopener noreferrer" data-link="discord">Join the CHN Discord <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg><span class="sr-only">(opens in a new tab)</span></a>
+            </div>
+            <div class="join__contact">
+              <p class="join__contact-label">Questions?</p>
+              <p><a class="link" href="mailto:gtechmulearncec@gmail.com" data-link="email">gtechmulearncec@gmail.com</a></p>
+              <ul class="join__social" aria-label="µLearn CHN on social media" role="list">
+              <li><a class="link" href="https://www.linkedin.com/company/gtech-mulearn-cec/" target="_blank" rel="noopener noreferrer" data-link="linkedin">LinkedIn <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(opens in a new tab)</span></a></li>
+              <li><a class="link" href="https://www.instagram.com/mulearn.chn/" target="_blank" rel="noopener noreferrer" data-link="instagram">Instagram <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(opens in a new tab)</span></a></li>
+            </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
 
 </main>
+
+<!-- ====================== FOOTER ====================== -->
+<div class="footer__edge" aria-hidden="true"><span class="edge edge--ink edge--flip edge--lg"></span></div>
+<footer class="site-footer on-ink deco-host" data-js="site-footer">
+  <span class="sticker sticker--yellow footer__s-spark" aria-hidden="true"><svg><use href="#s-sparkle"/></svg></span>
+  <span class="sticker sticker--strong footer__s-quarter" aria-hidden="true"><svg><use href="#s-quarter"/></svg></span>
+  <span class="sticker sticker--mint footer__s-tri sticker--hide-sm" aria-hidden="true"><svg><use href="#s-triangle"/></svg></span>
+  <span class="sticker sticker--yellow footer__s-squig sticker--hide-sm" aria-hidden="true"><svg><use href="#s-squiggle"/></svg></span>
+  <div class="container container--content layer">
+    <p class="footer__big"><span>Learn.</span> <span>Build.</span> <span>Belong.</span></p>
+
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="#top" aria-label="µLearn CHN, back to top">
+          <svg class="brand__mark" aria-hidden="true"><use href="#s-asterisk-6"/></svg>
+          <span class="brand__word">µLearn</span>
+          <span class="brand__chn" aria-hidden="true">CHN</span>
+        </a>
+        <p class="footer__about">The µLearn community of College of Engineering, Chengannur. A student community connected to the wider µLearn network.</p>
+        <p><a class="footer__org" href="https://mulearn.org/" target="_blank" rel="noopener noreferrer" data-link="mulearnOrg">Part of the µLearn network: mulearn.org <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(opens in a new tab)</span></a></p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer">
+        <p class="footer__label" id="footer-nav-label">On this page</p>
+        <ul class="footer__links" role="list" aria-labelledby="footer-nav-label">
+          <li><a href="#about">About</a></li>
+          <li><a href="#offers">Offers</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#memories">Memories</a></li>
+          <li><a href="#join">Join</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__connect">
+        <p class="footer__label" id="footer-connect-label">Connect with us</p>
+        <ul class="footer__tiles" role="list" aria-labelledby="footer-connect-label">
+          <li><a class="footer__tile" href="https://discord.gg/DfnDfBhGha" target="_blank" rel="noopener noreferrer" data-link="discord"><span>Discord</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(opens in a new tab)</span></a></li>
+          <li><a class="footer__tile" href="https://www.linkedin.com/company/gtech-mulearn-cec/" target="_blank" rel="noopener noreferrer" data-link="linkedin"><span>LinkedIn</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(opens in a new tab)</span></a></li>
+          <li><a class="footer__tile" href="https://www.instagram.com/mulearn.chn/" target="_blank" rel="noopener noreferrer" data-link="instagram"><span>Instagram</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span class="sr-only">(opens in a new tab)</span></a></li>
+          <li><a class="footer__tile footer__tile--mail" href="mailto:gtechmulearncec@gmail.com" data-link="email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span class="footer__mail"><span class="sr-only">Email us at </span>gtechmulearncec@gmail.com</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <p class="footer__legal">© 2026 µLearn CHN, College of Engineering, Chengannur.</p>
+      <a class="footer__top" href="#top">Back to top <svg class="icon" aria-hidden="true" style="transform:rotate(-90deg)"><use href="#i-arrow-right"/></svg></a>
+    </div>
+  </div>
+</footer>
 
 <script defer src="data/links.js"></script>
 <script defer src="js/main.js"></script>
