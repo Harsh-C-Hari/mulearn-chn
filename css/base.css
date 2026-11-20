@@ -1,0 +1,85 @@
+/* ==========================================================================
+   base.css — reset, element defaults, accessibility primitives (Phase 2.2)
+   Tokens only; no hard-coded colours or spacings.
+   ========================================================================== */
+*,*::before,*::after{box-sizing:border-box}
+html{
+  -webkit-text-size-adjust:100%; text-size-adjust:100%;
+  scroll-padding-top:var(--scroll-offset);
+  scroll-behavior:smooth;
+}
+body{
+  margin:0; min-height:100vh;
+  background:var(--surface-page); color:var(--text);
+  font-family:var(--font-body); font-size:var(--fs-body); line-height:var(--lh-body);
+  font-weight:var(--fw-regular);
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+  overflow-wrap:break-word;
+}
+/* Lock page scroll while a native dialog is open (spec §11.5) */
+body:has(dialog[open]){overflow:hidden}
+
+h1,h2,h3,h4,h5,h6{margin:0;font-family:var(--font-display);font-weight:var(--fw-xbold);line-height:var(--lh-heading);letter-spacing:var(--ls-heading);text-wrap:balance}
+h1{font-size:var(--fs-hero);line-height:var(--lh-display);letter-spacing:var(--ls-display)}
+h2{font-size:var(--fs-h2);line-height:.95;letter-spacing:var(--ls-display)}
+h3{font-size:var(--fs-h3);line-height:var(--lh-tight);font-family:var(--font-body);font-weight:var(--fw-xbold)}
+h4,h5,h6{font-family:var(--font-body);font-size:1rem;font-weight:var(--fw-bold)}
+p{margin:0;text-wrap:pretty}
+p+p{margin-block-start:var(--s-2)}
+ul,ol{margin:0;padding:0}
+figure{margin:0}
+small{font-size:var(--fs-meta)}
+strong,b{font-weight:var(--fw-bold)}
+hr{border:0;border-block-start:var(--border);margin:0}
+
+a{color:var(--link);text-decoration-thickness:2px;text-underline-offset:.2em}
+a:hover{text-decoration-thickness:3px}
+
+img,picture,svg,video{display:block;max-width:100%}
+img,video{height:auto}
+svg{flex:none}
+
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:disabled,[aria-disabled="true"]{cursor:not-allowed}
+
+/* Focus: 3px strong-indigo ring, 3px offset + 2px cream gap; yellow on ink surfaces (spec §10.4) */
+:focus{outline:none}
+:focus-visible{
+  outline:3px solid var(--focus-ring);
+  outline-offset:3px;
+  box-shadow:0 0 0 5px var(--focus-gap,var(--c-bg));
+  border-radius:var(--r-sm);
+}
+/* The ring and its gap follow the surface the control sits on (2.6 fix: ring must reach 3:1 against the adjacent surface).
+   Closest ancestor wins, so a coloured card inside an ink section still gets its own pair. */
+.on-ink,[data-surface="ink"]{--focus-ring:var(--focus-ring-on-ink);--focus-gap:var(--c-ink)}
+
+::selection{background:var(--c-accent);color:var(--c-ink)}
+
+/* Skip link */
+.skip-link{
+  position:fixed; inset-block-start:var(--s-2); inset-inline-start:var(--s-2);
+  z-index:var(--z-toast);
+  padding:var(--s-1) var(--s-3); min-height:44px; display:inline-flex; align-items:center;
+  background:var(--c-accent); color:var(--c-ink); font-weight:var(--fw-bold);
+  border:var(--border); border-radius:var(--r-sm); box-shadow:var(--shadow-5);
+  transform:translateY(-200%);
+}
+.skip-link:focus-visible{transform:none}
+
+/* Visually hidden (screen-reader text, e.g. "opens in new tab") */
+.sr-only{
+  position:absolute; width:1px; height:1px; margin:-1px; padding:0; border:0;
+  overflow:hidden; clip:rect(0 0 0 0); clip-path:inset(50%); white-space:nowrap;
+}
+
+/* Reduced motion — the only place !important is allowed (spec §13.7) */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto!important}
+  *,*::before,*::after{
+    animation-duration:.01ms!important; animation-iteration-count:1!important;
+    transition-duration:.01ms!important; scroll-behavior:auto!important;
+  }
+}

@@ -1,0 +1,99 @@
+/* ==========================================================================
+   tokens.css — µLearn CHN design tokens (Phase 2.2)
+   Three layers: 1 Primitive (raw values) → 2 Semantic (purpose) → 3 Component
+   (defined on the component in components.css, falling back to these).
+   Flat colour only. No gradients, no blurred shadows. No external requests.
+   ========================================================================== */
+
+/* ---------- Fonts (self-hosted) ---------- */
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:400;font-display:swap;src:url("../fonts/PlusJakartaSans-400.woff2") format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:500;font-display:swap;src:url("../fonts/PlusJakartaSans-500.woff2") format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:600;font-display:swap;src:url("../fonts/PlusJakartaSans-600.woff2") format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:700;font-display:swap;src:url("../fonts/PlusJakartaSans-700.woff2") format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:800;font-display:swap;src:url("../fonts/PlusJakartaSans-800.woff2") format("woff2")}
+/* Satoshi is optional (client-supplied, decision D6). Only local() is declared so a missing file never causes a
+   404 / console error. To use Satoshi files: place Satoshi-Bold.woff2 and Satoshi-Black.woff2 in fonts/ and add
+   `,url("../fonts/Satoshi-Bold.woff2") format("woff2")` (and the Black equivalent) after local() below. */
+@font-face{font-family:"Satoshi";font-style:normal;font-weight:700;font-display:swap;src:local("Satoshi Bold"),local("Satoshi-Bold")}
+@font-face{font-family:"Satoshi";font-style:normal;font-weight:900;font-display:swap;src:local("Satoshi Black"),local("Satoshi-Black")}
+
+:root{
+  /* ======================= 1. PRIMITIVE ======================= */
+  /* colour — locked palette (spec §3) */
+  --c-bg:#F8F3E9;             /* cream */
+  --c-ink:#0F172A;            /* navy: text + every outline */
+  --c-primary:#6366F1;        /* indigo: decoration/fill only, never text */
+  --c-primary-strong:#4F46E5; /* indigo for fills carrying white text (D5) */
+  --c-accent:#FACC15;         /* yellow */
+  --c-mint:#34D399;           /* mint */
+  --c-surface:#FFFFFF;
+  /* colour — Board 2 additions, approved as option C1-B (flat tints, navy text only) */
+  --c-lavender:#DDD6FE;       /* indigo tint · navy 12.86:1 */
+  --c-coral:#FB8F7C;          /* one warm accent · navy 7.92:1 */
+
+  /* spacing — 8px base grid */
+  --s-0:4px; --s-1:8px; --s-2:16px; --s-3:24px; --s-4:32px; --s-5:40px;
+  --s-6:48px; --s-8:64px; --s-10:80px; --s-12:96px; --s-16:128px;
+
+  /* shape */
+  --bw:2px;
+  --r-sm:8px; --r-md:12px; --r-lg:14px; --r-pill:999px;  /* pill: buttons only (C2-B) */
+  --shadow-1:1px 1px 0 var(--c-ink);   /* pressed */
+  --shadow-3:3px 3px 0 var(--c-ink);   /* small controls */
+  --shadow-5:5px 5px 0 var(--c-ink);
+  --shadow-6:6px 6px 0 var(--c-ink);
+  --shadow-7:7px 7px 0 var(--c-ink);
+  --shadow-9:9px 9px 0 var(--c-ink);   /* hover lift on large cards */
+
+  /* type */
+  --font-display:"Satoshi","Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-body:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --fw-regular:400; --fw-medium:500; --fw-semibold:600; --fw-bold:700; --fw-xbold:800;
+  --fs-hero:clamp(4rem,2.2rem + 9vw,11.5rem);
+  --fs-h2:clamp(2.75rem,1.6rem + 4.5vw,5.25rem);
+  --fs-h3:clamp(1.25rem,1.1rem + .6vw,1.625rem);
+  --fs-lead:clamp(1.125rem,1rem + .5vw,1.375rem);
+  --fs-body:1.0625rem;
+  --fs-meta:.875rem;
+  --fs-micro:.75rem;
+  --lh-display:.9; --lh-heading:1.05; --lh-body:1.6; --lh-tight:1.25;
+  --ls-display:-.035em; --ls-heading:-.02em; --ls-label:.08em;
+
+  /* layout */
+  --container:1440px; --container-content:1200px; --container-prose:44rem;
+  --gutter:clamp(20px,2.2vw + 12px,80px);
+  --section-y:clamp(64px,40px + 7vw,140px);
+  --header-h:64px;
+
+  /* motion */
+  --ease-out:cubic-bezier(.22,1,.36,1);
+  --t-fast:.15s; --t-med:.3s; --t-slow:.7s;
+
+  /* z-index scale */
+  --z-deco:0; --z-content:1; --z-raised:10; --z-header:50; --z-dialog:100; --z-toast:200;
+
+  /* ======================= 2. SEMANTIC ======================= */
+  --surface-page:var(--c-bg);
+  --surface-card:var(--c-surface);
+  --surface-ink:var(--c-ink);
+  --text:var(--c-ink);
+  --text-on-ink:var(--c-bg);
+  --text-on-strong:var(--c-surface);   /* only on --c-primary-strong */
+  --text-muted:#334155;                /* navy-slate, 9.36:1 on cream, 10.35:1 on white, 7.46:1 on lavender */
+  --border:var(--bw) solid var(--c-ink);
+  --border-color:var(--c-ink);
+  --focus-ring:var(--c-primary-strong);
+  --focus-ring-on-ink:var(--c-accent);
+  --link:var(--c-ink);
+  --scroll-offset:calc(var(--header-h) + var(--s-2));
+}
+
+/* Header height steps up on desktop (spec §5.6: 76px desktop / 64px mobile) */
+@media (min-width:1024px){:root{--header-h:76px}}
+@media (max-width:1023px){:root{--container:100%}}
+
+/* Breakpoints (CSS variables cannot drive @media, so they are documented here and used literally):
+   --bp-sm:640px  (tablet, 8 col)
+   --bp-lg:1024px (desktop, 12 col)
+   --bp-xl:1280px (wide desktop refinements)
+   Mobile-first: write base styles for ≤639px, then min-width queries. */

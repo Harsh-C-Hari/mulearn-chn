@@ -1,0 +1,22 @@
+{
+ "1440": {
+  "stops": 58,
+  "ringContrastMin": 3.27,
+  "ringBelow3": [],
+  "obscured": []
+ },
+ "390": {
+  "stops": 49,
+  "ringContrastMin": 3.27,
+  "ringBelow3": [],
+  "obscured": []
+ },
+ "skip": {
+  "first": {
+   "t": "Skip to content",
+   "href": "#main"
+  },
+  "hash": "#main",
+  "targetExists": true
+ }
+}

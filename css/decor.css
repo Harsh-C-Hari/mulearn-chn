@@ -1,0 +1,107 @@
+/* ==========================================================================
+   decor.css — decorative library (Phase 2.4)
+   Flat shapes only: no gradients, no blur, no 3D. Everything here is aria-hidden
+   and pointer-events:none; content must never depend on it.
+   Shapes live in img/ui/sprite.svg (inlined per page by scripts/sync_sprite.py).
+
+   Usage
+     <span class="sticker sticker--indigo" style="--x:4%;--y:10%;--size:72px;--rot:12deg" aria-hidden="true">
+       <svg><use href="#s-asterisk-6"/></svg>
+     </span>
+   Put stickers inside a positioned parent that clips (.section--clip or .deco-host).
+   ========================================================================== */
+
+/* ---------- Host: a box that positions + clips its stickers ---------- */
+.deco-host{position:relative;isolation:isolate;overflow:clip}
+
+/* ---------- Sticker wrapper ---------- */
+.sticker{
+  --size:64px; --ar:1; --rot:0deg;
+  position:absolute; z-index:var(--z-deco); pointer-events:none; user-select:none;
+  width:var(--size); aspect-ratio:var(--ar); height:auto;
+  inset-inline-start:var(--x,auto); inset-inline-end:var(--r,auto);
+  inset-block-start:var(--y,auto);  inset-block-end:var(--b,auto);
+  transform:rotate(var(--rot));
+}
+.sticker>svg{width:100%;height:100%;overflow:visible}
+.sticker>img{width:100%;height:100%;object-fit:contain}
+
+/* colour (sets the symbol's --fill) */
+.sticker--indigo{--fill:var(--c-primary)}
+.sticker--strong{--fill:var(--c-primary-strong)}
+.sticker--yellow{--fill:var(--c-accent)}
+.sticker--mint{--fill:var(--c-mint)}
+.sticker--lavender{--fill:var(--c-lavender)}
+.sticker--coral{--fill:var(--c-coral)}
+.sticker--ink{--fill:var(--c-ink)}
+.sticker--cream{--fill:var(--c-bg)}
+.sticker--white{--fill:var(--c-surface)}
+.sticker--alt-indigo{--fill-2:var(--c-primary)}
+.sticker--line{--line:var(--c-ink)}                 /* ink line colour (default) */
+.sticker--cream-line{--line:var(--c-bg)}            /* on ink surfaces */
+.sticker--outlined{--line:var(--c-ink);--line-w:3}  /* adds the 2–3px navy outline to filled shapes */
+/* shape aspect ratios (symbol viewBox ÷ 1) */
+.sticker--slab{--ar:1.4}.sticker--squiggle{--ar:2.667}.sticker--loop{--ar:1.833}.sticker--underline{--ar:10}
+.sticker--blob{--ar:1.143}.sticker--wedge{--ar:.75}
+/* faint backdrop patterns */
+.sticker--faint{opacity:.22}
+/* size steps */
+.sticker--xs{--size:28px}.sticker--sm{--size:44px}.sticker--md{--size:72px}.sticker--lg{--size:120px}.sticker--xl{--size:200px}
+/* hide the busier shapes on small screens so mobile stays calm */
+@media (max-width:639px){.sticker--hide-sm{display:none}}
+@media (min-width:1024px){.sticker--float-out{transform:rotate(var(--rot)) translate(var(--dx,0),var(--dy,0))}}
+
+/* ---------- Opt-in idle motion (CSS only; only when the user allows motion) ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .sticker--spin>svg{animation:sticker-spin 24s linear infinite}
+  .sticker--bob>svg{animation:sticker-bob 5s ease-in-out infinite alternate}
+  @keyframes sticker-spin{to{transform:rotate(360deg)}}
+  @keyframes sticker-bob{from{transform:translateY(-6px) rotate(-3deg)}to{transform:translateY(6px) rotate(3deg)}}
+}
+
+/* ---------- Pure-CSS shapes (no SVG needed) ---------- */
+.deco-circle,.deco-ring,.deco-pill{position:absolute;z-index:var(--z-deco);pointer-events:none;
+  inset-inline-start:var(--x,auto);inset-inline-end:var(--r,auto);inset-block-start:var(--y,auto);inset-block-end:var(--b,auto);
+  width:var(--size,80px);height:var(--h,var(--size,80px));transform:rotate(var(--rot,0deg))}
+.deco-circle{background:var(--fill,var(--c-primary));border-radius:50%}
+.deco-ring{border:var(--ring-w,10px) solid var(--fill,var(--c-accent));border-radius:50%}
+.deco-pill{background:var(--fill,var(--c-ink));border-radius:var(--r-pill)}           /* Board 2 ink swoosh bar */
+.deco-circle--outlined,.deco-pill--outlined{border:var(--border)}
+.deco-circle--indigo{--fill:var(--c-primary)}.deco-circle--yellow{--fill:var(--c-accent)}.deco-circle--mint{--fill:var(--c-mint)}
+.deco-circle--lavender{--fill:var(--c-lavender)}.deco-circle--coral{--fill:var(--c-coral)}.deco-circle--ink{--fill:var(--c-ink)}
+.deco-ring--indigo{--fill:var(--c-primary)}.deco-ring--mint{--fill:var(--c-mint)}.deco-ring--ink{--fill:var(--c-ink)}
+.deco-pill--yellow{--fill:var(--c-accent)}.deco-pill--indigo{--fill:var(--c-primary)}
+
+/* ---------- Faint backdrops (flat SVG tiles as data-URIs → no network request) ---------- */
+.bg-dots,.bg-grid{position:absolute;z-index:var(--z-deco);pointer-events:none;
+  inset-inline-start:var(--x,auto);inset-inline-end:var(--r,auto);inset-block-start:var(--y,auto);inset-block-end:var(--b,auto);
+  width:var(--w,240px);height:var(--h,180px);opacity:var(--op,.35)}
+.bg-dots{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ccircle cx='3' cy='3' r='2' fill='%230F172A'/%3E%3C/svg%3E");background-size:24px 24px}
+.bg-grid{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cpath d='M32 0H0v32' fill='none' stroke='%230F172A' stroke-width='1.5'/%3E%3C/svg%3E");background-size:32px 32px;
+  border-inline-start:1.5px solid var(--c-ink);border-block-start:1.5px solid var(--c-ink)}
+
+/* ---------- Section edges (Board 2 lavender → cream transition, kept geometric) ---------- */
+/* A strip that sits on the bottom/top of a section and is cut with a mask, filled by --edge. */
+.edge{--edge:var(--c-lavender);--edge-h:21px;--edge-w:60px;display:block;width:100%;height:var(--edge-h);background:var(--edge);pointer-events:none;
+  -webkit-mask:var(--edge-mask) repeat-x 0 0/var(--edge-w) var(--edge-h);mask:var(--edge-mask) repeat-x 0 0/var(--edge-w) var(--edge-h);
+  --edge-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 21'%3E%3Cpath d='M0 0H60V6A15 15 0 0 1 30 6A15 15 0 0 1 0 6Z'/%3E%3C/svg%3E")}
+.edge--zigzag{--edge-h:18px;--edge-w:36px;
+  --edge-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 18'%3E%3Cpath d='M0 0H36V4L27 18 18 4 9 18 0 4Z'/%3E%3C/svg%3E")}
+.edge--flip{transform:scaleY(-1)}                    /* use on a top edge */
+.edge--lavender{--edge:var(--c-lavender)}.edge--yellow{--edge:var(--c-accent)}.edge--mint{--edge:var(--c-mint)}
+.edge--ink{--edge:var(--c-ink)}.edge--white{--edge:var(--c-surface)}.edge--cream{--edge:var(--c-bg)}.edge--indigo{--edge:var(--c-primary)}
+.edge--lg{--edge-h:35px;--edge-w:100px}
+
+/* ---------- Clip-path panels (Join banner / ink slabs; hard edges, no curves) ---------- */
+.clip-diag{clip-path:polygon(18% 0,100% 0,100% 100%,0 100%)}
+.clip-diag-r{clip-path:polygon(0 0,100% 0,82% 100%,0 100%)}
+.clip-slab{clip-path:polygon(12% 0,100% 0,88% 100%,0 100%)}
+
+/* ---------- Marquee-free ink strip with label (Board 2 info bar) ---------- */
+.ink-bar{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-2) var(--s-4);padding:var(--s-3) var(--s-4);
+  background:var(--c-ink);color:var(--c-bg);border:var(--border);border-radius:var(--r-lg);box-shadow:6px 6px 0 var(--c-primary)}
+.ink-bar__badge{padding:2px var(--s-2);background:var(--c-accent);color:var(--c-ink);border-radius:var(--r-sm);font-size:var(--fs-meta);font-weight:var(--fw-xbold)}
+
+/* ---------- Highlight under a word (flat marker block, not a gradient) ---------- */
+.hl{box-shadow:inset 0 -.32em 0 var(--hl,var(--c-accent));padding-inline:.04em}
+.hl--lavender{--hl:var(--c-lavender)}.hl--mint{--hl:var(--c-mint)}.hl--indigo{--hl:var(--c-primary)}.hl--coral{--hl:var(--c-coral)}

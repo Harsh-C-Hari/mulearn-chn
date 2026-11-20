@@ -1,0 +1,75 @@
+/* ==========================================================================
+   layout.css — containers, sections, grids, splits (Phase 2.3)
+   Mobile-first. Breakpoints: 640 (tablet 8-col) · 900 (split) · 1024 (desktop 12-col)
+   ========================================================================== */
+
+/* ---------- Containers ---------- */
+.container{width:100%;max-width:var(--container);margin-inline:auto;padding-inline:var(--gutter)}
+.container--content{max-width:calc(var(--container-content) + var(--gutter) * 2)}
+.container--prose{max-width:calc(var(--container-prose) + var(--gutter) * 2)}
+.container--bleed{padding-inline:0}
+
+/* ---------- Sections ---------- */
+.section{position:relative;padding-block:var(--section-y);background:var(--surface-page);color:var(--text);isolation:isolate}
+.section--tight{padding-block:calc(var(--section-y) * .6)}
+.section--clip{overflow:clip}                      /* contains decorations → no horizontal overflow */
+.section--ruled{border-block:var(--border)}
+.section--white{background:var(--c-surface)}
+.section--lavender{background:var(--c-lavender)}
+.section--yellow{background:var(--c-accent)}
+.section--mint{background:var(--c-mint)}
+.section--ink{background:var(--c-ink);color:var(--text-on-ink)}
+.section--ink a{color:inherit}
+
+/* ---------- Grid: 4 col mobile · 8 tablet · 12 desktop ---------- */
+.grid{--cols:4;--gap:var(--s-3);display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));gap:var(--gap)}
+@media (min-width:640px){.grid{--cols:8;--gap:var(--s-4)}}
+@media (min-width:1024px){.grid{--cols:12;--gap:clamp(var(--s-4),3vw,var(--s-8))}}
+.grid>*{grid-column:1/-1;min-width:0}                /* default: full width */
+@media (min-width:640px){
+  .sm-span-4{grid-column:span 4}.sm-span-8{grid-column:1/-1}
+}
+@media (min-width:1024px){
+  .span-3{grid-column:span 3}.span-4{grid-column:span 4}.span-5{grid-column:span 5}
+  .span-6{grid-column:span 6}.span-7{grid-column:span 7}.span-8{grid-column:span 8}
+  .span-9{grid-column:span 9}.span-12{grid-column:1/-1}
+  .start-2{grid-column-start:2}.start-7{grid-column-start:7}.start-8{grid-column-start:8}
+}
+
+/* Auto-fit grid: cards that pick their own column count (min width via --min) */
+.grid-auto{--min:16rem;display:grid;gap:var(--s-4);grid-template-columns:repeat(auto-fit,minmax(min(100%,var(--min)),1fr))}
+.grid-2{display:grid;gap:var(--s-4);grid-template-columns:1fr}
+@media (min-width:640px){.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.grid-3{display:grid;gap:var(--s-4);grid-template-columns:1fr}
+@media (min-width:640px){.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1024px){.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.grid-4{display:grid;gap:var(--s-3);grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:1024px){.grid-4{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s-4)}}
+
+/* Staggered tops (≤ 40px, desktop only) for asymmetric rows */
+@media (min-width:1024px){
+  .stagger>:nth-child(even){margin-block-start:var(--s-5)}
+  .stagger--odd>:nth-child(odd){margin-block-start:var(--s-5)}
+}
+
+/* ---------- Split / editorial layouts ---------- */
+.split{display:grid;gap:var(--s-6);grid-template-columns:minmax(0,1fr);align-items:center}
+@media (min-width:900px){
+  .split{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:var(--s-8)}
+  .split--even{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .split--wide-left{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}
+  .split--wide-right{grid-template-columns:minmax(0,1fr) minmax(0,1.4fr)}
+  .split--reverse>:first-child{order:2}
+  .split--top{align-items:start}
+}
+/* Editorial: oversized heading column + content column */
+.editorial{display:grid;gap:var(--s-5);grid-template-columns:minmax(0,1fr)}
+@media (min-width:1024px){.editorial{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-10)}}
+
+/* ---------- Flow helpers ---------- */
+.stack{display:flex;flex-direction:column;gap:var(--stack-gap,var(--s-3))}
+.stack--sm{--stack-gap:var(--s-1)}.stack--md{--stack-gap:var(--s-2)}.stack--lg{--stack-gap:var(--s-5)}
+.cluster{display:flex;flex-wrap:wrap;align-items:center;gap:var(--cluster-gap,var(--s-2))}
+.cluster--lg{--cluster-gap:var(--s-3)}
+.cluster--between{justify-content:space-between}
+.layer{position:relative;z-index:var(--z-content)}  /* content that sits above decorations */

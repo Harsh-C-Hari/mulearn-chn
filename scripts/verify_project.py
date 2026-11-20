@@ -15,9 +15,10 @@ import sys
 import json
 from PIL import Image
 
-BASE_DIR = r"D:\mulearn\website"
-SOURCES_DIR = os.path.join(BASE_DIR, "sources", "mulearn")
-SITE_DIR = os.path.join(BASE_DIR, "mulearn-chn")
+# Paths are resolved relative to this script so it runs on any machine (fix H1, Phase 2.6).
+SITE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(SITE_DIR)
+SOURCES_DIR = os.path.join(BASE_DIR, "sources", "mulearn")  # present only in the full handoff bundle
 IMG_DIR = os.path.join(SITE_DIR, "img")
 MANIFEST_PATH = os.path.join(SITE_DIR, "docs", "ASSET_MANIFEST.json")
 
