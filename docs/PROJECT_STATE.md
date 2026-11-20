@@ -1,7 +1,7 @@
 # PROJECT_STATE.md
 
-**Last updated:** 2026-11-20 · **Current phase:** 6 (Team & Member Directory) — **Phase 6 complete** · **Next:** Phase 7 — Memories & Gallery  
-**Project status:** Phase 3 complete: header/navigation, hero and About assembled in `index.html`, with motion. Audited at 320/390/768/1024/1440 (axe 0 violations, no overflow, 0 console errors, 0 external requests, motion tests 17/17). Offers, Events, Team, Memories, Join and Footer are Phases 4–7.
+**Last updated:** 2026-11-20 · **Current phase:** 7 (Memories & Gallery) — **Phase 7 complete** · **Next:** Phase 8 — Motion Layer Integration & Sitewide Refinement  
+**Project status:** Phase 7 (Memories & Gallery) completed with 6-frame editorial polaroid collage, 11-item community gallery drawer, and accessible modal lightbox (`<dialog id="memories-lightbox">`). Audited at 320/390/768/1024/1440 (zero horizontal overflow, 0 console errors, 0 external requests).
 
 ## Phase status
 | Phase | Name | Status |
@@ -13,10 +13,19 @@
 | 4 | Offers + Join + Footer | ✅ complete |
 | 5 | Events + dialogs | ✅ complete — final ZIP `mulearn-chn_phase-05_complete.zip` (+ `mulearn-chn_phase-05_deploy.zip`) |
 | 6 | Team + directory | ✅ complete — final ZIP `mulearn-chn_phase-06_complete.zip` (+ `mulearn-chn_phase-06_deploy.zip`) |
-| 7 | Memories + lightbox | ⏳ |
+| 7 | Memories + lightbox | ✅ complete — final ZIP `mulearn-chn_phase-07_complete.zip` (+ `mulearn-chn_phase-07_deploy.zip`) |
 | 8 | Motion layer | ⏳ |
 | 9 | QA / a11y / perf / SEO | ⏳ |
 | 10 | Release & handoff | ⏳ |
+
+## Phase 7 progress (subphase checkpoints)
+| Subphase | Name | Status | Notes |
+|---|---|---|---|
+| 7.1 | Memory asset audit & section structure | ✅ complete | All 11 gallery items & 6 collage items audited; excluded promo assets; `#memories` section created in `index.html` & `css/sections/memories.css`; anchors connected. |
+| 7.2 | Six-frame editorial collage | ✅ complete | Responsive asymmetrical collage (p1–p6) with polaroid styling, Playful Neo-Brutalist shadows, zero image distortion, `scripts/build_memories.js`. |
+| 7.3 | 11-item gallery grid / drawer | ✅ complete | Accessible community gallery drawer (`#memories-gallery`), category metadata & tones, live category filter chips, no-JS fallback resilience, and `js/memories.js`. |
+| 7.4 | Reusable accessible lightbox | ✅ complete | Accessible modal dialog with focus trap, Esc to close, previous/next controls, keyboard navigation (ArrowLeft/ArrowRight), image preloading, no-JS fallback, and focus restoration. |
+| 7.5 | Motion, visual QA & final Phase 7 delivery | ✅ complete | Restrained GSAP entrance reveals (`js/motion-home.js`), 5-viewport visual QA, zero overflow, packaging & final Phase 7 ZIP. |
 
 ## Phase 6 progress (subphase checkpoints)
 | Subphase | Name | Status | ZIP |

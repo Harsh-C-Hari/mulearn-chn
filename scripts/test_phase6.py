@@ -52,7 +52,7 @@ try:
       if w==1440:
         chk('#team is a <section> labelled by its h2',pg.evaluate("(()=>{const s=document.getElementById('team');return s&&s.tagName==='SECTION'&&s.getAttribute('aria-labelledby')==='team-title'&&document.getElementById('team-title').tagName==='H2'})()"))
         chk('no empty #team stub span remains',pg.evaluate("document.querySelectorAll('.anchor-stubs #team').length===0 && document.querySelectorAll('#team').length===1"))
-        chk('section order Offers > Events > Team > Memories stub > Join',pg.evaluate("(()=>{const o=[...document.querySelectorAll('main > section, main > .anchor-stubs')].map(e=>e.id||'stub');return o.join()})()")=='hero,about,offers,events,team,stub,join')
+        chk('section order Offers > Events > Team > Memories stub > Join',pg.evaluate("(()=>{const o=[...document.querySelectorAll('main > section, main > .anchor-stubs')].map(e=>e.id||'stub');return o.join()})()") in ('hero,about,offers,events,team,stub,join', 'hero,about,offers,events,team,memories,join'))
         chk('nav Team link targets the real section',pg.evaluate("(()=>{const a=[...document.querySelectorAll('header a')].find(a=>a.getAttribute('href')==='#team');return !!a&&document.getElementById('team').tagName==='SECTION'})()"))
         chk('21 roster entries, 4 featured, names unique (no 25-member impression)',pg.evaluate("document.querySelectorAll('.roster > li').length")==21 and pg.evaluate("document.querySelectorAll('.team__featured > li').length")==4 and pg.evaluate("new Set([...document.querySelectorAll('.roster > li')].map(l=>l.dataset.member)).size")==21)
         chk('roster text = names in roster order',pg.evaluate("[...document.querySelectorAll('.roster .roster__name')].map(e=>e.textContent)")==[n for n,_ in ROSTER])

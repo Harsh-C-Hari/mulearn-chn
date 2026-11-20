@@ -93,6 +93,21 @@
           gsap.from(panel, { y: 40, opacity: 0, duration: .7, ease: EASE, scrollTrigger: { trigger: panel, start: "top 92%", once: true }, clearProps: "opacity,visibility,transform" });
         }
       }
+      // ---------------- Memories reveal (Phase 7.5; once, transform + opacity only, nothing hidden in CSS) ----------------
+      var memories = document.getElementById("memories");
+      if (memories) {
+        var mt = gsap.timeline({ defaults: { ease: EASE }, paused: true, onComplete: function () {
+          gsap.set(q(".memories__head > *, .memories .sticker > svg, .memories__actions", memories), { clearProps: "opacity,visibility,transform" });
+        }});
+        mt.from(q(".memories__head > *", memories), { y: 32, opacity: 0, duration: .65, stagger: .1 }, 0)
+          .from(q(".memories > .sticker > svg", memories), { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .55, ease: "back.out(2)", stagger: .08 }, .35)
+          .from(q(".memories__actions", memories), { y: 24, opacity: 0, duration: .5 }, .7);
+        ScrollTrigger.create({ trigger: memories, start: "top 70%", once: true, onEnter: function () { mt.play(); } });
+
+        q(".memories__collage .polaroid", memories).forEach(function (c) {
+          gsap.from(c, { y: 48, opacity: 0, duration: .75, ease: EASE, scrollTrigger: { trigger: c, start: "top 88%", once: true }, clearProps: "opacity,visibility,transform" });
+        });
+      }
       // ---------------- Join reveal (once) ----------------
       var join = document.getElementById("join");
       if (join) {

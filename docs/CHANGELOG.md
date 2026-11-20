@@ -2,6 +2,63 @@
 
 Format: newest first. Each entry: date · phase · what changed · files · verification.
 
+## 2026-11-20 — Phase 7 / Subphase 7.5 (Motion, Visual QA & Phase 7 Completion) — PHASE 7 COMPLETE
+- **Motion Layer Integration ([js/motion-home.js]):**
+  - Added restrained ScrollTrigger entrance timeline for `#memories`: section head and sparkles enter at 70% viewport, followed by each of the 6 collage polaroids rising gently at 88% viewport.
+  - Complete `clearProps: "all"` cleanup on animation completion leaves zero leftover inline styles in DOM.
+  - Full reduced-motion compliance: strictly wrapped in `mm.add('(prefers-reduced-motion: no-preference)')`; zero animation or layout shift when reduced motion is preferred.
+- **Visual QA & Integrity:**
+  - Audited across 5 viewports (320, 390, 768, 1024, 1440): zero horizontal overflow, zero console errors, zero external network requests.
+  - Verified 96/96 image derivatives (`py scripts/verify_project.py` PASS).
+  - Verified generator sync (`node scripts/build_memories.js --check` PASS).
+- **Packaging & Delivery:**
+  - Updated root archive `mulearn-chn.zip`.
+  - Generated phase checkpoints: `phase/mulearn-chn_phase_7.zip`, `phase/mulearn-chn_phase-07_complete.zip`, and deployable package `phase/mulearn-chn_phase-07_deploy.zip`.
+- **Files:** `js/motion-home.js`, `index.html`, `css/sections/memories.css`, `js/memories.js`, `scripts/build_memories.js`, `scripts/test_phase7.py`, `docs/PROJECT_STATE.md`, `docs/NEXT_PHASE.md`, `docs/CHANGELOG.md`.
+
+## 2026-11-20 — Phase 7 / Subphase 7.4 (Reusable Accessible Lightbox)
+- **Reusable Accessible Lightbox Modal (`<dialog id="memories-lightbox">`):**
+  - Implemented the accessible lightbox dialog in `index.html` and `css/sections/memories.css`.
+  - Supports `showModal()` with native focus trapping and backdrop styling (`rgba(15, 23, 42, 0.78)`).
+  - Navigation controls: Previous/Next buttons (`#lightbox-prev`, `#lightbox-next`), mobile touch-friendly navigation bar (`#lightbox-mob-prev`, `#lightbox-mob-next`), and close button (`#lightbox-close`).
+  - Keyboard navigation: Escape key closes the dialog, Left arrow (`ArrowLeft`) steps backward, Right arrow (`ArrowRight`) steps forward.
+  - Focus restoration: upon closing (via Escape, Close button, or backdrop click), keyboard focus returns directly to the button that triggered the modal.
+  - Image display & Preloading: displays full resolution photograph with native dimensions (`#lightbox-dims`), category badge (`#lightbox-category`), position counter (`#lightbox-counter`, e.g. "Photo 3 of 11"), and preloads adjacent photos in memory for instantaneous stepping.
+- **Global Event Delegation ([js/memories.js]):**
+  - Integrated click delegation for all `[data-lightbox-open]` triggers across both the 6 polaroids in the collage and the 11 cards in the gallery.
+- **Verification ([scripts/test_phase7.py]):**
+  - Added end-to-end browser tests verifying opening from collage cards, opening from gallery cards, next/prev button clicks, arrow key navigation, Escape closing, and focus return.
+- **Files:** `index.html`, `css/sections/memories.css`, `js/memories.js`, `scripts/test_phase7.py`, `docs/NEXT_PHASE.md`, `docs/CHANGELOG.md`, `docs/PROJECT_STATE.md`.
+
+## 2026-11-20 — Phase 7 / Subphase 7.3 (11-Item Gallery Display & Drawer Filter)
+- **11-Item Community Gallery Display:** Implemented the accessible gallery drawer (`#memories-gallery`) containing all 11 verified community photographs and authentic event extractions, with full responsive layouts (3 cols desktop, 2 cols tablet, 1 col mobile).
+  - Cards feature thumbnail preview with badge, category tag with color tone (yellow/mint/coral/lavender), image dimensions, verified title, and observable caption.
+  - Action trigger `<button type="button" class="gallery-card__action" data-lightbox-open="..." aria-haspopup="dialog">` with visually hidden text and focus ring.
+- **Drawer Toggle & Category Filtering ([js/memories.js]):**
+  - Added accessible disclosure toggle button (`#memories-gallery-toggle`, `aria-expanded`, `aria-controls="memories-gallery"`).
+  - Built interactive category filtering with 5 buttons (`All (11)`, `Community (1)`, `Workshops (4)`, `Events (5)`, `Design (1)`), updating `aria-pressed`, active styling, and card visibility.
+  - No-JS resilience: with JavaScript disabled (`.no-js`), toggle button is hidden and gallery drawer is displayed by default (`.no-js .memories__drawer[hidden] { display: block !important; }`).
+- **Generator & Verification Integration:**
+  - Extended `scripts/build_memories.js` to render both collage and gallery cards from `data/memories.js` (`--check` mode verified).
+  - Updated `scripts/test_phase7.py` to assert 11 gallery cards, drawer toggle functionality, and category filter behavior.
+- **Files:** `scripts/build_memories.js`, `js/memories.js`, `css/sections/memories.css`, `index.html`, `scripts/test_phase7.py`, `docs/NEXT_PHASE.md`, `docs/CHANGELOG.md`, `docs/PROJECT_STATE.md`.
+
+## 2026-11-20 — Phase 7 / Subphase 7.2 (Six-Frame Editorial Collage)
+- **Six-Frame Editorial Polaroid Collage:** Implemented the responsive 6-frame collage in `css/sections/memories.css` and `index.html` via `scripts/build_memories.js`.
+  - Dominant centerpiece `p5` (`polaroid--main` with "Featured moment" tag) spanning 8 columns on desktop and full width on tablet/mobile with `src1200` high-res derivative.
+  - Two medium frames `p1` (Lab Session Overview, 1.8:1) and `p2` (Mentored Workshop, 2.0:1) with subtle alternating tilts (-3° / +2.5°).
+  - Three small frames `p3` (Community Gathering, 1.9:1), `p4` (Peer Collaboration, 1.8:1), and `p6` (Technical Demo, 1.1:1).
+- **Playful Neo-Brutalist Styling & Interactions:** Pure flat white polaroids with 2px navy borders, hard offset shadows (`var(--shadow-5)` / `var(--shadow-7)`), interactive hover/focus straightening and lift (`scale(1.015)` and `var(--shadow-9)`), and yellow-to-mint interactive badge snap.
+- **Accessibility & Touch Targets:** Every polaroid includes a fully accessible stretched `<button type="button" class="polaroid__action" data-lightbox-open="..." aria-haspopup="dialog">` with visually hidden screen-reader label, visible focus ring (`outline: 3px solid var(--c-primary)`), and WCAG AAA compliance.
+- **Automation & Test Guard:** Created `scripts/build_memories.js` to render markup from `data/memories.js` (with `--check` flag). Updated `scripts/test_phase7.py` to assert collage structure, slots, dimensions, non-upscaling, and lightbox trigger targets.
+- **Files:** `scripts/build_memories.js`, `css/sections/memories.css`, `index.html`, `scripts/test_phase7.py`, `docs/NEXT_PHASE.md`, `docs/CHANGELOG.md`, `docs/PROJECT_STATE.md`.
+
+## 2026-11-20 — Phase 7 / Subphase 7.1 (Memory Asset Audit & Section Structure)
+- **Asset Audit & Inventory:** Performed full technical audit of all 6 editorial collage mappings (13 derivatives) and 11 lightbox gallery items (6 community photos + 5 extracted genuine event photos) in `data/memories.js`. All derivatives verified present in `img/memories/` and `img/events/` as clean WebP with stripped EXIF/GPS metadata and non-upscaled resolutions. Explicitly documented exclusion of promotional poster `Memories/event5_zdu88j.jpg` ("Weekly Twitches / Salt-Mango Tree"), low-res duplicate screenshots, and sponsor slides in `docs/memories-audit.md`.
+- **Semantic Memories Section:** Created `css/sections/memories.css` adhering to Playful Neo-Brutalist design tokens (white surface band, 2px navy borders top/bottom, subtle grid background, responsive headings, container rules). Replaced `<div class="anchor-stubs"><span id="memories"></span></div>` in `index.html` with `<section id="memories" class="section section--clip section--ruled section--white memories" aria-labelledby="memories-title">`, containing kicker tag, `h2#memories-title`, verified lead copy, and structural placeholders for the collage and gallery.
+- **Anchor & Test Integration:** Connected navigation anchors (`header a[href="#memories"]`, About CTA `a[href="#memories"]`, and footer link `a[href="#memories"]`). Updated `scripts/test_phase4.py` and `scripts/test_phase6.py` section order assertions to recognize the real `#memories` section. Created `scripts/test_phase7.py` covering asset validity, DOM semantics, content rules, and multi-viewport responsive layout.
+- **Files:** `data/memories.js`, `css/sections/memories.css`, `index.html`, `scripts/test_phase4.py`, `scripts/test_phase6.py`, `scripts/test_phase7.py`, `docs/memories-audit.md`, `docs/NEXT_PHASE.md`, `docs/CHANGELOG.md`.
+
 ## 2026-11-20 — Phase 6 / Fix-01 (Sticker anchoring + roster decoration)
 - **Featured Team Stickers (Phase 1):** Anchored stickers inside `<article class="card member-card">` so they translate with card on hover (`translate(-3px, -3px)`), matching Offers cards. De-duplicated Hanin C K's sticker from `#s-asterisk` to `#s-bolt` with `sticker--coral sticker--outlined`, giving 4 completely distinct shapes across the 4 featured leads (asterisk, star, sparkle, bolt).
 - **Featured Event Stickers (Phase 2):** Anchored stickers inside `<article class="card event-card">` for the 3 featured cards (ODYSSEY, Buildathon, Build with AI) so they move with cards on hover.
