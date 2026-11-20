@@ -1,17 +1,87 @@
-# µLearn CHN website
+# µLearn CHN Website
 
-Static site for the µLearn community at College of Engineering Chengannur: HTML, CSS, vanilla JS (classic scripts), vendored GSAP 3.15.1 + ScrollTrigger, self-hosted Plus Jakarta Sans. No build step, no CDN.
+Official website for the **µLearn chapter at College of Engineering Chengannur (CEC)**.
 
-**Status:** Phase 7 (Memories & Gallery) complete. Release preparation in progress.
+A playful neo-brutalist editorial static single-page web experience showcasing community offerings, technical events, community leads, interest groups, and milestone memories.
 
-## Run locally
-`python3 -m http.server 8000` then open `http://localhost:8000/` (index.html) or `/styleguide.html` (or open the files directly).
+---
 
-## Start here (new session)
-1. `docs/PROJECT_STATE.md` · 2. `docs/NEXT_PHASE.md` · 3. `docs/PROJECT_MASTER_SPEC.md` · 4. `docs/design-system.md`, `docs/design-audit.md` · 5. `docs/accessibility-report.md`
+## Technology Stack
 
-## Layout
-`css/` tokens, base, layout, components, decor, utilities, sections · `js/` motion guard · `vendor/gsap/` · `fonts/` · `img/` (96 optimised derivatives + UI sprite) · `data/` (verified links, team, events, memories) · `reference/` (approved boards, not deployed) · `docs/` · `scripts/` (verification, audits, packing).
+* **Markup & Structure**: Semantic HTML5 (native `<dialog>`, `<picture>`, `<svg>` symbols).
+* **Styling**: Modern CSS with CSS custom properties (design tokens), CSS Grid, Flexbox, and fluid typography. Zero CSS frameworks.
+* **Scripting**: Modular Vanilla JavaScript (ES modules and classic scripts). Zero frontend frameworks.
+* **Motion**: Locally vendored GSAP 3.15.1 and ScrollTrigger with strict `prefers-reduced-motion` compliance.
+* **Typography**: Self-hosted Plus Jakarta Sans (`.woff2` / `.woff`). Zero external font CDNs.
+* **Assets**: Fully local WebP image derivatives and inline/symbol SVG icons. Zero third-party runtime requests.
 
-## Checks
-`python3 scripts/verify_project.py` (assets) · `scripts/run_audit.sh [page.html]` (axe, keyboard, overflow, network; needs Playwright + axe-core, dev-only) · `python3 scripts/test_motion.py` · `python3 scripts/pack_checkpoint.py <name>` (full ZIP) · `python3 scripts/pack_deploy.py <name>` (deployable ZIP: no docs/scripts/reference/sources).
+---
+
+## Repository Structure
+
+```
+.
+├── index.html           # Production homepage
+├── styleguide.html      # Living design system & accessibility showcase
+├── css/                 # Design tokens, base, layout, components, and section CSS
+├── js/                  # Interaction modules, lightbox, dialogs, motion guard
+├── img/                 # 96 optimized WebP derivatives and UI SVG sprite
+├── fonts/               # Self-hosted Plus Jakarta Sans font files
+├── vendor/              # Vendored GSAP and ScrollTrigger libraries
+├── data/                # Verified community data (events, team, memories, links)
+├── docs/                # Architecture specifications, accessibility audits, logs
+├── scripts/             # Deterministic verification and data build scripts
+├── ASSET_MANIFEST.md    # Approved asset inventory and hashes
+├── ASSET_MAPPING.md     # Source-to-derivative resolution mapping
+├── .gitignore           # Repository ignore rules
+└── README.md            # Project documentation
+```
+
+---
+
+## Deployment Platform: Vercel
+
+The website is designed for deployment on **Vercel** as a static site:
+
+* **Framework Preset**: `Other`
+* **Build Command**: None (leave empty)
+* **Output Directory**: `.` (leave empty)
+* **Install Command**: None (leave empty)
+
+---
+
+## Local Development & Preview
+
+Serve the website locally with any static web server:
+
+```bash
+# Start a local HTTP server
+python -m http.server 8000
+```
+
+Open `http://localhost:8000/` in your browser. The design system showcase is available at `http://localhost:8000/styleguide.html`.
+
+---
+
+## Verification & Integrity Checks
+
+Run the verification suite from the project root:
+
+```bash
+# Verify 96/96 image derivatives and manifest integrity
+python scripts/verify_project.py
+
+# Verify synchronization between data/ and index.html
+node scripts/build_events.js --check
+node scripts/build_team.js --check
+node scripts/build_memories.js --check
+```
+
+---
+
+## Documentation
+
+* [Master Project Specification](docs/PROJECT_MASTER_SPEC.md)
+* [Current Project State](docs/PROJECT_STATE.md)
+* [Change Log](docs/CHANGELOG.md)
+* [Accessibility Report](docs/accessibility-report.md)
