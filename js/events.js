@@ -94,7 +94,6 @@
       sp.appendChild(wrap); bodyEl.appendChild(sp);
     }
     if (e.dialogNote) bodyEl.appendChild(h("p", "event-dialog__note", e.dialogNote));
-    panel.scrollTop = 0;
   }
 
   function canAnimate() {
@@ -110,6 +109,7 @@
     render(e);
     dlg.classList.remove("is-closing");
     dlg.showModal();
+    panel.scrollTop = 0;
     if (canAnimate()) {
       window.gsap.fromTo(panel, { y: 28, opacity: 0 }, { y: 0, opacity: 1, duration: .35, ease: "power3.out", clearProps: "transform,opacity" });
     }
