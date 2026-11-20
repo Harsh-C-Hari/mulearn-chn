@@ -7,7 +7,9 @@
 .footer__edge .edge{display:block}
 .site-footer{position:relative;isolation:isolate;overflow:clip;background:var(--c-ink);color:var(--c-bg);padding-block:var(--s-8) var(--s-4)}
 .site-footer a{color:inherit}
-.site-footer a:hover{text-decoration-color:var(--c-accent);text-decoration-skip-ink:none}
+@media (hover: hover) and (pointer: fine) {
+  .site-footer a:hover{text-decoration-color:var(--c-accent);text-decoration-skip-ink:none}
+}
 
 /* closing tagline */
 .footer__big{font:var(--fw-xbold) clamp(3rem,1.6rem + 6.2vw,8.5rem)/.88 var(--font-display);letter-spacing:-.045em;margin-block-end:var(--s-8);max-width:14ch}
@@ -36,13 +38,17 @@
 .footer__links{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--s-3)}
 @media (min-width:1024px){.footer__links{grid-template-columns:minmax(0,1fr)}}
 .footer__links a{display:flex;align-items:center;min-height:44px;font-size:1.125rem;font-weight:var(--fw-bold);text-decoration:none;border-block-end:2px solid transparent;width:fit-content}
-.footer__links a:hover{border-block-end-color:var(--c-accent)}
+@media (hover: hover) and (pointer: fine) {
+  .footer__links a:hover{border-block-end-color:var(--c-accent)}
+}
 
 /* connect tiles */
 .footer__tiles{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--s-2)}
 .footer__tile{display:flex;align-items:center;justify-content:space-between;gap:var(--s-2);min-height:52px;padding:var(--s-1) var(--s-2);border:2px solid var(--c-bg);border-radius:var(--r-md);box-shadow:4px 4px 0 var(--c-primary);font-weight:var(--fw-bold);text-decoration:none;
   transition:transform var(--t-fast) var(--ease-out),box-shadow var(--t-fast) var(--ease-out),background-color var(--t-fast) var(--ease-out),color var(--t-fast) var(--ease-out)}
-.footer__tile:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--c-accent);background:var(--c-accent);color:var(--c-ink)}
+@media (hover: hover) and (pointer: fine) {
+  .footer__tile:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--c-accent);background:var(--c-accent);color:var(--c-ink)}
+}
 .footer__tile:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--c-primary)}
 .footer__tile .icon{width:1.1em;height:1.1em}
 .footer__tile--mail{justify-content:flex-start}

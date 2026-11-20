@@ -34,7 +34,9 @@ strong,b{font-weight:var(--fw-bold)}
 hr{border:0;border-block-start:var(--border);margin:0}
 
 a{color:var(--link);text-decoration-thickness:2px;text-underline-offset:.2em;text-decoration-skip-ink:none}
-a:hover{text-decoration-thickness:3px}
+@media (hover: hover) and (pointer: fine) {
+  a:hover{text-decoration-thickness:3px}
+}
 
 img,picture,svg,video{display:block;max-width:100%}
 img,video{height:auto}

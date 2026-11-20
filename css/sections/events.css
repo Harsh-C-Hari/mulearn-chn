@@ -40,7 +40,10 @@
 .event-card--coral{--card-bg:var(--c-coral);--focus-ring:var(--c-ink)}
 .event-card--yellow{--card-bg:var(--c-accent);--focus-ring:var(--c-ink)}
 .event-card--indigo{--card-bg:var(--c-primary-strong);--card-fg:var(--text-on-strong);--focus-ring:var(--c-accent)}
-.event-card:hover,.event-card:focus-within{transform:translate(-3px,-3px);box-shadow:var(--shadow-9)}
+@media (hover: hover) and (pointer: fine) {
+  .event-card:hover{transform:translate(-3px,-3px);box-shadow:var(--shadow-9)}
+}
+.event-card:has(:focus-visible){transform:translate(-3px,-3px);box-shadow:var(--shadow-9)}
 
 .event-card__num{
   position:absolute; z-index:3; inset-block-start:-20px; inset-inline-start:-14px;
@@ -53,7 +56,10 @@
   transform:rotate(var(--rot,-1.5deg)); transition:transform var(--t-med) var(--ease-out);
 }
 .event--buildathon{--rot:1.5deg}
-.event-card:hover .event-card__poster,.event-card:focus-within .event-card__poster{transform:rotate(0)}
+@media (hover: hover) and (pointer: fine) {
+  .event-card:hover .event-card__poster{transform:rotate(0)}
+}
+.event-card:has(:focus-visible) .event-card__poster{transform:rotate(0)}
 .event-card__poster img{display:block;width:100%;aspect-ratio:5/6;object-fit:cover;object-position:50% 30%;border:1px solid var(--c-ink);border-radius:3px;background:var(--c-bg)}
 .event-card__body{display:flex;flex-direction:column;gap:var(--s-2);flex:1;min-width:0}
 .event-card__title{font:var(--fw-xbold) clamp(2.125rem,1.6rem + 2vw,3rem)/.95 var(--font-display);letter-spacing:var(--ls-display);text-wrap:balance;overflow-wrap:anywhere}
@@ -95,7 +101,10 @@
   --card-pad:0; --card-shadow:var(--shadow-5); --focus-ring:var(--c-primary-strong); --focus-gap:var(--c-surface);
   gap:0; overflow:visible; width:100%; flex-direction:row;
 }
-.event-mini:hover,.event-mini:focus-within{transform:translate(-2px,-2px);box-shadow:var(--shadow-7)}
+@media (hover: hover) and (pointer: fine) {
+  .event-mini:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-7)}
+}
+.event-mini:has(:focus-visible){transform:translate(-2px,-2px);box-shadow:var(--shadow-7)}
 .event-mini__thumb{
   --tone:var(--c-lavender); margin:0; flex:0 0 38%; max-width:38%; display:flex; align-items:center; justify-content:center;
   padding:var(--s-1); background:var(--tone); border-inline-end:var(--border); border-radius:calc(var(--r-lg) - 2px) 0 0 calc(var(--r-lg) - 2px);

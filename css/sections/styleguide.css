@@ -10,7 +10,9 @@
 .sg-header__row{display:flex;align-items:center;justify-content:space-between;gap:var(--s-3);min-height:var(--header-h)}
 .sg-brand{display:inline-flex;align-items:center;min-height:44px;gap:var(--s-1);font:var(--fw-xbold) 1.6rem/1 var(--font-display);letter-spacing:var(--ls-heading);color:var(--c-ink);text-decoration:none}
 .sg-brand svg{width:34px;height:34px;--fill:var(--c-ink)}
-.sg-brand:hover{text-decoration:none}
+@media (hover: hover) and (pointer: fine) {
+  .sg-brand:hover{text-decoration:none}
+}
 @media (min-width:640px){.sg-header .btn{white-space:nowrap;flex:none}}  /* below 640px the label may wrap so 320px never overflows */
 .sg-nav{display:none;gap:var(--s-1)}
 @media (min-width:1180px){.sg-nav{display:flex}}  /* 9 links + CTA need ~1180px; below that the in-page jump bar does the job */
@@ -31,7 +33,10 @@
 .sg-jump{margin-block-start:var(--s-6);position:relative;z-index:var(--z-raised)}
 .sg-jump ul{display:flex;flex-wrap:wrap;gap:var(--s-0) var(--s-1);list-style:none}
 .sg-jump a{display:inline-flex;align-items:center;min-height:44px;padding:0 var(--s-2);border-radius:var(--r-sm);color:var(--c-bg);font-weight:var(--fw-semibold);font-size:.9375rem;text-decoration:none}
-.sg-jump a:hover{background:var(--c-primary-strong);text-decoration:none}
+@media (hover: hover) and (pointer: fine) {
+  .sg-jump a:hover{background:var(--c-primary-strong);text-decoration:none}
+}
+.sg-jump a:active{background:var(--c-primary-strong)}
 
 /* ---------- Section scaffolding ---------- */
 .sg-sec{scroll-margin-top:var(--scroll-offset)}

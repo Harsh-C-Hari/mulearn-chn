@@ -9,9 +9,11 @@
 
 /* ---------- Brand lockup: asterisk + µLearn + CHN tag ---------- */
 .brand{display:inline-flex;align-items:center;gap:var(--s-1);min-height:44px;color:var(--c-ink);text-decoration:none;flex:none}
-.brand:hover{text-decoration:none}
+@media (hover: hover) and (pointer: fine) {
+  .brand:hover{text-decoration:none}
+  .brand:hover .brand__mark{transform:rotate(45deg)}
+}
 .brand__mark{width:34px;height:34px;--fill:var(--c-ink);transition:transform var(--t-med) var(--ease-out)}
-.brand:hover .brand__mark{transform:rotate(45deg)}
 .brand__word{font:var(--fw-xbold) 1.625rem/1 var(--font-display);letter-spacing:var(--ls-heading)}
 .brand__chn{
   align-self:center;padding:2px 7px;background:var(--c-accent);border:var(--border);border-radius:var(--r-sm);
@@ -34,7 +36,9 @@
 .menu-toggle[aria-expanded="true"] .menu-toggle__open{display:none}
 .menu-toggle[aria-expanded="true"] .menu-toggle__close{display:inline-block}
 .menu-toggle[aria-expanded="true"]{--btn-bg:var(--c-accent)}
-.menu-toggle:hover .icon{transform:none}   /* the arrow nudge in .btn is wrong for a menu icon */
+@media (hover: hover) and (pointer: fine) {
+  .menu-toggle:hover .icon{transform:none}   /* the arrow nudge in .btn is wrong for a menu icon */
+}
 
 /* ---------- Navigation ---------- */
 .site-nav{flex-basis:100%;order:3;padding-block-end:var(--s-2)}
@@ -54,7 +58,10 @@
     width:100%;min-height:56px;padding:0 var(--s-1);font:var(--fw-xbold) 1.375rem/1.1 var(--font-display);letter-spacing:var(--ls-heading);
     border-block-end:2px dashed var(--c-ink);border-radius:0;
   }
-  .js .site-nav .nav-link:hover{box-shadow:inset .5em 0 0 var(--c-lavender)}
+  @media (hover: hover) and (pointer: fine) {
+    .js .site-nav .nav-link:hover{box-shadow:inset .5em 0 0 var(--c-lavender)}
+  }
+  .js .site-nav .nav-link:active{background:var(--c-lavender)}
   .js .site-nav .nav-link[aria-current="true"]{box-shadow:inset .5em 0 0 var(--c-accent)}
   .js .site-nav__cta{display:block;padding-block-start:var(--s-3)}
 }
