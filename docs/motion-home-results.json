@@ -76,7 +76,7 @@
    "focusAfterMotion": "brand"
   }
  ],
- "cls": 0.001,
+ "cls": 0.0024,
  "checks": {
   "normal: entrance runs (opacity <1 mid-animation)": true,
   "normal: hero fully visible after entrance": true,

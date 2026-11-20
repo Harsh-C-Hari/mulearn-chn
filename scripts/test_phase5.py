@@ -69,6 +69,15 @@ try:
         chk('no year invented on Buildathon card',not re.search(r'20\d\d',pg.evaluate("document.querySelector('.event--buildathon').textContent")))
         chk('no Alappuzha / CEC conflict text on Build with AI card',not re.search(r'Alappuzha|CEC',pg.evaluate("document.querySelector('.event--bwai').textContent")))
         chk('keyboard: each featured button focusable, focus ring visible',pg.evaluate("""()=>[...document.querySelectorAll('.event-card__btn')].every(b=>{b.focus();return document.activeElement===b&&getComputedStyle(b).outlineStyle!=='none'&&parseFloat(getComputedStyle(b).outlineWidth)>=2})"""))
+        chk('featured event stickers: 3 stickers inside article.event-card, 0 on li',pg.evaluate("document.querySelectorAll('.events__featured .event-card .event-card__stk').length")==3 and pg.evaluate("document.querySelectorAll('.events__featured > li > .event-card__stk').length")==0)
+        chk('featured event stickers: 3 distinct shapes',len(set(pg.evaluate("[...document.querySelectorAll('.events__featured .event-card__stk use')].map(u=>u.getAttribute('href'))")))==3)
+        chk('featured event stickers: aria-hidden and pointer-events none',pg.evaluate("""()=>[...document.querySelectorAll('.events__featured .event-card__stk')].every(s=>s.getAttribute('aria-hidden')==='true'&&getComputedStyle(s).pointerEvents==='none')"""))
+        pg.mouse.move(0,0); pg.evaluate("document.querySelector('.events__featured .event-card').scrollIntoView({block:'center'})"); pg.wait_for_timeout(400)
+        _ec=pg.locator('.events__featured .event-card').first; _eb0=_ec.bounding_box(); _es0=_ec.locator('.event-card__stk').bounding_box()
+        pg.mouse.move(_eb0['x']+_eb0['width']/2,_eb0['y']+_eb0['height']/2); pg.wait_for_timeout(350)
+        _eb1=_ec.bounding_box(); _es1=_ec.locator('.event-card__stk').bounding_box()
+        _edc=(round(_eb1['x']-_eb0['x']),round(_eb1['y']-_eb0['y'])); _eds=(round(_es1['x']-_es0['x']),round(_es1['y']-_es0['y']))
+        chk('hover: featured event card and sticker translate together (-3px, -3px)',_edc==_eds and _edc==(-3,-3),(_edc,_eds))
       # ---- 5.3 compact entries ----
       cc=pg.evaluate("""[...document.querySelectorAll('.events__compact > li')].map(li=>{const im=li.querySelector('.event-mini__thumb img'),b=li.querySelector('.event-mini__btn'),r=b.getBoundingClientRect(),c=li.querySelector('.event-mini').getBoundingClientRect();
         return {slug:li.dataset.event,h3:li.querySelector('h3').textContent,loaded:im.complete&&im.naturalWidth>0,alt:im.alt.length>20,nat:+(im.currentSrc.match(/-(\\d+)\\.webp/)||[0,im.naturalWidth])[1],shown:im.getBoundingClientRect().width,btnName:b.textContent.trim(),open:b.dataset.eventOpen,popup:b.getAttribute('aria-haspopup'),bh:r.height,

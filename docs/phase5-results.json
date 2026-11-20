@@ -2299,6 +2299,31 @@
   "pass": true,
   "info": ""
  },
+ "featured event stickers: 3 stickers inside article.event-card, 0 on li": {
+  "pass": true,
+  "info": ""
+ },
+ "featured event stickers: 3 distinct shapes": {
+  "pass": true,
+  "info": ""
+ },
+ "featured event stickers: aria-hidden and pointer-events none": {
+  "pass": true,
+  "info": ""
+ },
+ "hover: featured event card and sticker translate together (-3px, -3px)": {
+  "pass": true,
+  "info": [
+   [
+    -3,
+    -3
+   ],
+   [
+    -3,
+    -3
+   ]
+  ]
+ },
  "1440px: 4 compact entries in order": {
   "pass": true,
   "info": [

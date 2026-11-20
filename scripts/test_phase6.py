@@ -58,6 +58,63 @@ try:
         chk('roster text = names in roster order',pg.evaluate("[...document.querySelectorAll('.roster .roster__name')].map(e=>e.textContent)")==[n for n,_ in ROSTER])
         chk('held titles are NOT in the page, other roles are',pg.evaluate("(()=>{const t=document.getElementById('team').innerText;return !/Lead Enabler|Co-Lead|Entrepreneurship/.test(t)&&/Technical Lead/.test(t)&&/Interest Group Lead – Web/.test(t)})()"))
         chk('no invented stats/bios in section',not re.search(r'\d+\+?\s*(years|projects|events|members strong)|award|experience',pg.evaluate("document.getElementById('team').innerText"),re.I))
+        chk('featured team stickers: 4 stickers inside article.member-card, 0 on li',pg.evaluate("document.querySelectorAll('.team__featured .member-card .member-card__stk').length")==4 and pg.evaluate("document.querySelectorAll('.team__featured > li > .member-card__stk').length")==0)
+        _stk_shapes=pg.evaluate("[...document.querySelectorAll('.team__featured .member-card__stk use')].map(u=>u.getAttribute('href'))")
+        chk('featured team stickers: 4 distinct shapes',len(set(_stk_shapes))==4 and len(_stk_shapes)==4,_stk_shapes)
+        chk('Hanin sticker is bolt (#s-bolt)',pg.evaluate("document.querySelector('[data-member=\"team-05-hanin\"] .member-card__stk use').getAttribute('href')")=='#s-bolt')
+        chk('roster stickers: 21 stickers inside li.roster__item',pg.evaluate("document.querySelectorAll('.roster .roster__item .roster__stk').length")==21)
+        chk('roster decorations: aria-hidden and pointer-events none',pg.evaluate("""()=>[...document.querySelectorAll('.roster__stk')].every(s=>s.getAttribute('aria-hidden')==='true'&&getComputedStyle(s).pointerEvents==='none')"""))
+        _dist_check=pg.evaluate("""() => {
+          const items = [...document.querySelectorAll('.roster__item')];
+          const shapes = items.map(li => li.querySelector('.roster__stk use').getAttribute('href'));
+          const colors = items.map(li => {
+            const cls = li.querySelector('.roster__stk').className;
+            const m = cls.match(/sticker--([a-z]+)/);
+            return m ? m[1] : '';
+          });
+          const mats = ['yellow','mint','coral','indigo','yellow','mint','coral','indigo','yellow','mint','coral','indigo','yellow','mint','coral','indigo','yellow','mint','coral','indigo','yellow'];
+          let errs = [];
+          for (let i = 0; i < shapes.length; i++) {
+            for (let j = i + 1; j <= Math.min(i + 6, shapes.length - 1); j++) {
+              if (shapes[i] === shapes[j]) errs.push(`Shape repeat between ${i+1} and ${j+1}: ${shapes[i]}`);
+            }
+            for (let j = i + 1; j <= Math.min(i + 4, colors.length - 1); j++) {
+              if (colors[i] === colors[j]) errs.push(`Color repeat between ${i+1} and ${j+1}: ${colors[i]}`);
+            }
+            if (colors[i] === mats[i]) errs.push(`Color equals mat at ${i+1}: ${colors[i]}`);
+          }
+          return errs;
+        }""")
+        chk('roster distance rules: shape >= 6, color >= 4, color != mat',len(_dist_check)==0,_dist_check)
+        _mc=pg.locator('.team__featured .member-card').first; _mc.scroll_into_view_if_needed(); pg.wait_for_timeout(1600)
+        pg.mouse.move(0,0); pg.wait_for_timeout(200)
+        _r0=_mc.evaluate("c=>{const s=c.querySelector('.member-card__stk'),rc=c.getBoundingClientRect(),rs=s.getBoundingClientRect();return [rc.x,rc.y,rs.x,rs.y]}")
+        _mc.hover(); pg.wait_for_timeout(350)
+        _r1=_mc.evaluate("c=>{const s=c.querySelector('.member-card__stk'),rc=c.getBoundingClientRect(),rs=s.getBoundingClientRect();return [rc.x,rc.y,rs.x,rs.y]}")
+        _mdc=(round(_r1[0]-_r0[0]),round(_r1[1]-_r0[1])); _mds=(round(_r1[2]-_r0[2]),round(_r1[3]-_r0[3]))
+        chk('hover: featured member card and sticker translate together (-3px, -3px)',_mdc==_mds and _mdc==(-3,-3),(_mdc,_mds))
+      _colls=pg.evaluate("""() => {
+        const items = [...document.querySelectorAll('.roster__item')];
+        const hits = [];
+        function overlaps(r1, r2) {
+          return !(r2.left >= r1.right || r2.right <= r1.left || r2.top >= r1.bottom || r2.bottom <= r1.top);
+        }
+        items.forEach((item, idx) => {
+          const stk = item.querySelector('.roster__stk');
+          if (!stk) return;
+          const stkRect = stk.getBoundingClientRect();
+          const texts = [...item.querySelectorAll('.roster__num, .roster__name, .roster__role, .roster__flag')];
+          texts.forEach(t => {
+            const range = document.createRange();
+            range.selectNodeContents(t);
+            for (const r of range.getClientRects()) {
+              if (overlaps(stkRect, r)) hits.push({ idx: idx+1, text: t.textContent });
+            }
+          });
+        });
+        return hits;
+      }""")
+      chk(f'{w}: no sticker bounding box intersects any text rect',len(_colls)==0,_colls)
       chk(f'{w}: no horizontal overflow',pg.evaluate("document.documentElement.scrollWidth<=window.innerWidth"),pg.evaluate("document.documentElement.scrollWidth"))
       chk(f'{w}: no console errors / external requests',not errs and not ext,(errs,ext))
       # ---- 6.3 directory ----
