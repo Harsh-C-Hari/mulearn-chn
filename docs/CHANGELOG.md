@@ -2,6 +2,12 @@
 
 Format: newest first. Each entry: date · phase · what changed · files · verification.
 
+## 2026-11-20 — Phase 5 / Subphase 5.5 (Integration, visual QA & Phase 5 completion) — PHASE 5 COMPLETE
+- Reviewed the Events section in the full page (desktop/tablet/mobile screenshots) against Board 1 + Board 2: hierarchy, spacing, poster legibility, featured vs compact subordination and decoration all accepted; no code changes were required. Phase 5 content/asset/dialog code is unchanged from 5.4.
+- Added: `docs/phase5-report.md`, `docs/audit-results-phase5-5.json`, `docs/audit-results-phase5-5-dialogs.json`, `docs/screenshots/events-5-5-{1440,390}.png`.
+- Verified: test_phase5 278/278; test_phase4 20/20; test_motion_home + test_motion PASS (CLS 0.001); axe 0 violations (page ×5, each of 7 dialogs × 5 widths = 35 runs); no overflow, 0 console errors, 0 external requests; verify_project PASS; fresh-extract checks of both final ZIPs.
+- Deliverables: `mulearn-chn_phase-05_complete.zip`, `mulearn-chn_phase-05_deploy.zip`.
+
 ## 2026-11-20 — Phase 5 / Subphase 5.4 (Accessible event-detail dialogs)
 - Added: `js/events.js`, `css/sections/event-dialog.css`, dialog shell in `index.html`, `dialogNote` (Tech Forge) in `data/events.js`, dialog tests in `scripts/test_phase5.py`, `docs/audit-results-phase5-4.json`, `docs/audit-results-phase5-4-dialogs.json`, `docs/screenshots/dialog-*.png`.
 - Verified: all seven triggers individually ×5 widths; Esc/Close/backdrop + focus return; reduced-motion, GSAP-blocked, JS-disabled; test_phase5 278/278; axe 0 (page ×5, dialogs ×35); test_phase4 20/20; motion PASS; verify_project PASS.

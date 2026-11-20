@@ -1,6 +1,6 @@
 # PROJECT_STATE.md
 
-**Last updated:** 2026-11-20 · **Current phase:** 5 (Events & Initiatives) — Subphase 5.4 **complete** · **Next:** Subphase 5.5 — Integration, visual QA & completion  
+**Last updated:** 2026-11-20 · **Current phase:** 5 (Events & Initiatives) — **COMPLETE** · **Next:** Phase 6 — Team & Member Directory  
 **Project status:** Phase 3 complete: header/navigation, hero and About assembled in `index.html`, with motion. Audited at 320/390/768/1024/1440 (axe 0 violations, no overflow, 0 console errors, 0 external requests, motion tests 17/17). Offers, Events, Team, Memories, Join and Footer are Phases 4–7.
 
 ## Phase status
@@ -11,7 +11,7 @@
 | 2 | Design foundation (subphased) | ✅ complete — final ZIP `mulearn-chn_phase-02_complete.zip` |
 | 3 | Header/nav + Hero + About | ✅ complete |
 | 4 | Offers + Join + Footer | ✅ complete |
-| 5 | Events + dialogs | 🔄 in progress (5.4 done) |
+| 5 | Events + dialogs | ✅ complete — final ZIP `mulearn-chn_phase-05_complete.zip` (+ `mulearn-chn_phase-05_deploy.zip`) |
 | 6 | Team + directory | ⏳ |
 | 7 | Memories + lightbox | ⏳ |
 | 8 | Motion layer | ⏳ |
@@ -25,9 +25,12 @@
 | 5.2 | Featured event cards | ✅ complete | `mulearn-chn_phase-05_subphase-02.zip` (+ `mulearn-chn_phase-05_subphase-02_deploy.zip`) |
 | 5.3 | Compact event entries | ✅ complete | `mulearn-chn_phase-05_subphase-03.zip` (+ `mulearn-chn_phase-05_subphase-03_deploy.zip`) |
 | 5.4 | Accessible event-detail dialogs | ✅ complete | `mulearn-chn_phase-05_subphase-04.zip` (+ `mulearn-chn_phase-05_subphase-04_deploy.zip`) |
-| 5.5 | Integration, visual QA & completion | ⏳ | |
+| 5.5 | Integration, visual QA & completion | ✅ complete | `mulearn-chn_phase-05_complete.zip` (+ `mulearn-chn_phase-05_deploy.zip`) |
 
 Phase 5 working rules (client, 2026-11-20): run all five subphases in order **without stopping for approval** (overrides the master prompt's "stop" lines); deliver the versioned full + deployable ZIP after each; never overwrite a checkpoint; look = mix of Board 1 + Board 2.
+
+### 5.5 notes
+Integration and completion. Events section reviewed in full-page context at 1440/768/390 (screenshots `docs/screenshots/events-5-5-*.png`): lavender label + 'Events & initiatives' headline with mint underline, three colour-blocked featured cards (coral/indigo/yellow) with tilted whole posters, four staggered compact tiles; matches the Board 1 + Board 2 mix; no changes needed. Final gates: test_phase5 278/278, test_phase4 20/20, motion PASS, axe 0 (page ×5, dialogs ×35), no overflow/console errors/external requests, verify_project PASS, deploy ZIP has no sources/docs/scripts/reference. Details in `docs/phase5-report.md`. Phase 6 (Team & Member Directory) is next and **not started**.
 
 ### 5.1 notes
 `data/events.js` rewritten to the reconciled schema (see `docs/events-audit.md`): 3 featured + 4 compact, unknown fields omitted, invented labels/venues removed (Tech Forge venue, Useless venue, "Overnight Hackathon", "Team" prefixes, third-party organiser), disputed Build with AI location omitted, Buildathon `₹7K*` kept. Real `#events` section (`css/sections/events.css`): lavender label "Looking back", h2 "Events & initiatives", lead, honesty note (posters' printed details; no guessed years), "Featured events" / "More events" groups, placeholder numbered cards. Cards are generated into `index.html` by `scripts/build_events.js` (markers `events:featured|compact`), so they exist without JS. `#events` stub removed; `#team #memories` stubs remain; order Offers → Events → stubs → Join. `data/events.js` is loaded (defer) ready for 5.4. New: `scripts/test_phase5.py` (41/41), `scripts/shot_events.py`, `docs/phase5-results.json`, `docs/audit-results-phase5-1.json` (axe 0 ×5). `scripts/test_phase4.py` section-order assertion updated to include `events`. Known: placeholder card styling only; Instagram arrow artefact in ODYSSEY/Buildathon derivatives to fix in 5.2.

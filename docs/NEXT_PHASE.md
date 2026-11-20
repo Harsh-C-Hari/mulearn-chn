@@ -1,9 +1,9 @@
 # NEXT_PHASE.md
 
-> **Checkpoint:** Phase 5 Subphase 5.4 complete (`mulearn-chn_phase-05_subphase-04.zip`). **Next:** Subphase 5.5 — Integration, visual QA & completion.
+> **Checkpoint:** Phase 5 complete (`mulearn-chn_phase-05_complete.zip`, deploy `mulearn-chn_phase-05_deploy.zip`). **Next:** Phase 6 — Team & Member Directory (not started).
 
-## 5.5 — Integration, visual QA & Phase 5 completion
-Review the Events section in the full-page context against Board 1 + Board 2, tune spacing/hierarchy, re-run the full responsive audit, axe ×5, all dialog tests, motion tests, asset-reference + "no sources in deploy" checks, update every doc (mark Phase 5 complete, Phase 6 next), and build `mulearn-chn_phase-05_complete.zip` + `mulearn-chn_phase-05_deploy.zip`. Do not start Phase 6.
+## Phase 6 — Team & Member Directory
+Replace the `#team` stub (keep order Header → Hero → About → Offers → Events → Team → Memories → Join → Footer) using `data/team.js` and the approved team crops (`scripts/test_team_crops.py`); follow Board 1 colour-blocked portrait tiles + Board 2 treatment; no invented roles/names; accessible directory; run the same per-subphase checkpoint workflow.
 
 ## Open items for the client
 © footer wording; unverified-live client URLs; Satoshi font files; Phase 1 tier-3 confirmations; Phase 5: Buildathon / Useless Projects / Web Slingers years; Build with AI location (Alappuzha vs CEC); ODYSSEY 32 h vs 24 h; Tech Forge details; Web Slingers venue/time reading.

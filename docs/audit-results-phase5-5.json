@@ -1,0 +1,82 @@
+{
+ "320": {
+  "overflowX": false,
+  "scrollWidth": 320,
+  "console": [],
+  "external": [],
+  "axeViolations": [],
+  "targetsUnder24px": []
+ },
+ "390": {
+  "overflowX": false,
+  "scrollWidth": 390,
+  "console": [],
+  "external": [],
+  "axeViolations": [],
+  "targetsUnder24px": []
+ },
+ "768": {
+  "overflowX": false,
+  "scrollWidth": 768,
+  "console": [],
+  "external": [],
+  "axeViolations": [],
+  "targetsUnder24px": []
+ },
+ "1024": {
+  "overflowX": false,
+  "scrollWidth": 1024,
+  "console": [],
+  "external": [],
+  "axeViolations": [],
+  "targetsUnder24px": []
+ },
+ "1440": {
+  "overflowX": false,
+  "scrollWidth": 1440,
+  "console": [],
+  "external": [],
+  "axeViolations": [],
+  "targetsUnder24px": []
+ },
+ "fonts": [
+  "Plus Jakarta Sans 400",
+  "Plus Jakarta Sans 600",
+  "Plus Jakarta Sans 700",
+  "Plus Jakarta Sans 800"
+ ],
+ "gsap": {
+  "gsap": "object",
+  "st": "function",
+  "ver": "3.15.1",
+  "cls": "js js-motion"
+ },
+ "semantics": {
+  "lang": "en",
+  "title": "\u00b5Learn CHN \u00b7 College of Engineering, Chengannur",
+  "h1": 1,
+  "headings": 24,
+  "headingSkips": 0,
+  "main": 1,
+  "header": 3,
+  "nav": 2,
+  "footer": 1,
+  "skipLink": true,
+  "imgNoAlt": 0,
+  "viewport": true
+ },
+ "keyboard": {
+  "tabStops": 48,
+  "withoutVisibleOutline": []
+ },
+ "reducedMotion": {
+  "jsMotionClass": false,
+  "gsapLoaded": "undefined",
+  "gsapRequested": [],
+  "maxTransitionMs": 0.01
+ },
+ "noJS": {
+  "bodyTextLen": 5224,
+  "hiddenSections": 0
+ }
+}
