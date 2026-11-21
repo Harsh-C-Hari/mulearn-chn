@@ -1,0 +1,127 @@
+[
+ [
+  "@320 full scroll: overflow none, 0 leftover inline styles, 0 console warnings/errors, CLS<0.01, no external requests",
+  true,
+  "{'inl': 0, 'errs': [], 'cls': 0}"
+ ],
+ [
+  "@320 perf: 0 live ScrollTriggers after full scroll, 0 running animations at rest, no will-change",
+  true,
+  ""
+ ],
+ [
+  "@320 axe (WCAG 2.2 AA + best practice) page: 0 violations",
+  true,
+  "[]"
+ ],
+ [
+  "@390 full scroll: overflow none, 0 leftover inline styles, 0 console warnings/errors, CLS<0.01, no external requests",
+  true,
+  "{'inl': 0, 'errs': [], 'cls': 0}"
+ ],
+ [
+  "@390 perf: 0 live ScrollTriggers after full scroll, 0 running animations at rest, no will-change",
+  true,
+  ""
+ ],
+ [
+  "@390 axe (WCAG 2.2 AA + best practice) page: 0 violations",
+  true,
+  "[]"
+ ],
+ [
+  "@390 axe with event dialog open: 0 violations",
+  true,
+  "[]"
+ ],
+ [
+  "@390 axe with lightbox open: 0 violations",
+  true,
+  "[]"
+ ],
+ [
+  "@768 full scroll: overflow none, 0 leftover inline styles, 0 console warnings/errors, CLS<0.01, no external requests",
+  true,
+  "{'inl': 0, 'errs': [], 'cls': 0.0003674318237851063}"
+ ],
+ [
+  "@768 perf: 0 live ScrollTriggers after full scroll, 0 running animations at rest, no will-change",
+  true,
+  ""
+ ],
+ [
+  "@768 axe (WCAG 2.2 AA + best practice) page: 0 violations",
+  true,
+  "[]"
+ ],
+ [
+  "@1024 full scroll: overflow none, 0 leftover inline styles, 0 console warnings/errors, CLS<0.01, no external requests",
+  true,
+  "{'inl': 0, 'errs': [], 'cls': 0.001186734065413475}"
+ ],
+ [
+  "@1024 perf: 0 live ScrollTriggers after full scroll, 0 running animations at rest, no will-change",
+  true,
+  ""
+ ],
+ [
+  "@1024 axe (WCAG 2.2 AA + best practice) page: 0 violations",
+  true,
+  "[]"
+ ],
+ [
+  "@1440 full scroll: overflow none, 0 leftover inline styles, 0 console warnings/errors, CLS<0.01, no external requests",
+  true,
+  "{'inl': 0, 'errs': [], 'cls': 0.0006701561361346879}"
+ ],
+ [
+  "@1440 perf: 0 live ScrollTriggers after full scroll, 0 running animations at rest, no will-change",
+  true,
+  ""
+ ],
+ [
+  "@1440 axe (WCAG 2.2 AA + best practice) page: 0 violations",
+  true,
+  "[]"
+ ],
+ [
+  "@1440 axe with event dialog open: 0 violations",
+  true,
+  "[]"
+ ],
+ [
+  "@1440 axe with lightbox open: 0 violations",
+  true,
+  "[]"
+ ],
+ [
+  "REGRESSION mobile hover fix: every :hover rule sits inside (hover:hover) and (pointer:fine) (or a reduced-motion block that cancels it)",
+  true,
+  "[]"
+ ],
+ [
+  "REGRESSION topbar logo: tap highlight suppressed, not global",
+  true,
+  ""
+ ],
+ [
+  "REGRESSION event dialog resets internal scroll on every opening",
+  true,
+  ""
+ ],
+ [
+  "REGRESSION lightbox floating prev/next/close layered and hit-testable (mobile)",
+  true,
+  "[True, True, True]"
+ ],
+ [
+  "REGRESSION lightbox keyboard Next advances and stays open",
+  true,
+  ""
+ ],
+ [
+  "reduced motion: GSAP never requested, no pre-motion/js-motion, hero visible",
+  true,
+  ""
+ ]
+]

@@ -71,6 +71,33 @@
     map.forEach(function (m) { io.observe(m.el); });
   }
 
+  // ---------- In-page anchor navigation (Phase 8.2) ----------
+  // Smooth scrolling lives here instead of CSS `scroll-behavior:smooth`, which conflicts with ScrollTrigger's refresh
+  // (deep links such as /#team did not land). Reduced motion = instant jump. The skip link stays native.
+  // Mirrors native behaviour: URL hash updated (back button works) and the target becomes the focus starting point.
+  var RM = w.matchMedia ? w.matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
+  document.addEventListener("click", function (e) {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a || a.target || a.hasAttribute("download") || a.classList.contains("skip-link")) return;
+    var id = a.getAttribute("href").slice(1);
+    if (!id) return;
+    try { id = decodeURIComponent(id); } catch (err) {}
+    var el = document.getElementById(id);
+    if (!el || typeof el.scrollIntoView !== "function") return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: RM.matches ? "auto" : "smooth", block: "start" });
+    try { if (w.history && w.history.pushState && w.location.hash !== "#" + id) w.history.pushState(null, "", "#" + id); } catch (err) {}
+    if (el !== document.body) {
+      if (!el.hasAttribute("tabindex")) {
+        el.setAttribute("tabindex", "-1");
+        el.setAttribute("data-anchor-target", "");
+        el.addEventListener("blur", function () { el.removeAttribute("tabindex"); el.removeAttribute("data-anchor-target"); }, { once: true });
+      }
+      el.focus({ preventScroll: true });
+    }
+  });
+
   // ---------- Header gets a flat hard shadow once the page has scrolled (class only; no layout change) ----------
   var ticking = false;
   function onScroll() {

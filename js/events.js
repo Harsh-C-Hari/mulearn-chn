@@ -110,6 +110,7 @@
     dlg.classList.remove("is-closing");
     dlg.showModal();
     panel.scrollTop = 0;
+    if (window.gsap) window.gsap.killTweensOf(panel);   // 8.4: a previous in/out tween must never fight the new one
     if (canAnimate()) {
       window.gsap.fromTo(panel, { y: 28, opacity: 0 }, { y: 0, opacity: 1, duration: .35, ease: "power3.out", clearProps: "transform,opacity" });
     }
@@ -126,6 +127,7 @@
     closing = true;
     if (canAnimate()) {
       dlg.classList.add("is-closing");
+      window.gsap.killTweensOf(panel);                 // 8.4: cancel an opening tween that is still running
       window.gsap.to(panel, { y: 16, opacity: 0, duration: .2, ease: "power2.in", onComplete: function () { window.gsap.set(panel, { clearProps: "transform,opacity" }); finish(); } });
     } else finish();
   }

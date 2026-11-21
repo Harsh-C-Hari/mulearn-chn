@@ -1,136 +1,155 @@
 /*!
- * motion-home.js — header / hero / About motion (Phase 3.5). Classic script; talks only to MULEARN.motion.
- * Rules (Master Spec §12, brief §3.5): subtle, once-only, transform+opacity only (no layout shift), no scroll hijack,
- * nothing hidden in CSS — start states are applied here, and only after GSAP + ScrollTrigger registered and the visitor
- * allows motion. Everything lives inside mm.add(), so a reduced-motion switch reverts it and leaves content visible.
+ * motion-home.js — page reveal system (Phase 3.5 → standardised in Phase 8.2). Classic script; talks only to MULEARN.motion.
+ * Rules (Master Spec §12): subtle, once-only, transform + opacity only (no layout shift), no scroll hijack, nothing hidden in
+ * CSS (the hero's brief pre-hide is the one guarded exception, see index.html head), start states are applied here and only
+ * after GSAP + ScrollTrigger registered and the visitor allows motion. Everything lives inside mm.add(), so a reduced-motion
+ * switch reverts it and leaves content visible.
+ *
+ * One vocabulary for every section (change a value in T and the whole page follows):
+ *   intro(section, steps, stickers)  one timeline per section: heading group → blocks → stickers, fired once at T.headStart
+ *   rise(elements)                   items that enter on their own as they approach the viewport (T.itemStart), once each
+ *   stickers always pop the same way (T.pop); text rises T.riseSm, blocks/figures/cards rise T.rise.
  */
 (function () {
   "use strict";
   var M = window.MULEARN && window.MULEARN.motion;
   if (!M) return;
+  var root = document.documentElement;
 
   M.onReady(function (gsap, ScrollTrigger, mm) {
-    if (!gsap || !ScrollTrigger || !mm) return;
+    if (!gsap || !ScrollTrigger || !mm) { root.classList.remove("pre-motion"); return; }
 
     mm.add("(prefers-reduced-motion: no-preference)", function () {
-      var q = function (sel, root) { return [].slice.call((root || document).querySelectorAll(sel)); };
-      var EASE = "power3.out";
+      var q = function (sel, ctx) { return [].slice.call((ctx || document).querySelectorAll(sel)); };
+
+      // ---------------- shared motion tokens ----------------
+      var T = {
+        ease: "power3.out",
+        dur: .7, durSm: .5,           // blocks / text
+        rise: 48, riseSm: 24,         // px travelled (transform only)
+        stagger: .08,
+        headStart: "top 80%",         // a section's own timeline
+        itemStart: "top 90%",         // individual cards / panels
+        footStart: "top 92%",
+        popAt: .3,                    // stickers join the section timeline here
+        pop: { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .5, ease: "back.out(1.6)", stagger: .06 }
+      };
+      var CLEAR = "opacity,visibility,transform";
+      var clear = function (els) { if (els.length) gsap.set(els, { clearProps: CLEAR }); };
+
+      // One timeline per section. steps: [{ sel, y, d, stagger, rot, yPercent, at }]; all start states removed on completion.
+      function intro(sec, steps, stickerSel, start) {
+        var all = [];
+        var tl = gsap.timeline({ defaults: { ease: T.ease }, paused: true, onComplete: function () { clear(all); } });
+        steps.forEach(function (s) {
+          var els = q(s.sel, sec);
+          if (!els.length) return;
+          all = all.concat(els);
+          var v = { opacity: 0, duration: s.d || T.durSm, stagger: s.stagger || 0 };
+          if (s.yPercent != null) v.yPercent = s.yPercent; else v.y = s.y == null ? T.riseSm : s.y;
+          if (s.rot) v.rotation = s.rot;
+          tl.from(els, v, s.at || 0);
+        });
+        var st = stickerSel ? q(stickerSel, sec) : [];
+        if (st.length) {
+          all = all.concat(st);
+          tl.from(st, { scale: 0, rotation: T.pop.rotation, transformOrigin: T.pop.transformOrigin, duration: T.pop.duration, ease: T.pop.ease, stagger: T.pop.stagger }, T.popAt);
+        }
+        // fire once, then remove the trigger immediately (`once` alone only kills it when its END is reached,
+        // which never happens for sections near the bottom of the page)
+        ScrollTrigger.create({ trigger: sec, start: start || T.headStart, once: true, onEnter: function (self) { tl.play(); self.kill(); } });
+        return tl;
+      }
+
+      // Items that rise on their own as they near the viewport (so lower cards are never animated off-screen).
+      function rise(els, y) {
+        els.forEach(function (el) {
+          var tw = gsap.from(el, { y: y == null ? T.rise : y, opacity: 0, duration: T.dur, ease: T.ease, clearProps: CLEAR, paused: true });
+          ScrollTrigger.create({ trigger: el, start: T.itemStart, once: true, onEnter: function (self) { tw.play(); self.kill(); } });
+        });
+      }
 
       // ---------------- Hero entrance (plays once, on load) ----------------
+      // Only when the pre-hide is still active: if GSAP arrived after the 1.2 s release the hero is already on screen and is left alone
+      // (an entrance then would hide visible content).
       var hero = document.getElementById("hero");
-      if (hero) {
-        var lines = q(".hero__title span", hero);
-        var tl = gsap.timeline({ defaults: { ease: EASE }, onComplete: function () {
-          gsap.set(q(".hero__title span, .hero__intro > *, .hero__actions > *, .hero__discord, .hero__figure, .hero .sticker > svg", hero), { clearProps: "opacity,visibility,transform" });
-        }});
-        tl.from(lines, { yPercent: 70, opacity: 0, duration: .8, stagger: .12 }, .05)
-          .from(q(".hero__intro > *", hero), { y: 24, opacity: 0, duration: .6, stagger: .08 }, .45)
-          .from(q(".hero__actions > *, .hero__discord", hero), { y: 20, opacity: 0, duration: .5, stagger: .07 }, .65)
-          .from(q(".hero__figure", hero), { y: 56, opacity: 0, rotation: "+=4", duration: .9 }, .25)
-          .from(q(".hero .sticker > svg", hero), { scale: 0, rotation: -40, transformOrigin: "50% 50%", duration: .6, ease: "back.out(2)", stagger: .07 }, .6);
+      if (hero && root.classList.contains("pre-motion")) {
+        var heroEls = q(".hero__title span, .hero__intro > *, .hero__actions > *, .hero__discord, .hero__figure, .hero .sticker > svg", hero);
+        // lazy:false → the start states are written to the elements synchronously, so releasing the CSS pre-hide on the next
+        // line can never expose a frame of un-hidden content (GSAP otherwise defers from() start states to its next tick).
+        var tl = gsap.timeline({ defaults: { ease: T.ease, lazy: false }, onComplete: function () { clear(heroEls); } });
+        tl.from(q(".hero__title span", hero), { yPercent: 70, opacity: 0, duration: T.dur + .1, stagger: .12 }, .05)
+          .from(q(".hero__figure", hero), { y: T.rise + 8, opacity: 0, rotation: "+=4", duration: .9 }, .25)
+          .from(q(".hero__intro > *", hero), { y: T.riseSm, opacity: 0, duration: .6, stagger: T.stagger }, .45)
+          .from(q(".hero__actions > *, .hero__discord", hero), { y: T.riseSm, opacity: 0, duration: T.durSm, stagger: T.stagger }, .65)
+          .from(q(".hero .sticker > svg", hero), { scale: 0, rotation: -T.pop.rotation, transformOrigin: T.pop.transformOrigin, duration: T.pop.duration, ease: T.pop.ease, stagger: T.pop.stagger }, .6);
       }
+      root.classList.remove("pre-motion");   // start states are now inline (GSAP), so the CSS pre-hide can go
 
-      // ---------------- About reveal (once, when it scrolls into view) ----------------
+      // ---------------- About ----------------
       var about = document.getElementById("about");
       if (about) {
-        var at = gsap.timeline({ defaults: { ease: EASE }, paused: true, onComplete: function () {
-          gsap.set(q(".about__card, .about__pair .card, .about__facts, .about__actions, .about__figure, .about .sticker > svg", about), { clearProps: "opacity,visibility,transform" });
-        }});
-        at.from(q(".about__card", about), { y: 48, opacity: 0, duration: .8 }, 0)
-          .from(q(".about__pair .card", about), { y: 28, opacity: 0, duration: .55, stagger: .1 }, .35)
-          .from(q(".about__facts, .about__actions", about), { y: 16, opacity: 0, duration: .45, stagger: .08 }, .6)
-          .from(q(".about__figure", about), { y: 64, opacity: 0, rotation: "-=5", duration: .9 }, .2)
-          .from(q(".about .sticker > svg", about), { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .55, ease: "back.out(2)", stagger: .08 }, .7);
-        ScrollTrigger.create({ trigger: about, start: "top 75%", once: true, onEnter: function () { at.play(); } });
+        intro(about, [
+          { sel: ".about__card", y: T.rise, d: T.dur },
+          { sel: ".about__figure", y: T.rise, d: T.dur, rot: "-=5", at: .2 },
+          { sel: ".about__pair .card", stagger: T.stagger, at: .35 },
+          { sel: ".about__facts, .about__actions", stagger: T.stagger, at: .6 }
+        ], ".about .sticker > svg");
       }
 
-      // ---------------- Offers reveal (once, when it scrolls into view) ----------------
+      // ---------------- Offers ----------------
       var offers = document.getElementById("offers");
       if (offers) {
-        var cards = q(".offer__card", offers);
-        var ot = gsap.timeline({ defaults: { ease: EASE }, paused: true, onComplete: function () {
-          gsap.set(q(".offers__head > *, .offer__card, .offers__note, .offers .sticker > svg", offers), { clearProps: "opacity,visibility,transform" });
-        }});
-        ot.from(q(".offers__head > *", offers), { y: 32, opacity: 0, duration: .65, stagger: .1 }, 0)
-          .from(q(".offers .sticker > svg", offers), { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .55, ease: "back.out(2)", stagger: .05 }, .35)
-          .from(q(".offers__note", offers), { y: 24, opacity: 0, duration: .5 }, .9);
-        ScrollTrigger.create({ trigger: offers, start: "top 70%", once: true, onEnter: function () { ot.play(); } });
-        // each card reveals as it nears the viewport (so lower cards are not animated off-screen)
-        cards.forEach(function (c) {
-          gsap.from(c, { y: 56, opacity: 0, duration: .8, ease: EASE, scrollTrigger: { trigger: c, start: "top 88%", once: true }, clearProps: "opacity,visibility,transform" });
-        });
+        intro(offers, [
+          { sel: ".offers__head > *", stagger: .1 },
+          { sel: ".offers__note", at: .9 }
+        ], ".offers .sticker > svg");
+        rise(q(".offer__card", offers));
       }
-      // ---------------- Events reveal (once; transform + opacity only, nothing is hidden in CSS) ----------------
+
+      // ---------------- Events ----------------
       var events = document.getElementById("events");
       if (events) {
-        var et = gsap.timeline({ defaults: { ease: EASE }, paused: true, onComplete: function () {
-          gsap.set(q(".events__head > *, .events .sticker > svg", events), { clearProps: "opacity,visibility,transform" });
-        }});
-        et.from(q(".events__head > *", events), { y: 32, opacity: 0, duration: .65, stagger: .1 }, 0)
-          .from(q(".events .sticker > svg", events), { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .55, ease: "back.out(2)", stagger: .05 }, .35);
-        ScrollTrigger.create({ trigger: events, start: "top 70%", once: true, onEnter: function () { et.play(); } });
-        // each event card rises as it nears the viewport (staggered naturally by its position)
-        q(".event--featured .event-card", events).forEach(function (c) {
-          gsap.from(c, { y: 56, opacity: 0, duration: .8, ease: EASE, scrollTrigger: { trigger: c, start: "top 88%", once: true }, clearProps: "opacity,visibility,transform" });
-        });
+        intro(events, [{ sel: ".events__head > *", stagger: .1 }], ".events .sticker > svg");
+        rise(q(".event--featured .event-card", events));
       }
-      // ---------------- Team reveal (Phase 6.4; once, transform + opacity only, nothing hidden in CSS) ----------------
-      // Head + stickers as one timeline; each featured card rises as it nears the viewport; the directory panel enters
-      // as ONE block (the 21 entries are deliberately not animated one by one).
+
+      // ---------------- Team (the 21-entry directory enters as ONE block, never entry by entry) ----------------
       var team = document.getElementById("team");
       if (team) {
-        var tt = gsap.timeline({ defaults: { ease: EASE }, paused: true, onComplete: function () {
-          gsap.set(q(".team__head > *, .team .sticker > svg", team), { clearProps: "opacity,visibility,transform" });
-        }});
-        tt.from(q(".team__head > *", team), { y: 32, opacity: 0, duration: .65, stagger: .1 }, 0)
-          .from(q(".team > .sticker > svg, .member-card__stk > svg", team), { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .55, ease: "back.out(2)", stagger: .05 }, .35);
-        ScrollTrigger.create({ trigger: team, start: "top 70%", once: true, onEnter: function () { tt.play(); } });
-        q(".team__featured .member-card", team).forEach(function (c) {
-          gsap.from(c, { y: 48, opacity: 0, duration: .75, ease: EASE, scrollTrigger: { trigger: c, start: "top 90%", once: true }, clearProps: "opacity,visibility,transform" });
-        });
-        var panel = team.querySelector(".roster-panel");
-        if (panel) {
-          gsap.from(panel, { y: 40, opacity: 0, duration: .7, ease: EASE, scrollTrigger: { trigger: panel, start: "top 92%", once: true }, clearProps: "opacity,visibility,transform" });
-        }
+        intro(team, [{ sel: ".team__head > *", stagger: .1 }], ".team > .sticker > svg, .member-card__stk > svg");
+        rise(q(".team__featured .member-card", team));
+        rise(q(".roster-panel", team));
       }
-      // ---------------- Memories reveal (Phase 7.5; once, transform + opacity only, nothing hidden in CSS) ----------------
+
+      // ---------------- Memories ----------------
       var memories = document.getElementById("memories");
       if (memories) {
-        var mt = gsap.timeline({ defaults: { ease: EASE }, paused: true, onComplete: function () {
-          gsap.set(q(".memories__head > *, .memories .sticker > svg, .memories__actions", memories), { clearProps: "opacity,visibility,transform" });
-        }});
-        mt.from(q(".memories__head > *", memories), { y: 32, opacity: 0, duration: .65, stagger: .1 }, 0)
-          .from(q(".memories > .sticker > svg", memories), { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .55, ease: "back.out(2)", stagger: .08 }, .35)
-          .from(q(".memories__actions", memories), { y: 24, opacity: 0, duration: .5 }, .7);
-        ScrollTrigger.create({ trigger: memories, start: "top 70%", once: true, onEnter: function () { mt.play(); } });
-
-        q(".memories__collage .polaroid", memories).forEach(function (c) {
-          gsap.from(c, { y: 48, opacity: 0, duration: .75, ease: EASE, scrollTrigger: { trigger: c, start: "top 88%", once: true }, clearProps: "opacity,visibility,transform" });
-        });
+        intro(memories, [
+          { sel: ".memories__head > *", stagger: .1 },
+          { sel: ".memories__actions", at: .7 }
+        ], ".memories > .sticker > svg");
+        rise(q(".memories__collage .polaroid", memories));
       }
-      // ---------------- Join reveal (once) ----------------
+
+      // ---------------- Join ----------------
       var join = document.getElementById("join");
       if (join) {
-        var jt = gsap.timeline({ defaults: { ease: EASE }, paused: true, onComplete: function () {
-          gsap.set(q(".join__banner, .join__step, .join__ctas > *, .join .sticker > svg", join), { clearProps: "opacity,visibility,transform" });
-        }});
-        jt.from(q(".join__banner", join), { y: 56, opacity: 0, duration: .8 }, 0)
-          .from(q(".join__step", join), { y: 24, opacity: 0, duration: .5, stagger: .12 }, .35)
-          .from(q(".join__ctas > *", join), { y: 20, opacity: 0, duration: .45, stagger: .1 }, .6)
-          .from(q(".join .sticker > svg", join), { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .55, ease: "back.out(2)", stagger: .08 }, .7);
-        ScrollTrigger.create({ trigger: join, start: "top 70%", once: true, onEnter: function () { jt.play(); } });
+        intro(join, [
+          { sel: ".join__banner", y: T.rise, d: T.dur },
+          { sel: ".join__step", stagger: .12, at: .35 },
+          { sel: ".join__ctas > *", stagger: .1, at: .6 }
+        ], ".join .sticker > svg");
       }
-      // ---------------- Footer reveal (once) ----------------
+
+      // ---------------- Footer ----------------
       var foot = document.querySelector(".site-footer");
       if (foot) {
-        var ft = gsap.timeline({ defaults: { ease: EASE }, paused: true, onComplete: function () {
-          gsap.set(q(".footer__big span, .footer__grid > *, .footer__bar, .site-footer .sticker > svg", foot), { clearProps: "opacity,visibility,transform" });
-        }});
-        ft.from(q(".footer__big span", foot), { yPercent: 60, opacity: 0, duration: .7, stagger: .1 }, 0)
-          .from(q(".footer__grid > *", foot), { y: 24, opacity: 0, duration: .5, stagger: .1 }, .3)
-          .from(q(".footer__bar", foot), { y: 12, opacity: 0, duration: .4 }, .6)
-          .from(q(".site-footer .sticker > svg", foot), { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .5, ease: "back.out(2)", stagger: .06 }, .5);
-        ScrollTrigger.create({ trigger: foot, start: "top 85%", once: true, onEnter: function () { ft.play(); } });
+        intro(foot, [
+          { sel: ".footer__big span", yPercent: 60, d: T.dur, stagger: .1 },
+          { sel: ".footer__grid > *", stagger: .1, at: .3 },
+          { sel: ".footer__bar", y: 12, d: .4, at: .6 }
+        ], ".site-footer .sticker > svg", T.footStart);
       }
     });
   });

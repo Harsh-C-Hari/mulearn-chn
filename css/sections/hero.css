@@ -66,3 +66,7 @@
 }
 .hero__edge{position:relative;z-index:var(--z-content);margin-block-start:-1px;background:var(--c-bg);overflow:clip}
 .hero__edge .edge{display:block}
+
+/* Phase 8.2 — pre-hide for the entrance (html.pre-motion is added by the inline head script ONLY when motion is allowed and
+   is always removed within 1.2 s, by motion-home.js, by motion-guard on failure, or by the timer). Never applies without JS. */
+.pre-motion .hero__title span,.pre-motion .hero__intro>*,.pre-motion .hero__actions>*,.pre-motion .hero__discord,.pre-motion .hero__figure,.pre-motion .hero .sticker>svg{opacity:0}

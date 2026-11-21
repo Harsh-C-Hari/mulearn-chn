@@ -1,0 +1,22 @@
+[
+ [
+  "event dialog \u00d78 open/close: closed, clean, one dialog node",
+  true,
+  ""
+ ],
+ [
+  "no live ScrollTriggers after use",
+  true,
+  ""
+ ],
+ [
+  "resize 1440\u2192390\u21921024\u2192320\u2192768\u21921440 during reveals: nothing hidden/stuck, no overflow, no errors",
+  true,
+  "{'hid': [], 'left': 0, 'errs': []}"
+ ],
+ [
+  "rapid scroll flips on touch 390: nothing hidden or stuck",
+  true,
+  ""
+ ]
+]

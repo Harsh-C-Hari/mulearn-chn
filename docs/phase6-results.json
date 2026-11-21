@@ -47,7 +47,7 @@
   "info": ""
  },
  "index.html team markup is generated from data": {
-  "pass": true,
+  "pass": false,
   "info": ""
  },
  "320: no sticker bounding box intersects any text rect": {
@@ -66,11 +66,11 @@
   ]
  },
  "320: directory lists all 21 unique members with exact names and roles": {
-  "pass": true,
+  "pass": false,
   "info": [
    [
     "Geetha S",
-    null
+    "Lead Enabler"
    ],
    [
     "Nithin Jayakumar",
@@ -78,7 +78,7 @@
    ],
    [
     "Divyalakshmi",
-    null
+    "Campus Co-Lead"
    ]
   ]
  },
@@ -241,11 +241,11 @@
   ]
  },
  "390: directory lists all 21 unique members with exact names and roles": {
-  "pass": true,
+  "pass": false,
   "info": [
    [
     "Geetha S",
-    null
+    "Lead Enabler"
    ],
    [
     "Nithin Jayakumar",
@@ -253,7 +253,7 @@
    ],
    [
     "Divyalakshmi",
-    null
+    "Campus Co-Lead"
    ]
   ]
  },
@@ -416,11 +416,11 @@
   ]
  },
  "768: directory lists all 21 unique members with exact names and roles": {
-  "pass": true,
+  "pass": false,
   "info": [
    [
     "Geetha S",
-    null
+    "Lead Enabler"
    ],
    [
     "Nithin Jayakumar",
@@ -428,7 +428,7 @@
    ],
    [
     "Divyalakshmi",
-    null
+    "Campus Co-Lead"
    ]
   ]
  },
@@ -591,11 +591,11 @@
   ]
  },
  "1024: directory lists all 21 unique members with exact names and roles": {
-  "pass": true,
+  "pass": false,
   "info": [
    [
     "Geetha S",
-    null
+    "Lead Enabler"
    ],
    [
     "Nithin Jayakumar",
@@ -603,7 +603,7 @@
    ],
    [
     "Divyalakshmi",
-    null
+    "Campus Co-Lead"
    ]
   ]
  },
@@ -775,7 +775,7 @@
   "info": ""
  },
  "held titles are NOT in the page, other roles are": {
-  "pass": true,
+  "pass": false,
   "info": ""
  },
  "no invented stats/bios in section": {
@@ -840,11 +840,11 @@
   ]
  },
  "1440: directory lists all 21 unique members with exact names and roles": {
-  "pass": true,
+  "pass": false,
   "info": [
    [
     "Geetha S",
-    null
+    "Lead Enabler"
    ],
    [
     "Nithin Jayakumar",
@@ -852,7 +852,7 @@
    ],
    [
     "Divyalakshmi",
-    null
+    "Campus Co-Lead"
    ]
   ]
  },
@@ -1075,6 +1075,6 @@
  },
  "6.4 team entrance causes no layout shift beyond CLS 0.01 (page-wide)": {
   "pass": true,
-  "info": 0.0012523780548878206
+  "info": 1.831280048076923e-05
  }
 }

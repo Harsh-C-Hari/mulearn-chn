@@ -27,6 +27,20 @@
   <link rel="stylesheet" href="css/sections/join.css">
   <link rel="stylesheet" href="css/sections/footer.css">
   <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js")</script>
+  <script>
+    /* Phase 8.2 — hero entrance without a flash. Only when motion is allowed: pre-hide the hero (CSS keys off html.pre-motion),
+       start downloading GSAP now instead of after parse, and ALWAYS release after 1.2 s so content never stays hidden.
+       Removed by js/motion-home.js (entrance takes over), by motion-guard on failure/reduced motion, or by this timer. */
+    (function () {
+      var d = document.documentElement, w = window;
+      if (!w.matchMedia || w.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      d.classList.add("pre-motion");
+      ["gsap", "ScrollTrigger"].forEach(function (n) {
+        var l = document.createElement("link"); l.rel = "preload"; l.as = "script"; l.href = "vendor/gsap/" + n + ".min.js"; document.head.appendChild(l);
+      });
+      w.setTimeout(function () { d.classList.remove("pre-motion"); }, 1200);
+    })();
+  </script>
 </head>
 
 <body id="top">
@@ -1275,6 +1289,7 @@
                 <button type="button" class="btn btn--sm btn--neutral gallery-filter" data-filter="design"
                   aria-pressed="false">Design (1)</button>
               </div>
+              <p class="sr-only" id="gallery-status" role="status" aria-live="polite"></p>
             </div>
 
             <ul class="gallery-grid" role="list">

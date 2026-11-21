@@ -6,7 +6,8 @@
 html{
   -webkit-text-size-adjust:100%; text-size-adjust:100%;
   scroll-padding-top:var(--scroll-offset);
-  scroll-behavior:smooth;
+  /* No CSS `scroll-behavior:smooth` here (Phase 8.2): it fights ScrollTrigger's refresh and stopped #hash deep links from
+     landing. Smooth in-page scrolling is done in js/nav.js (anchor navigation) and honours prefers-reduced-motion. */
 }
 body{
   margin:0; min-height:100vh;
@@ -57,6 +58,10 @@ button{cursor:pointer}
 /* The ring and its gap follow the surface the control sits on (2.6 fix: ring must reach 3:1 against the adjacent surface).
    Closest ancestor wins, so a coloured card inside an ink section still gets its own pair. */
 .on-ink,[data-surface="ink"]{--focus-ring:var(--focus-ring-on-ink);--focus-gap:var(--c-ink)}
+
+/* Programmatic landing target of an in-page anchor jump (js/nav.js sets data-anchor-target on a non-interactive section/body):
+   not a control and not a tab stop, so it gets no ring (native #hash navigation behaves the same). */
+[data-anchor-target]:focus,[data-anchor-target]:focus-visible{outline:none;box-shadow:none}
 
 ::selection{background:var(--c-accent);color:var(--c-ink)}
 

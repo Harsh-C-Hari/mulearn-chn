@@ -92,3 +92,9 @@
   .js .site-nav.is-open{animation:menu-in var(--t-med) var(--ease-out)}
   @keyframes menu-in{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
 }
+
+/* Phase 8.3 — the brand mark answers a press like it answers hover (touch + mouse) */
+.brand:active .brand__mark{transform:rotate(45deg)}
+
+/* Phase 8.5 — no-JS fallback at 320px: the CTA list item must wrap onto its own full-width row instead of widening the page */
+@media (max-width:639px){.no-js .site-nav{min-width:0;max-width:100%}.no-js .site-nav__cta{flex:1 0 100%;min-width:0}.no-js .site-nav__cta .btn{max-width:100%}}

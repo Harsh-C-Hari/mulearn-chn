@@ -203,3 +203,17 @@ a.card:active,.card--link:active{transform:translate(4px,4px);box-shadow:var(--s
 /* ---------- Prose ---------- */
 .prose>*+*{margin-block-start:var(--s-2)}
 .prose a{font-weight:var(--fw-semibold)}
+
+/* ==========================================================================
+   Phase 8.3 — micro-interaction layer. Pressed feedback exists for every input type (:active only lasts while pressed,
+   so it can never stick on touch). Hover stays gated by (hover:hover) and (pointer:fine) above; focus rings are untouched.
+   Tap highlight is suppressed ONLY on controls that draw their own pressed state (never globally).
+   ========================================================================== */
+.link:active{text-decoration-thickness:4px;text-decoration-color:var(--c-primary-strong)}
+.card--ink .link:active,.card--indigo .link:active{text-decoration-color:var(--c-accent)}
+.nav-link:active{box-shadow:inset 0 -.35em 0 var(--c-lavender)}
+a.card:active,.card--link:active{transition-duration:var(--t-fast)}   /* a press answers at button speed, not hover speed */
+.link,.nav-link,.footer__tile{-webkit-tap-highlight-color:transparent}
+/* no double-tap-zoom delay on controls (pinch-zoom is unaffected); control labels are not selectable text */
+a,button,[role="button"],summary,label{touch-action:manipulation}
+.btn,.nav-link,.link,.footer__tile{-webkit-user-select:none;user-select:none}

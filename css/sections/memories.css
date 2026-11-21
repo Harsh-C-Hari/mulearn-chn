@@ -93,7 +93,6 @@
   box-shadow: var(--shadow-5);
   transform: rotate(var(--rot));
   transition: transform var(--t-med) var(--ease-out), box-shadow var(--t-med) var(--ease-out);
-  will-change: transform;
   display: flex;
   flex-direction: column;
 }
@@ -159,7 +158,7 @@
   box-shadow: var(--shadow-3);
   pointer-events: none;
   z-index: 1;
-  transition: transform var(--t-fast) var(--ease-out), background-color var(--t-fast);
+  transition: transform var(--t-fast) var(--ease-out), background-color var(--t-fast) var(--ease-out);
 }
 
 .polaroid__badge .icon {
@@ -353,7 +352,7 @@
   border: var(--border);
   border-radius: var(--r-pill);
   box-shadow: var(--shadow-5);
-  transition: transform var(--t-fast) var(--ease-out), box-shadow var(--t-fast) var(--ease-out), background-color var(--t-fast);
+  transition: transform var(--t-fast) var(--ease-out), box-shadow var(--t-fast) var(--ease-out), background-color var(--t-fast) var(--ease-out);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -480,7 +479,7 @@
   box-shadow: var(--shadow-3);
   cursor: pointer;
   color: var(--c-ink);
-  transition: all var(--t-fast) var(--ease-out);
+  transition: transform var(--t-fast) var(--ease-out), box-shadow var(--t-fast) var(--ease-out), background-color var(--t-fast) var(--ease-out);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -605,7 +604,7 @@
   box-shadow: 2px 2px 0 var(--c-ink);
   pointer-events: none;
   z-index: 1;
-  transition: transform var(--t-fast), background-color var(--t-fast);
+  transition: transform var(--t-fast) var(--ease-out), background-color var(--t-fast) var(--ease-out);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -842,7 +841,7 @@
   isolation: isolate;
   align-items: center;
   justify-content: center;
-  transition: transform var(--t-fast) var(--ease-out), box-shadow var(--t-fast) var(--ease-out), background-color var(--t-fast);
+  transition: transform var(--t-fast) var(--ease-out), box-shadow var(--t-fast) var(--ease-out), background-color var(--t-fast) var(--ease-out);
 }
 
 .lightbox-dialog__nav--prev {
@@ -952,3 +951,16 @@
   font-weight: var(--fw-bold);
   font-size: var(--fs-meta);
 }
+
+/* ---------- Phase 8.3 — pressed feedback for the photo triggers (touch + mouse; :active never sticks) ---------- */
+.polaroid:has(.polaroid__action:active){transform:rotate(var(--rot)) translate(2px,2px) scale(.99);box-shadow:var(--shadow-3);transition-duration:var(--t-fast)}
+.gallery-card:has(.gallery-card__action:active) .gallery-card__inner{transform:translate(2px,2px);box-shadow:var(--shadow-3)}
+.polaroid__action,.gallery-card__action,.lightbox-dialog__nav{-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+
+/* ---------- Phase 8.4 — lightbox motion parity with the event dialog (panel rises in; photo dims while the next one loads) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .lightbox-dialog[open] .lightbox-dialog__panel{animation:lb-rise .3s var(--ease-out)}
+  @keyframes lb-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+}
+#lightbox-image{transition:opacity var(--t-fast) var(--ease-out)}
+#lightbox-image.is-loading{opacity:.55}

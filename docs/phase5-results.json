@@ -60,7 +60,7 @@
   "info": ""
  },
  "index.html event markup is generated from data": {
-  "pass": true,
+  "pass": false,
   "info": ""
  },
  "320px: no horizontal overflow": {
@@ -4399,14 +4399,17 @@
    "http://localhost:8772/css/sections/events.css",
    "http://localhost:8772/css/sections/event-dialog.css",
    "http://localhost:8772/css/sections/team.css",
+   "http://localhost:8772/css/sections/memories.css",
    "http://localhost:8772/css/sections/join.css",
    "http://localhost:8772/css/sections/footer.css",
    "http://localhost:8772/img/hero/hero-600.webp",
    "http://localhost:8772/data/links.js",
    "http://localhost:8772/data/events.js",
+   "http://localhost:8772/data/memories.js",
    "http://localhost:8772/js/main.js",
    "http://localhost:8772/js/nav.js",
    "http://localhost:8772/js/events.js",
+   "http://localhost:8772/js/memories.js",
    "http://localhost:8772/js/motion-guard.js",
    "http://localhost:8772/js/motion-home.js",
    "http://localhost:8772/fonts/PlusJakartaSans-400.woff2",
@@ -4443,7 +4446,8 @@
    "http://localhost:8772/img/team/al-ameen-300.webp",
    "http://localhost:8772/img/team/amal-s-300.webp",
    "http://localhost:8772/img/team/abhiram-j-300.webp",
-   "http://localhost:8772/img/team/swathy-j-300.webp"
+   "http://localhost:8772/img/team/swathy-j-300.webp",
+   "http://localhost:8772/img/memories/collage-p1-460.webp"
   ]
  },
  "GSAP blocked: dialog opens immediately and fully visible": {

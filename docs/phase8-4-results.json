@@ -1,0 +1,352 @@
+[
+ [
+  "@320 event dialog: rapid open/Esc \u00d73 leaves it closed, clean styles, focus on trigger, scroll unlocked",
+  true,
+  "{'open': False, 'op': '', 'tr': '', 'lock': 'visible', 'focus': True}"
+ ],
+ [
+  "@320 event dialog: reopened scrolled-to-top",
+  true,
+  ""
+ ],
+ [
+  "@320 event dialog: body scroll locked while open",
+  true,
+  ""
+ ],
+ [
+  "@320 event dialog: backdrop closes",
+  true,
+  ""
+ ],
+ [
+  "@320 filter announces result",
+  true,
+  "Showing 4 photos in Workshops"
+ ],
+ [
+  "@320 lightbox opens by keyboard, focus on Close",
+  true,
+  ""
+ ],
+ [
+  "@320 lightbox visible controls are hit-testable (layering)",
+  true,
+  "{'lightbox-close': True, 'lightbox-prev': True, 'lightbox-next': True, 'lightbox-mob-prev': 'hidden', 'lightbox-mob-next': 'hidden'}"
+ ],
+ [
+  "@320 lightbox: 24 rapid steps \u2014 image matches counter, loading state clears",
+  true,
+  "{'c': 'Photo 1 of 11', 'srcOk': True, 'loading': False}"
+ ],
+ [
+  "@320 lightbox: Esc closes and focus returns to the trigger",
+  true,
+  ""
+ ],
+ [
+  "@320 lightbox: reopened scrolled-to-top",
+  true,
+  ""
+ ],
+ [
+  "@320 lightbox: page scroll locked",
+  true,
+  ""
+ ],
+ [
+  "@320 lightbox: Close button works",
+  true,
+  ""
+ ],
+ [
+  "@320 no console errors / no overflow",
+  true,
+  "[]"
+ ],
+ [
+  "@390 event dialog: rapid open/Esc \u00d73 leaves it closed, clean styles, focus on trigger, scroll unlocked",
+  true,
+  "{'open': False, 'op': '', 'tr': '', 'lock': 'visible', 'focus': True}"
+ ],
+ [
+  "@390 event dialog: reopened scrolled-to-top",
+  true,
+  ""
+ ],
+ [
+  "@390 event dialog: body scroll locked while open",
+  true,
+  ""
+ ],
+ [
+  "@390 event dialog: backdrop closes",
+  true,
+  ""
+ ],
+ [
+  "@390 filter announces result",
+  true,
+  "Showing 4 photos in Workshops"
+ ],
+ [
+  "@390 lightbox opens by keyboard, focus on Close",
+  true,
+  ""
+ ],
+ [
+  "@390 lightbox visible controls are hit-testable (layering)",
+  true,
+  "{'lightbox-close': True, 'lightbox-prev': True, 'lightbox-next': True, 'lightbox-mob-prev': 'hidden', 'lightbox-mob-next': 'hidden'}"
+ ],
+ [
+  "@390 lightbox: 24 rapid steps \u2014 image matches counter, loading state clears",
+  true,
+  "{'c': 'Photo 1 of 11', 'srcOk': True, 'loading': False}"
+ ],
+ [
+  "@390 lightbox: Esc closes and focus returns to the trigger",
+  true,
+  ""
+ ],
+ [
+  "@390 lightbox: reopened scrolled-to-top",
+  true,
+  ""
+ ],
+ [
+  "@390 lightbox: page scroll locked",
+  true,
+  ""
+ ],
+ [
+  "@390 lightbox: Close button works",
+  true,
+  ""
+ ],
+ [
+  "@390 no console errors / no overflow",
+  true,
+  "[]"
+ ],
+ [
+  "@768 event dialog: rapid open/Esc \u00d73 leaves it closed, clean styles, focus on trigger, scroll unlocked",
+  true,
+  "{'open': False, 'op': '', 'tr': '', 'lock': 'visible', 'focus': True}"
+ ],
+ [
+  "@768 event dialog: reopened scrolled-to-top",
+  true,
+  ""
+ ],
+ [
+  "@768 event dialog: body scroll locked while open",
+  true,
+  ""
+ ],
+ [
+  "@768 event dialog: backdrop closes",
+  true,
+  ""
+ ],
+ [
+  "@768 filter announces result",
+  true,
+  "Showing 4 photos in Workshops"
+ ],
+ [
+  "@768 lightbox opens by keyboard, focus on Close",
+  true,
+  ""
+ ],
+ [
+  "@768 lightbox visible controls are hit-testable (layering)",
+  true,
+  "{'lightbox-close': True, 'lightbox-prev': True, 'lightbox-next': True, 'lightbox-mob-prev': 'hidden', 'lightbox-mob-next': 'hidden'}"
+ ],
+ [
+  "@768 lightbox: 24 rapid steps \u2014 image matches counter, loading state clears",
+  true,
+  "{'c': 'Photo 1 of 11', 'srcOk': True, 'loading': False}"
+ ],
+ [
+  "@768 lightbox: Esc closes and focus returns to the trigger",
+  true,
+  ""
+ ],
+ [
+  "@768 lightbox: reopened scrolled-to-top",
+  true,
+  ""
+ ],
+ [
+  "@768 lightbox: page scroll locked",
+  true,
+  ""
+ ],
+ [
+  "@768 lightbox: Close button works",
+  true,
+  ""
+ ],
+ [
+  "@768 no console errors / no overflow",
+  true,
+  "[]"
+ ],
+ [
+  "@1024 event dialog: rapid open/Esc \u00d73 leaves it closed, clean styles, focus on trigger, scroll unlocked",
+  true,
+  "{'open': False, 'op': '', 'tr': '', 'lock': 'visible', 'focus': True}"
+ ],
+ [
+  "@1024 event dialog: reopened scrolled-to-top",
+  true,
+  ""
+ ],
+ [
+  "@1024 event dialog: body scroll locked while open",
+  true,
+  ""
+ ],
+ [
+  "@1024 event dialog: backdrop closes",
+  true,
+  ""
+ ],
+ [
+  "@1024 filter announces result",
+  true,
+  "Showing 4 photos in Workshops"
+ ],
+ [
+  "@1024 lightbox opens by keyboard, focus on Close",
+  true,
+  ""
+ ],
+ [
+  "@1024 lightbox visible controls are hit-testable (layering)",
+  true,
+  "{'lightbox-close': True, 'lightbox-prev': True, 'lightbox-next': True, 'lightbox-mob-prev': 'hidden', 'lightbox-mob-next': 'hidden'}"
+ ],
+ [
+  "@1024 lightbox: 24 rapid steps \u2014 image matches counter, loading state clears",
+  true,
+  "{'c': 'Photo 1 of 11', 'srcOk': True, 'loading': False}"
+ ],
+ [
+  "@1024 lightbox: Esc closes and focus returns to the trigger",
+  true,
+  ""
+ ],
+ [
+  "@1024 lightbox: reopened scrolled-to-top",
+  true,
+  ""
+ ],
+ [
+  "@1024 lightbox: page scroll locked",
+  true,
+  ""
+ ],
+ [
+  "@1024 lightbox: Close button works",
+  true,
+  ""
+ ],
+ [
+  "@1024 no console errors / no overflow",
+  true,
+  "[]"
+ ],
+ [
+  "@1440 event dialog: rapid open/Esc \u00d73 leaves it closed, clean styles, focus on trigger, scroll unlocked",
+  true,
+  "{'open': False, 'op': '', 'tr': '', 'lock': 'visible', 'focus': True}"
+ ],
+ [
+  "@1440 event dialog: reopened scrolled-to-top",
+  true,
+  ""
+ ],
+ [
+  "@1440 event dialog: body scroll locked while open",
+  true,
+  ""
+ ],
+ [
+  "@1440 event dialog: backdrop closes",
+  true,
+  ""
+ ],
+ [
+  "@1440 filter announces result",
+  true,
+  "Showing 4 photos in Workshops"
+ ],
+ [
+  "@1440 lightbox opens by keyboard, focus on Close",
+  true,
+  ""
+ ],
+ [
+  "@1440 lightbox visible controls are hit-testable (layering)",
+  true,
+  "{'lightbox-close': True, 'lightbox-prev': True, 'lightbox-next': True, 'lightbox-mob-prev': 'hidden', 'lightbox-mob-next': 'hidden'}"
+ ],
+ [
+  "@1440 lightbox: 24 rapid steps \u2014 image matches counter, loading state clears",
+  true,
+  "{'c': 'Photo 1 of 11', 'srcOk': True, 'loading': False}"
+ ],
+ [
+  "@1440 lightbox: Esc closes and focus returns to the trigger",
+  true,
+  ""
+ ],
+ [
+  "@1440 lightbox: reopened scrolled-to-top",
+  true,
+  ""
+ ],
+ [
+  "@1440 lightbox: page scroll locked",
+  true,
+  ""
+ ],
+ [
+  "@1440 lightbox: Close button works",
+  true,
+  ""
+ ],
+ [
+  "@1440 no console errors / no overflow",
+  true,
+  "[]"
+ ],
+ [
+  "nav 390: opens, Esc closes and returns focus",
+  true,
+  ""
+ ],
+ [
+  "nav 390: link tap closes menu and lands below header",
+  true,
+  "80"
+ ],
+ [
+  "nav 390: header stays sticky and shows is-stuck shadow",
+  true,
+  ""
+ ],
+ [
+  "nav 390: aria-current follows section",
+  true,
+  ""
+ ],
+ [
+  "nav 390: tap outside closes menu",
+  true,
+  ""
+ ]
+]

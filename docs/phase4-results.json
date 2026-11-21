@@ -61,7 +61,7 @@
    "#memories"
   ]
  },
- "section order: hero, about, offers, events (Phase 5), team (Phase 6), (stub), join, footer": {
+ "section order: hero, about, offers, events (Phase 5), team (Phase 6), (stub/memories), join, footer": {
   "pass": true,
   "info": [
    "hero",
@@ -69,7 +69,7 @@
    "offers",
    "events",
    "team",
-   "anchor-stubs",
+   "memories",
    "join",
    "site-footer"
   ]
@@ -84,7 +84,7 @@
    "true",
    true,
    "false",
-   149,
+   128,
    66
   ]
  },

@@ -68,3 +68,7 @@
 .footer__s-squig{--size:130px;--r:calc(var(--gutter) + 20px);--y:calc(var(--s-6) + 92px);--rot:-6deg;display:none}
 @media (min-width:1024px){.footer__s-squig{display:block}}
 @media (max-width:639px){.footer__s-spark{--size:44px;--y:var(--s-4)}.footer__s-quarter{--size:100px}}
+
+/* Phase 8.3 — footer list links: pressed state mirrors hover */
+.footer__links a:active{border-block-end-color:var(--c-accent)}
+.footer__links a{-webkit-tap-highlight-color:transparent}

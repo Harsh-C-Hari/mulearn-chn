@@ -1,0 +1,202 @@
+[
+ [
+  "normal @320: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0}"
+ ],
+ [
+  "normal @390: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0}"
+ ],
+ [
+  "normal @768: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0001}"
+ ],
+ [
+  "normal @1024: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0041}"
+ ],
+ [
+  "normal @1440: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0002}"
+ ],
+ [
+  "touch @320: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0}"
+ ],
+ [
+  "touch @390: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0}"
+ ],
+ [
+  "touch @768: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0}"
+ ],
+ [
+  "touch @1024: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0}"
+ ],
+ [
+  "touch @1440: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0}"
+ ],
+ [
+  "reduced @320: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02 js-motion=False pre-motion=False",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0}"
+ ],
+ [
+  "reduced @390: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02 js-motion=False pre-motion=False",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0}"
+ ],
+ [
+  "reduced @768: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02 js-motion=False pre-motion=False",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0009}"
+ ],
+ [
+  "reduced @1024: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02 js-motion=False pre-motion=False",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0045}"
+ ],
+ [
+  "reduced @1440: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02 js-motion=False pre-motion=False",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.001}"
+ ],
+ [
+  "gsap-blocked @320: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02 js-motion=False pre-motion=False",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0}"
+ ],
+ [
+  "gsap-blocked @390: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02 js-motion=False pre-motion=False",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0}"
+ ],
+ [
+  "gsap-blocked @768: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02 js-motion=False pre-motion=False",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0001}"
+ ],
+ [
+  "gsap-blocked @1024: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02 js-motion=False pre-motion=False",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0041}"
+ ],
+ [
+  "gsap-blocked @1440: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02 js-motion=False pre-motion=False",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0002}"
+ ],
+ [
+  "scrolltrigger-blocked (init failure) @320: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02 js-motion=False pre-motion=False",
+  false,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0279}"
+ ],
+ [
+  "scrolltrigger-blocked (init failure) @390: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02 js-motion=False pre-motion=False",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0}"
+ ],
+ [
+  "scrolltrigger-blocked (init failure) @768: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02 js-motion=False pre-motion=False",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0001}"
+ ],
+ [
+  "scrolltrigger-blocked (init failure) @1024: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02 js-motion=False pre-motion=False",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0041}"
+ ],
+ [
+  "scrolltrigger-blocked (init failure) @1440: visible content, no stuck inline styles, no overflow, no errors, CLS<0.02 js-motion=False pre-motion=False",
+  true,
+  "{'hidden': [], 'inline': 0, 'overflow': False, 'errs': [], 'cls': 0.0002}"
+ ],
+ [
+  "js-off @320: all content visible, no overflow",
+  true,
+  "[]"
+ ],
+ [
+  "js-off @390: all content visible, no overflow",
+  true,
+  "[]"
+ ],
+ [
+  "js-off @768: all content visible, no overflow",
+  true,
+  "[]"
+ ],
+ [
+  "js-off @1024: all content visible, no overflow",
+  true,
+  "[]"
+ ],
+ [
+  "js-off @1440: all content visible, no overflow",
+  true,
+  "[]"
+ ],
+ [
+  "keyboard-only @320: reaches nav, all 7 event buttons, gallery toggle",
+  true,
+  "['event:buildathon', 'event:bwai', 'event:odyssey', 'event:techforge', 'event:typerace', 'event:useless', 'event:webslingers', 'lb', 'toggle']"
+ ],
+ [
+  "keyboard-only @390: reaches nav, all 7 event buttons, gallery toggle",
+  true,
+  "['event:buildathon', 'event:bwai', 'event:odyssey', 'event:techforge', 'event:typerace', 'event:useless', 'event:webslingers', 'lb', 'toggle']"
+ ],
+ [
+  "keyboard-only @768: reaches nav, all 7 event buttons, gallery toggle",
+  true,
+  "['event:buildathon', 'event:bwai', 'event:odyssey', 'event:techforge', 'event:typerace', 'event:useless', 'event:webslingers', 'lb', 'toggle']"
+ ],
+ [
+  "keyboard-only @1024: reaches nav, all 7 event buttons, gallery toggle",
+  true,
+  "['event:buildathon', 'event:bwai', 'event:odyssey', 'event:techforge', 'event:typerace', 'event:useless', 'event:webslingers', 'lb', 'toggle']"
+ ],
+ [
+  "keyboard-only @1440: reaches nav, all 7 event buttons, gallery toggle",
+  true,
+  "['event:buildathon', 'event:bwai', 'event:odyssey', 'event:techforge', 'event:typerace', 'event:useless', 'event:webslingers', 'lb', 'nav', 'toggle']"
+ ],
+ [
+  "gallery \u00d75 reopen: Enter on Next = 1 step, Space + ArrowRight = 2 more (no duplicated handlers), lightbox stays open",
+  true,
+  "('Photo 1 of 11', 'Photo 2 of 11', 'Photo 4 of 11', True)"
+ ],
+ [
+  "event dialog \u00d78 open/close: closed, clean, one dialog node",
+  true,
+  ""
+ ],
+ [
+  "no live ScrollTriggers after use",
+  true,
+  ""
+ ],
+ [
+  "resize 1440\u2192390\u21921024\u2192320\u2192768\u21921440 during reveals: nothing hidden/stuck, no overflow, no errors",
+  true,
+  "{'hid': [], 'left': 0, 'errs': []}"
+ ],
+ [
+  "rapid scroll flips on touch 390: nothing hidden or stuck",
+  true,
+  ""
+ ]
+]

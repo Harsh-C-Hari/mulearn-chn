@@ -1,0 +1,317 @@
+[
+ [
+  "deep link #offers @320",
+  true,
+  "top=80"
+ ],
+ [
+  "  nothing hidden above viewport @320#offers",
+  true,
+  ""
+ ],
+ [
+  "  no console errors @320#offers",
+  true,
+  "[]"
+ ],
+ [
+  "deep link #team @320",
+  true,
+  "top=80"
+ ],
+ [
+  "  nothing hidden above viewport @320#team",
+  true,
+  ""
+ ],
+ [
+  "  no console errors @320#team",
+  true,
+  "[]"
+ ],
+ [
+  "deep link #join @320",
+  true,
+  "top=80"
+ ],
+ [
+  "  nothing hidden above viewport @320#join",
+  true,
+  ""
+ ],
+ [
+  "  no console errors @320#join",
+  true,
+  "[]"
+ ],
+ [
+  "deep link #offers @390",
+  true,
+  "top=80"
+ ],
+ [
+  "  nothing hidden above viewport @390#offers",
+  true,
+  ""
+ ],
+ [
+  "  no console errors @390#offers",
+  true,
+  "[]"
+ ],
+ [
+  "deep link #team @390",
+  true,
+  "top=80"
+ ],
+ [
+  "  nothing hidden above viewport @390#team",
+  true,
+  ""
+ ],
+ [
+  "  no console errors @390#team",
+  true,
+  "[]"
+ ],
+ [
+  "deep link #join @390",
+  true,
+  "top=80"
+ ],
+ [
+  "  nothing hidden above viewport @390#join",
+  true,
+  ""
+ ],
+ [
+  "  no console errors @390#join",
+  true,
+  "[]"
+ ],
+ [
+  "deep link #offers @768",
+  true,
+  "top=80"
+ ],
+ [
+  "  nothing hidden above viewport @768#offers",
+  true,
+  ""
+ ],
+ [
+  "  no console errors @768#offers",
+  true,
+  "[]"
+ ],
+ [
+  "deep link #team @768",
+  true,
+  "top=80"
+ ],
+ [
+  "  nothing hidden above viewport @768#team",
+  true,
+  ""
+ ],
+ [
+  "  no console errors @768#team",
+  true,
+  "[]"
+ ],
+ [
+  "deep link #join @768",
+  true,
+  "top=80"
+ ],
+ [
+  "  nothing hidden above viewport @768#join",
+  true,
+  ""
+ ],
+ [
+  "  no console errors @768#join",
+  true,
+  "[]"
+ ],
+ [
+  "deep link #offers @1024",
+  true,
+  "top=92"
+ ],
+ [
+  "  nothing hidden above viewport @1024#offers",
+  true,
+  ""
+ ],
+ [
+  "  no console errors @1024#offers",
+  true,
+  "[]"
+ ],
+ [
+  "deep link #team @1024",
+  true,
+  "top=92"
+ ],
+ [
+  "  nothing hidden above viewport @1024#team",
+  true,
+  ""
+ ],
+ [
+  "  no console errors @1024#team",
+  true,
+  "[]"
+ ],
+ [
+  "deep link #join @1024",
+  true,
+  "top=92"
+ ],
+ [
+  "  nothing hidden above viewport @1024#join",
+  true,
+  ""
+ ],
+ [
+  "  no console errors @1024#join",
+  true,
+  "[]"
+ ],
+ [
+  "deep link #offers @1440",
+  true,
+  "top=92"
+ ],
+ [
+  "  nothing hidden above viewport @1440#offers",
+  true,
+  ""
+ ],
+ [
+  "  no console errors @1440#offers",
+  true,
+  "[]"
+ ],
+ [
+  "deep link #team @1440",
+  true,
+  "top=92"
+ ],
+ [
+  "  nothing hidden above viewport @1440#team",
+  true,
+  ""
+ ],
+ [
+  "  no console errors @1440#team",
+  true,
+  "[]"
+ ],
+ [
+  "deep link #join @1440",
+  true,
+  "top=92"
+ ],
+ [
+  "  nothing hidden above viewport @1440#join",
+  true,
+  ""
+ ],
+ [
+  "  no console errors @1440#join",
+  true,
+  "[]"
+ ],
+ [
+  "hero has no visible\u2192hidden flash @390",
+  true,
+  "first=[143, 0]"
+ ],
+ [
+  "hero fully visible at end @390",
+  true,
+  ""
+ ],
+ [
+  "hero has no visible\u2192hidden flash @1440",
+  true,
+  "first=[206, 0]"
+ ],
+ [
+  "hero fully visible at end @1440",
+  true,
+  ""
+ ],
+ [
+  "slow GSAP: hero visible by ~1.4s",
+  true,
+  "firstVisible=1336ms"
+ ],
+ [
+  "slow GSAP: hero not re-hidden after release",
+  true,
+  ""
+ ],
+ [
+  "reduced: content visible, no pre-motion class",
+  true,
+  "vis=True pm=False"
+ ],
+ [
+  "gsap blocked: content visible, no pre-motion class",
+  true,
+  "vis=True pm=False"
+ ],
+ [
+  "js off: content visible, no pre-motion class",
+  true,
+  "vis=True pm=False"
+ ],
+ [
+  "rapid scroll: no stuck/leftover inline styles",
+  true,
+  "left=0"
+ ],
+ [
+  "rapid scroll: all ScrollTriggers consumed",
+  true,
+  ""
+ ],
+ [
+  "drawer open: footer trigger re-measured",
+  true,
+  "before=11612 after=13655 joinTop=12993"
+ ],
+ [
+  "drawer open: smooth scroll reached the drawer",
+  true,
+  "drawerTop=92"
+ ],
+ [
+  "nav click: smooth (many scroll events), lands under header, hash set, target focused",
+  true,
+  "{'n': 59, 'top': 92, 'hash': '#events', 'focus': 'events', 'cur': 'Events'}"
+ ],
+ [
+  "browser Back returns to previous position",
+  true,
+  "y=0"
+ ],
+ [
+  "reduced motion: anchor jump is instant",
+  true,
+  "events=1 top=92"
+ ],
+ [
+  "keyboard anchor: target focused, no section ring",
+  true,
+  "['team', 'none', 'none']"
+ ],
+ [
+  "keyboard anchor: next Tab continues inside Team",
+  true,
+  "BUTTON"
+ ]
+]

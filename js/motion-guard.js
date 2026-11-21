@@ -15,6 +15,7 @@
  * Public API  (window.MULEARN.motion)
  *   .ready        boolean — true once GSAP + ScrollTrigger are registered and motion is allowed
  *   .reduced      boolean — current prefers-reduced-motion state
+ *   .refresh()    re-measure pending ScrollTriggers after a layout-height change (safe no-op without motion)
  *   .onReady(fn)  fn(gsap, ScrollTrigger, mm) runs once motion is ready (immediately if already ready).
  *                 `mm` is a gsap.matchMedia() context: put animations inside mm.add("(min-width:…)", () => {…})
  *                 so they are reverted automatically on breakpoint change or when motion is disabled.
@@ -64,9 +65,11 @@
       root.classList.add("js-motion");
       document.dispatchEvent(new CustomEvent("mulearn:motion-ready"));
       flush();
+      // pre-motion (hero pre-hide) is released by motion-home once its entrance has taken over; this is only the safety net
+      w.setTimeout(function () { root.classList.remove("pre-motion"); }, 0);
     }).catch(function (err) {
       state.failed = true; state.loading = false;
-      root.classList.remove("js-motion");
+      root.classList.remove("js-motion", "pre-motion");
       if (w.console) console.info(String(err.message || err));       // info, not error: failure is a supported state
     });
   }
@@ -76,7 +79,7 @@
     if (w.ScrollTrigger) { try { w.ScrollTrigger.getAll().forEach(function (t) { t.kill(); }); } catch (e) {} }
     if (w.gsap) { try { w.gsap.globalTimeline.clear(); } catch (e) {} }
     state.ready = false; MOTION.ready = false;
-    root.classList.remove("js-motion");
+    root.classList.remove("js-motion", "pre-motion");
     document.dispatchEvent(new CustomEvent("mulearn:motion-off"));
   }
 
@@ -88,6 +91,12 @@
   var MOTION = w.MULEARN.motion = {
     ready: false,
     reduced: state.reduced,
+    // Re-measure pending scroll triggers after the page height changed (gallery drawer / filters). Synchronous on purpose:
+    // callers refresh BEFORE starting a smooth scroll so the refresh can never cancel it. No-op when motion is off.
+    refresh: function () {
+      if (!state.ready || !w.ScrollTrigger) return;
+      try { w.ScrollTrigger.refresh(); } catch (e) {}
+    },
     onReady: function (fn) {
       if (typeof fn !== "function") return;
       if (state.ready) { try { fn(w.gsap, w.ScrollTrigger, state.mm); } catch (e) { if (w.console) console.warn(e); } }

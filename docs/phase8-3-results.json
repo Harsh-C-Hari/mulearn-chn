@@ -1,0 +1,132 @@
+[
+ [
+  "touch: (hover:hover) is false",
+  true,
+  ""
+ ],
+ [
+  "touch: no sticky hover change \u2014 btn",
+  true,
+  ""
+ ],
+ [
+  "touch: pressed feedback \u2014 btn",
+  true,
+  "none|rgb(15, 23, 42) 5px 5px 0px 0px|auto|rgb(15, 23, 42)|rgb(15, 23, 42) -> matrix(1, 0, 0, 1, 4, 4)|rgb(15, 23, 42) 1px 1px 0px 0px|auto|rgb(15, 23, 42)|rgb(15, 23, 42)"
+ ],
+ [
+  "touch: no sticky hover change \u2014 link",
+  true,
+  ""
+ ],
+ [
+  "touch: pressed feedback \u2014 link",
+  true,
+  "none|none|2px|rgb(15, 23, 42)|rgb(15, 23, 42) -> none|none|4px|rgb(79, 70, 229)|rgb(15, 23, 42)"
+ ],
+ [
+  "touch: no sticky hover change \u2014 navlink",
+  true,
+  ""
+ ],
+ [
+  "touch: pressed feedback \u2014 navlink",
+  true,
+  "none|none|auto|rgb(15, 23, 42)|rgb(15, 23, 42) -> none|rgb(221, 214, 254) 0px -7.7px 0px 0px inset|auto|rgb(15, 23, 42)|rgb(15, 23, 42)"
+ ],
+ [
+  "touch: no sticky hover change \u2014 polaroid",
+  true,
+  ""
+ ],
+ [
+  "touch: pressed feedback \u2014 polaroid",
+  true,
+  "matrix(1, 0, 0, 1, 0, 0)|rgb(15, 23, 42) 5px 5px 0px 0px|auto|rgb(15, 23, 42)|rgb(15, 23, 42) -> matrix(0.99, 0, 0, 0.99, 2, 2)|rgb(15, 23, 42) 3px 3px 0px 0px|auto|rgb(15, 23, 42)|rgb(15, 23, 42)"
+ ],
+ [
+  "touch: no sticky hover change \u2014 galleryinner",
+  true,
+  ""
+ ],
+ [
+  "touch: pressed feedback \u2014 galleryinner",
+  true,
+  "none|rgb(15, 23, 42) 5px 5px 0px 0px|auto|rgb(15, 23, 42)|rgb(15, 23, 42) -> matrix(1, 0, 0, 1, 2, 2)|rgb(15, 23, 42) 3px 3px 0px 0px|auto|rgb(15, 23, 42)|rgb(15, 23, 42)"
+ ],
+ [
+  "touch: no sticky hover change \u2014 tile",
+  true,
+  ""
+ ],
+ [
+  "touch: pressed feedback \u2014 tile",
+  true,
+  "none|rgb(99, 102, 241) 4px 4px 0px 0px|auto|rgb(248, 243, 233)|rgb(248, 243, 233) -> matrix(1, 0, 0, 1, 3, 3)|rgb(99, 102, 241) 1px 1px 0px 0px|auto|rgb(248, 243, 233)|rgb(248, 243, 233)"
+ ],
+ [
+  "touch: no sticky hover change \u2014 brand .brand__mark",
+  true,
+  ""
+ ],
+ [
+  "touch: pressed feedback \u2014 brand .brand__mark",
+  true,
+  "none|none|auto|rgb(15, 23, 42)|rgb(15, 23, 42) -> matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0)|none|auto|rgb(15, 23, 42)|rgb(15, 23, 42)"
+ ],
+ [
+  "touch: no sticky hover change \u2014 footlink",
+  true,
+  ""
+ ],
+ [
+  "touch: pressed feedback \u2014 footlink",
+  true,
+  "none|none|auto|rgb(248, 243, 233)|rgba(0, 0, 0, 0) -> none|none|auto|rgb(248, 243, 233)|rgb(250, 204, 21)"
+ ],
+ [
+  "tap-highlight not globally suppressed",
+  true,
+  ""
+ ],
+ [
+  "tap-highlight suppressed on topbar logo",
+  true,
+  ""
+ ],
+ [
+  "touch-action: manipulation on controls",
+  true,
+  ""
+ ],
+ [
+  "mouse: (hover:hover) true",
+  true,
+  ""
+ ],
+ [
+  "mouse: hover changes .hero__actions .btn",
+  true,
+  ""
+ ],
+ [
+  "no `transition: all` in use",
+  true,
+  "0"
+ ],
+ [
+  "no permanent will-change",
+  true,
+  ""
+ ],
+ [
+  "keyboard: 45 tab stops all show a focus ring and none hides under the header",
+  true,
+  "[]"
+ ],
+ [
+  "keyboard: tab order moves down the page",
+  true,
+  ""
+ ]
+]

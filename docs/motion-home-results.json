@@ -38,10 +38,12 @@
    "aboutVisibleWithoutScroll": true,
    "overflow": false,
    "gsapRequested": [
-    "gsap.min.js"
+    "gsap.min.js",
+    "ScrollTrigger.min.js"
    ],
    "external": [],
    "console": [
+    "Failed to load resource: net::ERR_FAILED",
     "Failed to load resource: net::ERR_FAILED"
    ],
    "stuckClassAtTop": false,
@@ -76,7 +78,7 @@
    "focusAfterMotion": "brand"
   }
  ],
- "cls": 0.0024,
+ "cls": 0.0002,
  "checks": {
   "normal: entrance runs (opacity <1 mid-animation)": true,
   "normal: hero fully visible after entrance": true,

@@ -14,9 +14,21 @@
 | 5 | Events + dialogs | ✅ complete — final ZIP `mulearn-chn_phase-05_complete.zip` (+ `mulearn-chn_phase-05_deploy.zip`) |
 | 6 | Team + directory | ✅ complete — final ZIP `mulearn-chn_phase-06_complete.zip` (+ `mulearn-chn_phase-06_deploy.zip`) |
 | 7 | Memories + lightbox | ✅ complete — final ZIP `mulearn-chn_phase-07_complete.zip` (+ `mulearn-chn_phase-07_deploy.zip`) |
-| 8 | Motion layer | ⏳ |
+| 8 | Motion & interaction refinement (subphased 8.1–8.6) | ✅ complete (automated scope) — final ZIP `mulearn-chn_phase-08_complete.zip` |
 | 9 | QA / a11y / perf / SEO | ⏳ |
 | 10 | Release & handoff | ⏳ |
+
+## Phase 8 progress (subphase checkpoints)
+| Subphase | Name | Status |
+|---|---|---|
+| 8.1 | Motion & interaction audit | ✅ complete — `docs/phase8-audit.md` (no code changes) |
+| 8.2 | Scroll-based motion standardisation | ✅ complete — `docs/phase8-2-report.md` |
+| 8.3 | Micro-interaction refinement | ✅ complete — `docs/phase8-3-report.md` |
+| 8.4 | Navigation, dialog & gallery refinement | ✅ complete — `docs/phase8-4-report.md` |
+| 8.5 | Responsive motion & failure resilience | ✅ complete — `docs/phase8-5-report.md` (fixes lightbox keyboard-activation bug, no-JS 320px overflow) |
+| 8.6 | Final motion & interaction QA | ✅ complete — `docs/phase8-completion-report.md` (PASS, automated scope) |
+
+Phase 8 working rules (client, 2026-11-21): run 8.1–8.6 in order without stopping; deliver the versioned ZIP after each; intro/loader excluded.
 
 ## Phase 7 progress (subphase checkpoints)
 | Subphase | Name | Status | Notes |

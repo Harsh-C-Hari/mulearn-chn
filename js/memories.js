@@ -24,6 +24,14 @@
   // ==========================================================================
   // 1. Gallery Drawer Toggle (Subphase 7.3)
   // ==========================================================================
+  // Phase 8.2: the drawer/filters change the page height, so pending scroll reveals below are re-measured (no-op without motion).
+  // Always called BEFORE a smooth scroll starts so it can never cancel it. Reduced motion = instant scroll.
+  function relayout() {
+    var M = window.MULEARN && window.MULEARN.motion;
+    if (M && typeof M.refresh === "function") M.refresh();
+  }
+  var reducedMq = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
+
   var toggleBtn = document.getElementById("memories-gallery-toggle");
   var drawer = document.getElementById("memories-gallery");
   var toggleText = toggleBtn ? toggleBtn.querySelector(".memories__toggle-text") : null;
@@ -42,8 +50,9 @@
           : "View full gallery (11 photos)";
       }
 
+      relayout();
       if (nextState) {
-        drawer.scrollIntoView({ behavior: "smooth", block: "start" });
+        drawer.scrollIntoView({ behavior: reducedMq.matches ? "auto" : "smooth", block: "start" });
       }
     });
   }
@@ -70,6 +79,14 @@
           var match = filter === "all" || cardCat === filter;
           card.hidden = !match;
         });
+        relayout();
+        // 8.4: announce the result of a filter change (the grid change itself is silent for screen readers)
+        var status = document.getElementById("gallery-status");
+        if (status) {
+          var n = 0;
+          cards.forEach(function (c) { if (!c.hidden) n++; });
+          status.textContent = "Showing " + n + (n === 1 ? " photo" : " photos") + (filter === "all" ? "" : " in " + btn.textContent.replace(/\s*\(\d+\)\s*$/, ""));
+        }
       });
     });
   }
@@ -118,10 +135,15 @@
     if (!item) return;
 
     if (imgEl) {
+      // 8.4: until the new photo has decoded, dim the old one (it would otherwise sit under the new caption); the
+      // frame size is fixed by width/height so nothing shifts. Only the latest request may clear the state.
+      imgEl.classList.add("is-loading");
+      imgEl.onload = imgEl.onerror = function () { imgEl.classList.remove("is-loading"); };
       imgEl.src = item.src;
       imgEl.alt = item.title;
       imgEl.width = item.width;
       imgEl.height = item.height;
+      if (imgEl.complete) imgEl.classList.remove("is-loading");
     }
     if (titleEl) titleEl.textContent = item.title;
     if (captionEl) captionEl.textContent = item.caption;
@@ -149,6 +171,7 @@
       dlg.setAttribute("open", "");
     }
 
+    if (panel) panel.scrollTop = 0;   // 8.4: same guarantee as the event dialog — every opening starts at the top
     if (closeBtn) closeBtn.focus();
   }
 
@@ -184,6 +207,9 @@
   // Backdrop click to close
   dlg.addEventListener("click", function (e) {
     if (!panel) return;
+    // 8.5: only a click that lands on the dialog element itself (the backdrop) can be a "click outside". Clicks on the
+    // controls inside — including keyboard/Space/Enter activation, which reports coordinates (0,0) — must never close it.
+    if (e.target !== dlg) return;
     var rect = panel.getBoundingClientRect();
     var inDialog =
       rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&

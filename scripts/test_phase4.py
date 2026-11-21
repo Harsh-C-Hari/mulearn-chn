@@ -38,7 +38,11 @@ try:
         pg.evaluate("window.scrollTo(0,0)"); pg.wait_for_timeout(150)
         pg.evaluate("document.documentElement.style.scrollBehavior='auto'")
         pg.click(f'.site-nav a[href="{i}"]') if pg.locator(f'.site-nav a[href="{i}"]').count() else pg.click(f'a[href="{i}"] >> nth=0')
-        pg.wait_for_timeout(250)
+        # Phase 8.2: in-page anchors scroll smoothly via JS (nav.js), so wait until the scroll has settled
+        last=-1; stable=0
+        for _ in range(60):
+            pg.wait_for_timeout(100); y=pg.evaluate('window.scrollY'); stable=stable+1 if y==last else 0; last=y
+            if stable>=3: break
         top=pg.evaluate("(i)=>document.getElementById(i.slice(1)).getBoundingClientRect().top",i)
         if i!='#top' and top < hh-2: badland.append((i,round(top),round(hh)))
     chk('anchor clicks land at/below the sticky header',not badland,badland)
