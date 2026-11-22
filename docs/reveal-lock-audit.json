@@ -1,0 +1,326 @@
+[
+ {
+  "sel": ".about .sticker > svg",
+  "n": 3,
+  "withTransition": 0,
+  "locked": 3,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".about__card",
+  "n": 1,
+  "withTransition": 1,
+  "locked": 1,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": "transform, box-shadow|0.3s, 0.3s"
+ },
+ {
+  "sel": ".about__facts, .about__actions",
+  "n": 2,
+  "withTransition": 0,
+  "locked": 2,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".about__figure",
+  "n": 1,
+  "withTransition": 0,
+  "locked": 1,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".about__pair .card",
+  "n": 2,
+  "withTransition": 2,
+  "locked": 2,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": "transform, box-shadow|0.3s, 0.3s"
+ },
+ {
+  "sel": ".event--featured .event-card",
+  "n": 3,
+  "withTransition": 3,
+  "locked": 3,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": "transform, box-shadow|0.3s, 0.3s"
+ },
+ {
+  "sel": ".events .sticker > svg",
+  "n": 7,
+  "withTransition": 0,
+  "locked": 7,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".events__head > *",
+  "n": 4,
+  "withTransition": 0,
+  "locked": 4,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".footer__bar",
+  "n": 1,
+  "withTransition": 0,
+  "locked": 1,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".footer__big span",
+  "n": 3,
+  "withTransition": 0,
+  "locked": 3,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".footer__grid > *",
+  "n": 3,
+  "withTransition": 0,
+  "locked": 3,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".hero .sticker > svg",
+  "n": 7,
+  "withTransition": 0,
+  "locked": 7,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".hero__actions > *",
+  "n": 2,
+  "withTransition": 2,
+  "locked": 2,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": "transform, box-shadow|0.15s, 0.15s"
+ },
+ {
+  "sel": ".hero__actions > *, .hero__discord",
+  "n": 3,
+  "withTransition": 2,
+  "locked": 3,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": "transform, box-shadow|0.15s, 0.15s"
+ },
+ {
+  "sel": ".hero__discord",
+  "n": 1,
+  "withTransition": 0,
+  "locked": 1,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".hero__figure",
+  "n": 1,
+  "withTransition": 0,
+  "locked": 1,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".hero__intro > *",
+  "n": 2,
+  "withTransition": 0,
+  "locked": 2,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".hero__title span",
+  "n": 3,
+  "withTransition": 0,
+  "locked": 3,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".hero__title span, .hero__intro > *, .hero__actions > *, .hero__discord, .hero__figure, .hero .sticker > svg",
+  "n": 16,
+  "withTransition": 2,
+  "locked": 16,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": "transform, box-shadow|0.15s, 0.15s"
+ },
+ {
+  "sel": ".join .sticker > svg",
+  "n": 4,
+  "withTransition": 0,
+  "locked": 4,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".join__banner",
+  "n": 1,
+  "withTransition": 0,
+  "locked": 1,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".join__ctas > *",
+  "n": 2,
+  "withTransition": 2,
+  "locked": 2,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": "transform, box-shadow|0.15s, 0.15s"
+ },
+ {
+  "sel": ".join__step",
+  "n": 3,
+  "withTransition": 0,
+  "locked": 3,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".memories > .sticker > svg",
+  "n": 2,
+  "withTransition": 0,
+  "locked": 2,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".memories__actions",
+  "n": 1,
+  "withTransition": 0,
+  "locked": 1,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".memories__collage .polaroid",
+  "n": 6,
+  "withTransition": 6,
+  "locked": 6,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": "transform, box-shadow|0.3s, 0.3s"
+ },
+ {
+  "sel": ".memories__head > *",
+  "n": 3,
+  "withTransition": 0,
+  "locked": 3,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".offer__card",
+  "n": 6,
+  "withTransition": 6,
+  "locked": 6,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": "transform, box-shadow|0.3s, 0.3s"
+ },
+ {
+  "sel": ".offers .sticker > svg",
+  "n": 11,
+  "withTransition": 0,
+  "locked": 11,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".offers__head > *",
+  "n": 3,
+  "withTransition": 0,
+  "locked": 3,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".offers__note",
+  "n": 1,
+  "withTransition": 0,
+  "locked": 1,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".roster-panel",
+  "n": 1,
+  "withTransition": 0,
+  "locked": 1,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".site-footer .sticker > svg",
+  "n": 4,
+  "withTransition": 0,
+  "locked": 4,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".team > .sticker > svg, .member-card__stk > svg",
+  "n": 8,
+  "withTransition": 0,
+  "locked": 8,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ },
+ {
+  "sel": ".team__featured .member-card",
+  "n": 4,
+  "withTransition": 4,
+  "locked": 4,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": "transform, box-shadow|0.3s, 0.3s"
+ },
+ {
+  "sel": ".team__head > *",
+  "n": 3,
+  "withTransition": 0,
+  "locked": 3,
+  "unlockedWithTransition": 0,
+  "leftover": 0,
+  "sample": ""
+ }
+]

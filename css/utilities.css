@@ -35,3 +35,9 @@
 .ratio-1{aspect-ratio:1/1}.ratio-4-3{aspect-ratio:4/3}.ratio-3-4{aspect-ratio:3/4}.ratio-16-10{aspect-ratio:16/10}
 .rot-n2{transform:rotate(-2deg)}.rot-2{transform:rotate(2deg)}.rot-n4{transform:rotate(-4deg)}.rot-4{transform:rotate(4deg)}
 @media (max-width:639px){.rot-n4,.rot-4{transform:rotate(2deg)}}
+
+/* GSAP owns this element's transform/opacity while it reveals (js/motion-home.js lock()/unlock()). Components such as .btn, .card,
+   .polaroid, .member-card and .event-card__poster carry CSS hover transitions on `transform`; if those were active, GSAP would read a
+   stale end value and the element would sit ~48px low until clearProps made the CSS transition slide it into place. Hover rules are
+   untouched: the class only exists during the reveal. */
+.is-revealing { transition: none !important; }

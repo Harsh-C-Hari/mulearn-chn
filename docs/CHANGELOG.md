@@ -2,6 +2,12 @@
 
 Format: newest first. Each entry: date · phase · what changed · files · verification.
 
+## 2026-11-22 — Reveal glitch fix ("stuck low, then snaps into place")
+- Fixed: elements with CSS hover transitions on `transform` (.btn, .card, .polaroid, .member-card, .event-card__poster) were frozen ~48px low while their GSAP reveal ran, then slid up when `clearProps` let the CSS transition fire.
+- Added: `.is-revealing { transition: none !important; }` in `css/utilities.css`; `lock()/unlock()` helpers in `js/motion-home.js` used by `intro()` (steps + stickers locked before the first `tl.from()`), `rise()`, the hero timeline and `clear()`; `unlock` runs one frame after `clearProps`. `mm.add()` now returns a cleanup that removes `is-revealing` everywhere on revert. Header rule added: anything GSAP animates must go through `lock()`.
+- Unchanged: every existing `transition`/hover rule, motion timings, distances, `index.html`.
+- Added tests: `scripts/test_reveal_lock.py` (per-frame sampling), `scripts/audit_reveal_lock.py`; results `docs/reveal-lock-results.json`, `docs/reveal-lock-before.json` (same test on the code before the fix), `docs/reveal-lock-audit.json`.
+
 ## 2026-11-21 — Image skeletons / Phases 5.2 – 6 (responsive, accessibility, motion, final QA)
 - Fixed: event-thumb skeleton now follows each thumb's own width/height (was fixed 390:502, up to ~16px off); portrait skeleton inset follows the card mat (4px → 8px from 600px).
 - Changed: skeletons wait 80 ms before appearing (cached images never flash one; lightbox exempt); hero disc no longer pulses (nothing larger than 100×100 px animates).

@@ -9,6 +9,11 @@
  *   intro(section, steps, stickers)  one timeline per section: heading group → blocks → stickers, fired once at T.headStart
  *   rise(elements)                   items that enter on their own as they approach the viewport (T.itemStart), once each
  *   stickers always pop the same way (T.pop); text rises T.riseSm, blocks/figures/cards rise T.rise.
+ *
+ * RULE: any element GSAP animates must go through lock() (class .is-revealing → `transition:none`), because it may carry a CSS
+ * hover transition on `transform`/`opacity` (.btn, .card, .polaroid, .member-card, .event-card__poster…). Without the lock the CSS
+ * transition fights the tween (GSAP reads a stale end value, the element sits ~48px low, then snaps when clearProps runs).
+ * unlock() runs after clearProps, one frame later, so no stray transition can fire. intro()/rise()/hero do this for you.
  */
 (function () {
   "use strict";
@@ -35,24 +40,37 @@
         pop: { scale: 0, rotation: 30, transformOrigin: "50% 50%", duration: .5, ease: "back.out(1.6)", stagger: .06 }
       };
       var CLEAR = "opacity,visibility,transform";
-      var clear = function (els) { if (els.length) gsap.set(els, { clearProps: CLEAR }); };
+      // lock/unlock: GSAP owns the element while .is-revealing is set (css/utilities.css disables its CSS transitions meanwhile).
+      var LOCK = "is-revealing";
+      var lock = function (els) { els.forEach(function (el) { el.classList.add(LOCK); }); };
+      var unlock = function (els) {
+        // after clearProps the inline transform is gone, so releasing the lock one frame later cannot start a transition
+        requestAnimationFrame(function () { els.forEach(function (el) { el.classList.remove(LOCK); }); });
+      };
+      var clear = function (els) {
+        if (!els.length) return;
+        gsap.set(els, { clearProps: CLEAR });
+        unlock(els);
+      };
 
       // One timeline per section. steps: [{ sel, y, d, stagger, rot, yPercent, at }]; all start states removed on completion.
       function intro(sec, steps, stickerSel, start) {
         var all = [];
+        // lock every element this timeline owns (steps AND stickers) before the first tl.from(): from() renders its start state immediately
+        steps.forEach(function (s) { all = all.concat(q(s.sel, sec)); });
+        var st = stickerSel ? q(stickerSel, sec) : [];
+        all = all.concat(st);
+        lock(all);
         var tl = gsap.timeline({ defaults: { ease: T.ease }, paused: true, onComplete: function () { clear(all); } });
         steps.forEach(function (s) {
           var els = q(s.sel, sec);
           if (!els.length) return;
-          all = all.concat(els);
           var v = { opacity: 0, duration: s.d || T.durSm, stagger: s.stagger || 0 };
           if (s.yPercent != null) v.yPercent = s.yPercent; else v.y = s.y == null ? T.riseSm : s.y;
           if (s.rot) v.rotation = s.rot;
           tl.from(els, v, s.at || 0);
         });
-        var st = stickerSel ? q(stickerSel, sec) : [];
         if (st.length) {
-          all = all.concat(st);
           tl.from(st, { scale: 0, rotation: T.pop.rotation, transformOrigin: T.pop.transformOrigin, duration: T.pop.duration, ease: T.pop.ease, stagger: T.pop.stagger }, T.popAt);
         }
         // fire once, then remove the trigger immediately (`once` alone only kills it when its END is reached,
@@ -64,7 +82,8 @@
       // Items that rise on their own as they near the viewport (so lower cards are never animated off-screen).
       function rise(els, y) {
         els.forEach(function (el) {
-          var tw = gsap.from(el, { y: y == null ? T.rise : y, opacity: 0, duration: T.dur, ease: T.ease, clearProps: CLEAR, paused: true });
+          lock([el]);   // before from(): it writes the start state immediately
+          var tw = gsap.from(el, { y: y == null ? T.rise : y, opacity: 0, duration: T.dur, ease: T.ease, clearProps: CLEAR, paused: true, onComplete: function () { unlock([el]); } });
           ScrollTrigger.create({ trigger: el, start: T.itemStart, once: true, onEnter: function (self) { tw.play(); self.kill(); } });
         });
       }
@@ -75,6 +94,7 @@
       var hero = document.getElementById("hero");
       if (hero && root.classList.contains("pre-motion")) {
         var heroEls = q(".hero__title span, .hero__intro > *, .hero__actions > *, .hero__discord, .hero__figure, .hero .sticker > svg", hero);
+        lock(heroEls);   // before the timeline exists and before the pre-hide is released
         // lazy:false → the start states are written to the elements synchronously, so releasing the CSS pre-hide on the next
         // line can never expose a frame of un-hidden content (GSAP otherwise defers from() start states to its next tick).
         var tl = gsap.timeline({ defaults: { ease: T.ease, lazy: false }, onComplete: function () { clear(heroEls); } });
@@ -151,6 +171,9 @@
           { sel: ".footer__bar", y: 12, d: .4, at: .6 }
         ], ".site-footer .sticker > svg", T.footStart);
       }
+
+      // reduced-motion switch (or any revert) mid-session: nothing may stay locked
+      return function () { q("." + LOCK).forEach(function (el) { el.classList.remove(LOCK); }); };
     });
   });
 })();

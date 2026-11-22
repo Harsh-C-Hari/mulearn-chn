@@ -1,0 +1,346 @@
+{
+ "375: reduced motion \u2192 no .is-revealing, no inline start states, all targets visible": {
+  "pass": true,
+  "info": "{'locked': 0, 'inline': 0, 'visible': True}"
+ },
+ "375: hero buttons (2) \u2014 rises in sync with the fade, no late snap, lock released, ends at CSS rest transform": {
+  "pass": false,
+  "info": "[{'i': 0, 'ty0': 24, 'frames': 17, 'sync_err': 0.962, 'finished': True, 'end_inline': '', 'end_locked': 0, 'end_computed': 'none', 'settle_changes': 10, 'locked_while_animating': False, 'rest': 'none'}, {'i': 1, 'ty0': 24, 'frames': 17, 'sync_err': 0.964, 'finished': True, 'end_inline': '', 'end_loc"
+ },
+ "frame_samples": {
+  "375 hero buttons#0": [
+   {
+    "t": 1003,
+    "inline": "translate3d(0px, 24px, 0px)",
+    "computed_ty": 24,
+    "opacity": 0.107,
+    "locked": 0
+   },
+   {
+    "t": 1053,
+    "inline": "translate3d(0px, 24px, 0px)",
+    "computed_ty": 24,
+    "opacity": 0.416,
+    "locked": 0
+   },
+   {
+    "t": 1103,
+    "inline": "translate3d(0px, 24px, 0px)",
+    "computed_ty": 24,
+    "opacity": 0.637,
+    "locked": 0
+   },
+   {
+    "t": 1153,
+    "inline": "translate3d(0px, 24px, 0px)",
+    "computed_ty": 24,
+    "opacity": 0.796,
+    "locked": 0
+   },
+   {
+    "t": 1203,
+    "inline": "translate3d(0px, 24px, 0px)",
+    "computed_ty": 24,
+    "opacity": 0.893,
+    "locked": 0
+   },
+   {
+    "t": 1254,
+    "inline": "translate3d(0px, 24px, 0px)",
+    "computed_ty": 24,
+    "opacity": 0.95,
+    "locked": 0
+   },
+   {
+    "t": 1303,
+    "inline": "translate3d(0px, 24px, 0px)",
+    "computed_ty": 24,
+    "opacity": 0.98,
+    "locked": 0
+   },
+   {
+    "t": 1353,
+    "inline": "translate3d(0px, 24px, 0px)",
+    "computed_ty": 24,
+    "opacity": 0.994,
+    "locked": 0
+   }
+  ],
+  "375 offer cards#0": [
+   {
+    "t": 968,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.11,
+    "locked": 0
+   },
+   {
+    "t": 1035,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.4,
+    "locked": 0
+   },
+   {
+    "t": 1101,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.622,
+    "locked": 0
+   },
+   {
+    "t": 1168,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.771,
+    "locked": 0
+   },
+   {
+    "t": 1235,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.875,
+    "locked": 0
+   },
+   {
+    "t": 1301,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.938,
+    "locked": 0
+   },
+   {
+    "t": 1368,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.973,
+    "locked": 0
+   },
+   {
+    "t": 1435,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.991,
+    "locked": 0
+   },
+   {
+    "t": 1501,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.998,
+    "locked": 0
+   }
+  ],
+  "1280 hero buttons#0": [
+   {
+    "t": 867,
+    "inline": "translate3d(0px, 24px, 0px)",
+    "computed_ty": 24,
+    "opacity": 0.063,
+    "locked": 0
+   },
+   {
+    "t": 917,
+    "inline": "translate3d(0px, 24px, 0px)",
+    "computed_ty": 24,
+    "opacity": 0.406,
+    "locked": 0
+   },
+   {
+    "t": 967,
+    "inline": "translate3d(0px, 24px, 0px)",
+    "computed_ty": 24,
+    "opacity": 0.618,
+    "locked": 0
+   },
+   {
+    "t": 1017,
+    "inline": "translate3d(0px, 24px, 0px)",
+    "computed_ty": 24,
+    "opacity": 0.786,
+    "locked": 0
+   },
+   {
+    "t": 1067,
+    "inline": "translate3d(0px, 24px, 0px)",
+    "computed_ty": 24,
+    "opacity": 0.882,
+    "locked": 0
+   },
+   {
+    "t": 1117,
+    "inline": "translate3d(0px, 24px, 0px)",
+    "computed_ty": 24,
+    "opacity": 0.944,
+    "locked": 0
+   },
+   {
+    "t": 1167,
+    "inline": "translate3d(0px, 24px, 0px)",
+    "computed_ty": 24,
+    "opacity": 0.979,
+    "locked": 0
+   },
+   {
+    "t": 1217,
+    "inline": "translate3d(0px, 24px, 0px)",
+    "computed_ty": 24,
+    "opacity": 0.994,
+    "locked": 0
+   }
+  ],
+  "1280 offer cards#0": [
+   {
+    "t": 895,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.12,
+    "locked": 0
+   },
+   {
+    "t": 962,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.416,
+    "locked": 0
+   },
+   {
+    "t": 1028,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.619,
+    "locked": 0
+   },
+   {
+    "t": 1095,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.771,
+    "locked": 0
+   },
+   {
+    "t": 1162,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.874,
+    "locked": 0
+   },
+   {
+    "t": 1228,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.937,
+    "locked": 0
+   },
+   {
+    "t": 1295,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.973,
+    "locked": 0
+   },
+   {
+    "t": 1362,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.991,
+    "locked": 0
+   },
+   {
+    "t": 1428,
+    "inline": "translate3d(0px, 48px, 0px)",
+    "computed_ty": 48,
+    "opacity": 0.998,
+    "locked": 0
+   }
+  ]
+ },
+ "375: about cards (2) \u2014 rises in sync with the fade, no late snap, lock released, ends at CSS rest transform": {
+  "pass": false,
+  "info": "[{'i': 0, 'ty0': 24, 'frames': 17, 'sync_err': 0.963, 'finished': True, 'end_inline': '', 'end_locked': 0, 'end_computed': 'none', 'settle_changes': 19, 'locked_while_animating': False, 'rest': 'none'}, {'i': 1, 'ty0': 24, 'frames': 17, 'sync_err': 0.966, 'finished': True, 'end_inline': '', 'end_loc"
+ },
+ "375: offer cards (6) \u2014 rises in sync with the fade, no late snap, lock released, ends at CSS rest transform": {
+  "pass": false,
+  "info": "[{'i': 0, 'ty0': 48, 'frames': 24, 'sync_err': 0.966, 'finished': True, 'end_inline': '', 'end_locked': 0, 'end_computed': 'none', 'settle_changes': 18, 'locked_while_animating': False, 'rest': 'none'}, {'i': 1, 'ty0': 48, 'frames': 24, 'sync_err': 0.966, 'finished': True, 'end_inline': '', 'end_loc"
+ },
+ "375: featured event cards (3) \u2014 rises in sync with the fade, no late snap, lock released, ends at CSS rest transform": {
+  "pass": false,
+  "info": "[{'i': 0, 'ty0': 48, 'frames': 24, 'sync_err': 0.967, 'finished': True, 'end_inline': '', 'end_locked': 0, 'end_computed': 'none', 'settle_changes': 19, 'locked_while_animating': False, 'rest': 'none'}, {'i': 1, 'ty0': 48, 'frames': 24, 'sync_err': 0.966, 'finished': True, 'end_inline': '', 'end_loc"
+ },
+ "375: featured member cards (4) \u2014 rises in sync with the fade, no late snap, lock released, ends at CSS rest transform": {
+  "pass": false,
+  "info": "[{'i': 0, 'ty0': 48, 'frames': 21, 'sync_err': 0.965, 'finished': True, 'end_inline': '', 'end_locked': 0, 'end_computed': 'none', 'settle_changes': 19, 'locked_while_animating': False, 'rest': 'none'}, {'i': 1, 'ty0': 48, 'frames': 21, 'sync_err': 0.965, 'finished': True, 'end_inline': '', 'end_loc"
+ },
+ "375: polaroids (6) \u2014 rises in sync with the fade, no late snap, lock released, ends at CSS rest transform": {
+  "pass": false,
+  "info": "[{'i': 0, 'ty0': 48, 'frames': 21, 'sync_err': 0.966, 'finished': True, 'end_inline': '', 'end_locked': 0, 'end_computed': 'matrix(1, 0, 0, 1, 0, 0)', 'settle_changes': 19, 'locked_while_animating': False, 'rest': 'matrix(1, 0, 0, 1, 0, 0)'}, {'i': 1, 'ty0': 48, 'frames': 21, 'sync_err': 0.966, 'fin"
+ },
+ "375: join CTAs (2) \u2014 rises in sync with the fade, no late snap, lock released, ends at CSS rest transform": {
+  "pass": false,
+  "info": "[{'i': 0, 'ty0': 24, 'frames': 17, 'sync_err': 0.966, 'finished': True, 'end_inline': '', 'end_locked': 0, 'end_computed': 'none', 'settle_changes': 8, 'locked_while_animating': False, 'rest': 'none'}, {'i': 1, 'ty0': 24, 'frames': 17, 'sync_err': 0.966, 'finished': True, 'end_inline': '', 'end_lock"
+ },
+ "375: hover lift on .btn still animates (intermediate frames, not a jump)": {
+  "pass": true,
+  "info": "10 distinct frames"
+ },
+ "375: hover lift on a.card still animates (intermediate frames, not a jump)": {
+  "pass": true,
+  "info": "19 distinct frames"
+ },
+ "375: hover lift on .event-card still animates (intermediate frames, not a jump)": {
+  "pass": true,
+  "info": "20 distinct frames"
+ },
+ "375: hover lift on .polaroid still animates (intermediate frames, not a jump)": {
+  "pass": true,
+  "info": "19 distinct frames"
+ },
+ "1280: reduced motion \u2192 no .is-revealing, no inline start states, all targets visible": {
+  "pass": true,
+  "info": "{'locked': 0, 'inline': 0, 'visible': True}"
+ },
+ "1280: hero buttons (2) \u2014 rises in sync with the fade, no late snap, lock released, ends at CSS rest transform": {
+  "pass": false,
+  "info": "[{'i': 0, 'ty0': 24, 'frames': 18, 'sync_err': 0.969, 'finished': True, 'end_inline': '', 'end_locked': 0, 'end_computed': 'none', 'settle_changes': 10, 'locked_while_animating': False, 'rest': 'none'}, {'i': 1, 'ty0': 24, 'frames': 17, 'sync_err': 0.964, 'finished': True, 'end_inline': '', 'end_loc"
+ },
+ "1280: about cards (2) \u2014 rises in sync with the fade, no late snap, lock released, ends at CSS rest transform": {
+  "pass": false,
+  "info": "[{'i': 0, 'ty0': 24, 'frames': 17, 'sync_err': 0.963, 'finished': True, 'end_inline': '', 'end_locked': 0, 'end_computed': 'none', 'settle_changes': 17, 'locked_while_animating': False, 'rest': 'none'}, {'i': 1, 'ty0': 24, 'frames': 17, 'sync_err': 0.965, 'finished': True, 'end_inline': '', 'end_loc"
+ },
+ "1280: offer cards (6) \u2014 rises in sync with the fade, no late snap, lock released, ends at CSS rest transform": {
+  "pass": false,
+  "info": "[{'i': 0, 'ty0': 48, 'frames': 24, 'sync_err': 0.966, 'finished': True, 'end_inline': '', 'end_locked': 0, 'end_computed': 'none', 'settle_changes': 18, 'locked_while_animating': False, 'rest': 'none'}, {'i': 1, 'ty0': 48, 'frames': 24, 'sync_err': 0.966, 'finished': True, 'end_inline': '', 'end_loc"
+ },
+ "1280: featured event cards (3) \u2014 rises in sync with the fade, no late snap, lock released, ends at CSS rest transform": {
+  "pass": false,
+  "info": "[{'i': 0, 'ty0': 48, 'frames': 16, 'sync_err': 0.963, 'finished': True, 'end_inline': '', 'end_locked': 0, 'end_computed': 'none', 'settle_changes': 19, 'locked_while_animating': False, 'rest': 'none'}, {'i': 1, 'ty0': 48, 'frames': 16, 'sync_err': 0.963, 'finished': True, 'end_inline': '', 'end_loc"
+ },
+ "1280: featured member cards (4) \u2014 rises in sync with the fade, no late snap, lock released, ends at CSS rest transform": {
+  "pass": false,
+  "info": "[{'i': 0, 'ty0': 48, 'frames': 19, 'sync_err': 0.964, 'finished': True, 'end_inline': '', 'end_locked': 0, 'end_computed': 'none', 'settle_changes': 18, 'locked_while_animating': False, 'rest': 'none'}, {'i': 1, 'ty0': 48, 'frames': 19, 'sync_err': 0.964, 'finished': True, 'end_inline': '', 'end_loc"
+ },
+ "1280: polaroids (6) \u2014 rises in sync with the fade, no late snap, lock released, ends at CSS rest transform": {
+  "pass": false,
+  "info": "[{'i': 0, 'ty0': 48, 'frames': 13, 'sync_err': 0.969, 'finished': True, 'end_inline': '', 'end_locked': 0, 'end_computed': 'matrix(0.997564, -0.0697565, 0.0697565, 0.997564, 0, 0)', 'settle_changes': 18, 'locked_while_animating': False, 'rest': 'matrix(0.997564, -0.0697565, 0.0697565, 0.997564, 0, 0"
+ },
+ "1280: join CTAs (2) \u2014 rises in sync with the fade, no late snap, lock released, ends at CSS rest transform": {
+  "pass": false,
+  "info": "[{'i': 0, 'ty0': 24, 'frames': 17, 'sync_err': 0.965, 'finished': True, 'end_inline': '', 'end_locked': 0, 'end_computed': 'none', 'settle_changes': 9, 'locked_while_animating': False, 'rest': 'none'}, {'i': 1, 'ty0': 24, 'frames': 17, 'sync_err': 0.966, 'finished': True, 'end_inline': '', 'end_lock"
+ },
+ "1280: hover lift on .btn still animates (intermediate frames, not a jump)": {
+  "pass": true,
+  "info": "10 distinct frames"
+ },
+ "1280: hover lift on a.card still animates (intermediate frames, not a jump)": {
+  "pass": true,
+  "info": "19 distinct frames"
+ },
+ "1280: hover lift on .event-card still animates (intermediate frames, not a jump)": {
+  "pass": true,
+  "info": "19 distinct frames"
+ },
+ "1280: hover lift on .polaroid still animates (intermediate frames, not a jump)": {
+  "pass": true,
+  "info": "20 distinct frames"
+ }
+}
