@@ -1,0 +1,102 @@
+{
+ "1a normal loading: no skeleton left in view, 0 console/page errors, 0 external requests": {
+  "pass": true,
+  "info": "{'left': 0, 'errs': [], 'ext': []}"
+ },
+ "1b lazy images: after scrolling the whole page no overlay remains and every visible image decoded": {
+  "pass": true,
+  "info": "{'left': [], 'imgs': []}"
+ },
+ "1c no console/page errors during full scroll": {
+  "pass": true,
+  "info": "[]"
+ },
+ "1d slow loading (400 ms/img): skeletons appear, then all in-view ones are gone": {
+  "pass": true,
+  "info": "{'seen': 49, 'left': 0}"
+ },
+ "1e failed images: every in-view overlay is the static failed state, no page errors": {
+  "pass": true,
+  "info": "{'n': 1, 'errs': []}"
+ },
+ "2a 390: nav link scrolls to #team with skeletons showing": {
+  "pass": true,
+  "info": "82"
+ },
+ "2b 390: team directory 21 rows, each with a skeleton, text intact": {
+  "pass": true,
+  "info": "{'rows': 21, 'sk': 21, 'txt': ['01\\n                 ', '02\\n                 ', '03\\n                 ']}"
+ },
+ "2c 390: event dialog opens with content; photo skeleton present": {
+  "pass": true,
+  "info": "{'open': True, 'sk': 2, 't': 'ODYSSEY'}"
+ },
+ "2d 390: Esc closes dialog, focus returns to the trigger": {
+  "pass": true,
+  "info": ""
+ },
+ "2e 390: re-open: one skeleton per photo (no duplicates)": {
+  "pass": true,
+  "info": ""
+ },
+ "2f 390: gallery filters change the visible set (11/4/5/1/1) with skeletons present": {
+  "pass": true,
+  "info": "{'all': 11, 'workshops': 4, 'events': 5, 'design': 1, 'community': 1}"
+ },
+ "2g 390: lightbox next/prev work while the skeleton shows": {
+  "pass": true,
+  "info": "['\u00b5Learn CHN Community Group', 'Computer Lab Technical Session', '\u00b5Learn CHN Community Group']"
+ },
+ "2h 390: 0 page errors across all interactions": {
+  "pass": true,
+  "info": "[]"
+ },
+ "2a 1440: nav link scrolls to #team with skeletons showing": {
+  "pass": true,
+  "info": "92"
+ },
+ "2b 1440: team directory 21 rows, each with a skeleton, text intact": {
+  "pass": true,
+  "info": "{'rows': 21, 'sk': 21, 'txt': ['01\\n                 ', '02\\n                 ', '03\\n                 ']}"
+ },
+ "2c 1440: event dialog opens with content; photo skeleton present": {
+  "pass": true,
+  "info": "{'open': True, 'sk': 2, 't': 'ODYSSEY'}"
+ },
+ "2d 1440: Esc closes dialog, focus returns to the trigger": {
+  "pass": true,
+  "info": ""
+ },
+ "2e 1440: re-open: one skeleton per photo (no duplicates)": {
+  "pass": true,
+  "info": ""
+ },
+ "2f 1440: gallery filters change the visible set (11/4/5/1/1) with skeletons present": {
+  "pass": true,
+  "info": "{'all': 11, 'workshops': 4, 'events': 5, 'design': 1, 'community': 1}"
+ },
+ "2g 1440: lightbox next/prev work while the skeleton shows": {
+  "pass": true,
+  "info": "['\u00b5Learn CHN Community Group', 'Computer Lab Technical Session', '\u00b5Learn CHN Community Group']"
+ },
+ "2h 1440: 0 page errors across all interactions": {
+  "pass": true,
+  "info": "[]"
+ },
+ "3a GSAP motion still active (html.js-motion) and skeleton CSS did not disable it": {
+  "pass": true,
+  "info": ""
+ },
+ "3b reduced motion: js-motion off and 0 skeleton animations": {
+  "pass": true,
+  "info": ""
+ },
+ "4a footprint: skeleton.js + skeleton.css < 30 KB raw, 0 new assets/dependencies": {
+  "pass": true,
+  "info": "{'js/skeleton.js': 14314, 'css/skeleton.css': 8095}"
+ },
+ "4b LCP with skeleton \u2264 LCP without + 150 ms (informational, local server)": {
+  "pass": true,
+  "info": "{'with': 392, 'without': 412}"
+ }
+}

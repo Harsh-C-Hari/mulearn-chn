@@ -1,0 +1,230 @@
+{
+ "A1 skeletons present for the a11y checks": {
+  "pass": true,
+  "info": "51"
+ },
+ "A2 every overlay aria-hidden=true, every inner svg aria-hidden, no title/desc/text": {
+  "pass": true,
+  "info": ""
+ },
+ "A3 nothing focusable inside an overlay, pointer-events none": {
+  "pass": true,
+  "info": ""
+ },
+ "A4 alt/src/width/height/loading untouched on skeleton hosts": {
+  "pass": true,
+  "info": ""
+ },
+ "A5 accessibility tree has no skeleton content": {
+  "pass": true,
+  "info": "22959"
+ },
+ "A6 axe (WCAG 2.2 AA): skeletons add 0 violations vs. the same page without skeleton.js @390": {
+  "pass": true,
+  "info": "{'with': 0, 'without': 7, 'new': []}"
+ },
+ "A7 keyboard tab walk never lands in an overlay": {
+  "pass": true,
+  "info": "{'stops': 66, 'inside': 0}"
+ },
+ "B 320: reduced motion \u2192 0 running skeleton animations": {
+  "pass": true,
+  "info": "0"
+ },
+ "B 390: reduced motion \u2192 0 running skeleton animations": {
+  "pass": true,
+  "info": "0"
+ },
+ "B 768: reduced motion \u2192 0 running skeleton animations": {
+  "pass": true,
+  "info": "0"
+ },
+ "B 1024: reduced motion \u2192 0 running skeleton animations": {
+  "pass": true,
+  "info": "0"
+ },
+ "B 1440: reduced motion \u2192 0 running skeleton animations": {
+  "pass": true,
+  "info": "0"
+ },
+ "B6 motion on: no animated element larger than 100x100 px (area)": {
+  "pass": true,
+  "info": "0"
+ },
+ "B7 motion on: only \u22651.8s calm loops (no fast flashing)": {
+  "pass": true,
+  "info": "[1800, 2800]"
+ },
+ "C1 JS off: no overlay ever exists, eager images render normally": {
+  "pass": true,
+  "info": "1"
+ },
+ "C2 JS off: no attribute residue on hosts": {
+  "pass": true,
+  "info": ""
+ },
+ "C3 skeleton.js blocked: page works, 0 overlays, 0 page errors": {
+  "pass": true,
+  "info": "[]"
+ },
+ "D1 forced colours: bordered overlays keep a solid system-colour border": {
+  "pass": true,
+  "info": "[{'k': 'skel--about', 'bw': '2px', 'st': 'solid', 'col': 'rgb(0, 0, 0)'}, {'k': 'skel--poster', 'bw': '1px', 'st': 'solid', 'col': 'rgb(0, 0, 0)'}, {'k': 'skel--poster', 'bw': '1px', 'st': 'solid', 'col': 'rgb(0, 0, 0)'}]"
+ },
+ "E1 every failed image shows the static failed state (no loading overlays left)": {
+  "pass": true,
+  "info": "{'n': 51, 'failed': 51, 'anim': 0, 'ico': 51}"
+ },
+ "E2 failed state has 0 running animations": {
+  "pass": true,
+  "info": "{'n': 51, 'failed': 51, 'anim': 0, 'ico': 51}"
+ },
+ "E3 failure state is stable (no retry/flicker loop)": {
+  "pass": true,
+  "info": "(51, 51)"
+ },
+ "E4 failed icon is hidden from AT; alt untouched": {
+  "pass": true,
+  "info": ""
+ },
+ "F1 hero skeleton visible while its bytes are pending": {
+  "pass": true,
+  "info": ""
+ },
+ "F2 skeleton removed once the image has loaded; image complete": {
+  "pass": true,
+  "info": "0.15"
+ },
+ "G1 second visit (cache warm): no skeleton ever created for in-viewport images, none visible after load": {
+  "pass": true,
+  "info": "{'visible_born': [], 'inview': 0, 'offscreen_lazy_overlays': 49}"
+ },
+ "G2 lightbox: a photo already loaded (back to previous) shows no skeleton": {
+  "pass": true,
+  "info": ""
+ },
+ "H 320: lightbox skeleton ratio == photo ratio, within stage, \u226458vh, image hidden meanwhile": {
+  "pass": true,
+  "info": "{'w': 244, 'h': 183, 'sw': 244, 'ar': 1.333, 'iw': 1600, 'ih': 1200, 'vh': 700, 'over': 0, 'imgHidden': True}"
+ },
+ "H 320: no horizontal overflow with lightbox skeleton": {
+  "pass": true,
+  "info": "0"
+ },
+ "H 320: visible prev/next controls are the top element (not covered by the skeleton)": {
+  "pass": true,
+  "info": "[True, True, None, None]"
+ },
+ "H 320: rapid next \u00d73 while pending \u2192 exactly one skeleton, caption == new alt": {
+  "pass": true,
+  "info": "{'n': 1, 'alt': 'Mentored Coding Session', 'title': 'Mentored Coding Session', 'counter': 'Photo 6 of 11'}"
+ },
+ "H 320: after release the last photo shows, no skeleton, no stuck state": {
+  "pass": true,
+  "info": "{'n': 0, 'ok': True, 'alt': 'Mentored Coding Session', 'title': 'Mentored Coding Session', 'state': None}"
+ },
+ "H 320: Esc closes the lightbox and returns focus to its trigger": {
+  "pass": true,
+  "info": "polaroid__action"
+ },
+ "H 390: lightbox skeleton ratio == photo ratio, within stage, \u226458vh, image hidden meanwhile": {
+  "pass": true,
+  "info": "{'w': 314, 'h': 235.5, 'sw': 314, 'ar': 1.333, 'iw': 1600, 'ih': 1200, 'vh': 844, 'over': 0, 'imgHidden': True}"
+ },
+ "H 390: no horizontal overflow with lightbox skeleton": {
+  "pass": true,
+  "info": "0"
+ },
+ "H 390: visible prev/next controls are the top element (not covered by the skeleton)": {
+  "pass": true,
+  "info": "[True, True, None, None]"
+ },
+ "H 390: rapid next \u00d73 while pending \u2192 exactly one skeleton, caption == new alt": {
+  "pass": true,
+  "info": "{'n': 1, 'alt': 'Mentored Coding Session', 'title': 'Mentored Coding Session', 'counter': 'Photo 6 of 11'}"
+ },
+ "H 390: after release the last photo shows, no skeleton, no stuck state": {
+  "pass": true,
+  "info": "{'n': 0, 'ok': True, 'alt': 'Mentored Coding Session', 'title': 'Mentored Coding Session', 'state': None}"
+ },
+ "H 390: Esc closes the lightbox and returns focus to its trigger": {
+  "pass": true,
+  "info": "polaroid__action"
+ },
+ "H 768: lightbox skeleton ratio == photo ratio, within stage, \u226458vh, image hidden meanwhile": {
+  "pass": true,
+  "info": "{'w': 676, 'h': 507, 'sw': 676, 'ar': 1.333, 'iw': 1600, 'ih': 1200, 'vh': 1024, 'over': 0, 'imgHidden': True}"
+ },
+ "H 768: no horizontal overflow with lightbox skeleton": {
+  "pass": true,
+  "info": "0"
+ },
+ "H 768: visible prev/next controls are the top element (not covered by the skeleton)": {
+  "pass": true,
+  "info": "[True, True, None, None]"
+ },
+ "H 768: rapid next \u00d73 while pending \u2192 exactly one skeleton, caption == new alt": {
+  "pass": true,
+  "info": "{'n': 1, 'alt': 'Mentored Coding Session', 'title': 'Mentored Coding Session', 'counter': 'Photo 6 of 11'}"
+ },
+ "H 768: after release the last photo shows, no skeleton, no stuck state": {
+  "pass": true,
+  "info": "{'n': 0, 'ok': True, 'alt': 'Mentored Coding Session', 'title': 'Mentored Coding Session', 'state': None}"
+ },
+ "H 768: Esc closes the lightbox and returns focus to its trigger": {
+  "pass": true,
+  "info": "polaroid__action"
+ },
+ "H 1024: lightbox skeleton ratio == photo ratio, within stage, \u226458vh, image hidden meanwhile": {
+  "pass": true,
+  "info": "{'w': 593.890625, 'h': 445.421875, 'sw': 932, 'ar': 1.333, 'iw': 1600, 'ih': 1200, 'vh': 768, 'over': 0, 'imgHidden': True}"
+ },
+ "H 1024: no horizontal overflow with lightbox skeleton": {
+  "pass": true,
+  "info": "0"
+ },
+ "H 1024: visible prev/next controls are the top element (not covered by the skeleton)": {
+  "pass": true,
+  "info": "[True, True, None, None]"
+ },
+ "H 1024: rapid next \u00d73 while pending \u2192 exactly one skeleton, caption == new alt": {
+  "pass": true,
+  "info": "{'n': 1, 'alt': 'Mentored Coding Session', 'title': 'Mentored Coding Session', 'counter': 'Photo 6 of 11'}"
+ },
+ "H 1024: after release the last photo shows, no skeleton, no stuck state": {
+  "pass": true,
+  "info": "{'n': 0, 'ok': True, 'alt': 'Mentored Coding Session', 'title': 'Mentored Coding Session', 'state': None}"
+ },
+ "H 1024: Esc closes the lightbox and returns focus to its trigger": {
+  "pass": true,
+  "info": "polaroid__action"
+ },
+ "H 1440: lightbox skeleton ratio == photo ratio, within stage, \u226458vh, image hidden meanwhile": {
+  "pass": true,
+  "info": "{'w': 695.96875, 'h': 521.984375, 'sw': 1020, 'ar': 1.333, 'iw': 1600, 'ih': 1200, 'vh': 900, 'over': 0, 'imgHidden': True}"
+ },
+ "H 1440: no horizontal overflow with lightbox skeleton": {
+  "pass": true,
+  "info": "0"
+ },
+ "H 1440: visible prev/next controls are the top element (not covered by the skeleton)": {
+  "pass": true,
+  "info": "[True, True, None, None]"
+ },
+ "H 1440: rapid next \u00d73 while pending \u2192 exactly one skeleton, caption == new alt": {
+  "pass": true,
+  "info": "{'n': 1, 'alt': 'Mentored Coding Session', 'title': 'Mentored Coding Session', 'counter': 'Photo 6 of 11'}"
+ },
+ "H 1440: after release the last photo shows, no skeleton, no stuck state": {
+  "pass": true,
+  "info": "{'n': 0, 'ok': True, 'alt': 'Mentored Coding Session', 'title': 'Mentored Coding Session', 'state': None}"
+ },
+ "H 1440: Esc closes the lightbox and returns focus to its trigger": {
+  "pass": true,
+  "info": "polaroid__action"
+ },
+ "I1 axe 0 violations with the lightbox skeleton showing @1440": {
+  "pass": true,
+  "info": "[]"
+ }
+}

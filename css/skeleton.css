@@ -1,0 +1,138 @@
+/* ==========================================================================
+   skeleton.css — themed image skeletons (µLearn CHN)
+   An image placeholder is "the paste-up board before the photo goes in":
+   cream stock, navy keyline, a few flat registration marks. Flat colour only:
+   no gradients, no blur, no shimmer. The overlay (<span class="skel">) is
+   created by js/skeleton.js, sits inside the image's existing host and is
+   removed as soon as the image has loaded. See docs/skeleton/.
+   ========================================================================== */
+
+:root{
+  /* tokens — only the two cream tints are new; everything else aliases existing tokens */
+  --skel-base:#F1EADA;           /* cream, one step darker than --c-bg */
+  --skel-shape:#E4DAC3;          /* internal shapes */
+  --skel-line:var(--c-ink);
+  --skel-a1:var(--c-accent);     /* yellow */
+  --skel-a2:var(--c-mint);
+  --skel-a3:var(--c-primary);    /* indigo (decoration only) */
+  --skel-pulse:1.8s;
+  --skel-ease:ease-in-out;
+}
+
+/* ---------- Overlay base ---------- */
+.skel{
+  position:absolute; inset:var(--skel-inset,0); z-index:0; box-sizing:border-box;
+  display:block; overflow:hidden; pointer-events:none; user-select:none;
+  background:var(--skel-base);
+  border:var(--skel-bw,1px) solid var(--skel-line); border-radius:var(--skel-r,3px);
+}
+.skel>svg{display:block;width:100%;height:100%}
+.skel .sh{fill:var(--skel-shape)}
+.skel .ln{fill:none;stroke:var(--skel-line);stroke-width:2;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.skel .a1{fill:var(--skel-a1);--fill:var(--skel-a1)}
+.skel .a2{fill:var(--skel-a2);--fill:var(--skel-a2)}
+.skel .a3{fill:var(--skel-a3);--fill:var(--skel-a3)}
+.skel .ik{fill:var(--c-ink);--fill:var(--c-ink)}
+.skel .ol{--line:var(--c-ink);--line-w:3}                 /* sprite shapes with the navy outline */
+/* Board-mix helpers (5.1): tints are the accent at low opacity over cream — never a gradient, never a new hex */
+.skel .tn{fill:var(--skel-a1);fill-opacity:.34}
+.skel .tn2{fill:var(--skel-a2);fill-opacity:.34}
+.skel .tn3{fill:var(--skel-a3);fill-opacity:.24}
+.skel .wh{fill:var(--c-surface)}
+.skel .cr{fill:var(--c-bg)}
+.skel .dim{opacity:.11}
+.skel .dim2{opacity:.62}
+
+/* Hosts that are static by default need a positioning context only while a skeleton is present */
+[data-skel-state]{position:relative}
+
+/* ---------- Motion: accent marks breathe; large surfaces never move ---------- */
+@keyframes skel-breathe{0%,100%{opacity:.45}50%{opacity:1}}
+@keyframes skel-reveal{from{opacity:.6}to{opacity:1}}
+@keyframes skel-tilt{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
+@media (prefers-reduced-motion:no-preference){
+  .skel [data-a]{animation:skel-breathe var(--skel-pulse) var(--skel-ease) infinite}
+  .skel [data-a="2"]{animation-delay:-.6s}
+  .skel [data-a="3"]{animation-delay:-1.2s}
+  .skel [data-w]{transform-box:fill-box;transform-origin:50% 50%;animation:skel-tilt 2.8s var(--skel-ease) infinite}
+  .skel [data-w]:nth-of-type(even){animation-delay:-1.4s}
+  img[data-skel-reveal]{animation:skel-reveal .16s ease-out}
+}
+@media (prefers-reduced-motion:reduce){
+  .skel [data-a]{animation:none;opacity:1}
+  .skel [data-w]{animation:none;transform:none}
+  img[data-skel-reveal]{animation:none}
+}
+/* tiny variants never animate, on any viewport */
+.skel--roster [data-a],.skel--mini [data-a],.skel--mini [data-w]{animation:none;opacity:1}
+
+/* ---------- Failed state: static, quiet, never an endless "loading" ---------- */
+.skel.is-failed{display:grid;place-items:center}
+.skel.is-failed>svg{display:none}
+.skel__ico{display:block;width:min(34%,44px);height:auto;aspect-ratio:1;fill:none;stroke:var(--c-ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.6}
+.skel--roster .skel__ico{width:min(46%,22px)}
+
+/* @variants:start — one block per variant, added per sub-phase */
+
+/* calmer on small screens: the busier shapes drop out (same rule as .sticker--hide-sm) */
+@media (max-width:639px){.skel .hide-sm{display:none}}
+
+/* A · hero — the host (.photo-frame) already draws the 2px outline + hard shadow */
+.skel--hero{--skel-bw:0px;--skel-r:0}
+/* B · about — sits inside the 8px yellow mat; image has a 2px frame, radius 4 */
+.skel--about{--skel-inset:var(--s-1);--skel-bw:2px;--skel-r:4px}
+
+/* C1 · poster — inside the 8px white mat; same 1px keyline + radius as the image */
+.skel--poster{--skel-inset:var(--s-1);--skel-bw:1px;--skel-r:3px;--skel-a3:var(--card-bg,var(--c-primary))}   /* art field echoes the card colour */
+/* C2 · mini thumb — the image box is centred in a tone mat, so the overlay is centred and ratio-locked to the image's own ratio
+   (<700px: image fills the mat width; ≥700px: image is height:100% of a 4/3 mat) */
+.skel--mini{
+  --skel-bw:2px; --skel-r:3px; box-shadow:3px 3px 0 var(--c-ink); --skel-a1:var(--tone,var(--c-lavender));
+  inset:auto; inset-inline:var(--s-1); top:50%; transform:translateY(-50%); aspect-ratio:var(--skel-ar,390/502);
+  box-sizing:content-box;   /* the image's ratio applies to its content box (2px border outside it): same rule here keeps the boxes identical */   /* --skel-ar = that thumb's own width/height (5.2: the four thumbs differ) */
+}
+@media (min-width:700px){
+  .skel--mini{inset-inline:auto; inset-block:var(--s-2); top:var(--s-2); bottom:var(--s-2); left:50%; transform:translateX(-50%); max-width:calc(100% - var(--s-4))}
+}
+
+/* D1 · portrait — inside the 4px white mat; alternate cards swap the corner accent to mint (matches the cards' tilt rhythm) */
+.skel--portrait{--skel-inset:var(--s-0);--skel-bw:1px;--skel-r:3px;--skel-a1:var(--card-bg,var(--c-accent))}   /* tint = the card's own colour (Board-1 colour-blocked portraits) */
+@media (min-width:600px){.skel--portrait{--skel-inset:var(--s-1)}}   /* team.css: the mat grows 4px → 8px when the cards stack (5.2 fix) */
+/* D2 · roster — 72/84px: keyline only, silhouette only */
+.skel--roster{--skel-inset:var(--s-0);--skel-bw:1px;--skel-r:3px;--skel-a1:var(--mat,var(--c-accent))}
+
+/* E · collage — the polaroid photo box already has the 1px keyline + overflow:hidden; accent rotates per slot */
+.skel--collage,.skel--collage-sq{--skel-bw:0px;--skel-r:0}
+.polaroid--p1 .skel{--skel-a1:var(--c-accent)}
+.polaroid--p2 .skel{--skel-a1:var(--c-mint)}
+.polaroid--p3 .skel{--skel-a1:var(--c-primary)}
+.polaroid--p4 .skel{--skel-a1:var(--c-accent)}
+.polaroid--p5 .skel{--skel-a1:var(--c-mint)}
+.polaroid--p6 .skel{--skel-a1:var(--c-primary)}
+/* E2 · gallery — accent follows the card's category tone (same mapping as the category tags) */
+.skel--gallery{--skel-bw:0px;--skel-r:0}
+.gallery-card[data-category="community"] .skel{--skel-a1:var(--c-accent)}
+.gallery-card[data-category="workshops"] .skel{--skel-a1:var(--c-mint)}
+.gallery-card[data-category="events"] .skel{--skel-a1:var(--c-coral)}
+.gallery-card[data-category="design"] .skel{--skel-a1:var(--c-primary)}
+
+/* G2 · dialog photo — inside the 6px mat; the image carries a 1px navy keyline and no radius.
+   Accent follows the dialog's tone so it never clashes with the panel colour. */
+.skel--dialog-photo{
+  --skel-bw:1px; --skel-r:0;
+  inset:6px 6px auto 6px; width:auto; aspect-ratio:var(--skel-ar,1.5);   /* = the image box; the grid may stretch the figure taller */
+}
+.event-dialog[data-tone="yellow"] .skel--dialog-photo{--skel-a1:var(--c-primary)}
+.event-dialog[data-tone="indigo"] .skel--dialog-photo{--skel-a1:var(--c-accent)}
+
+/* F · lightbox — in-flow skeleton, ratio from the incoming photo (--skel-ar set by JS), same caps as the real image
+   (max 100% wide / 58vh tall). The <img> stays in the DOM (it keeps loading, eager) but is not shown meanwhile. */
+[data-skel-state]>#lightbox-image{display:none}
+.skel--lightbox{
+  position:relative; inset:auto; flex:none;
+  --skel-bw:2px; --skel-r:var(--r-sm); border-color:var(--c-surface); box-shadow:6px 6px 0 var(--c-primary);   /* indigo hard shadow reads on the dark stage (Board 2) */
+  aspect-ratio:var(--skel-ar,1.3333);
+  width:min(100%,calc(58vh * var(--skel-ar,1.3333)));
+  max-height:58vh;
+}
+/* @variants:end */

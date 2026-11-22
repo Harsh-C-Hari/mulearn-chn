@@ -2,6 +2,22 @@
 
 Format: newest first. Each entry: date · phase · what changed · files · verification.
 
+## 2026-11-21 — Image skeletons / Phases 5.2 – 6 (responsive, accessibility, motion, final QA)
+- Fixed: event-thumb skeleton now follows each thumb's own width/height (was fixed 390:502, up to ~16px off); portrait skeleton inset follows the card mat (4px → 8px from 600px).
+- Changed: skeletons wait 80 ms before appearing (cached images never flash one; lightbox exempt); hero disc no longer pulses (nothing larger than 100×100 px animates).
+- Added: `scripts/test_skel_5_2.py`, `test_skel_5_3.py`, `test_skel_6_1.py`, `shot_skel_5_4.py`; results `docs/skel-results-5-2.json`, `5-3`, `6-1`; screenshots `docs/screenshots/skel-5-*`.
+- Added: `docs/skeleton/05-final-report.md` (Phase 6 final report and verdict).
+- Verified: see the final report. Files: `js/skeleton.js`, `css/skeleton.css`.
+
+## 2026-11-21 — Image skeletons / Sub-phase 5.1 (board-mix visual refinement)
+- Changed: every skeleton variant redrawn as a mix of reference Board 1 (colour-blocked, taped frames, stickers) and Board 2 (heavy navy shapes, hard offset shadows). Host-colour echo via existing tokens. Tilt animation for stickers (reduced-motion safe).
+- Fixed: translucent tint revealing the shadow rect (opaque cream base added).
+- Verified: `scripts/test_skel_5_1.py` 13/13, `scripts/test_skel_4_7.py` 14/14.
+
+## 2026-11-21 — Image skeletons / Sub-phase 4.7 (event-dialog photos)
+- Added: `dialog-photo` skeleton variant (`js/skeleton.js`, `css/skeleton.css`), ratio-locked to the photo; `scripts/skel_harness.py`, `scripts/test_skel_4_7.py`, `docs/skeleton/04-implementation.md`.
+- Verified: 14/14 checks (slow / failed / cached / re-open / geometry at 1280 and 320). No images, data or generated markup touched.
+
 ## 2026-11-20 — Release Preparation / Stage 2 (Vercel Readiness Audit)
 - **Vercel Readiness & Deployment Handoff ([docs/DEPLOYMENT.md]):**
   - Completed production path audit: all 76 asset references in `index.html`, 25 in `styleguide.html`, and 5 in `css/` confirmed local, valid, and relative.

@@ -1,0 +1,115 @@
+{
+ "slow: one skeleton per photo (odyssey=2)": {
+  "pass": true,
+  "info": [
+   {
+    "dx": 0,
+    "dy": 0,
+    "dw": 0,
+    "dh": 0.6875,
+    "hidden": "true",
+    "pe": "none",
+    "alt": true
+   },
+   {
+    "dx": 0,
+    "dy": 0,
+    "dw": 0,
+    "dh": 0.859375,
+    "hidden": "true",
+    "pe": "none",
+    "alt": true
+   }
+  ]
+ },
+ "slow: skeleton box == image box (<=1px)": {
+  "pass": true,
+  "info": [
+   {
+    "dx": 0,
+    "dy": 0,
+    "dw": 0,
+    "dh": 0.6875,
+    "hidden": "true",
+    "pe": "none",
+    "alt": true
+   },
+   {
+    "dx": 0,
+    "dy": 0,
+    "dw": 0,
+    "dh": 0.859375,
+    "hidden": "true",
+    "pe": "none",
+    "alt": true
+   }
+  ]
+ },
+ "slow: aria-hidden + pointer-events none + alt kept": {
+  "pass": true,
+  "info": ""
+ },
+ "slow: poster has NO skeleton": {
+  "pass": true,
+  "info": ""
+ },
+ "re-open: still exactly 2 skeletons (no duplicates)": {
+  "pass": true,
+  "info": ""
+ },
+ "event without photos: no skeleton, no error": {
+  "pass": true,
+  "info": ""
+ },
+ "normal: skeleton removed after load": {
+  "pass": true,
+  "info": ""
+ },
+ "normal: no data-skel-state left on figure": {
+  "pass": true,
+  "info": ""
+ },
+ "normal: photo really loaded": {
+  "pass": true,
+  "info": ""
+ },
+ "cached/re-render: no skeleton for already-loaded photos": {
+  "pass": true,
+  "info": ""
+ },
+ "no console errors": {
+  "pass": true,
+  "info": []
+ },
+ "failed: static failed overlay (not an endless loader)": {
+  "pass": true,
+  "info": [
+   {
+    "f": true,
+    "anim": 0
+   },
+   {
+    "f": true,
+    "anim": 0
+   }
+  ]
+ },
+ "320px: skeleton == image box": {
+  "pass": true,
+  "info": [
+   {
+    "dx": 0,
+    "dy": 0,
+    "dw": 0,
+    "dh": 0.8125,
+    "hidden": "true",
+    "pe": "none",
+    "alt": true
+   }
+  ]
+ },
+ "320px: no horizontal overflow in dialog": {
+  "pass": true,
+  "info": ""
+ }
+}

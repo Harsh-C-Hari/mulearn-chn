@@ -1,0 +1,162 @@
+{
+ "320: skeleton box == image box (<=1px), 51 measured": {
+  "pass": true,
+  "info": "['skel--about', 'skel--collage', 'skel--collage-sq', 'skel--gallery', 'skel--hero', 'skel--mini', 'skel--portrait', 'skel--poster', 'skel--roster']"
+ },
+ "320: no horizontal overflow while skeletons show": {
+  "pass": true,
+  "info": "{'sw': 320, 'cw': 320}"
+ },
+ "320: skeleton svg never exceeds its overlay": {
+  "pass": true,
+  "info": ""
+ },
+ "320: hide-sm decorations hidden": {
+  "pass": true,
+  "info": "0"
+ },
+ "320: mini ratio follows each image (390x502/461/460/499)": {
+  "pass": true,
+  "info": "[0.785, 0.852, 0.854, 0.79]"
+ },
+ "320: CLS when images arrive <= 0.02": {
+  "pass": true,
+  "info": "0"
+ },
+ "320: no skeleton left after load (visible-area images)": {
+  "pass": true,
+  "info": "0"
+ },
+ "320: no horizontal overflow after load": {
+  "pass": true,
+  "info": "{'sw': 320, 'cw': 320}"
+ },
+ "390: skeleton box == image box (<=1px), 51 measured": {
+  "pass": true,
+  "info": "['skel--about', 'skel--collage', 'skel--collage-sq', 'skel--gallery', 'skel--hero', 'skel--mini', 'skel--portrait', 'skel--poster', 'skel--roster']"
+ },
+ "390: no horizontal overflow while skeletons show": {
+  "pass": true,
+  "info": "{'sw': 390, 'cw': 390}"
+ },
+ "390: skeleton svg never exceeds its overlay": {
+  "pass": true,
+  "info": ""
+ },
+ "390: hide-sm decorations hidden": {
+  "pass": true,
+  "info": "0"
+ },
+ "390: mini ratio follows each image (390x502/461/460/499)": {
+  "pass": true,
+  "info": "[0.783, 0.851, 0.852, 0.788]"
+ },
+ "390: CLS when images arrive <= 0.02": {
+  "pass": true,
+  "info": "0"
+ },
+ "390: no skeleton left after load (visible-area images)": {
+  "pass": true,
+  "info": "0"
+ },
+ "390: no horizontal overflow after load": {
+  "pass": true,
+  "info": "{'sw': 390, 'cw': 390}"
+ },
+ "768: skeleton box == image box (<=1px), 51 measured": {
+  "pass": true,
+  "info": "['skel--about', 'skel--collage', 'skel--collage-sq', 'skel--gallery', 'skel--hero', 'skel--mini', 'skel--portrait', 'skel--poster', 'skel--roster']"
+ },
+ "768: no horizontal overflow while skeletons show": {
+  "pass": true,
+  "info": "{'sw': 768, 'cw': 768}"
+ },
+ "768: skeleton svg never exceeds its overlay": {
+  "pass": true,
+  "info": ""
+ },
+ "768: hide-sm decorations shown": {
+  "pass": true,
+  "info": "4"
+ },
+ "768: mini ratio follows each image (390x502/461/460/499)": {
+  "pass": true,
+  "info": "[0.781, 0.849, 0.851, 0.786]"
+ },
+ "768: CLS when images arrive <= 0.02": {
+  "pass": true,
+  "info": "0"
+ },
+ "768: no skeleton left after load (visible-area images)": {
+  "pass": true,
+  "info": "0"
+ },
+ "768: no horizontal overflow after load": {
+  "pass": true,
+  "info": "{'sw': 768, 'cw': 768}"
+ },
+ "1024: skeleton box == image box (<=1px), 51 measured": {
+  "pass": true,
+  "info": "['skel--about', 'skel--collage', 'skel--collage-sq', 'skel--gallery', 'skel--hero', 'skel--mini', 'skel--portrait', 'skel--poster', 'skel--roster']"
+ },
+ "1024: no horizontal overflow while skeletons show": {
+  "pass": true,
+  "info": "{'sw': 1024, 'cw': 1024}"
+ },
+ "1024: skeleton svg never exceeds its overlay": {
+  "pass": true,
+  "info": ""
+ },
+ "1024: hide-sm decorations shown": {
+  "pass": true,
+  "info": "4"
+ },
+ "1024: mini ratio follows each image (390x502/461/460/499)": {
+  "pass": true,
+  "info": "[0.784, 0.851, 0.853, 0.789]"
+ },
+ "1024: CLS when images arrive <= 0.02": {
+  "pass": true,
+  "info": "0"
+ },
+ "1024: no skeleton left after load (visible-area images)": {
+  "pass": true,
+  "info": "0"
+ },
+ "1024: no horizontal overflow after load": {
+  "pass": true,
+  "info": "{'sw': 1024, 'cw': 1024}"
+ },
+ "1440: skeleton box == image box (<=1px), 51 measured": {
+  "pass": true,
+  "info": "['skel--about', 'skel--collage', 'skel--collage-sq', 'skel--gallery', 'skel--hero', 'skel--mini', 'skel--portrait', 'skel--poster', 'skel--roster']"
+ },
+ "1440: no horizontal overflow while skeletons show": {
+  "pass": true,
+  "info": "{'sw': 1440, 'cw': 1440}"
+ },
+ "1440: skeleton svg never exceeds its overlay": {
+  "pass": true,
+  "info": ""
+ },
+ "1440: hide-sm decorations shown": {
+  "pass": true,
+  "info": "4"
+ },
+ "1440: mini ratio follows each image (390x502/461/460/499)": {
+  "pass": true,
+  "info": "[0.782, 0.85, 0.851, 0.787]"
+ },
+ "1440: CLS when images arrive <= 0.02": {
+  "pass": true,
+  "info": "0"
+ },
+ "1440: no skeleton left after load (visible-area images)": {
+  "pass": true,
+  "info": "0"
+ },
+ "1440: no horizontal overflow after load": {
+  "pass": true,
+  "info": "{'sw': 1440, 'cw': 1440}"
+ }
+}

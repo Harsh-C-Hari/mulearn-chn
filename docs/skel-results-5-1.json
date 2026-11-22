@@ -1,0 +1,50 @@
+{
+ "no gradient/blur/drop-shadow/filter in skeleton css+js": {
+  "pass": true,
+  "info": ""
+ },
+ "only the two documented new hex values (+ none else)": {
+  "pass": true,
+  "info": "{'#E4DAC3', '#F1EADA'}"
+ },
+ "coverage counts (held)": {
+  "pass": true,
+  "info": "{'skel--hero': 1, 'skel--about': 1, 'skel--poster': 3, 'skel--mini': 4, 'skel--portrait': 4, 'skel--roster': 21, 'skel--collage': 5, 'skel--collage-sq': 1, 'skel--gallery': 11}"
+ },
+ "every overlay aria-hidden": {
+  "pass": true,
+  "info": ""
+ },
+ "portrait tint == each card colour (yellow/indigo/mint/yellow)": {
+  "pass": true,
+  "info": "['rgb(250, 204, 21)', 'rgb(99, 102, 241)', 'rgb(52, 211, 153)', 'rgb(250, 204, 21)']"
+ },
+ "roster tint == its own mat colour": {
+  "pass": true,
+  "info": "[['rgb(250, 204, 21)', 'rgb(250, 204, 21)'], ['rgb(52, 211, 153)', 'rgb(52, 211, 153)'], ['rgb(251, 143, 124)', 'rgb(251, 143, 124)'], ['rgb(99, 102, 241)', 'rgb(99, 102, 241)'], ['rgb(250, 204, 21)', 'rgb(250, 204, 21)'], ['rgb(52, 211, 153)', 'rgb(52, 211, 153)'], ['rgb(251, 143, 124)', 'rgb(251, "
+ },
+ "poster field echoes card colour": {
+  "pass": true,
+  "info": "['rgb(251, 143, 124)', 'rgb(79, 70, 229)', 'rgb(250, 204, 21)']"
+ },
+ "motion on: stickers tilt, accents breathe, mini/roster static": {
+  "pass": true,
+  "info": "{'w': ['skel-tilt'], 'a': ['skel-breathe'], 'mini': []}"
+ },
+ "large surfaces never animate": {
+  "pass": true,
+  "info": ""
+ },
+ "reduced motion: all skeleton animation off": {
+  "pass": true,
+  "info": "['none']"
+ },
+ "lightbox skeleton present @1440": {
+  "pass": true,
+  "info": "{'w': 695.96875, 'h': 521.984375}"
+ },
+ "lightbox skeleton present @390": {
+  "pass": true,
+  "info": "{'w': 314, 'h': 235.5}"
+ }
+}
