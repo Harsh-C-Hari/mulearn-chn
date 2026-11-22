@@ -2,6 +2,11 @@
 
 Format: newest first. Each entry: date · phase · what changed · files · verification.
 
+## 2026-11-22 — Heading highlight band made consistent
+- Changed: default `.hl` marker band in `css/decor.css` from `.32em` to `.2em` (inset box-shadow, `padding-inline` and `--hl` colour modifiers unchanged). About `µLearn CHN` (lavender) and Join `µLearn!` were thicker than Offers, Events, Team and Memories, which already override to `.2em`; the overrides are left as they are. No colour, HTML, JS or motion change.
+- Verified: every visible `.hl` band = 0.2 × font-size at 1280px; no overflow or console errors at 375/768/1280px; `scripts/test_motion_home.py` and `scripts/test_reveal_lock.py` pass.
+- Files: `css/decor.css`, `docs/CHANGELOG.md`.
+
 ## 2026-11-22 — Memories section decoration + favicon visibility
 - Fixed: `.memories__bg-grid` had no placement and sat behind the "Community moments" label and title. It now sits at the right like the sibling sections (`--w:200px; --h:150px; --r:3%; --y:110px; --op:.32`), hidden below 640px.
 - Added: 3 flat stickers, direct children of `section#memories` so the existing `intro(..., ".memories > .sticker > svg")` reveal animates them (no JS change, no spin/bob): indigo `s-asterisk-6` beside the heading (>=1024px), mint outlined `s-triangle` in the empty area under the last-row frame (>=1024px), coral `s-squiggle` bottom-right opposite the ink sparkle (>=640px). Mobile (<640px) unchanged: the two existing sparkles only.
