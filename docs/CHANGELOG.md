@@ -2,6 +2,13 @@
 
 Format: newest first. Each entry: date · phase · what changed · files · verification.
 
+## 2026-11-22 — Memories section decoration + favicon visibility
+- Fixed: `.memories__bg-grid` had no placement and sat behind the "Community moments" label and title. It now sits at the right like the sibling sections (`--w:200px; --h:150px; --r:3%; --y:110px; --op:.32`), hidden below 640px.
+- Added: 3 flat stickers, direct children of `section#memories` so the existing `intro(..., ".memories > .sticker > svg")` reveal animates them (no JS change, no spin/bob): indigo `s-asterisk-6` beside the heading (>=1024px), mint outlined `s-triangle` in the empty area under the last-row frame (>=1024px), coral `s-squiggle` bottom-right opposite the ink sparkle (>=640px). Mobile (<640px) unchanged: the two existing sparkles only.
+- Changed: favicon (inline data URI in `index.html`) is now a yellow `#FACC15` rounded tile with a navy `#0F172A` ring and a navy asterisk-6 (scaled .8). Old flat-navy-on-transparent vanished on dark tab strips. Contrast: asterisk/tile 11.66:1; navy ring vs light tabs 13.6–17.9:1; yellow tile vs dark tabs 7.9–11.2:1. `theme-color` unchanged.
+- Files: `index.html`, `css/sections/memories.css`, `docs/CHANGELOG.md`.
+- Note: `node scripts/build_memories.js --check` already reports "out of date" on the original zip (the generated blocks were reformatted by an HTML formatter). The generated blocks were not touched.
+
 ## 2026-11-22 — Reveal glitch fix ("stuck low, then snaps into place")
 - Fixed: elements with CSS hover transitions on `transform` (.btn, .card, .polaroid, .member-card, .event-card__poster) were frozen ~48px low while their GSAP reveal ran, then slid up when `clearProps` let the CSS transition fire.
 - Added: `.is-revealing { transition: none !important; }` in `css/utilities.css`; `lock()/unlock()` helpers in `js/motion-home.js` used by `intro()` (steps + stickers locked before the first `tl.from()`), `rise()`, the hero timeline and `clear()`; `unlock` runs one frame after `clearProps`. `mm.add()` now returns a cleanup that removes `is-revealing` everywhere on revert. Header rule added: anything GSAP animates must go through `lock()`.

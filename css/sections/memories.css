@@ -15,8 +15,16 @@
 
 /* Background grid */
 .memories__bg-grid {
-  opacity: 0.35;
-  pointer-events: none;
+  --w: 200px;
+  --h: 150px;
+  --r: 3%;
+  --y: 110px;
+  --op: .32;
+  display: none;
+}
+/* From 1024px only: below that the heading spans the full width and the grid would sit behind the title. */
+@media (min-width: 1024px) {
+  .memories__bg-grid { display: block; }
 }
 
 /* Header */
@@ -64,6 +72,16 @@
   bottom: var(--s-6);
   left: calc(var(--gutter) + 16px);
   z-index: 1;
+}
+
+/* Extra stickers (direct children of #memories so ".memories > .sticker > svg" reveals them).
+   All sit under .memories__collage (z-index:2); no spin/bob (GSAP owns the <svg>). */
+.memories__s-asterisk { --size: 96px; --r: 22%; --y: 170px; --rot: 10deg; display: none; }
+.memories__s-tri      { --size: 52px; --r: 7%;  --b: 300px; --rot: -12deg; display: none; }
+.memories__s-squig    { --size: 120px; --r: 6%; --b: var(--s-6); --rot: -6deg; display: none; }
+@media (min-width: 1024px) {
+  .memories__s-asterisk, .memories__s-tri, .memories__s-squig { display: block; }
+  .memories__s-squig { --size: 130px; }
 }
 
 /* ==========================================================================
